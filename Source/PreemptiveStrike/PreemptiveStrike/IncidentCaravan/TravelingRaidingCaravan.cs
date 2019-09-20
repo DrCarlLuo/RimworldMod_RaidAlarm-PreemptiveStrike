@@ -99,9 +99,14 @@ namespace PreemptiveStrike.IncidentCaravan
                 if (!detected)
                     detected = DetectDangerUtilities.TryDetectIncidentCaravan(this);
                 else
-                    DetectDangerUtilities.TryDetectCaravanDetail(this);
+                {
+                    if (DetectDangerUtilities.TryDetectCaravanDetail(this))
+                        incident.RevealRandomInformation();
+                }
 
-                confirmed = confirmed || DetectDangerUtilities.TryConfirmCaravanWithinVision(this);
+                confirmed = DetectDangerUtilities.TryConfirmCaravanWithinVision(this);
+                if (confirmed)
+                    incident.RevealAllInformation();
                 detected = detected || confirmed;
             }
         }

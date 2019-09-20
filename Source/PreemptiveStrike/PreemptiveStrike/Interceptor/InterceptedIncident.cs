@@ -7,7 +7,7 @@ using Verse;
 
 namespace PreemptiveStrike.Interceptor
 {
-    abstract class InterceptedIncident:IExposable
+    abstract class InterceptedIncident : IExposable
     {
         public IncidentDef incidentDef;
         public IncidentParms parms;
@@ -20,6 +20,10 @@ namespace PreemptiveStrike.Interceptor
             Scribe_Deep.Look<IncidentParms>(ref parms, "parms");
         }
 
+        public abstract void RevealRandomInformation();
+
+        public abstract void RevealAllInformation();
+
         public InterceptedIncident() { }
 
         public InterceptedIncident(IncidentDef incidentDef, IncidentParms incidentParms)
@@ -28,6 +32,6 @@ namespace PreemptiveStrike.Interceptor
             this.parms = incidentParms;
         }
 
-        
+
     }
 }

@@ -12,7 +12,7 @@ namespace PreemptiveStrike.Mod
         public static int WatchTowerVisionRange = 2;
         public static int WatchTowerDetectRange = 5;
 
-        public static int DetectionChance = 50;
+        public static int DetectionChance = 100;
 
         public static int TickForIncidentCaravanCoverOneTile = 500; //default: 2500 for one hour
 

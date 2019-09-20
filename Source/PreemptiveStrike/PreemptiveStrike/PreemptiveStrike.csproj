@@ -58,6 +58,7 @@
     <Compile Include="IncidentCaravan\TravelingRaidingCaravan.cs" />
     <Compile Include="Interceptor\IncidentInterceptorUtility.cs" />
     <Compile Include="Interceptor\InterceptedIncident.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_HumanCrowd.cs" />
     <Compile Include="Interceptor\InterceptedIncident_RaidEnemy.cs" />
     <Compile Include="Jobs\JobDriver_PES_StandGuard.cs" />
     <Compile Include="Jobs\WorkGiver_PES_StandGuard.cs" />

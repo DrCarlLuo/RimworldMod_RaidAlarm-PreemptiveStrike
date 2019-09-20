@@ -23,4 +23,19 @@ namespace PreemptiveStrike.Harmony
             }
         }
     }
+
+    [HarmonyPatch(typeof(PawnGroupMakerUtility), "GeneratePawns")]
+    static class Patch_PawnGroupMakerUtility_GeneratePawns
+    {
+        [HarmonyPrefix]
+        static bool Prefix(ref IEnumerable<Pawn> __result)
+        {
+            if(IncidentInterceptorUtility.IsIntercepting_PawnGeneration)
+            {
+                __result = IncidentInterceptorUtility.tmpPawnList;
+                return false;
+            }
+            return true;
+        }
+    }
 }

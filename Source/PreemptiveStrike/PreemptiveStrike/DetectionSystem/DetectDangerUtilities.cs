@@ -34,6 +34,13 @@ namespace PreemptiveStrike.DetectionSystem
 
         public static bool TryDetectCaravanDetail(TravelingRaidingCaravan caravan)
         {
+            if(caravan.detected)
+            {
+                if (new IntRange(1, 100).RandomInRange <= PES_Settings.DetectionChance)
+                {
+                    return true;
+                }
+            }
             return false;
         }
 
