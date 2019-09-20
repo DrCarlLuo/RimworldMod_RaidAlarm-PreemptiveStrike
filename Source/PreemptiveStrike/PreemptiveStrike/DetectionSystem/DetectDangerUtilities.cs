@@ -51,7 +51,7 @@ namespace PreemptiveStrike.DetectionSystem
 
         public static int GetDetectionRangeOfMap(int MapTile)
         {
-            int res = 0;
+            int res = -1;
             if (LastWatchTowerUsedTickInMapTile.TryGetValue(MapTile, out int lastTick))
             {
                 if (lastTick == Find.TickManager.TicksGame)
@@ -62,7 +62,7 @@ namespace PreemptiveStrike.DetectionSystem
 
         public static int GetVisionRangeOfMap(int MapTile)
         {
-            int res = 0;
+            int res = -1;
             if (LastWatchTowerUsedTickInMapTile.TryGetValue(MapTile, out int lastTick))
             {
                 if (lastTick == Find.TickManager.TicksGame)

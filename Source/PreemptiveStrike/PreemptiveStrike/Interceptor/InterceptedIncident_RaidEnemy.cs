@@ -21,6 +21,8 @@ namespace PreemptiveStrike.Interceptor
             IncidentInterceptorUtility.IsIntercepting_IncidentExcecution = true;
         }
 
+        public InterceptedIncident_RaidEnemy() { }
+
         public InterceptedIncident_RaidEnemy(IncidentParms parms) : base(IncidentDefOf.RaidEnemy, parms) { }
     }
 }

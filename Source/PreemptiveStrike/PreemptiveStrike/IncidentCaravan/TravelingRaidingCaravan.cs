@@ -8,6 +8,7 @@ using UnityEngine;
 using Verse;
 using PreemptiveStrike.Interceptor;
 using PreemptiveStrike.DetectionSystem;
+using PreemptiveStrike.Mod;
 
 namespace PreemptiveStrike.IncidentCaravan
 {
@@ -26,6 +27,19 @@ namespace PreemptiveStrike.IncidentCaravan
         public InterceptedIncident incident;
         public bool detected;
         public bool confirmed;
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look<int>(ref initialTile, "initialTile", 0, false);
+            Scribe_Values.Look<Vector3>(ref curPos, "curPos", Vector3.zero, false);
+            Scribe_Values.Look<int>(ref destinationTile, "destinationTile", 0, false);
+            Scribe_Values.Look<bool>(ref arrived, "arrived", false, false);
+            Scribe_Values.Look<int>(ref remainingTick, "remainingTick", 0, false);
+            Scribe_Deep.Look<InterceptedIncident>(ref incident, "incident");
+            Scribe_Values.Look<bool>(ref detected, "detected", false, false);
+            Scribe_Values.Look<bool>(ref confirmed, "confirmed", false, false);
+        }
 
         public override void PostAdd()
         {
@@ -92,10 +106,31 @@ namespace PreemptiveStrike.IncidentCaravan
             }
         }
 
-        public override Vector3 DrawPos => detected ? curPos : Vector3.zero;//I dont know how to conceal a world object(to make it unselectable), so I just hide it in the core of the planet...XD
+        //I dont know how to conceal a world object(to make it unselectable), so I just hide it in the core of the planet...XD
+        public override Vector3 DrawPos
+        {
+            get
+            {
+                if (PES_Settings.DebugModeOn)
+                    return curPos;
+                return detected? curPos : Vector3.zero;
+            }
+        }
 
         public override void Draw()
         {
+            if(PES_Settings.DebugModeOn)
+            {
+                if (confirmed)
+                    Material.color = Color.white;
+                else if (detected)
+                    Material.color = Color.cyan;
+                else
+                    Material.color = Color.black;
+                base.Draw();
+                return;
+            }
+
             if (detected)
                 base.Draw();
         }
