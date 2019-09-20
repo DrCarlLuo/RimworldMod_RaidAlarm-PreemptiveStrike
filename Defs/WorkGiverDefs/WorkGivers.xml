@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <WorkGiverDef>
+    <defName>PES_StandGuard</defName>
+    <label>StandGuard at WatchTower</label>
+    <giverClass>PreemptiveStrike.Jobs.WorkGiver_PES_StandGuard</giverClass>
+    <workType>Recon</workType>
+    <priorityInType>100</priorityInType>
+    <verb>stand guard</verb>
+    <gerund>standing guard</gerund>
+    <requiredCapacities>
+      <li>Sight</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+</Defs>

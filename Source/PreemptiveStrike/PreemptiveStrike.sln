@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreemptiveStrike", "PreemptiveStrike\PreemptiveStrike.csproj", "{05A15A7A-3D2F-42E2-A534-694B57DE73DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05A15A7A-3D2F-42E2-A534-694B57DE73DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A15A7A-3D2F-42E2-A534-694B57DE73DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A15A7A-3D2F-42E2-A534-694B57DE73DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A15A7A-3D2F-42E2-A534-694B57DE73DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6ECB9797-5507-4B9C-86F4-C38090C4EDD0}
+	EndGlobalSection
+EndGlobal

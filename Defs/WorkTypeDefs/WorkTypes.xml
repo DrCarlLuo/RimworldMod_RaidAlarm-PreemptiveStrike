@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <WorkTypeDef>
+    <defName>Recon</defName>
+    <labelShort>Recon</labelShort>
+    <pawnLabel>Sentry</pawnLabel>
+    <gerundLabel>being on sentry duty</gerundLabel>
+    <description>Do sentry job in the colony, make reconnaissance of the surrounding area, and detect incoming enemy</description>
+    <verb>Do sentry duty</verb>
+    <naturalPriority>350</naturalPriority>
+    <alwaysStartActive>true</alwaysStartActive>
+    <requireCapableColonist>true</requireCapableColonist>
+  </WorkTypeDef>
+
+</Defs>
