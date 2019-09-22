@@ -20,18 +20,21 @@ namespace PreemptiveStrike.Interceptor
             Scribe_Deep.Look<IncidentParms>(ref parms, "parms");
         }
 
+        public virtual bool SubstituionWorkerExecution()
+        {
+            Log.Error("Substitution Worker not implemented!!!");
+            return false;
+        }
+
+        public virtual bool ManualDeterminParams()
+        {
+            Log.Error("Manual Params Determination not implemented!!!");
+            return false;
+        }
+
         public abstract void RevealRandomInformation();
 
         public abstract void RevealAllInformation();
-
-        public InterceptedIncident() { }
-
-        public InterceptedIncident(IncidentDef incidentDef, IncidentParms incidentParms)
-        {
-            this.incidentDef = incidentDef;
-            this.parms = incidentParms;
-        }
-
 
     }
 }

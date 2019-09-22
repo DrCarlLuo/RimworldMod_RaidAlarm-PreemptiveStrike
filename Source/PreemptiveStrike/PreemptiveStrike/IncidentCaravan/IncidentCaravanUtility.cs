@@ -22,7 +22,7 @@ namespace PreemptiveStrike.IncidentCaravan
                 return false;
             }
             travalingCaravan.Tile = sourceTile;
-            travalingCaravan.SetFaction(incident.parms.faction);
+            //travalingCaravan.SetFaction(incident.parms.faction);
             travalingCaravan.destinationTile = incident.parms.target.Tile;
 
             int approxTileDist = Mathf.CeilToInt(Find.WorldGrid.ApproxDistanceInTiles(travalingCaravan.Tile, travalingCaravan.destinationTile));

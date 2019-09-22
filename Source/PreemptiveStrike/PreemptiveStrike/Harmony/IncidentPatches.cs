@@ -18,8 +18,8 @@ namespace PreemptiveStrike.Harmony
         {
             if (IncidentInterceptorUtility.IsIntercepting_IncidentExcecution)
             {
-                IncidentInterceptorUtility.Intercept_Raid_EdgeWalkIn(parms);
-                __result = false;
+                if(IncidentInterceptorUtility.Intercept_Raid_EdgeWalkIn(parms))
+                    __result = false;
             }
         }
     }
@@ -30,12 +30,51 @@ namespace PreemptiveStrike.Harmony
         [HarmonyPrefix]
         static bool Prefix(ref IEnumerable<Pawn> __result)
         {
-            if(IncidentInterceptorUtility.IsIntercepting_PawnGeneration)
-            {
+            if (IncidentInterceptorUtility.IsIntercepting_PawnGeneration == PawnPatchType.Generate)
+                return true;
+            if (IncidentInterceptorUtility.IsIntercepting_PawnGeneration == PawnPatchType.ReturnTempList)
                 __result = IncidentInterceptorUtility.tmpPawnList;
-                return false;
-            }
+            else
+                __result = new List<Pawn>();
+            IncidentInterceptorUtility.IsIntercepting_PawnGeneration = PawnPatchType.Generate;
+            return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(IncidentWorker_TraderCaravanArrival), "TryExecuteWorker")]
+    static class Patch_IncidentWorker_TraderCaravanArrival_TryExecuteWorker
+    {
+        [HarmonyPrefix]
+        static bool Prefix(IncidentWorker_TraderCaravanArrival __instance, ref bool __result, IncidentParms parms)
+        {
+            if (IncidentInterceptorUtility.isIntercepting_TraderCaravan_Worker)
+                IncidentInterceptorUtility.CreateIncidentCaraven<InterceptedIncident_HumanCrowd_TraderCaravan>(IncidentDefOf.TraderCaravanArrival, parms);
             return true;
         }
     }
+
+    [HarmonyPatch(typeof(IncidentWorker_TravelerGroup), "TryExecuteWorker")]
+    static class IncidentWorker_TravelerGroup_TryExecuteWorker
+    {
+        [HarmonyPrefix]
+        static bool Prefix(IncidentWorker_TravelerGroup __instance, ref bool __result, IncidentParms parms)
+        {
+            if (IncidentInterceptorUtility.isIntercepting_TravelerGroup)
+                IncidentInterceptorUtility.CreateIncidentCaraven<InterceptedIncident_HumanCrowd_TravelerGroup>(IncidentDefOf.TravelerGroup, parms);
+            return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(IncidentWorker_VisitorGroup), "TryExecuteWorker")]
+    static class IncidentWorker_VisitorGroup_TryExecuteWorker
+    {
+        [HarmonyPrefix]
+        static bool Prefix(IncidentWorker_VisitorGroup __instance, ref bool __result, IncidentParms parms)
+        {
+            if (IncidentInterceptorUtility.isIntercepting_VisitorGroup)
+                IncidentInterceptorUtility.CreateIncidentCaraven<InterceptedIncident_HumanCrowd_VisitorGroup>(IncidentDefOf.VisitorGroup, parms);
+            return true;
+        }
+    }
+
 }

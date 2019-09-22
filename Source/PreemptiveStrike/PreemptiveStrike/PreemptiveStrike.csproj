@@ -59,7 +59,11 @@
     <Compile Include="Interceptor\IncidentInterceptorUtility.cs" />
     <Compile Include="Interceptor\InterceptedIncident.cs" />
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_Neutral.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_TraderCaravan.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_TravelerGroup.cs" />
     <Compile Include="Interceptor\InterceptedIncident_RaidEnemy.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_VisitorGroup.cs" />
     <Compile Include="Jobs\JobDriver_PES_StandGuard.cs" />
     <Compile Include="Jobs\WorkGiver_PES_StandGuard.cs" />
     <Compile Include="Mod\PES_Settings.cs" />

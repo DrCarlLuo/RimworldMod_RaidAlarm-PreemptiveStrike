@@ -13,9 +13,10 @@ namespace PreemptiveStrike.Interceptor
         public bool faction_revealed = false;
         public bool crowdSize_revealed = false;
         public bool spawnPosition_revealed = false;
+        public List<Pawn> pawnList;
 
         public virtual Faction SourceFaction => parms.faction;
-        public virtual int CrowdSize => parms.pawnGroups.Count;
+        public virtual int CrowdSize => pawnList != null ? pawnList.Count : 0;
         public virtual IntVec3 SpawnPosition => parms.spawnCenter;
 
         public override void ExposeData()
@@ -25,6 +26,7 @@ namespace PreemptiveStrike.Interceptor
             Scribe_Values.Look<bool>(ref faction_revealed, "faction_revealed", false, false);
             Scribe_Values.Look<bool>(ref crowdSize_revealed, "crowdSize_revealed", false, false);
             Scribe_Values.Look<bool>(ref spawnPosition_revealed, "spawnPosition_revealed", false, false);
+            Scribe_Collections.Look<Pawn>(ref pawnList, "pawnList", LookMode.Deep);
         }
 
         protected virtual void RevealIntention()
@@ -58,9 +60,5 @@ namespace PreemptiveStrike.Interceptor
             if (!crowdSize_revealed)
                 RevealCrowdSize();
         }
-
-        public InterceptedIncident_HumanCrowd() { }
-
-        public InterceptedIncident_HumanCrowd(IncidentDef incidentDef, IncidentParms incidentParms) : base(incidentDef, incidentParms) { }
     }
 }

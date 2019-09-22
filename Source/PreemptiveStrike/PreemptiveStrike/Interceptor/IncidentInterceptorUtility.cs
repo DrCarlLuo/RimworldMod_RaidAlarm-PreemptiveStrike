@@ -8,32 +8,95 @@ using PreemptiveStrike.IncidentCaravan;
 
 namespace PreemptiveStrike.Interceptor
 {
+    enum PawnPatchType
+    {
+        Generate,
+        ReturnZero,
+        ReturnTempList
+    }
+
+    enum WorkerPatchType
+    {
+        Nothing,
+        Forestall,
+        Substitution
+    }
+
     [StaticConstructorOnStartup]
     class IncidentInterceptorUtility
     {
         //Intercepting Switches(Used in harmony Patches)
         public static bool IsIntercepting_IncidentExcecution;
-        public static bool IsIntercepting_PawnGeneration;
+        public static PawnPatchType IsIntercepting_PawnGeneration;
+
+        public static bool isIntercepting_TraderCaravan_Worker;
+        public static bool isIntercepting_TravelerGroup;
+        public static bool isIntercepting_VisitorGroup;
+
         public static bool IsIntercepting_PawnArrivalWorker;
 
         public static List<Pawn> tmpPawnList;
+        public static InterceptedIncident tmpIncident;
 
         static IncidentInterceptorUtility()
         {
             IsIntercepting_IncidentExcecution = true;
-            IsIntercepting_PawnGeneration = false;
+            IsIntercepting_PawnGeneration = PawnPatchType.Generate;
+            
+            isIntercepting_TraderCaravan_Worker = true;
+            isIntercepting_TravelerGroup = true;
+            isIntercepting_VisitorGroup = true;
         }
 
-        //TODO: SHOULD CHECK IF IT IS ALLIED RAID!!!
         public static bool Intercept_Raid_EdgeWalkIn(IncidentParms parms)
         {
-            InterceptedIncident incident = new InterceptedIncident_HumanCrowd_RaidEnemy(parms);
+            if (parms.faction.PlayerRelationKind != FactionRelationKind.Hostile)
+                return false;
+            InterceptedIncident incident = new InterceptedIncident_HumanCrowd_RaidEnemy();
+            incident.incidentDef = IncidentDefOf.RaidEnemy;
+            incident.parms = parms;
             if (!IncidentCaravanUtility.AddNewIncidentCaravan(incident))
             {
                 Log.Error("Fail to create Incident Caravan");
                 return false;
             }
             return true;
+        }
+
+        public static bool CreateIncidentCaraven<T> (IncidentDef incidentDef, IncidentParms parms) where T : InterceptedIncident, new()
+        {
+            InterceptedIncident incident = new T();
+            incident.incidentDef = incidentDef;
+            incident.parms = parms;
+            IsIntercepting_PawnGeneration = PawnPatchType.ReturnZero;
+            if (!IncidentCaravanUtility.AddNewIncidentCaravan(incident))
+            {
+                Log.Error("Fail to create Incident Caravan");
+                return false;
+            }
+            return true;
+        }
+
+        public static List<Pawn> GenerateRaidPawns(IncidentParms parms)
+        {
+            IsIntercepting_PawnGeneration = PawnPatchType.Generate;
+
+            PawnGroupKindDef combat = PawnGroupKindDefOf.Combat;
+            parms.points = IncidentWorker_Raid.AdjustedRaidPoints(parms.points, parms.raidArrivalMode, parms.raidStrategy, parms.faction, combat);
+            PawnGroupMakerParms defaultPawnGroupMakerParms = IncidentParmsUtility.GetDefaultPawnGroupMakerParms(combat, parms, false);
+            List<Pawn> list = PawnGroupMakerUtility.GeneratePawns(defaultPawnGroupMakerParms, true).ToList<Pawn>();
+            if (list.Count == 0)
+                Log.Error("Got no pawns spawning raid from parms " + parms, false);
+            return list;
+        }
+
+        public static List<Pawn> GenerateNeutralPawns(PawnGroupKindDef pawnGroupKind,IncidentParms parms)
+        {
+            IsIntercepting_PawnGeneration = PawnPatchType.Generate;
+
+            PawnGroupMakerParms defaultPawnGroupMakerParms = IncidentParmsUtility.GetDefaultPawnGroupMakerParms(pawnGroupKind, parms, true);
+            List<Pawn> list = PawnGroupMakerUtility.GeneratePawns(defaultPawnGroupMakerParms, false).ToList<Pawn>();
+            return list;
         }
     }
 }
