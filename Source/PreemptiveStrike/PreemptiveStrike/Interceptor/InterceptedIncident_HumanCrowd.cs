@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RimWorld;
+using PreemptiveStrike.Mod;
 using Verse;
 
 namespace PreemptiveStrike.Interceptor
@@ -32,19 +33,22 @@ namespace PreemptiveStrike.Interceptor
         protected virtual void RevealIntention()
         {
             intention_revealed = true;
-            Log.Message("Intention Revealed!!!");
+            if (PES_Settings.DebugModeOn)
+                Log.Message("Intention Revealed!!!");
         }
 
         protected virtual void RevealFaction()
         {
             faction_revealed = true;
-            Log.Message("faction Revealed!!!");
+            if (PES_Settings.DebugModeOn)
+                Log.Message("faction Revealed!!!");
         }
 
         protected virtual void RevealSpawnPosition()
         {
             spawnPosition_revealed = true;
-            Log.Message("SpawnPosition Revealed!!!");
+            if (PES_Settings.DebugModeOn)
+                Log.Message("SpawnPosition Revealed!!!");
         }
 
         protected abstract void RevealCrowdSize();

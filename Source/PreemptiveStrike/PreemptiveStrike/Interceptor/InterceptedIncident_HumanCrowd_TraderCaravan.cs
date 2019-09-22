@@ -67,8 +67,11 @@ namespace PreemptiveStrike.Interceptor
                 availables.Add(RevealSpawnPosition);
             if (!caravanType_revealed && intention_revealed && crowdSize_revealed)
                 availables.Add(RevealTraderKind);
-            Action OneToReveal = availables.RandomElement<Action>();
-            OneToReveal();
+            if (availables.Count != 0)
+            {
+                Action OneToReveal = availables.RandomElement<Action>();
+                OneToReveal();
+            }
         }
 
         public override void RevealAllInformation()

@@ -17,7 +17,7 @@ namespace PreemptiveStrike.Interceptor
 
     enum WorkerPatchType
     {
-        Nothing,
+        ExecuteOrigin,
         Forestall,
         Substitution
     }
@@ -25,7 +25,8 @@ namespace PreemptiveStrike.Interceptor
     [StaticConstructorOnStartup]
     class IncidentInterceptorUtility
     {
-        //Intercepting Switches(Used in harmony Patches)
+        #region Intercepting Switches
+        //Used in harmony Patches
         public static bool IsIntercepting_IncidentExcecution;
         public static PawnPatchType IsIntercepting_PawnGeneration;
 
@@ -33,7 +34,12 @@ namespace PreemptiveStrike.Interceptor
         public static bool isIntercepting_TravelerGroup;
         public static bool isIntercepting_VisitorGroup;
 
-        public static bool IsIntercepting_PawnArrivalWorker;
+        public static WorkerPatchType isIntercepting_FarmAnimalsWanderIn;
+        public static WorkerPatchType isIntercepting_HerdMigration;
+        public static WorkerPatchType isIntercepting_ThrumboPasses;
+        public static WorkerPatchType isIntercepting_Alphabeavers;
+        public static WorkerPatchType isIntercepting_ManhunterPack;
+        #endregion
 
         public static List<Pawn> tmpPawnList;
         public static InterceptedIncident tmpIncident;
@@ -42,10 +48,16 @@ namespace PreemptiveStrike.Interceptor
         {
             IsIntercepting_IncidentExcecution = true;
             IsIntercepting_PawnGeneration = PawnPatchType.Generate;
-            
+
             isIntercepting_TraderCaravan_Worker = true;
             isIntercepting_TravelerGroup = true;
             isIntercepting_VisitorGroup = true;
+
+            isIntercepting_FarmAnimalsWanderIn = WorkerPatchType.Forestall;
+            isIntercepting_HerdMigration = WorkerPatchType.Forestall;
+            isIntercepting_ThrumboPasses = WorkerPatchType.Forestall;
+            isIntercepting_Alphabeavers = WorkerPatchType.Forestall;
+            isIntercepting_ManhunterPack = WorkerPatchType.Forestall;
         }
 
         public static bool Intercept_Raid_EdgeWalkIn(IncidentParms parms)
@@ -63,12 +75,27 @@ namespace PreemptiveStrike.Interceptor
             return true;
         }
 
-        public static bool CreateIncidentCaraven<T> (IncidentDef incidentDef, IncidentParms parms) where T : InterceptedIncident, new()
+        public static bool CreateIncidentCaraven_HumanNeutral<T>(IncidentDef incidentDef, IncidentParms parms) where T : InterceptedIncident, new()
         {
             InterceptedIncident incident = new T();
             incident.incidentDef = incidentDef;
             incident.parms = parms;
             IsIntercepting_PawnGeneration = PawnPatchType.ReturnZero;
+            if (!IncidentCaravanUtility.AddNewIncidentCaravan(incident))
+            {
+                Log.Error("Fail to create Incident Caravan");
+                return false;
+            }
+            return true;
+        }
+
+        public static bool CreateIncidentCaravan_Animal<T>(IncidentDef incidentDef, IncidentParms parms) where T : InterceptedIncident, new()
+        {
+            InterceptedIncident incident = new T();
+            incident.incidentDef = incidentDef;
+            incident.parms = parms;
+            if (!incident.ManualDeterminParams())
+                return false;
             if (!IncidentCaravanUtility.AddNewIncidentCaravan(incident))
             {
                 Log.Error("Fail to create Incident Caravan");
@@ -90,7 +117,7 @@ namespace PreemptiveStrike.Interceptor
             return list;
         }
 
-        public static List<Pawn> GenerateNeutralPawns(PawnGroupKindDef pawnGroupKind,IncidentParms parms)
+        public static List<Pawn> GenerateNeutralPawns(PawnGroupKindDef pawnGroupKind, IncidentParms parms)
         {
             IsIntercepting_PawnGeneration = PawnPatchType.Generate;
 

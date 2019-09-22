@@ -58,6 +58,12 @@
     <Compile Include="IncidentCaravan\TravelingRaidingCaravan.cs" />
     <Compile Include="Interceptor\IncidentInterceptorUtility.cs" />
     <Compile Include="Interceptor\InterceptedIncident.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_AnimalHerd.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_AnimalHerd_Alphabeavers.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_AnimalHerd_FarmAnimalsWanderIn.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_AnimalHerd_HerdMigration.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_AnimalHerd_ManhunterPack.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_AnimalHerd_ThrumboPasses.cs" />
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd.cs" />
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_Neutral.cs" />
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_TraderCaravan.cs" />

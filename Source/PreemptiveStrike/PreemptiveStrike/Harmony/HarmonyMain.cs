@@ -18,6 +18,16 @@ namespace PreemptiveStrike.Harmony
         {
             instance = HarmonyInstance.Create("DrCarlLuo.Rimworld.PreemptiveStrike");
             instance.PatchAll(Assembly.GetExecutingAssembly());
+            ManualPatchings();
+        }
+
+        static void ManualPatchings()
+        {
+            //This alphabeaver one is f**king special
+            //Why it has to be an INTERNAL CLASS, WHYYYYYYYYYYYYYYYYYYYYYY?????
+            var prefix = typeof(Patch_IncidentWorker_Alphabeavers_TryExecuteWorker).GetMethod("Prefix");
+            instance.Patch(AccessTools.Method(AccessTools.TypeByName("RimWorld.IncidentWorker_Alphabeavers"), "TryExecuteWorker"), new HarmonyMethod(prefix));
+
         }
     }
 }

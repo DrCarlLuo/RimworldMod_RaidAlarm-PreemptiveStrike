@@ -76,8 +76,11 @@ namespace PreemptiveStrike.Interceptor
                 availables.Add(RevealSpawnPosition);
             if (!raidStrategy_revealed && intention_revealed)
                 availables.Add(RevealStrategy);
-            Action OneToReveal = availables.RandomElement<Action>();
-            OneToReveal();
+            if (availables.Count != 0)
+            {
+                Action OneToReveal = availables.RandomElement<Action>();
+                OneToReveal();
+            }
         }
 
         public override void RevealAllInformation()

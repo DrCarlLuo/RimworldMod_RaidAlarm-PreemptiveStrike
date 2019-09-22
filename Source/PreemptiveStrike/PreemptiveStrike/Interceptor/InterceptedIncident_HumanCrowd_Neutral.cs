@@ -43,8 +43,11 @@ namespace PreemptiveStrike.Interceptor
                 availables.Add(RevealCrowdSize);
             if (!spawnPosition_revealed)
                 availables.Add(RevealSpawnPosition);
-            Action OneToReveal = availables.RandomElement<Action>();
-            OneToReveal();
+            if (availables.Count != 0)
+            {
+                Action OneToReveal = availables.RandomElement<Action>();
+                OneToReveal();
+            }
         }
 
         protected override void RevealCrowdSize()
