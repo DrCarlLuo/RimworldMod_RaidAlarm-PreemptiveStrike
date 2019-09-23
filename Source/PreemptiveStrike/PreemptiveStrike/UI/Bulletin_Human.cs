@@ -21,7 +21,7 @@ namespace PreemptiveStrike.UI
 
         private InterceptedIncident_HumanCrowd Incident_Human => incident as InterceptedIncident_HumanCrowd;
 
-        private void DetermineCategory()
+        protected override void DetermineCategory()
         {
             if (Incident_Human.faction_revealed)
             {

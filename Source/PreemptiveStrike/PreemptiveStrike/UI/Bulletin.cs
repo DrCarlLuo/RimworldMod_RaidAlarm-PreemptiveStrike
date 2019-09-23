@@ -17,7 +17,7 @@ namespace PreemptiveStrike.UI
         Neutral
     }
 
-    class Bulletin
+    abstract class Bulletin
     {
         public string MainLabel;
         public Texture2D MainIcon;
@@ -36,6 +36,8 @@ namespace PreemptiveStrike.UI
                 return new Bulletin_Animal(caravan);
             return null;
         }
+
+        protected abstract void DetermineCategory();
 
         protected virtual void DrawIcon(float x,float y)
         {

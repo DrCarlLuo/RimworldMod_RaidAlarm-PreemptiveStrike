@@ -32,6 +32,8 @@ namespace PreemptiveStrike.Interceptor
         protected virtual void RevealIntention()
         {
             intention_revealed = true;
+            PreemptiveStrike.UI.ColonySecurityDashBoard_Window.Recache();
+
             if (PES_Settings.DebugModeOn)
                 Log.Message("Intention Revealed!!!");
         }
