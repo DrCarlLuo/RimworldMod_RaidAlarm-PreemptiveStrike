@@ -17,7 +17,7 @@ namespace PreemptiveStrike.DetectionSystem
     {
         public static Dictionary<int, int> LastWatchTowerUsedTickInMapTile;
 
-        public static bool TryDetectIncidentCaravan(TravelingRaidingCaravan caravan)
+        public static bool TryDetectIncidentCaravan(TravelingIncidentCaravan caravan)
         {
             int targetTile = caravan.incident.parms.target.Tile;
             int remainingTiles = Mathf.CeilToInt(ApproxTileNumBetweenCaravanTarget(caravan));
@@ -32,7 +32,7 @@ namespace PreemptiveStrike.DetectionSystem
             return false;
         }
 
-        public static bool TryDetectCaravanDetail(TravelingRaidingCaravan caravan)
+        public static bool TryDetectCaravanDetail(TravelingIncidentCaravan caravan)
         {
             if(caravan.detected)
             {
@@ -44,7 +44,7 @@ namespace PreemptiveStrike.DetectionSystem
             return false;
         }
 
-        public static bool TryConfirmCaravanWithinVision(TravelingRaidingCaravan caravan)
+        public static bool TryConfirmCaravanWithinVision(TravelingIncidentCaravan caravan)
         {
             int targetTile = caravan.incident.parms.target.Tile;
             int remainingTiles = Mathf.CeilToInt(ApproxTileNumBetweenCaravanTarget(caravan));
@@ -78,7 +78,7 @@ namespace PreemptiveStrike.DetectionSystem
             return res;
         }
 
-        public static float ApproxTileNumBetweenCaravanTarget(TravelingRaidingCaravan caravan)
+        public static float ApproxTileNumBetweenCaravanTarget(TravelingIncidentCaravan caravan)
         {
             //TODO: Is this a little costly???
             return Find.WorldGrid.ApproxDistanceInTiles(caravan.Tile, caravan.incident.parms.target.Tile);

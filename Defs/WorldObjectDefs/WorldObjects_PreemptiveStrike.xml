@@ -6,7 +6,7 @@
     <defName>PES_RaidingCaravan</defName>
     <label>Incoming Raiding Caravan</label>
     <description>An enemy raiding caravan heading towards your settlement! Prepare for it or conduct a preemptive strike!</description>
-    <worldObjectClass>PreemptiveStrike.IncidentCaravan.TravelingRaidingCaravan</worldObjectClass>
+    <worldObjectClass>PreemptiveStrike.IncidentCaravan.TravelingIncidentCaravan</worldObjectClass>
     <texture>World/WorldObjects/Caravan</texture>
     <useDynamicDrawer>true</useDynamicDrawer>
     <expandingIcon>true</expandingIcon>

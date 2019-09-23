@@ -13,9 +13,11 @@ namespace PreemptiveStrike.IncidentCaravan
 {
     static class IncidentCaravanUtility
     {
+        public static List<TravelingIncidentCaravan> IncidentCaravans = new List<TravelingIncidentCaravan>();
+
         public static bool AddNewIncidentCaravan(InterceptedIncident incident)
         {
-            TravelingRaidingCaravan travalingCaravan = (TravelingRaidingCaravan)WorldObjectMaker.MakeWorldObject(DefDatabase<WorldObjectDef>.GetNamed("PES_RaidingCaravan", true));
+            TravelingIncidentCaravan travalingCaravan = (TravelingIncidentCaravan)WorldObjectMaker.MakeWorldObject(DefDatabase<WorldObjectDef>.GetNamed("PES_RaidingCaravan", true));
             if (!TryFindTile(incident.parms.target.Tile, out int sourceTile))
             {
                 Log.Error("Fail to create incident caravan: no available tile found");

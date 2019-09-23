@@ -12,7 +12,7 @@ using PreemptiveStrike.Mod;
 
 namespace PreemptiveStrike.IncidentCaravan
 {
-    class TravelingRaidingCaravan : WorldObject
+    class TravelingIncidentCaravan : WorldObject
     {
         public int initialTile = -1;
         public Vector3 curPos;
@@ -96,8 +96,9 @@ namespace PreemptiveStrike.IncidentCaravan
         {
             if (!confirmed)
             {
+                bool newDetected = detected;
                 if (!detected)
-                    detected = DetectDangerUtilities.TryDetectIncidentCaravan(this);
+                    newDetected = DetectDangerUtilities.TryDetectIncidentCaravan(this);
                 else
                 {
                     if (DetectDangerUtilities.TryDetectCaravanDetail(this))
@@ -107,7 +108,14 @@ namespace PreemptiveStrike.IncidentCaravan
                 confirmed = DetectDangerUtilities.TryConfirmCaravanWithinVision(this);
                 if (confirmed)
                     incident.RevealAllInformation();
-                detected = detected || confirmed;
+                newDetected = newDetected || confirmed;
+
+                if (newDetected != detected)
+                {
+                    detected = newDetected;
+                    PreemptiveStrike.UI.ColonySecurityDashBoard_Window.Recache();
+                }
+                
             }
         }
 

@@ -33,6 +33,7 @@ namespace PreemptiveStrike.Interceptor
         protected virtual void RevealIntention()
         {
             intention_revealed = true;
+            PreemptiveStrike.UI.ColonySecurityDashBoard_Window.Recache();
             if (PES_Settings.DebugModeOn)
                 Log.Message("Intention Revealed!!!");
         }
@@ -40,6 +41,7 @@ namespace PreemptiveStrike.Interceptor
         protected virtual void RevealFaction()
         {
             faction_revealed = true;
+            PreemptiveStrike.UI.ColonySecurityDashBoard_Window.Recache();
             if (PES_Settings.DebugModeOn)
                 Log.Message("faction Revealed!!!");
         }
@@ -63,6 +65,7 @@ namespace PreemptiveStrike.Interceptor
                 RevealSpawnPosition();
             if (!crowdSize_revealed)
                 RevealCrowdSize();
+            PreemptiveStrike.UI.ColonySecurityDashBoard_Window.Recache();
         }
     }
 }
