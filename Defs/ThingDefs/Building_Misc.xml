@@ -2,35 +2,29 @@
 
 <Defs>
 	<ThingDef ParentName="BuildingBase">
-    <defName>PES_watchtower</defName>
-    <label>WatchTower</label>
+    <defName>PES_PremitiveWatchtower</defName>
+    <label>Premitive WatchTower</label>
 	  <thingClass>Building</thingClass>
-    <description>A tall tower where one colonist can go on sentry duty, keeping a vigilant eye on the surrounding and alert the colony in time when danger approaches</description>
+    <description>A premitive tall tower where one colonist can go on sentry duty, keeping a vigilant eye on the surrounding, and when danger approaches, alert the colony in time by making smoke signal</description>
     <graphicData>
-      <texPath>Things/Buildings/Watchtower</texPath>
+      <texPath>Things/Buildings/PrimitiveWatchTower</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3, 4)</drawSize>
+      <drawSize>(3, 7)</drawSize>
       <shadowData>
         <volume>(3.0, 3.0, 3.0)</volume>
       </shadowData>
     </graphicData>
-    <costStuffCount>300</costStuffCount>
     <costList>
-      <Steel>50</Steel>
+      <WoodLog>300</WoodLog>
     </costList>
-    <stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-      <li>Stony</li>
-		</stuffCategories>
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
-      <MaxHitPoints>500</MaxHitPoints>
+      <MaxHitPoints>300</MaxHitPoints>
       <WorkToBuild>2000</WorkToBuild>
-      <Flammability>0.4</Flammability>
+      <Flammability>1</Flammability>
 	    <Beauty>0</Beauty>
     </statBases>
 	  <building>
@@ -38,8 +32,7 @@
 	  </building>
     <blockWind>true</blockWind>
 	  <fillPercent>0.5</fillPercent>
-    <interactionCellIcon>DiningChair</interactionCellIcon>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <interactionCellOffset>(0,0,3)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 	  <passability>PassThroughOnly</passability>
@@ -49,5 +42,192 @@
     <canOverlapZones>false</canOverlapZones>
     <size>(3, 3)</size>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+    <defName>PES_watchtower</defName>
+    <label>WatchTower</label>
+	  <thingClass>Building</thingClass>
+    <description>Modern construction technology made it possible to build a watch tower much taller than a primitive one. Besides the height, some modern electronic devices can make the colonist on sentry duty see further. Can work without electricity, but only provide half the vision range and detection range.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Watchtower</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6, 12)</drawSize>
+      <shadowData>
+        <volume>(3.0, 3.0, 3.0)</volume>
+      </shadowData>
+    </graphicData>
+    <costList>
+      <Steel>300</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0</Flammability>
+	    <Beauty>0</Beauty>
+    </statBases>
+	  <building>
+      <allowAutoroof>false</allowAutoroof>
+	  </building>
+    <blockWind>true</blockWind>
+	  <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(2,0,3)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+	  <passability>PassThroughOnly</passability>
+    <pathCost>10</pathCost>
+    <designationCategory>Security</designationCategory>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(6, 6)</size>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PES_Radar</defName>
+    <label>Radar</label>
+	  <thingClass>Building</thingClass>
+    <description>A detection system that uses radio waves to determine the range, angle, or velocity of objects. Can be used to extend the detection range of the cology.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Radar</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3, 4)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>300</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <building>
+      <allowAutoroof>false</allowAutoroof>
+    </building>
+    <fillPercent>0.50</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	  <passability>PassThroughOnly</passability>
+    <pathCost>25</pathCost>
+    <designationCategory>Security</designationCategory>
+    <rotatable>true</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(3, 4)</size>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PES_SentryDroneArray</defName>
+    <label>Sentry Drone Array</label>
+	  <thingClass>Building</thingClass>
+    <description>A operation and monitor console for several sentry drones which are used for reconnaissance duty and greatly expand the vision range of the colony</description>
+    <graphicData>
+      <texPath>Things/Buildings/DroneArray</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(9, 9)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>300</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <building>
+      <allowAutoroof>false</allowAutoroof>
+    </building>
+    <fillPercent>0.50</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	  <passability>PassThroughOnly</passability>
+    <pathCost>25</pathCost>
+    <designationCategory>Security</designationCategory>
+    <rotatable>true</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(7, 5)</size>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PES_SpySatellite</defName>
+    <label>Reconnaissance Satellite Uplink</label>
+	  <thingClass>Building</thingClass>
+    <description>An uplink station receiving and transmitting data between a spy satellite and the colony, extending the detection range of the colony to cover a huge area of this planet</description>
+    <graphicData>
+      <texPath>Things/Buildings/SpySatellite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2.46875</drawSize>
+    </graphicData>
+    <uiIconScale>0.85</uiIconScale>
+    <costList>
+      <Steel>300</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <fillPercent>0.50</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	  <passability>PassThroughOnly</passability>
+    <pathCost>25</pathCost>
+    <designationCategory>Security</designationCategory>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(2, 2)</size>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
   </ThingDef>
 </Defs>
