@@ -37,7 +37,7 @@ namespace PreemptiveStrike.IncidentCaravan
         private static bool TryFindTile(int targetTile, out int tile)
         {
             //IntRange banditCampQuestSiteDistanceRange = SiteTuning.BanditCampQuestSiteDistanceRange;
-            IntRange banditCampQuestSiteDistanceRange = new IntRange(6,7);
+            IntRange banditCampQuestSiteDistanceRange = new IntRange(10,11);
             return TileFinder.TryFindNewSiteTile(out tile, banditCampQuestSiteDistanceRange.min, banditCampQuestSiteDistanceRange.max, false, true, -1);
         }
     }

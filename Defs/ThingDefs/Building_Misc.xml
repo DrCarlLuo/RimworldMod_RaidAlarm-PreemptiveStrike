@@ -5,7 +5,7 @@
     <defName>PES_PremitiveWatchtower</defName>
     <label>Premitive WatchTower</label>
 	  <thingClass>Building</thingClass>
-    <description>A premitive tall tower where one colonist can go on sentry duty, keeping a vigilant eye on the surrounding, and when danger approaches, alert the colony in time by making smoke signal</description>
+    <description>A premitive tall tower where one colonist can go on sentry duty, keeping a vigilant eye on the surrounding, and when danger approaches, alert the colony in time by making smoke signal.</description>
     <graphicData>
       <texPath>Things/Buildings/PrimitiveWatchTower</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -17,6 +17,15 @@
     <costList>
       <WoodLog>300</WoodLog>
     </costList>
+    <comps>
+      <li Class="PreemptiveStrike.Things.CompProperties_Detection">
+        <compClass>PreemptiveStrike.Things.CompDetection_ManualDevice</compClass>
+        <visionRangeProvide>1</visionRangeProvide>
+        <detectionRangeProvide>3</detectionRangeProvide>
+        <NotUsableUnderDarkness>true</NotUsableUnderDarkness>
+        <AffectedByOperatorSightAbility>true</AffectedByOperatorSightAbility>
+      </li>
+    </comps>
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
@@ -34,9 +43,9 @@
 	  <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,3)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 	  <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
+    <pathCost>10</pathCost>
     <designationCategory>Security</designationCategory>
     <rotatable>false</rotatable>
     <canOverlapZones>false</canOverlapZones>
@@ -68,6 +77,13 @@
       </li>
       <li Class="CompProperties_Breakdownable"/>
       <li Class="CompProperties_Flickable"/>
+      <li Class="PreemptiveStrike.Things.CompProperties_Detection">
+        <compClass>PreemptiveStrike.Things.CompDetection_ManualDevice</compClass>
+        <visionRangeProvide>2</visionRangeProvide>
+        <detectionRangeProvide>6</detectionRangeProvide>
+        <NotUsableUnderDarkness>true</NotUsableUnderDarkness>
+        <AffectedByOperatorSightAbility>true</AffectedByOperatorSightAbility>
+      </li>
     </comps>
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
@@ -94,7 +110,7 @@
     <canOverlapZones>false</canOverlapZones>
     <size>(6, 6)</size>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -147,23 +163,33 @@
     <defName>PES_SentryDroneArray</defName>
     <label>Sentry Drone Array</label>
 	  <thingClass>Building</thingClass>
-    <description>A operation and monitor console for several sentry drones which are used for reconnaissance duty and greatly expand the vision range of the colony</description>
+    <description>An operation and monitor console for several sentry drones which are used for reconnaissance duty and greatly expand the vision range of the colony</description>
     <graphicData>
       <texPath>Things/Buildings/DroneArray</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(9, 9)</drawSize>
     </graphicData>
     <costList>
-      <Steel>300</Steel>
-      <ComponentIndustrial>8</ComponentIndustrial>
+      <Steel>500</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentSpacer>5</ComponentSpacer>
+      <Plasteel>100</Plasteel>
+      <Gold>20</Gold>
     </costList>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>300</basePowerConsumption>
+        <basePowerConsumption>500</basePowerConsumption>
       </li>
       <li Class="CompProperties_Breakdownable"/>
       <li Class="CompProperties_Flickable"/>
+      <li Class="PreemptiveStrike.Things.CompProperties_Detection">
+        <compClass>PreemptiveStrike.Things.CompDetection_ManualDevice</compClass>
+        <visionRangeProvide>6</visionRangeProvide>
+        <detectionRangeProvide>0</detectionRangeProvide>
+        <NotUsableUnderDarkness>false</NotUsableUnderDarkness>
+        <AffectedByOperatorSightAbility>false</AffectedByOperatorSightAbility>
+      </li>
     </comps>
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
@@ -172,22 +198,26 @@
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
-      <WorkToBuild>2000</WorkToBuild>
+      <WorkToBuild>3000</WorkToBuild>
       <Flammability>0.5</Flammability>
     </statBases>
     <building>
       <allowAutoroof>false</allowAutoroof>
     </building>
-    <fillPercent>0.50</fillPercent>
+    <fillPercent>0.40</fillPercent>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 	  <passability>PassThroughOnly</passability>
     <pathCost>25</pathCost>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,3)</interactionCellOffset>
+    <interactionCellIcon>DiningChair</interactionCellIcon>
+    <interactionCellIconReverse>true</interactionCellIconReverse>
     <designationCategory>Security</designationCategory>
     <rotatable>true</rotatable>
     <canOverlapZones>false</canOverlapZones>
     <size>(7, 5)</size>
-    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">

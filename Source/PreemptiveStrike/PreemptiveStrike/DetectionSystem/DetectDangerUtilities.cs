@@ -11,11 +11,24 @@ using PreemptiveStrike.Mod;
 
 namespace PreemptiveStrike.DetectionSystem
 {
+    struct DetectionEffect
+    {
+        public int LastTick;
+        public int Vision;
+        public int Detection;
+
+        public DetectionEffect(int lastTick, int vision, int detection)
+        {
+            LastTick = lastTick;
+            Vision = vision;
+            Detection = detection;
+        }
+    }
 
     [StaticConstructorOnStartup]
     static class DetectDangerUtilities
     {
-        public static Dictionary<int, int> LastWatchTowerUsedTickInMapTile;
+        public static Dictionary<int, DetectionEffect> DetectionAbilityInMapTile;
 
         public static bool TryDetectIncidentCaravan(TravelingIncidentCaravan caravan)
         {
@@ -34,7 +47,7 @@ namespace PreemptiveStrike.DetectionSystem
 
         public static bool TryDetectCaravanDetail(TravelingIncidentCaravan caravan)
         {
-            if(caravan.detected)
+            if (caravan.detected)
             {
                 if (new IntRange(1, 100).RandomInRange <= PES_Settings.DetectionChance)
                 {
@@ -48,7 +61,10 @@ namespace PreemptiveStrike.DetectionSystem
         {
             int targetTile = caravan.incident.parms.target.Tile;
             int remainingTiles = Mathf.CeilToInt(ApproxTileNumBetweenCaravanTarget(caravan));
-            if (remainingTiles <= GetVisionRangeOfMap(targetTile))
+            int visionRange = GetVisionRangeOfMap(targetTile);
+            if (visionRange == 0)
+                return false; //if the colony has no vision, then dont do it at all
+            if (remainingTiles <= visionRange)
             {
                 Messages.Message("Caravan Spotted!", MessageTypeDefOf.NegativeEvent);
                 return true;
@@ -58,24 +74,16 @@ namespace PreemptiveStrike.DetectionSystem
 
         public static int GetDetectionRangeOfMap(int MapTile)
         {
-            int res = -1;
-            if (LastWatchTowerUsedTickInMapTile.TryGetValue(MapTile, out int lastTick))
-            {
-                if (lastTick == Find.TickManager.TicksGame)
-                    res = Math.Max(res, PES_Settings.WatchTowerDetectRange);
-            }
-            return res;
+            if (DetectionAbilityInMapTile.TryGetValue(MapTile, out DetectionEffect effect) && effect.LastTick == Find.TickManager.TicksGame)
+                return effect.Detection;
+            return 0;
         }
 
         public static int GetVisionRangeOfMap(int MapTile)
         {
-            int res = -1;
-            if (LastWatchTowerUsedTickInMapTile.TryGetValue(MapTile, out int lastTick))
-            {
-                if (lastTick == Find.TickManager.TicksGame)
-                    res = Math.Max(res, PES_Settings.WatchTowerVisionRange);
-            }
-            return res;
+            if (DetectionAbilityInMapTile.TryGetValue(MapTile, out DetectionEffect effect) && effect.LastTick == Find.TickManager.TicksGame)
+                return effect.Vision;
+            return 0;
         }
 
         public static float ApproxTileNumBetweenCaravanTarget(TravelingIncidentCaravan caravan)
@@ -88,7 +96,7 @@ namespace PreemptiveStrike.DetectionSystem
 
         static DetectDangerUtilities()
         {
-            LastWatchTowerUsedTickInMapTile = new Dictionary<int, int>();
+            DetectionAbilityInMapTile = new Dictionary<int, DetectionEffect>();
         }
     }
 }

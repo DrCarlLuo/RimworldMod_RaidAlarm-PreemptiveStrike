@@ -2,9 +2,9 @@
 
 <Defs>
   <WorkGiverDef>
-    <defName>PES_StandGuard</defName>
-    <label>StandGuard at WatchTower</label>
-    <giverClass>PreemptiveStrike.Jobs.WorkGiver_PES_StandGuard</giverClass>
+    <defName>PES_StandGuard_Primitive</defName>
+    <label>StandGuard at Primitive WatchTower</label>
+    <giverClass>PreemptiveStrike.Jobs.WorkGiver_PES_StandGuard_Primitive</giverClass>
     <workType>Recon</workType>
     <priorityInType>100</priorityInType>
     <verb>stand guard</verb>
@@ -12,6 +12,31 @@
     <requiredCapacities>
       <li>Sight</li>
     </requiredCapacities>
-    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>PES_StandGuard</defName>
+    <label>StandGuard at WatchTower</label>
+    <giverClass>PreemptiveStrike.Jobs.WorkGiver_PES_StandGuard</giverClass>
+    <workType>Recon</workType>
+    <priorityInType>200</priorityInType>
+    <verb>stand guard</verb>
+    <gerund>standing guard</gerund>
+    <requiredCapacities>
+      <li>Sight</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+    <WorkGiverDef>
+    <defName>PES_OperateSentryArray</defName>
+    <label>Monitor Sentry Drone Array Console</label>
+    <giverClass>PreemptiveStrike.Jobs.WorkGiver_PES_OperateSentryArray</giverClass>
+    <workType>Recon</workType>
+    <priorityInType>300</priorityInType>
+    <verb>monitor</verb>
+    <gerund>monitoring at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
   </WorkGiverDef>
 </Defs>

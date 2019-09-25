@@ -9,7 +9,7 @@ using PreemptiveStrike.Things;
 
 namespace PreemptiveStrike.Jobs
 {
-    class JobDriver_PES_StandGuard : JobDriver
+    class JobDriver_PES_StandGuard_Primitive : JobDriver
     {
         private int lastRotateTick;
 
@@ -25,13 +25,12 @@ namespace PreemptiveStrike.Jobs
         {
             this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
             this.FailOnBurningImmobile(TargetIndex.A);
+            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
             this.FailOn(delegate ()
             {
                 var comp = this.job.targetA.Thing.TryGetComp<CompDetection_ManualDevice>();
                 return !comp.CanUseNow;
             });
-
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
 
             Toil work = new Toil();
             lastRotateTick = Find.TickManager.TicksGame;
@@ -39,7 +38,7 @@ namespace PreemptiveStrike.Jobs
             {
                 Pawn actor = work.actor;
                 actor.skills.Learn(SkillDefOf.Shooting, 0.035f, false);
-
+                
                 if (Find.TickManager.TicksGame - lastRotateTick >= 300)
                 {
                     rotateToFace = TargetIndex.B;

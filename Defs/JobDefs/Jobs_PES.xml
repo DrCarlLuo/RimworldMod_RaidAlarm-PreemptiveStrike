@@ -2,9 +2,25 @@
 
 <Defs>
   <JobDef>
+    <defName>PES_StandGuard_Primitive</defName>
+    <driverClass>PreemptiveStrike.Jobs.JobDriver_PES_StandGuard_Primitive</driverClass>
+    <reportString>Standing guard at TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </JobDef>
+
+  <JobDef>
     <defName>PES_StandGuard</defName>
     <driverClass>PreemptiveStrike.Jobs.JobDriver_PES_StandGuard</driverClass>
     <reportString>Standing guard at TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </JobDef>
+
+    <JobDef>
+    <defName>PES_OperateSentryArray</defName>
+    <driverClass>PreemptiveStrike.Jobs.JobDriver_PES_OperateSentryArray</driverClass>
+    <reportString>Monitoring drone reconnaissance at TargetA.</reportString>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 </Defs>

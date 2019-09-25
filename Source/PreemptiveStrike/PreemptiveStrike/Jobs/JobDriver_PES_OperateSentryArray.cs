@@ -9,10 +9,8 @@ using PreemptiveStrike.Things;
 
 namespace PreemptiveStrike.Jobs
 {
-    class JobDriver_PES_StandGuard : JobDriver
+    class JobDriver_PES_OperateSentryArray : JobDriver
     {
-        private int lastRotateTick;
-
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             Pawn pawn = this.pawn;
@@ -30,29 +28,22 @@ namespace PreemptiveStrike.Jobs
                 var comp = this.job.targetA.Thing.TryGetComp<CompDetection_ManualDevice>();
                 return !comp.CanUseNow;
             });
-
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
-
             Toil work = new Toil();
-            lastRotateTick = Find.TickManager.TicksGame;
             work.tickAction = delegate ()
             {
                 Pawn actor = work.actor;
-                actor.skills.Learn(SkillDefOf.Shooting, 0.035f, false);
+                Building building = (Building)actor.CurJob.targetA.Thing;
 
-                if (Find.TickManager.TicksGame - lastRotateTick >= 300)
-                {
-                    rotateToFace = TargetIndex.B;
-                    actor.Rotation = Rot4.Random;
-                    lastRotateTick = Find.TickManager.TicksGame;
-                }
+                actor.skills.Learn(SkillDefOf.Intellectual, 0.035f, false);
+                actor.GainComfortFromCellIfPossible();
 
                 var comp = this.job.targetA.Thing.TryGetComp<CompDetection_ManualDevice>();
                 comp.Use(actor);
             };
             work.defaultCompleteMode = ToilCompleteMode.Never;
             work.FailOnCannotTouch(TargetIndex.A, PathEndMode.InteractionCell);
-            //work.activeSkill = (() => SkillDefOf.Shooting);
+            //work.activeSkill = (() => SkillDefOf.Intellectual);
             yield return work;
         }
     }

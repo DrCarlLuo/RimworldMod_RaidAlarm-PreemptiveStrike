@@ -9,13 +9,14 @@ using PreemptiveStrike.Things;
 
 namespace PreemptiveStrike.Jobs
 {
-    class WorkGiver_PES_StandGuard : WorkGiver_Scanner
+    class WorkGiver_PES_StandGuard_Primitive : WorkGiver_Scanner
     {
-        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForDef(PESDefOf.PES_watchtower);
+        public override ThingRequest PotentialWorkThingRequest
+            => ThingRequest.ForDef(PESDefOf.PES_PremitiveWatchtower);
 
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
-            return pawn.Map.listerBuildings.AllBuildingsColonistOfDef(PESDefOf.PES_watchtower).Cast<Thing>();
+            return pawn.Map.listerBuildings.AllBuildingsColonistOfDef(PESDefOf.PES_PremitiveWatchtower).Cast<Thing>();
         }
 
         public override PathEndMode PathEndMode => PathEndMode.InteractionCell;
@@ -25,7 +26,7 @@ namespace PreemptiveStrike.Jobs
             List<Building> allBuildingsColonist = pawn.Map.listerBuildings.allBuildingsColonist;
             for (int i = 0; i < allBuildingsColonist.Count; i++)
             {
-                if (allBuildingsColonist[i].def == PESDefOf.PES_watchtower)
+                if (allBuildingsColonist[i].def == PESDefOf.PES_PremitiveWatchtower)
                 {
                     CompDetection_ManualDevice comp = allBuildingsColonist[i].GetComp<CompDetection_ManualDevice>();
                     if (comp != null && comp.CanUseNow)
@@ -39,6 +40,7 @@ namespace PreemptiveStrike.Jobs
         {
             if (t.Faction != pawn.Faction)
                 return false;
+
             Building building = t as Building;
             if (building == null)
                 return false;
@@ -55,7 +57,8 @@ namespace PreemptiveStrike.Jobs
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            return new Job(PESDefOf.PES_StandGuard, t, 1500, true);
+            return new Job(PESDefOf.PES_StandGuard_Primitive, t, 1500, true);
         }
+
     }
 }
