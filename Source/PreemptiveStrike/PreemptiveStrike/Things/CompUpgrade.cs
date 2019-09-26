@@ -16,7 +16,7 @@ namespace PreemptiveStrike.Things
         public static readonly string CompleteEventNameRoot = "CompleteUpgrade";
 
         public bool complete = false;
-        public int workAccum = 0;
+        public float workAccum = 0;
         public bool beginUpgrade = false;
         public ThingOwner ingredients;
 
@@ -25,21 +25,88 @@ namespace PreemptiveStrike.Things
             this.ingredients = new ThingOwner<Thing>(this);
         }
 
-        private bool AllPrerequisitesMeet 
-            => (Props.needResearch == null || Props.needResearch.IsFinished) &&
-               (Props.needUpgradeType == null)
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe.EnterNode("CompUpgrade_" + Props.upgradeTypeName);
+            Scribe_Values.Look(ref complete, "complete", false, false);
+            if (!complete)
+            {
+                Scribe_Values.Look(ref workAccum, "workAccum", 0f, false);
+                Scribe_Values.Look(ref beginUpgrade, "beginUpgrade", false, false);
+                Scribe_Deep.Look(ref this.ingredients, "ingredients");
+            }
+            if (ingredients == null)
+                ingredients = new ThingOwner<Thing>(this);
+            if (Scribe.mode == LoadSaveMode.LoadingVars)
+            {
+                //Use this to apply update in save-loading
+                //so that compdetection does not need to save any data
+                if (complete)
+                    PostUpgrade(true);
+            }
+            Scribe.ExitNode();
+        }
 
-        public float FinishPercentage => Mathf.Clamp01(this.workAccum * 1f / Math.Max(Props.workAmount, 1));
+        private bool AllPrerequisitesMeet
+            => (Props.needResearch == null || Props.needResearch.IsFinished) &&
+               (Props.needUpgradeType == null);
+
+        public float FinishPercentage => Mathf.Clamp01(this.workAccum / Math.Max(Props.workAmount, 1));
+
+        private void UpdateDesignation()
+        {
+            if (this.parent.Map != null)
+            {
+                parent.ToggleDesignation(PESDefOf.PES_InstallUpgrade, parent.AllComps.OfType<CompUpgrade>().Any((CompUpgrade comp) => comp.beginUpgrade));
+            }
+        }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
+            UpdateDesignation();
         }
 
         public override void PostDeSpawn(Map map)
         {
             base.PostDeSpawn(map);
             ingredients.TryDropAll(parent.Position, map, ThingPlaceMode.Near);
+        }
+
+        public void Work(Pawn pawn, float workAmount)
+        {
+            workAccum += workAmount;
+            if (workAccum >= Props.workAmount)
+                CompleteUpgrade();
+
+        }
+
+        private void CompleteUpgrade()
+        {
+            beginUpgrade = false;
+            if (!complete)
+            {
+                complete = true;
+                ingredients.ClearAndDestroyContents(DestroyMode.Vanish);
+                UpdateDesignation();
+                PostUpgrade(false);
+            }
+        }
+
+        private void PostUpgrade(bool exposeData)
+        {
+            parent.BroadcastCompSignal(CompleteEventNameRoot + "_" + Props.upgradeTypeName);
+            if (Props.upgradeCompProp.Count > 0)
+            {
+                foreach (var prop in Props.upgradeCompProp)
+                {
+                    var comp = Activator.CreateInstance(prop.compClass) as ThingComp;
+                    parent.ForceAddComp(comp, prop);
+                    if (exposeData)
+                        comp.PostExposeData();
+                }
+            }
         }
 
         public void GetChildHolders(List<IThingHolder> outChildren)
@@ -49,22 +116,73 @@ namespace PreemptiveStrike.Things
 
         public ThingOwner GetDirectlyHeldThings() => ingredients;
 
+        public ThingDefCount TryGetOneMissingMaterial()
+        {
+            if (beginUpgrade)
+            {
+                foreach (var needThing in Props.costList)
+                {
+                    int remainingNum = needThing.count;
+                    foreach (var existThing in ingredients)
+                    {
+                        if (existThing.def == needThing.thingDef)
+                            remainingNum -= existThing.stackCount;
+                    }
+                    if (remainingNum > 0)
+                        return new ThingDefCount(needThing.thingDef, remainingNum);
+                }
+            }
+            return default;
+        }
+
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if(!complete && AllPrerequisitesMeet)
+            if (!complete && AllPrerequisitesMeet)
             {
                 yield return new Command_Toggle
                 {
-                    defaultLabel = Props.name,
-                    defaultDesc = Props.describe,
+                    defaultLabel = "Install" + Props.name,
+                    defaultDesc = Props.DescriptionOnGizmo,
                     toggleAction = delegate ()
                     {
-                        Log.Message("Pretend to be upgrading");
+                        if (!beginUpgrade && !AllPawnInColonyMeetSkillRequirement)
+                        {
+                            Messages.Message("A colonist with at least Level " + Props.needConstructionSkill + " in construction is required to construct this upgrading", this.parent, MessageTypeDefOf.RejectInput, false);
+                        }
+                        else
+                        {
+                            beginUpgrade = !beginUpgrade;
+                            if (!beginUpgrade)
+                                ingredients.TryDropAll(parent.Position, parent.Map, ThingPlaceMode.Near);
+                            UpdateDesignation();
+                        }
                     },
-                    isActive = () => beginUpgrade
+                    isActive = () => beginUpgrade,
+                    icon = ContentFinder<Texture2D>.Get(Props.GizmoTexPath)
                 };
             }
             yield break;
+        }
+
+        public bool PawnMeetsSkillRequirement(Pawn pawn) => pawn.skills.GetSkill(SkillDefOf.Construction).Level >= Props.needConstructionSkill;
+
+        public bool AllPawnInColonyMeetSkillRequirement => !parent.Map.mapPawns.FreeColonists.All((Pawn pawn) => !PawnMeetsSkillRequirement(pawn));
+
+        public override string CompInspectStringExtra()
+        {
+            StringBuilder sb = new StringBuilder("");
+            if (beginUpgrade)
+            {
+                sb.Append("Installing Upgrade: ");
+                sb.Append(Props.name);
+                sb.AppendLine();
+                sb.Append("Progress: ");
+                sb.Append(Mathf.RoundToInt(FinishPercentage * 100f));
+                sb.Append("%\n");
+                sb.Append("Delivered: ");
+                sb.Append(ingredients.ContentsString);
+            }
+            return sb.ToString();
         }
 
     }

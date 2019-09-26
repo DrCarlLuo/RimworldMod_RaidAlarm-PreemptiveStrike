@@ -71,9 +71,11 @@
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_TravelerGroup.cs" />
     <Compile Include="Interceptor\InterceptedIncident_RaidEnemy.cs" />
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_VisitorGroup.cs" />
+    <Compile Include="Jobs\JobDriver_PES_InstallUpgrade.cs" />
     <Compile Include="Jobs\JobDriver_PES_OperateSentryArray.cs" />
     <Compile Include="Jobs\JobDriver_PES_StandGuard.cs" />
     <Compile Include="Jobs\JobDriver_PES_StandGuard_Primitive.cs" />
+    <Compile Include="Jobs\WorkGiver_PES_InstallUpgrade.cs" />
     <Compile Include="Jobs\WorkGiver_PES_OperateSentryArray.cs" />
     <Compile Include="Jobs\WorkGiver_PES_StandGuard.cs" />
     <Compile Include="Jobs\WorkGiver_PES_StandGuard_Primitive.cs" />
@@ -82,9 +84,13 @@
     <Compile Include="Textures.cs" />
     <Compile Include="Things\CompDetection.cs" />
     <Compile Include="Things\CompDetection_ManualDevice.cs" />
+    <Compile Include="Things\CompNeedSustain.cs" />
     <Compile Include="Things\CompProperties_Detection.cs" />
+    <Compile Include="Things\CompProperties_NeedSustain.cs" />
     <Compile Include="Things\CompProperties_Upgrade.cs" />
     <Compile Include="Things\CompUpgrade.cs" />
+    <Compile Include="Things\UpgradeUtilities.cs" />
+    <Compile Include="Jobs\WorkGiver_PES_Refuel.cs" />
     <Compile Include="UI\Bulletin.cs" />
     <Compile Include="UI\Bulletin_Animal.cs" />
     <Compile Include="UI\Bulletin_Human.cs" />

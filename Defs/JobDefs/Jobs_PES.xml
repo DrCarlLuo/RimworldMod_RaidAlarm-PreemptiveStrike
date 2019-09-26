@@ -17,10 +17,16 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
   </JobDef>
 
-    <JobDef>
+  <JobDef>
     <defName>PES_OperateSentryArray</defName>
     <driverClass>PreemptiveStrike.Jobs.JobDriver_PES_OperateSentryArray</driverClass>
     <reportString>Monitoring drone reconnaissance at TargetA.</reportString>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
+
+  <JobDef>
+		<defName>PES_Job_InstallUpgrade</defName>
+		<driverClass>PreemptiveStrike.Jobs.JobDriver_PES_InstallUpgrade</driverClass>
+		<reportString>Installing upgrade at TargetA.</reportString>
+	</JobDef>
 </Defs>

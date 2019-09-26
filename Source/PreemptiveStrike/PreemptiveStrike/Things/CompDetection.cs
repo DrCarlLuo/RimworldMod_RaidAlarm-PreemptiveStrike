@@ -24,5 +24,25 @@ namespace PreemptiveStrike.Things
             oldEffect.Vision = Math.Max(oldEffect.Vision, visionRange);
             oldEffect.Detection = Math.Max(oldEffect.Detection, detectionRange);
         }
+
+        public override string CompInspectStringExtra()
+        {
+            var upgradeList = parent.AllComps.OfType<CompUpgrade>();
+            bool none = true;
+            StringBuilder sb = new StringBuilder("Installed Upgrade: ");
+            foreach (var comp in upgradeList)
+            {
+                if(comp.complete)
+                {
+                    if (none)
+                        none = false;
+                    else
+                        sb.Append(", ");
+                    sb.Append(comp.Props.name);
+                }
+            }
+            if (none) return null;
+            return sb.ToString();
+        }
     }
 }

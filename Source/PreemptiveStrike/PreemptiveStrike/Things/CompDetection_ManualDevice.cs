@@ -15,6 +15,8 @@ namespace PreemptiveStrike.Things
 
         public virtual bool CanUseNow => this.parent.Spawned && this.parent.Faction == Faction.OfPlayer && (!Props.NotUsableUnderDarkness || this.parent.Map.skyManager.CurSkyGlow > 0.3);
 
+        public event Action<Pawn> UseAction;
+
         public virtual void Use(Pawn worker)
         {
             if (!this.CanUseNow)
@@ -29,6 +31,7 @@ namespace PreemptiveStrike.Things
                 vision = Mathf.RoundToInt(vision * sightFactor);
                 detection = Mathf.RoundToInt(detection * sightFactor);
             }
+            UseAction?.Invoke(worker);
             this.UpdateDetectionAbility(vision, detection);
         }
 

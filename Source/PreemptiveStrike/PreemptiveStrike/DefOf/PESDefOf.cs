@@ -25,5 +25,8 @@ namespace PreemptiveStrike
         public static JobDef PES_StandGuard_Primitive;
         public static JobDef PES_StandGuard;
         public static JobDef PES_OperateSentryArray;
+        public static JobDef PES_Job_InstallUpgrade;
+
+        public static DesignationDef PES_InstallUpgrade;
     }
 }

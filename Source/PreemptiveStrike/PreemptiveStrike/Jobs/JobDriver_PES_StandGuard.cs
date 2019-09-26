@@ -15,10 +15,7 @@ namespace PreemptiveStrike.Jobs
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            Pawn pawn = this.pawn;
-            LocalTargetInfo targetA = this.job.targetA;
-            Job job = this.job;
-            return pawn.Reserve(targetA, job, 1, -1, null, errorOnFailed);
+            return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()

@@ -84,6 +84,59 @@
         <NotUsableUnderDarkness>true</NotUsableUnderDarkness>
         <AffectedByOperatorSightAbility>true</AffectedByOperatorSightAbility>
       </li>
+      <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
+        <name>Provide Food</name>
+        <description>Shine Bright like a diamond</description>
+        <upgradeTypeName>FoodSustain</upgradeTypeName>
+        <workAmount>1000</workAmount>
+        <costList>
+					<ComponentSpacer>2</ComponentSpacer>
+					<Plasteel>40</Plasteel>
+				</costList>
+        <needConstructionSkill>0</needConstructionSkill>
+        <GizmoTexPath>UI/rxUIUpgrade</GizmoTexPath>
+        <upgradeCompProp>
+          <li Class="CompProperties_Refuelable">
+            <fuelCapacity>60.0</fuelCapacity>
+            <fuelFilter>
+              <categories>
+                <li>FoodRaw</li>
+              </categories>
+            </fuelFilter>
+            <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+            <autoRefuelPercent>10</autoRefuelPercent>
+            <showFuelGizmo>true</showFuelGizmo>
+            <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+            <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+          </li>
+          <li Class = "PreemptiveStrike.Things.CompProperties_NeedSustain">
+            <needType>Food</needType>
+            <maxLevel>100</maxLevel>
+            <instant>true</instant>
+            <consumeFuel>true</consumeFuel>
+            <converseRatio>0.05</converseRatio>
+          </li>
+        </upgradeCompProp>
+      </li>
+      <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
+        <name>Provide Recreation</name>
+        <description>Shine Bright like a diamond</description>
+        <upgradeTypeName>RecreationSustain</upgradeTypeName>
+        <workAmount>1000</workAmount>
+        <costList>
+					<ComponentSpacer>2</ComponentSpacer>
+					<Plasteel>40</Plasteel>
+				</costList>
+        <needConstructionSkill>10</needConstructionSkill>
+        <GizmoTexPath>UI/rxUIUpgrade</GizmoTexPath>
+        <upgradeCompProp>
+          <li Class = "PreemptiveStrike.Things.CompProperties_NeedSustain">
+            <needType>Joy</needType>
+            <maxLevel>0.6</maxLevel>
+            <instant>false</instant>
+          </li>
+        </upgradeCompProp>
+      </li>
     </comps>
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>

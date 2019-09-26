@@ -17,5 +17,6 @@ namespace PreemptiveStrike
         public static readonly Texture2D IconAnimal = ContentFinder<Texture2D>.Get("UI/animals");
 
         public static readonly Texture2D IconMerchant = ContentFinder<Texture2D>.Get("UI/Merchant");
+
     }
 }

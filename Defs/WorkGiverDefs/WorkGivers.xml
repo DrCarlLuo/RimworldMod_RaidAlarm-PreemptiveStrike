@@ -27,7 +27,7 @@
     </requiredCapacities>
   </WorkGiverDef>
 
-    <WorkGiverDef>
+  <WorkGiverDef>
     <defName>PES_OperateSentryArray</defName>
     <label>Monitor Sentry Drone Array Console</label>
     <giverClass>PreemptiveStrike.Jobs.WorkGiver_PES_OperateSentryArray</giverClass>
@@ -38,5 +38,29 @@
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>PES_InstallUpgrade</defName>
+    <label>Install Upgrade in Recon Buildings</label>
+    <giverClass>PreemptiveStrike.Jobs.WorkGiver_PES_InstallUpgrade</giverClass>
+    <workType>Construction</workType>
+    <priorityInType>190</priorityInType>
+    <verb>upgrade</verb>
+    <gerund>upgrading</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>PES_Refuel</defName>
+    <label>refuel fuelable buildings</label>
+    <giverClass>PreemptiveStrike.Jobs.WorkGiver_PES_Refuel</giverClass>
+    <workType>Hauling</workType>
+    <verb>refuel</verb>
+    <gerund>refueling</gerund>
+    <priorityInType>60</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
   </WorkGiverDef>
 </Defs>
