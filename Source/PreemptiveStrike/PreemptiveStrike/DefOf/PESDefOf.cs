@@ -28,5 +28,11 @@ namespace PreemptiveStrike
         public static JobDef PES_Job_InstallUpgrade;
 
         public static DesignationDef PES_InstallUpgrade;
+
+        public static WeatherDef Fog;
+        public static WeatherDef Rain;
+        public static WeatherDef RainyThunderstorm;
+        public static WeatherDef FoggyRain;
+        public static WeatherDef SnowHard;
     }
 }

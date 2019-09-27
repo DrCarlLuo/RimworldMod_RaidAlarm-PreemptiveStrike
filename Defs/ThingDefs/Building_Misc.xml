@@ -9,7 +9,7 @@
     <graphicData>
       <texPath>Things/Buildings/PrimitiveWatchTower</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3, 7)</drawSize>
+      <drawSize>(3, 5)</drawSize>
       <shadowData>
         <volume>(3.0, 3.0, 3.0)</volume>
       </shadowData>
@@ -24,6 +24,10 @@
         <detectionRangeProvide>3</detectionRangeProvide>
         <NotUsableUnderDarkness>true</NotUsableUnderDarkness>
         <AffectedByOperatorSightAbility>true</AffectedByOperatorSightAbility>
+        <AffectedByWeather>true</AffectedByWeather>
+      </li>
+      <li Class = "PreemptiveStrike.Things.CompProperties_BuildingAlarm_Primitive">
+        <DrawOffset>(-0.1,1.1,2)</DrawOffset>
       </li>
     </comps>
     <placeWorkers>
@@ -41,7 +45,7 @@
 	  </building>
     <blockWind>true</blockWind>
 	  <fillPercent>0.5</fillPercent>
-    <interactionCellOffset>(0,0,3)</interactionCellOffset>
+    <interactionCellOffset>(1,0,2)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 	  <passability>PassThroughOnly</passability>
@@ -49,8 +53,11 @@
     <designationCategory>Security</designationCategory>
     <rotatable>false</rotatable>
     <canOverlapZones>false</canOverlapZones>
-    <size>(3, 3)</size>
+    <size>(3, 5)</size>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li>PES_PrimitiveTower</li>
+    </researchPrerequisites>
   </ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -66,6 +73,9 @@
         <volume>(3.0, 3.0, 3.0)</volume>
       </shadowData>
     </graphicData>
+    <uiIconOffset>(0, 0.15)</uiIconOffset>
+    <uiIconScale>1.25</uiIconScale>
+    <tickerType>Normal</tickerType>
     <costList>
       <Steel>300</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -83,18 +93,21 @@
         <detectionRangeProvide>6</detectionRangeProvide>
         <NotUsableUnderDarkness>true</NotUsableUnderDarkness>
         <AffectedByOperatorSightAbility>true</AffectedByOperatorSightAbility>
+        <UsableWithoutPower>true</UsableWithoutPower>
+        <AffectedByWeather>true</AffectedByWeather>
       </li>
       <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
-        <name>Provide Food</name>
-        <description>Shine Bright like a diamond</description>
+        <name>Mini Nutrient Paste Dispenser</name>
+        <description>Install a nutrient paste dispenser inside the tower, so that the sentinel colonist does not need to leave the watchtower occasionally for food. Accept Raw food inside.</description>
         <upgradeTypeName>FoodSustain</upgradeTypeName>
+        <needResearch>PES_FoodSupply</needResearch>
         <workAmount>1000</workAmount>
         <costList>
-					<ComponentSpacer>2</ComponentSpacer>
-					<Plasteel>40</Plasteel>
+          <Steel>90</Steel>
+					<ComponentIndustrial>3</ComponentIndustrial>
 				</costList>
-        <needConstructionSkill>0</needConstructionSkill>
-        <GizmoTexPath>UI/rxUIUpgrade</GizmoTexPath>
+        <needConstructionSkill>5</needConstructionSkill>
+        <GizmoTexPath>UI/Update_food</GizmoTexPath>
         <upgradeCompProp>
           <li Class="CompProperties_Refuelable">
             <fuelCapacity>60.0</fuelCapacity>
@@ -119,16 +132,17 @@
         </upgradeCompProp>
       </li>
       <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
-        <name>Provide Recreation</name>
-        <description>Shine Bright like a diamond</description>
+        <name>Radio</name>
+        <description>Install a radio inside the watchtower, so that the sentinel colonist can listen to it while being on sentry duty. Keep the sentinel's recreational need at a moderate level</description>
         <upgradeTypeName>RecreationSustain</upgradeTypeName>
+        <needResearch>PES_JoyRadio</needResearch>
         <workAmount>1000</workAmount>
         <costList>
-					<ComponentSpacer>2</ComponentSpacer>
-					<Plasteel>40</Plasteel>
+          <Steel>10</Steel>
+					<ComponentIndustrial>1</ComponentIndustrial>
 				</costList>
-        <needConstructionSkill>10</needConstructionSkill>
-        <GizmoTexPath>UI/rxUIUpgrade</GizmoTexPath>
+        <needConstructionSkill>7</needConstructionSkill>
+        <GizmoTexPath>UI/Update_Radio</GizmoTexPath>
         <upgradeCompProp>
           <li Class = "PreemptiveStrike.Things.CompProperties_NeedSustain">
             <needType>Joy</needType>
@@ -136,6 +150,29 @@
             <instant>false</instant>
           </li>
         </upgradeCompProp>
+      </li>
+      <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
+        <name>Searchlight</name>
+        <needResearch>PES_SearchLight</needResearch>
+        <description>With a search light, the watchtower can be used with 60% efficiency when it's dark at the cost of extra 500W power consumption.</description>
+        <upgradeTypeName>NightVision</upgradeTypeName>
+        <workAmount>2000</workAmount>
+        <costList>
+          <Steel>100</Steel>
+				</costList>
+        <needConstructionSkill>8</needConstructionSkill>
+        <GizmoTexPath>UI/Update_searchlight</GizmoTexPath>
+      </li>
+      <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
+        <name>Tactical Telescope</name>
+        <description>With a telescope installed, the sentinel can see even further on the tower.\n+50% Vision Range\n+50% Detection Range</description>
+        <upgradeTypeName>Telescope</upgradeTypeName>
+        <workAmount>500</workAmount>
+        <costList>
+          <Telescope>1</Telescope>
+				</costList>
+        <needConstructionSkill>0</needConstructionSkill>
+        <GizmoTexPath>UI/Update_telescope</GizmoTexPath>
       </li>
     </comps>
     <placeWorkers>
@@ -164,6 +201,9 @@
     <size>(6, 6)</size>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>PES_ModernTower</li>
+    </researchPrerequisites>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -176,8 +216,10 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3, 4)</drawSize>
     </graphicData>
+    <tickerType>Normal</tickerType>
     <costList>
       <Steel>300</Steel>
+      <Silver>50</Silver>
       <ComponentIndustrial>8</ComponentIndustrial>
     </costList>
     <comps>
@@ -187,6 +229,12 @@
       </li>
       <li Class="CompProperties_Breakdownable"/>
       <li Class="CompProperties_Flickable"/>
+      <li Class="PreemptiveStrike.Things.CompProperties_Detection">
+        <compClass>PreemptiveStrike.Things.CompDetection_AutoDevice</compClass>
+        <visionRangeProvide>0</visionRangeProvide>
+        <detectionRangeProvide>16</detectionRangeProvide>
+        <UsableWithoutPower>false</UsableWithoutPower>
+      </li>
     </comps>
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
@@ -210,6 +258,9 @@
     <size>(3, 4)</size>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>PES_RADAR</li>
+    </researchPrerequisites>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -238,10 +289,31 @@
       <li Class="CompProperties_Flickable"/>
       <li Class="PreemptiveStrike.Things.CompProperties_Detection">
         <compClass>PreemptiveStrike.Things.CompDetection_ManualDevice</compClass>
-        <visionRangeProvide>6</visionRangeProvide>
+        <visionRangeProvide>8</visionRangeProvide>
         <detectionRangeProvide>0</detectionRangeProvide>
         <NotUsableUnderDarkness>false</NotUsableUnderDarkness>
         <AffectedByOperatorSightAbility>false</AffectedByOperatorSightAbility>
+        <UsableWithoutPower>false</UsableWithoutPower>
+        <AffectedByWeather>false</AffectedByWeather>
+      </li>
+      <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
+        <name>Radio</name>
+        <description>Install a radio near this console, so that the operator can listen to it while monitor the drones. Keep the operator's recreational need at a moderate level</description>
+        <upgradeTypeName>RecreationSustain</upgradeTypeName>
+        <workAmount>1000</workAmount>
+        <costList>
+          <Steel>10</Steel>
+					<ComponentIndustrial>1</ComponentIndustrial>
+				</costList>
+        <needConstructionSkill>7</needConstructionSkill>
+        <GizmoTexPath>UI/Update_Radio</GizmoTexPath>
+        <upgradeCompProp>
+          <li Class = "PreemptiveStrike.Things.CompProperties_NeedSustain">
+            <needType>Joy</needType>
+            <maxLevel>0.6</maxLevel>
+            <instant>false</instant>
+          </li>
+        </upgradeCompProp>
       </li>
     </comps>
     <placeWorkers>
@@ -271,30 +343,43 @@
     <size>(7, 5)</size>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>PES_SentryArray</li>
+    </researchPrerequisites>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
     <defName>PES_SpySatellite</defName>
     <label>Reconnaissance Satellite Uplink</label>
 	  <thingClass>Building</thingClass>
-    <description>An uplink station receiving and transmitting data between a spy satellite and the colony, extending the detection range of the colony to cover a huge area of this planet</description>
+    <description>An uplink station receiving and transmitting data between a spy satellite and the colony, extending the detection range of the colony to cover a huge area on this planet</description>
     <graphicData>
       <texPath>Things/Buildings/SpySatellite</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>2.46875</drawSize>
     </graphicData>
     <uiIconScale>0.85</uiIconScale>
+    <tickerType>Normal</tickerType>
     <costList>
       <Steel>300</Steel>
+      <Plasteel>100</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
       <ComponentIndustrial>8</ComponentIndustrial>
+      <Gold>40</Gold>
     </costList>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>300</basePowerConsumption>
+        <basePowerConsumption>600</basePowerConsumption>
       </li>
       <li Class="CompProperties_Breakdownable"/>
       <li Class="CompProperties_Flickable"/>
+      <li Class="PreemptiveStrike.Things.CompProperties_Detection">
+        <compClass>PreemptiveStrike.Things.CompDetection_AutoDevice</compClass>
+        <visionRangeProvide>0</visionRangeProvide>
+        <detectionRangeProvide>25</detectionRangeProvide>
+        <UsableWithoutPower>false</UsableWithoutPower>
+      </li>
     </comps>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
@@ -310,7 +395,10 @@
     <canOverlapZones>false</canOverlapZones>
     <size>(2, 2)</size>
     <rotatable>false</rotatable>
-    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>PES_Satellite</li>
+    </researchPrerequisites>
   </ThingDef>
 </Defs>

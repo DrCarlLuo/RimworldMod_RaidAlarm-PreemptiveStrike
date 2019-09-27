@@ -44,18 +44,28 @@ namespace PreemptiveStrike.Things
             compClass = typeof(CompUpgrade);
         }
 
-        private string descriptionOnGizmo;
+        public string TruncatedName
+        {
+            get
+            {
+                if (name.Length > 20)
+                    return name.Substring(0, 20) + "...";
+                return name;
+            }
+        }
+
+        private string descriptionOnGizmo = null;
         public string DescriptionOnGizmo
         {
             get
             {
                 if (descriptionOnGizmo == null)
                 {
-                    string.Format("<b>{0}</b>\n{1}\n\n{2}{3}",
+                    descriptionOnGizmo = string.Format("<b>{0}</b>\n{1}\n\nMaterials:\n{2}{3}",
                         name,
                         description,
                         MaterialDescription,
-                        needConstructionSkill == 0 ? "" : skillRequirementDescription
+                        needConstructionSkill == 0 ? "" : SkillRequirementDescription
                         );
                 }
                 return descriptionOnGizmo;
@@ -75,6 +85,7 @@ namespace PreemptiveStrike.Things
                         sb.Append(tc.thingDef.label);
                         sb.Append(" x");
                         sb.Append(tc.count);
+                        sb.Append(" ");
                     }
                     materialDescription = sb.ToString();
                 }
@@ -82,14 +93,14 @@ namespace PreemptiveStrike.Things
             }
         }
 
-        private string skillRequirementDescription;
+        private string skillRequirementDescription = null;
         public string SkillRequirementDescription
         {
             get
             {
                 if (skillRequirementDescription == null)
                 {
-                    skillRequirementDescription = string.Format("Construction Needed:{0}", needConstructionSkill);
+                    skillRequirementDescription = string.Format("\n\nConstruction Needed:{0}", needConstructionSkill);
                 }
                 return skillRequirementDescription;
             }

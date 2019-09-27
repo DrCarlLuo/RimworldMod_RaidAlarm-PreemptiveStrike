@@ -82,9 +82,13 @@
     <Compile Include="Mod\PES_Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Textures.cs" />
+    <Compile Include="Things\CompBuildingAlarm.cs" />
+    <Compile Include="Things\CompBuildingAlarm_Primitive.cs" />
     <Compile Include="Things\CompDetection.cs" />
+    <Compile Include="Things\CompDetection_AutoDevice.cs" />
     <Compile Include="Things\CompDetection_ManualDevice.cs" />
     <Compile Include="Things\CompNeedSustain.cs" />
+    <Compile Include="Things\CompProperties_BuildingAlarm_Primitive.cs" />
     <Compile Include="Things\CompProperties_Detection.cs" />
     <Compile Include="Things\CompProperties_NeedSustain.cs" />
     <Compile Include="Things\CompProperties_Upgrade.cs" />

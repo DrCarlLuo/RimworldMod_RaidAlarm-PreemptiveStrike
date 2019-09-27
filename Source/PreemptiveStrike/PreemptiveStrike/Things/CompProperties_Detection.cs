@@ -14,5 +14,7 @@ namespace PreemptiveStrike.Things
         public int detectionRangeProvide = 0;
         public bool NotUsableUnderDarkness = false;
         public bool AffectedByOperatorSightAbility = false;
+        public bool UsableWithoutPower = true;
+        public bool AffectedByWeather = true;
     }
 }

@@ -6,6 +6,7 @@ using RimWorld;
 using Verse;
 using UnityEngine;
 using PreemptiveStrike.IncidentCaravan;
+using PreemptiveStrike.DetectionSystem;
 
 namespace PreemptiveStrike.UI
 {
@@ -62,7 +63,8 @@ namespace PreemptiveStrike.UI
 
         public override void DoWindowContents(Rect inRect)
         {
-            GUI.Label(new Rect(10f, 10f, 400f, 30f), "Colony Security Report");
+            //GUI.Label(new Rect(10f, 10f, 400f, 30f), "Colony Security Report");
+            GUI.Label(new Rect(10f, 10f, 400f, 30f), DetectionAbility);
 
             scrollViewVec = GUI.BeginScrollView(new Rect(5f, 50f, UIConstants.BulletinWidth + 20f, UIConstants.BulletinHeight * 3 + UIConstants.BulletinIntend * 3), scrollViewVec, new Rect(0f, 0f, UIConstants.BulletinWidth, BulletinCache.Count * (UIConstants.BulletinHeight + UIConstants.BulletinIntend)));
 
@@ -77,6 +79,23 @@ namespace PreemptiveStrike.UI
             //Bulletin test = new Bulletin();
             //test.OnDraw(0f,50f);
             //Widgets.ButtonImage(new Rect(10f, 40f, 30f, 30f), Textures.IconSword);
+        }
+
+        private string DetectionAbility
+        {
+            get
+            {
+                if(Find.CurrentMap != null)
+                {
+                    if (!DetectDangerUtilities.DetectionAbilityInMapTile.TryGetValue(Find.CurrentMap.Tile, out DetectionEffect res))
+                        return "nothing to see";
+                    if (res.LastTick != Find.TickManager.TicksGame)
+                        return "Vision: 0    Detection:0";
+                    else
+                        return string.Format("Vision: {0}    Detection:{1}", res.Vision, res.Detection);
+                }
+                return "nothing to see";
+            }
         }
     }
 }

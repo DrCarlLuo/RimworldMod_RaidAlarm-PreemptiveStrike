@@ -97,7 +97,7 @@ namespace PreemptiveStrike.Things
         private void PostUpgrade(bool exposeData)
         {
             parent.BroadcastCompSignal(CompleteEventNameRoot + "_" + Props.upgradeTypeName);
-            if (Props.upgradeCompProp.Count > 0)
+            if (Props.upgradeCompProp != null && Props.upgradeCompProp.Count > 0)
             {
                 foreach (var prop in Props.upgradeCompProp)
                 {
@@ -141,7 +141,7 @@ namespace PreemptiveStrike.Things
             {
                 yield return new Command_Toggle
                 {
-                    defaultLabel = "Install" + Props.name,
+                    defaultLabel = "Install: " + Props.TruncatedName,
                     defaultDesc = Props.DescriptionOnGizmo,
                     toggleAction = delegate ()
                     {

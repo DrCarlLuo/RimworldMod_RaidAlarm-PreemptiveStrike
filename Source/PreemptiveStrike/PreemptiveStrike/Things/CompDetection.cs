@@ -11,6 +11,22 @@ namespace PreemptiveStrike.Things
 {
     abstract class CompDetection : ThingComp
     {
+
+        public virtual CompProperties_Detection Props => props as CompProperties_Detection;
+
+        protected CompPowerTrader compPowerTraderInt = null;
+        protected CompPowerTrader compPowerTrader
+        {
+            get
+            {
+                if (compPowerTraderInt == null)
+                    compPowerTraderInt = parent.GetComp<CompPowerTrader>();
+                return compPowerTraderInt;
+            }
+        }
+
+        public bool PowerOnOrDontNeedPower => compPowerTrader == null || compPowerTrader.PowerOn;
+
         protected virtual void UpdateDetectionAbility(int visionRange, int detectionRange)
         {
             int tile = parent.Map.Tile;
@@ -23,6 +39,7 @@ namespace PreemptiveStrike.Things
             }
             oldEffect.Vision = Math.Max(oldEffect.Vision, visionRange);
             oldEffect.Detection = Math.Max(oldEffect.Detection, detectionRange);
+            dic[tile] = oldEffect;
         }
 
         public override string CompInspectStringExtra()
