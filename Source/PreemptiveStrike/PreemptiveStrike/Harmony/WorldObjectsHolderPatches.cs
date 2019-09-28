@@ -12,6 +12,8 @@ using Verse;
 
 namespace PreemptiveStrike.Harmony
 {
+    //Do these patches because the worldobjects are stored in save along with worldobjectsholder
+
     [HarmonyPatch(typeof(WorldObjectsHolder), "AddToCache")]
     static class Patch_WorldObjectsHolder_AddToCache
     {
@@ -20,7 +22,7 @@ namespace PreemptiveStrike.Harmony
         {
             if (o is TravelingIncidentCaravan)
                 IncidentCaravanUtility.IncidentCaravans.Add((TravelingIncidentCaravan)o);
-            ColonySecurityDashBoard_Window.Recache();
+            EventManger.NotifyCaravanListChange?.Invoke();
         }
     }
 
@@ -32,7 +34,7 @@ namespace PreemptiveStrike.Harmony
         {
             if (o is TravelingIncidentCaravan)
                 IncidentCaravanUtility.IncidentCaravans.Remove((TravelingIncidentCaravan)o);
-            ColonySecurityDashBoard_Window.Recache();
+            EventManger.NotifyCaravanListChange?.Invoke();
         }
     }
 
@@ -43,7 +45,7 @@ namespace PreemptiveStrike.Harmony
         static void Prefix(WorldObjectsHolder __instance)
         {
             IncidentCaravanUtility.IncidentCaravans.Clear();
-            ColonySecurityDashBoard_Window.Recache();
+            EventManger.NotifyCaravanListChange?.Invoke();
         }
     }
 

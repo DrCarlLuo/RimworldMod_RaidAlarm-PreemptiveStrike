@@ -10,6 +10,7 @@ using PreemptiveStrike.DetectionSystem;
 
 namespace PreemptiveStrike.UI
 {
+    [StaticConstructorOnStartup]
     class ColonySecurityDashBoard_Window : Window
     {
         public static ColonySecurityDashBoard_Window Instance { get; } = new ColonySecurityDashBoard_Window();
@@ -21,7 +22,7 @@ namespace PreemptiveStrike.UI
             BulletinCache.Clear();
             foreach (var x in IncidentCaravanUtility.IncidentCaravans)
             {
-                if(x.detected)
+                if (x.detected)
                     BulletinCache.Add(Bulletin.Create(x));
             }
             ReCalulateSize();
@@ -52,6 +53,11 @@ namespace PreemptiveStrike.UI
             //this.Resizer.minWindowSize.x = 200.0f;
             //this.Resizer.minWindowSize.y = 100.0f;
             //this.windowRect = new Rect(Verse.UI.screenWidth - 435f, 100f, 420f, 420f);
+        }
+
+        static ColonySecurityDashBoard_Window()
+        {
+            EventManger.NotifyCaravanListChange += Recache;
         }
 
         protected override void SetInitialSizeAndPosition()
@@ -85,7 +91,7 @@ namespace PreemptiveStrike.UI
         {
             get
             {
-                if(Find.CurrentMap != null)
+                if (Find.CurrentMap != null)
                 {
                     if (!DetectDangerUtilities.DetectionAbilityInMapTile.TryGetValue(Find.CurrentMap.Tile, out DetectionEffect res))
                         return "nothing to see";

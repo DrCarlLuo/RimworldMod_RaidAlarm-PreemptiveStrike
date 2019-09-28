@@ -47,7 +47,9 @@ namespace PreemptiveStrike.DetectionSystem
 
         public static bool TryDetectCaravanDetail(TravelingIncidentCaravan caravan)
         {
-            if (caravan.detected)
+            int targetTile = caravan.incident.parms.target.Tile;
+            int remainingTiles = Mathf.CeilToInt(ApproxTileNumBetweenCaravanTarget(caravan));
+            if (caravan.detected && remainingTiles <= GetDetectionRangeOfMap(targetTile))
             {
                 if (new IntRange(1, 100).RandomInRange <= PES_Settings.DetectionChance)
                 {

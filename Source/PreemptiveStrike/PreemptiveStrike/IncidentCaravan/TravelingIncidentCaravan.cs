@@ -33,7 +33,7 @@ namespace PreemptiveStrike.IncidentCaravan
         {
             get
             {
-                if (confirmed)
+                if (confirmed || CommunicationEstablished)
                     return incident.IncidentTitle_Confirmed;
                 else
                     return incident.IncidentTitle_Unknow;
@@ -126,7 +126,7 @@ namespace PreemptiveStrike.IncidentCaravan
                 if (newDetected != detected)
                 {
                     detected = newDetected;
-                    PreemptiveStrike.UI.ColonySecurityDashBoard_Window.Recache();
+                    EventManger.NotifyCaravanListChange?.Invoke();
                 }
                 
             }
@@ -170,12 +170,30 @@ namespace PreemptiveStrike.IncidentCaravan
             Find.WorldObjects.Remove(this);
         }
 
-        #region Communication
+        public void Dismiss()
+        {
+            Find.WorldObjects.Remove(this);
+            Messages.Message("PES_CaravanDismiss".Translate(CaravanTitle),MessageTypeDefOf.NeutralEvent);
+            
+        }
 
+        #region Communication
         public bool Communicable => incident is InterceptedIncident_HumanCrowd;
         public InterceptedIncident_HumanCrowd CommunicableIncident => incident as InterceptedIncident_HumanCrowd;
 
         public bool CommunicationEstablished = false;
+
+        public void EstablishCommunication()
+        {
+            if(!CommunicationEstablished)
+            {
+                CommunicationEstablished = true;
+                incident.RevealInformationWhenCommunicationEstablished();
+                if(!incident.IsHostileToPlayer)
+                    confirmed = detected = true;
+                EventManger.NotifyCaravanListChange?.Invoke();
+            }
+        }
 
         public string GetCallLabel()
         {
@@ -192,9 +210,9 @@ namespace PreemptiveStrike.IncidentCaravan
 
         public void TryOpenComms(Pawn negotiator)
         {
-            Dialog_Negotiation dialog_Negotiation = new Dialog_Negotiation(negotiator, this, DialogMaker_TryToContact.PrologueNode(negotiator,this), true);
-            dialog_Negotiation.soundAmbient = SoundDefOf.RadioComms_Ambience;
-            Find.WindowStack.Add(dialog_Negotiation);
+            DialogUtilities.tempCaravan = this;
+            DialogUtilities.tempPawn = negotiator;
+            DialogUtilities.OpenDialog(DialogMaker_TryToContact.PrologueNode());
         }
 
         public Faction GetFaction()

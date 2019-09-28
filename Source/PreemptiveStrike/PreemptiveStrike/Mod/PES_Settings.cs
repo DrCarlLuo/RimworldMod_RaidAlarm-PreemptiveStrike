@@ -28,6 +28,19 @@ namespace PreemptiveStrike.Mod
 
         public static int TickForIncidentCaravanCoverOneTile = 500; //default: 2500 for one hour
 
+        //Negotiate Changes
+        public static float BasePersuadeChance_Friendly = 0.3f;
+        public static float BasePersuadeChance_Hostile = 0.1f;
+
+        public static float BaseIntimidationFrightenChance_Friendly = 0.21f;
+        public static float BaseIntimidationContactChance_Friendly = 0.45f;
+        public static float BaseIntimidationFrightenChance_Hostile = 0.11f;
+        public static float BaseIntimidationContactChance_Hostile = 0.4f;
+
+        public static float BaseBeguilementFrightenChance_Friendly = 0.9f;
+        public static float BaseBeguilementFrightenChance_Hostile = 0.25f;
+        public static float BaseBeguilementContactChance_Hostile = 0.25f;
+
         public static bool DebugModeOn = true;
     }
 }

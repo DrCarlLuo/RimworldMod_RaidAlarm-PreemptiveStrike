@@ -92,5 +92,11 @@ namespace PreemptiveStrike.Interceptor
                 RevealStrategy();
         }
 
+        public override void RevealInformationWhenCommunicationEstablished()
+        {
+            RevealFaction();
+            RevealIntention();
+        }
+
     }
 }

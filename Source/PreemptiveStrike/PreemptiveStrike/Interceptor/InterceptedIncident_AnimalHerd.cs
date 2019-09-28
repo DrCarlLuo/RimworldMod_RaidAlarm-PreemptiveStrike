@@ -63,7 +63,7 @@ namespace PreemptiveStrike.Interceptor
         protected virtual void RevealIntention()
         {
             intention_revealed = true;
-            PreemptiveStrike.UI.ColonySecurityDashBoard_Window.Recache();
+            EventManger.NotifyCaravanListChange?.Invoke();
 
             if (PES_Settings.DebugModeOn)
                 Log.Message("Intention Revealed!!!");
@@ -118,6 +118,11 @@ namespace PreemptiveStrike.Interceptor
                 Action OneToReveal = availables.RandomElement<Action>();
                 OneToReveal();
             }
+        }
+
+        public sealed override void RevealInformationWhenCommunicationEstablished()
+        {
+            throw new Exception("Try to establish communication with uncommunicable");
         }
 
         protected abstract void SetInterceptFlag(WorkerPatchType value);

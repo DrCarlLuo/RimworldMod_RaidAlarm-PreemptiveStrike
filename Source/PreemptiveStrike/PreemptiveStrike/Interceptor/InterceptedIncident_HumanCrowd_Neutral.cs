@@ -52,6 +52,11 @@ namespace PreemptiveStrike.Interceptor
             }
         }
 
+        public override void RevealInformationWhenCommunicationEstablished()
+        {
+            RevealAllInformation();
+        }
+
         protected override void RevealCrowdSize()
         {
             crowdSize_revealed = true;

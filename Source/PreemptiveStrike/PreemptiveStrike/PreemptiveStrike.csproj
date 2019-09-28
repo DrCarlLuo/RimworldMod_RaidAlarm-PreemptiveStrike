@@ -53,7 +53,8 @@
     <Compile Include="DefOf\PESDefOf.cs" />
     <Compile Include="DetectionSystem\DetectDangerUtilities.cs" />
     <Compile Include="Dialogue\DialogMaker_TryToContact.cs" />
-    <Compile Include="Dialogue\TestDialogue.cs" />
+    <Compile Include="Dialogue\DialogUtilities.cs" />
+    <Compile Include="EventManger.cs" />
     <Compile Include="Harmony\DialogPatches.cs" />
     <Compile Include="Harmony\HarmonyMain.cs" />
     <Compile Include="Harmony\IncidentPatches.cs" />

@@ -54,5 +54,7 @@ namespace PreemptiveStrike.Interceptor
 
         public abstract void RevealAllInformation();
 
+        public abstract void RevealInformationWhenCommunicationEstablished();
+
     }
 }
