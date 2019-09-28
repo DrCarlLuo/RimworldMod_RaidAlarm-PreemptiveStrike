@@ -16,53 +16,19 @@ namespace PreemptiveStrike.UI
         public Bulletin_Human(TravelingIncidentCaravan travelingIncidentCaravan)
         {
             Caravan = travelingIncidentCaravan;
-            DetermineCategory();
         }
 
         private InterceptedIncident_HumanCrowd Incident_Human => incident as InterceptedIncident_HumanCrowd;
 
-        protected override void DetermineCategory()
-        {
-            if (Incident_Human.faction_revealed)
-            {
-                if (Incident_Human.parms.faction.PlayerRelationKind == FactionRelationKind.Hostile)
-                    bulletinCategory = BulletinCategory.Danger;
-                else
-                    bulletinCategory = BulletinCategory.Neutral;
-            }
-            else if (Incident_Human.intention_revealed)
-            {
-                if (Incident_Human is InterceptedIncident_HumanCrowd_Neutral)
-                    bulletinCategory = BulletinCategory.Neutral;
-                else
-                    bulletinCategory = BulletinCategory.Danger;
-            }
-            else
-                bulletinCategory = BulletinCategory.Unknown;
-        }
-
         protected override void DrawIcon(float x, float y)
         {
-            if (bulletinCategory == BulletinCategory.Unknown)
+            if (bulletinIntelLevel == IncidentIntelLevel.Unknown)
                 MainIcon = Textures.IconUnknown;
-            else if (bulletinCategory == BulletinCategory.Danger)
+            else if (bulletinIntelLevel == IncidentIntelLevel.Danger)
                 MainIcon = Textures.IconSword;
-            else if (bulletinCategory == BulletinCategory.Neutral)
+            else if (bulletinIntelLevel == IncidentIntelLevel.Neutral)
                 MainIcon = Textures.IconMerchant;
             base.DrawIcon(x, y);
-        }
-
-        protected override void DrawMainLabel(float x, float y)
-        {
-            MainLabel = "Unidentified Corps";
-            if (Caravan.confirmed)
-            {
-                if (bulletinCategory == BulletinCategory.Danger)
-                    MainLabel = "1st Legion of Mighty Roman Empire";
-                else if (bulletinCategory == BulletinCategory.Neutral)
-                    MainLabel = "Venetian Merchants";
-            }
-            base.DrawMainLabel(x, y);
         }
 
         protected override void DrawFirstLine(float x, float y)

@@ -23,9 +23,9 @@ namespace PreemptiveStrike.UI
         public Texture2D MainIcon;
         public TravelingIncidentCaravan Caravan;
 
-        public BulletinCategory bulletinCategory;
-
         public InterceptedIncident incident => Caravan.incident;
+
+        public IncidentIntelLevel bulletinIntelLevel => incident.IntelLevel;
 
         public static Bulletin Create(TravelingIncidentCaravan caravan)
         {
@@ -37,8 +37,6 @@ namespace PreemptiveStrike.UI
             return null;
         }
 
-        protected abstract void DetermineCategory();
-
         protected virtual void DrawIcon(float x,float y)
         {
             Widgets.ButtonImage(new Rect(x, y, UIConstants.BulletinIconSize, UIConstants.BulletinIconSize), MainIcon);
@@ -46,6 +44,7 @@ namespace PreemptiveStrike.UI
 
         protected virtual void DrawMainLabel(float x, float y)
         {
+            MainLabel = Caravan.CaravanTitle;
             Text.Font = GameFont.Medium;
             Widgets.Label(new Rect(x, y, 350f, UIConstants.MainLabelHeight), MainLabel);
         }

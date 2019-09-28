@@ -12,6 +12,8 @@ namespace PreemptiveStrike.Interceptor
     {
         protected abstract void SetInterceptFlag(bool value);
 
+        public override bool IsHostileToPlayer => false;
+
         protected virtual PawnGroupKindDef GetPawnGroupKind()
         {
             return PawnGroupKindDefOf.Peaceful;

@@ -15,6 +15,16 @@ namespace PreemptiveStrike.IncidentCaravan
     {
         public static List<TravelingIncidentCaravan> IncidentCaravans = new List<TravelingIncidentCaravan>();
 
+        public static IEnumerable<ICommunicable> GetAllCommunicableCaravan()
+        {
+            foreach(var x in IncidentCaravans)
+            {
+                if (x.Communicable)
+                    yield return x;
+            }
+            yield break;
+        }
+
         public static bool AddNewIncidentCaravan(InterceptedIncident incident)
         {
             TravelingIncidentCaravan travalingCaravan = (TravelingIncidentCaravan)WorldObjectMaker.MakeWorldObject(DefDatabase<WorldObjectDef>.GetNamed("PES_RaidingCaravan", true));

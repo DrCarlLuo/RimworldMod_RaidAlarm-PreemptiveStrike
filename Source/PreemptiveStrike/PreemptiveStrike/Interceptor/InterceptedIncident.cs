@@ -7,10 +7,28 @@ using Verse;
 
 namespace PreemptiveStrike.Interceptor
 {
+    enum IncidentIntelLevel
+    {
+        Danger,
+        Unknown,
+        Neutral
+    }
+
     abstract class InterceptedIncident : IExposable
     {
         public IncidentDef incidentDef;
         public IncidentParms parms;
+
+        private string incidentTitle_Confirmed = null;
+        public abstract string IncidentTitle_Confirmed { get; }
+
+        private string incidentTitle_Unknow = null;
+        public abstract string IncidentTitle_Unknow { get; }
+        
+
+        public abstract IncidentIntelLevel IntelLevel { get; }
+
+        public abstract bool IsHostileToPlayer { get; }
 
         public abstract void ExecuteNow();
 

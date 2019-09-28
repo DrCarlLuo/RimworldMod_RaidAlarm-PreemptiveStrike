@@ -20,7 +20,7 @@ namespace PreemptiveStrike.Harmony
         {
             if (o is TravelingIncidentCaravan)
                 IncidentCaravanUtility.IncidentCaravans.Add((TravelingIncidentCaravan)o);
-            //ColonySecurityDashBoard_Window.Recache();
+            ColonySecurityDashBoard_Window.Recache();
         }
     }
 
@@ -46,17 +46,5 @@ namespace PreemptiveStrike.Harmony
             ColonySecurityDashBoard_Window.Recache();
         }
     }
-
-    //[HarmonyPatch(typeof(CompProperties_Refuelable))]
-    //[HarmonyPatch("FuelIcon", PropertyMethod.Getter)]
-    //static class Patch_Test
-    //{
-    //    [HarmonyPrefix]
-    //    static void Prefix(CompProperties_Refuelable __instance)
-    //    {
-    //        if(__instance.fuelFilter.AnyAllowedDef == null)
-    //        Log.Message("Ima KILL YOU");
-    //    }
-    //}
 
 }

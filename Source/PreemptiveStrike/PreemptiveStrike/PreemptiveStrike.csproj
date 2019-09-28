@@ -52,6 +52,9 @@
   <ItemGroup>
     <Compile Include="DefOf\PESDefOf.cs" />
     <Compile Include="DetectionSystem\DetectDangerUtilities.cs" />
+    <Compile Include="Dialogue\DialogMaker_TryToContact.cs" />
+    <Compile Include="Dialogue\TestDialogue.cs" />
+    <Compile Include="Harmony\DialogPatches.cs" />
     <Compile Include="Harmony\HarmonyMain.cs" />
     <Compile Include="Harmony\IncidentPatches.cs" />
     <Compile Include="Harmony\WorldObjectsHolderPatches.cs" />
@@ -81,7 +84,7 @@
     <Compile Include="Jobs\WorkGiver_PES_StandGuard_Primitive.cs" />
     <Compile Include="Mod\PES_Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Textures.cs" />
+    <Compile Include="DefOf\Textures.cs" />
     <Compile Include="Things\CompBuildingAlarm.cs" />
     <Compile Include="Things\CompBuildingAlarm_Primitive.cs" />
     <Compile Include="Things\CompDetection.cs" />

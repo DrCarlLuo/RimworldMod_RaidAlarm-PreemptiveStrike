@@ -9,10 +9,11 @@ using Verse;
 using PreemptiveStrike.Interceptor;
 using PreemptiveStrike.DetectionSystem;
 using PreemptiveStrike.Mod;
+using PreemptiveStrike.Dialogue;
 
 namespace PreemptiveStrike.IncidentCaravan
 {
-    class TravelingIncidentCaravan : WorldObject
+    class TravelingIncidentCaravan : WorldObject, ICommunicable
     {
         public int initialTile = -1;
         public Vector3 curPos;
@@ -28,17 +29,29 @@ namespace PreemptiveStrike.IncidentCaravan
         public bool detected;
         public bool confirmed;
 
+        public string CaravanTitle
+        {
+            get
+            {
+                if (confirmed)
+                    return incident.IncidentTitle_Confirmed;
+                else
+                    return incident.IncidentTitle_Unknow;
+            }
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look<int>(ref initialTile, "initialTile", 0, false);
-            Scribe_Values.Look<Vector3>(ref curPos, "curPos", Vector3.zero, false);
-            Scribe_Values.Look<int>(ref destinationTile, "destinationTile", 0, false);
-            Scribe_Values.Look<bool>(ref arrived, "arrived", false, false);
-            Scribe_Values.Look<int>(ref remainingTick, "remainingTick", 0, false);
-            Scribe_Deep.Look<InterceptedIncident>(ref incident, "incident");
-            Scribe_Values.Look<bool>(ref detected, "detected", false, false);
-            Scribe_Values.Look<bool>(ref confirmed, "confirmed", false, false);
+            Scribe_Values.Look(ref initialTile, "initialTile", 0, false);
+            Scribe_Values.Look(ref curPos, "curPos", Vector3.zero, false);
+            Scribe_Values.Look(ref destinationTile, "destinationTile", 0, false);
+            Scribe_Values.Look(ref arrived, "arrived", false, false);
+            Scribe_Values.Look(ref remainingTick, "remainingTick", 0, false);
+            Scribe_Deep.Look(ref incident, "incident");
+            Scribe_Values.Look(ref detected, "detected", false, false);
+            Scribe_Values.Look(ref confirmed, "confirmed", false, false);
+            Scribe_Values.Look(ref CommunicationEstablished, "CommunicationEstablished", false, false);
         }
 
         public override void PostAdd()
@@ -156,5 +169,55 @@ namespace PreemptiveStrike.IncidentCaravan
             incident.ExecuteNow();
             Find.WorldObjects.Remove(this);
         }
+
+        #region Communication
+
+        public bool Communicable => incident is InterceptedIncident_HumanCrowd;
+        public InterceptedIncident_HumanCrowd CommunicableIncident => incident as InterceptedIncident_HumanCrowd;
+
+        public bool CommunicationEstablished = false;
+
+        public string GetCallLabel()
+        {
+            return CaravanTitle;
+        }
+
+        public string GetInfoText()
+        {
+            if (CommunicableIncident.faction_revealed)
+                return CommunicableIncident.SourceFaction.GetInfoText();
+            else
+                return "PES_UnknownFaction".Translate();
+        }
+
+        public void TryOpenComms(Pawn negotiator)
+        {
+            Dialog_Negotiation dialog_Negotiation = new Dialog_Negotiation(negotiator, this, DialogMaker_TryToContact.PrologueNode(negotiator,this), true);
+            dialog_Negotiation.soundAmbient = SoundDefOf.RadioComms_Ambience;
+            Find.WindowStack.Add(dialog_Negotiation);
+        }
+
+        public Faction GetFaction()
+        {
+            if (CommunicableIncident.faction_revealed)
+                return CommunicableIncident.SourceFaction;
+            else
+                return null;
+        }
+
+        public FloatMenuOption CommFloatMenuOption(Building_CommsConsole console, Pawn negotiator)
+        {
+            StringBuilder sb = new StringBuilder("");
+            if (CommunicationEstablished)
+                sb.Append("CallOnRadio".Translate(this.GetCallLabel()));
+            else
+                sb.Append("PES_TryToCallOnRadio".Translate(GetCallLabel()));
+            return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption(sb.ToString(), delegate ()
+            {
+                console.GiveUseCommsJob(negotiator, this);
+            }, MenuOptionPriority.InitiateSocial), negotiator, console);
+        }
+
+        #endregion
     }
 }

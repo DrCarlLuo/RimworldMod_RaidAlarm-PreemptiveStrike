@@ -12,6 +12,8 @@ namespace PreemptiveStrike.Interceptor
 {
     class InterceptedIncident_AnimalHerd_FarmAnimalsWanderIn : InterceptedIncident_AnimalHerd
     {
+        public override bool IsHostileToPlayer => false;
+
         protected override void SetInterceptFlag(WorkerPatchType value)
         {
             IncidentInterceptorUtility.isIntercepting_FarmAnimalsWanderIn = value;

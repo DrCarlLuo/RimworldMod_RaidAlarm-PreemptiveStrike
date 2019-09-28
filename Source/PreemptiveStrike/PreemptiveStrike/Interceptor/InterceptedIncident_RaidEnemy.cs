@@ -10,6 +10,8 @@ namespace PreemptiveStrike.Interceptor
 {
     class InterceptedIncident_HumanCrowd_RaidEnemy : InterceptedIncident_HumanCrowd
     {
+        public override bool IsHostileToPlayer => true;
+
         public bool raidStrategy_revealed = false;
 
         public virtual RaidStrategyDef RaidStrategy => parms.raidStrategy;

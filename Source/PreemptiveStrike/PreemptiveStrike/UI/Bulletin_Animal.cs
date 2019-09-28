@@ -16,46 +16,19 @@ namespace PreemptiveStrike.UI
         public Bulletin_Animal(TravelingIncidentCaravan travelingIncidentCaravan)
         {
             Caravan = travelingIncidentCaravan;
-            DetermineCategory();
         }
 
         private InterceptedIncident_AnimalHerd Incident_Animal => incident as InterceptedIncident_AnimalHerd;
 
-        protected override void DetermineCategory()
-        {
-            if (Incident_Animal.intention_revealed)
-            {
-                if (Incident_Animal is InterceptedIncident_AnimalHerd_ManhunterPack || Incident_Animal is InterceptedIncident_AnimalHerd_Alphabeavers)
-                    bulletinCategory = BulletinCategory.Danger;
-                else
-                    bulletinCategory = BulletinCategory.Neutral;
-            }
-            else
-                bulletinCategory = BulletinCategory.Unknown;
-        }
-
         protected override void DrawIcon(float x, float y)
         {
-            if (bulletinCategory == BulletinCategory.Unknown)
+            if (bulletinIntelLevel == IncidentIntelLevel.Unknown)
                 MainIcon = Textures.IconUnknown;
-            else if (bulletinCategory == BulletinCategory.Danger)
+            else if (bulletinIntelLevel == IncidentIntelLevel.Danger)
                 MainIcon = Textures.IconAnimal;
-            else if (bulletinCategory == BulletinCategory.Neutral)
+            else if (bulletinIntelLevel == IncidentIntelLevel.Neutral)
                 MainIcon = Textures.IconAnimal;
             base.DrawIcon(x, y);
-        }
-
-        protected override void DrawMainLabel(float x, float y)
-        {
-            MainLabel = "Unidentified Animal Herd";
-            if (Caravan.confirmed)
-            {
-                if (bulletinCategory == BulletinCategory.Danger)
-                    MainLabel = "Devouring Swarms";
-                else if (bulletinCategory == BulletinCategory.Neutral)
-                    MainLabel = "Puppy and Kittens";
-            }
-            base.DrawMainLabel(x, y);
         }
 
         protected override void DrawFirstLine(float x, float y)

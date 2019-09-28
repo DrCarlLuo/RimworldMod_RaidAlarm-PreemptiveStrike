@@ -20,6 +20,45 @@ namespace PreemptiveStrike.Interceptor
         public virtual int CrowdSize => pawnList != null ? pawnList.Count : 0;
         public virtual IntVec3 SpawnPosition => parms.spawnCenter;
 
+        public override string IncidentTitle_Confirmed
+        {
+            get
+            {
+                if (IsHostileToPlayer)
+                    return "1st Legion of Mighty Roman Empire";
+                else
+                    return "Venetian Merchants";
+            }
+        }
+
+        public override string IncidentTitle_Unknow
+        {
+            get
+            {
+                return "Unidentified Corps";
+            }
+        }
+
+        public override IncidentIntelLevel IntelLevel
+        {
+            get
+            {
+                if(faction_revealed)
+                {
+                    if (SourceFaction.PlayerRelationKind == FactionRelationKind.Hostile)
+                        return IncidentIntelLevel.Danger;
+                    else
+                        return IncidentIntelLevel.Neutral;
+                }
+                if(intention_revealed)
+                {
+                    return this.IsHostileToPlayer ? IncidentIntelLevel.Danger : IncidentIntelLevel.Neutral;
+                }
+                return IncidentIntelLevel.Unknown;
+            }
+        }
+
+
         public override void ExposeData()
         {
             base.ExposeData();
@@ -67,5 +106,6 @@ namespace PreemptiveStrike.Interceptor
                 RevealCrowdSize();
             PreemptiveStrike.UI.ColonySecurityDashBoard_Window.Recache();
         }
+
     }
 }

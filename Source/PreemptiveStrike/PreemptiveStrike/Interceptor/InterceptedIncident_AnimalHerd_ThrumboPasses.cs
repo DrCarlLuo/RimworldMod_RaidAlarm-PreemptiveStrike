@@ -15,6 +15,8 @@ namespace PreemptiveStrike.Interceptor
         IntVec3 invalid;
         IntVec3 intVec;
 
+        public override bool IsHostileToPlayer => false;
+
         public override void ExposeData()
         {
             base.ExposeData();

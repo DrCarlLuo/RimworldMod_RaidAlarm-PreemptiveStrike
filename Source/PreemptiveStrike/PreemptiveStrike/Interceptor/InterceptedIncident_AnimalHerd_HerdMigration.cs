@@ -18,6 +18,8 @@ namespace PreemptiveStrike.Interceptor
         IntVec3 near;
         List<Pawn> pawnList;
 
+        public override bool IsHostileToPlayer => false;
+
         public override void ExposeData()
         {
             base.ExposeData();
