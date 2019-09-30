@@ -5,6 +5,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 using PreemptiveStrike.Mod;
+using System.Reflection;
 
 namespace PreemptiveStrike.Interceptor
 {
@@ -57,10 +58,17 @@ namespace PreemptiveStrike.Interceptor
             RevealAllInformation();
         }
 
+        protected override void RevealSpawnPosition()
+        {
+            lookTargets = new TargetInfo(parms.spawnCenter, parms.target as Map, false);
+            base.RevealSpawnPosition();
+        }
+
         protected override void RevealCrowdSize()
         {
             crowdSize_revealed = true;
-            pawnList = IncidentInterceptorUtility.GenerateNeutralPawns(GetPawnGroupKind(), parms);
+            if(pawnList == null)
+                pawnList = IncidentInterceptorUtility.GenerateNeutralPawns(GetPawnGroupKind(), parms);
 
             if (PES_Settings.DebugModeOn)
             {

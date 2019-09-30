@@ -29,6 +29,7 @@ namespace PreemptiveStrike.Interceptor
         //Used in harmony Patches
         public static bool IsIntercepting_IncidentExcecution;
         public static PawnPatchType IsIntercepting_PawnGeneration;
+        public static PawnPatchType IsIntercepting_GroupSpliter;
 
         public static bool isIntercepting_TraderCaravan_Worker;
         public static bool isIntercepting_TravelerGroup;
@@ -43,11 +44,14 @@ namespace PreemptiveStrike.Interceptor
 
         public static List<Pawn> tmpPawnList;
         public static InterceptedIncident tmpIncident;
+        public static List<Pair<List<Pawn>, IntVec3>> tempGroupList;
 
         static IncidentInterceptorUtility()
         {
             IsIntercepting_IncidentExcecution = true;
             IsIntercepting_PawnGeneration = PawnPatchType.Generate;
+
+            IsIntercepting_GroupSpliter = PawnPatchType.Generate;
 
             isIntercepting_TraderCaravan_Worker = true;
             isIntercepting_TravelerGroup = true;
@@ -60,13 +64,19 @@ namespace PreemptiveStrike.Interceptor
             isIntercepting_ManhunterPack = WorkerPatchType.Forestall;
         }
 
-        public static bool Intercept_Raid_EdgeWalkIn(IncidentParms parms)
+        public static bool Intercept_Raid(IncidentParms parms, bool splitInGroups = false)
         {
             if (parms.faction.PlayerRelationKind != FactionRelationKind.Hostile)
                 return false;
-            InterceptedIncident incident = new InterceptedIncident_HumanCrowd_RaidEnemy();
+            InterceptedIncident incident;
+            if (splitInGroups)
+                incident = new InterceptedIncident_HumanCrowd_RaidEnemy_Groups();
+            else
+                incident = new InterceptedIncident_HumanCrowd_RaidEnemy();
             incident.incidentDef = IncidentDefOf.RaidEnemy;
             incident.parms = parms;
+            if (!incident.ManualDeterminParams())
+                return false;
             if (!IncidentCaravanUtility.AddNewIncidentCaravan(incident))
             {
                 Log.Error("Fail to create Incident Caravan");

@@ -19,6 +19,8 @@ namespace PreemptiveStrike.Interceptor
         public IncidentDef incidentDef;
         public IncidentParms parms;
 
+        public LookTargets lookTargets = null;
+
         private string incidentTitle_Confirmed = null;
         public abstract string IncidentTitle_Confirmed { get; }
 

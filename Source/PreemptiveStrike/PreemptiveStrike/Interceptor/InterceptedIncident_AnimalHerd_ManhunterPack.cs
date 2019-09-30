@@ -42,6 +42,7 @@ namespace PreemptiveStrike.Interceptor
             }
             pawnList = ManhunterPackIncidentUtility.GenerateAnimals(AnimalType, map.Tile, parms.points * 1f);
             AnimalNum = pawnList.Count;
+            lookTargets = new TargetInfo(intVec, map, false);
             return true;
         }
 

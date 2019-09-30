@@ -14,21 +14,42 @@ namespace PreemptiveStrike.Interceptor
 
         public bool raidStrategy_revealed = false;
 
-        public virtual RaidStrategyDef RaidStrategy => parms.raidStrategy;
+        private string strategyString;
+        public virtual string StrategyString
+        {
+            get
+            {
+                if(strategyString == null)
+                {
+                    Type workerClass = parms.raidStrategy.workerClass;
+                    if (workerClass == typeof(RaidStrategyWorker_ImmediateAttack))
+                        strategyString = "Frontal assault";
+                    if (workerClass == typeof(RaidStrategyWorker_ImmediateAttackSappers))
+                        strategyString = "Sappers";
+                    if (workerClass == typeof(RaidStrategyWorker_ImmediateAttackSmart))
+                        strategyString = "Smart Attack";
+                    if (workerClass == typeof(RaidStrategyWorker_Siege))
+                        strategyString = "Siege";
+                    if (workerClass == typeof(RaidStrategyWorker_StageThenAttack))
+                        strategyString = "Stage then attack";
+                }
+                return strategyString;
+            }
+        }
 
         protected virtual void RevealStrategy()
         {
             raidStrategy_revealed = true;
 
             if (PES_Settings.DebugModeOn)
-                Log.Message("Strategy Revealed: " + RaidStrategy.label);
+            {
+
+            }
         }
 
         protected override void RevealCrowdSize()
         {
             crowdSize_revealed = true;
-
-            pawnList = IncidentInterceptorUtility.GenerateRaidPawns(parms);
 
             if (PES_Settings.DebugModeOn)
             {
@@ -42,6 +63,19 @@ namespace PreemptiveStrike.Interceptor
                 }
                 Log.Message(sb.ToString());
             }
+        }
+
+        public override bool ManualDeterminParams()
+        {
+            pawnList = IncidentInterceptorUtility.GenerateRaidPawns(parms);
+            ResolveLookTargets();
+            return true;
+        }
+
+        protected virtual void ResolveLookTargets()
+        {
+            IntVec3 loc = CellFinder.RandomClosewalkCellNear(parms.spawnCenter, parms.target as Map, 8, null);
+            lookTargets = new TargetInfo(loc, parms.target as Map, false);
         }
 
         public override void ExposeData()

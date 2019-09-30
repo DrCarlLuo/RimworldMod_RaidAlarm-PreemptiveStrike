@@ -46,6 +46,7 @@ namespace PreemptiveStrike.Interceptor
             {
                 invalid = IntVec3.Invalid;
             }
+            lookTargets = new TargetInfo(intVec, map, false);
             return true;
         }
 

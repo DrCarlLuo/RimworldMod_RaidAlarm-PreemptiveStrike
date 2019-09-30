@@ -39,7 +39,7 @@ namespace PreemptiveStrike.Interceptor
                 return false;
             }
             AnimalNum = Mathf.Clamp(GenMath.RoundRandom(2.5f / AnimalType.RaceProps.baseBodySize), 2, 10);
-
+            lookTargets = new TargetInfo(EntryVec, map, false);
             return true;
         }
 
@@ -53,7 +53,7 @@ namespace PreemptiveStrike.Interceptor
                 GenSpawn.Spawn(pawn, loc, map, Rot4.Random, WipeMode.Vanish, false);
                 pawn.SetFaction(Faction.OfPlayer, null);
             }
-            Find.LetterStack.ReceiveLetter("LetterLabelFarmAnimalsWanderIn".Translate(AnimalType.GetLabelPlural(-1)).CapitalizeFirst(), "LetterFarmAnimalsWanderIn".Translate(AnimalType.GetLabelPlural(-1)), LetterDefOf.PositiveEvent, new TargetInfo(EntryVec, map, false), null, null);
+            Find.LetterStack.ReceiveLetter("LetterLabelFarmAnimalsWanderIn".Translate(AnimalType.GetLabelPlural(-1)).CapitalizeFirst(), "LetterFarmAnimalsWanderIn".Translate(AnimalType.GetLabelPlural(-1)), LetterDefOf.PositiveEvent, lookTargets, null, null);
             return true;
         }
 

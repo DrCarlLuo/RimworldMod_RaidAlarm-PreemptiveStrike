@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="DefOf\PESDefOf.cs" />
     <Compile Include="DetectionSystem\DetectDangerUtilities.cs" />
+    <Compile Include="Dialogue\DialogMaker_Friendly.cs" />
     <Compile Include="Dialogue\DialogMaker_TryToContact.cs" />
     <Compile Include="Dialogue\DialogUtilities.cs" />
     <Compile Include="EventManger.cs" />
@@ -71,9 +72,10 @@
     <Compile Include="Interceptor\InterceptedIncident_AnimalHerd_ThrumboPasses.cs" />
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd.cs" />
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_Neutral.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_RaidEnemy_Groups.cs" />
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_TraderCaravan.cs" />
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_TravelerGroup.cs" />
-    <Compile Include="Interceptor\InterceptedIncident_RaidEnemy.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_RaidEnemy.cs" />
     <Compile Include="Interceptor\InterceptedIncident_HumanCrowd_VisitorGroup.cs" />
     <Compile Include="Jobs\JobDriver_PES_InstallUpgrade.cs" />
     <Compile Include="Jobs\JobDriver_PES_OperateSentryArray.cs" />

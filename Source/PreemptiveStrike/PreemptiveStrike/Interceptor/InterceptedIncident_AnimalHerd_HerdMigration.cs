@@ -46,6 +46,7 @@ namespace PreemptiveStrike.Interceptor
             }
             pawnList = this.GenerateAnimals(AnimalType, map.Tile);
             AnimalNum = pawnList.Count;
+            lookTargets = new TargetInfo(intVec, map, false);
             return true;
         }
 

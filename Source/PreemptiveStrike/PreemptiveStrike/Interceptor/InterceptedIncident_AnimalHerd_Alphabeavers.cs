@@ -44,6 +44,8 @@ namespace PreemptiveStrike.Interceptor
 
             float f = (float)freeColonistsCount * randomInRange;
             AnimalNum = Mathf.Clamp(GenMath.RoundRandom(f), 1, 10);
+
+            lookTargets = new TargetInfo(intVec, map, false);
             return true;
         }
 
@@ -57,7 +59,7 @@ namespace PreemptiveStrike.Interceptor
                 Pawn pawn = (Pawn)GenSpawn.Spawn(newThing, loc, map, WipeMode.Vanish);
                 pawn.needs.food.CurLevelPercentage = 1f;
             }
-            Find.LetterStack.ReceiveLetter("LetterLabelBeaversArrived".Translate(), "BeaversArrived".Translate(), LetterDefOf.ThreatSmall, new TargetInfo(intVec, map, false), null, null);
+            Find.LetterStack.ReceiveLetter("LetterLabelBeaversArrived".Translate(), "BeaversArrived".Translate(), LetterDefOf.ThreatSmall, lookTargets, null, null);
             return true;
         }
 

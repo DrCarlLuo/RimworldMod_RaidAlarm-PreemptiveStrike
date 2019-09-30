@@ -62,15 +62,19 @@ namespace PreemptiveStrike.Dialogue
             //Mechanoid
             if (incident.faction_revealed && incident.SourceFaction == Faction.OfMechanoids)
             {
-                option = new DiaOption("PES_TryContactPrologue_Mechanoid".Translate());
-                option.resolveTree = true;
+                option = new DiaOption("PES_TryContactPrologue_Mechanoid".Translate())
+                {
+                    link = MechanoidAnswers()
+                };
                 diaNode.options.Add(option);
             }
             else
             {
                 string key;
-                Action CommEstablishAction = () => { caravan.EstablishCommunication(); };
-                Action LeaveAction = () => { caravan.Dismiss(); };
+                void CommEstablishAction() { caravan.EstablishCommunication(); }
+                void LeaveAction() { caravan.Dismiss(); }
+
+                float MessageOdds = incident.SourceFaction == Faction.OfMechanoids ? 0f : DialogUtilities.MessageReceiveChance;
 
                 #region Persuasion
                 StringBuilder sb = new StringBuilder(string.Format(@"<b>[{0}]</b>  ", "PES_Persuade_noun".Translate().CapitalizeFirst()));
@@ -103,9 +107,9 @@ namespace PreemptiveStrike.Dialogue
                 //Action
                 option = new DiaOption(sb.ToString());
                 if (incident.IsHostileToPlayer)
-                    option.action = DialogUtilities.ResolveActionByOdds(hostileOdds*DialogUtilities.MessageReceiveChance, CommEstablishAction, PersuasionSuccessNode(), null, ContactFailNode());
+                    option.action = DialogUtilities.ResolveActionByOdds(hostileOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), null, ContactFailNode());
                 else
-                    option.action = DialogUtilities.ResolveActionByOdds(friendlyOdds * DialogUtilities.MessageReceiveChance, CommEstablishAction, PersuasionSuccessNode(), null, ContactFailNode());
+                    option.action = DialogUtilities.ResolveActionByOdds(friendlyOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), null, ContactFailNode());
                 diaNode.options.Add(option);
                 #endregion
 
@@ -128,9 +132,9 @@ namespace PreemptiveStrike.Dialogue
                     sb.AppendLine(OddsIndicator(0, friendlyContactOdds, "PES_TryOutcome_Positive", friendlyFleeOdds, "PES_TryOutcome_Scared"));
                 option = new DiaOption(sb.ToString());
                 if (incident.IsHostileToPlayer)
-                    option.action = DialogUtilities.ResolveActionByOdds(friendlyContactOdds * DialogUtilities.MessageReceiveChance, CommEstablishAction, PersuasionSuccessNode(), friendlyFleeOdds, LeaveAction, IntimidationSuccessNode(), null, ContactFailNode());
+                    option.action = DialogUtilities.ResolveActionByOdds(friendlyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), friendlyFleeOdds * MessageOdds, LeaveAction, IntimidationSuccessNode(), null, ContactFailNode());
                 else
-                    option.action = DialogUtilities.ResolveActionByOdds(EnemyContactOdds * DialogUtilities.MessageReceiveChance, CommEstablishAction, PersuasionSuccessNode(), EnemyFleeOdds, LeaveAction, IntimidationSuccessNode(), null, ContactFailNode());
+                    option.action = DialogUtilities.ResolveActionByOdds(EnemyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), EnemyFleeOdds * MessageOdds, LeaveAction, IntimidationSuccessNode(), null, ContactFailNode());
                 diaNode.options.Add(option);
                 #endregion
 
@@ -155,9 +159,9 @@ namespace PreemptiveStrike.Dialogue
                     }
                     option = new DiaOption(sb.ToString());
                     if (incident.IsHostileToPlayer)
-                        option.action = DialogUtilities.ResolveActionByOdds(EnemyFleeOdds, LeaveAction, BeguilementSuccessNode(incident.faction_revealed), EnemyContactOdds, CommEstablishAction, PersuasionSuccessNode(), null, ContactFailNode());
+                        option.action = DialogUtilities.ResolveActionByOdds(EnemyLeaveOdds * MessageOdds, LeaveAction, BeguilementSuccessNode(incident.faction_revealed), EnemyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), null, ContactFailNode());
                     else
-                        option.action = DialogUtilities.ResolveActionByOdds(friendlyFleeOdds, LeaveAction, BeguilementSuccessNode(incident.faction_revealed),null, ContactFailNode());
+                        option.action = DialogUtilities.ResolveActionByOdds(friendlyFleeOdds * MessageOdds, LeaveAction, BeguilementSuccessNode(incident.faction_revealed), null, ContactFailNode());
                     diaNode.options.Add(option);
                 }
                 #endregion
@@ -231,6 +235,24 @@ namespace PreemptiveStrike.Dialogue
                 diaNode.options.Add(DialogUtilities.CurtOption("PES_ASHAME", null, null, true));
             }
             return diaNode;
+        }
+
+        public static DiaNode MechanoidAnswers()
+        {
+            int no = new IntRange(1, 2).RandomInRange;
+            DiaNode diaNode1 = new DiaNode(("PES_Mechanoid_Outcome_" + no.ToString()).Translate());
+
+            DiaNode diaNode2 = new DiaNode(("PES_MechanoidAnswer_" + no.ToString()).Translate());
+            DiaOption option2 = new DiaOption("PES_trembling".Translate());
+            option2.resolveTree = true;
+            option2.action = () => { DialogUtilities.tempCaravan.Communicable = false; };
+            diaNode2.options.Add(option2);
+
+            DiaOption option1 = new DiaOption("PES_Mechanoid_Choice".Translate());
+            option1.link = diaNode2;
+            diaNode1.options.Add(option1);
+
+            return diaNode1;
         }
 
         private static string OddsIndicator(int obj, float odds, string verb, float odds2 = 0f, string verb2 = null)

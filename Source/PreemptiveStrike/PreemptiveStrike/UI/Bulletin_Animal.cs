@@ -101,7 +101,15 @@ namespace PreemptiveStrike.UI
         {
             Text.Font = GameFont.Tiny;
             Widgets.Label(new Rect(x, y, 100f, UIConstants.TinyLabelHeight), "ETA: " + Caravan.remainingTick);
-            Widgets.ButtonText(new Rect(x + 110f, y, 290f, UIConstants.TinyLabelHeight), "Incoming Direction: unknown", false);
+            Rect directionRect = new Rect(x + 110f, y, 290f, UIConstants.TinyLabelHeight);
+            if(Widgets.ButtonText(directionRect, Incident_Animal.spawnPosition_revealed? "Incoming Direction: known" : "Incoming Direction: unknown", false) && Incident_Animal.spawnPosition_revealed)
+            {
+                CameraJumper.TryJump(Incident_Animal.lookTargets.TryGetPrimaryTarget());
+            }
+            if(Incident_Animal.spawnPosition_revealed && Mouse.IsOver(directionRect))
+            {
+                Incident_Animal.lookTargets.TryHighlight();
+            }
         }
     }
 }

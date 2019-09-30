@@ -22,4 +22,10 @@
   <PES_ASHAME>unfortunate</PES_ASHAME>
   <PES_Reassuring>reassuring</PES_Reassuring>
   <PES_RaiseAlarm>Enemy incoming! Raise the alarm!</PES_RaiseAlarm>
+  <PES_trembling>trembling</PES_trembling>
+
+  <PES_Friendly_Greeting>People from {0} greets {1} warmly and say that they are arriving very soon.</PES_Friendly_Greeting>
+  <PES_Friendly_Dismiss>Tell them it is not a good timing to come here and dismiss them</PES_Friendly_Dismiss>
+  <PES_Friendly_Dismissed>They say that the message is acknowledged and they will not head toward our colony.</PES_Friendly_Dismissed>
+
 </LanguageData>

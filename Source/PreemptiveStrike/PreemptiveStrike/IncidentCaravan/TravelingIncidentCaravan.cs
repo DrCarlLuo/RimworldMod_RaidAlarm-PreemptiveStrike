@@ -52,6 +52,7 @@ namespace PreemptiveStrike.IncidentCaravan
             Scribe_Values.Look(ref detected, "detected", false, false);
             Scribe_Values.Look(ref confirmed, "confirmed", false, false);
             Scribe_Values.Look(ref CommunicationEstablished, "CommunicationEstablished", false, false);
+            Scribe_Values.Look(ref Communicable, "Communicable", false, false);
         }
 
         public override void PostAdd()
@@ -62,6 +63,7 @@ namespace PreemptiveStrike.IncidentCaravan
             arrived = false;
             detected = false;
             confirmed = false;
+            Communicable = incident is InterceptedIncident_HumanCrowd;
             //traveledPct += (1f - traveledPct) / remainingTick;
         }
 
@@ -178,7 +180,7 @@ namespace PreemptiveStrike.IncidentCaravan
         }
 
         #region Communication
-        public bool Communicable => incident is InterceptedIncident_HumanCrowd;
+        public bool Communicable = false;
         public InterceptedIncident_HumanCrowd CommunicableIncident => incident as InterceptedIncident_HumanCrowd;
 
         public bool CommunicationEstablished = false;
@@ -210,9 +212,7 @@ namespace PreemptiveStrike.IncidentCaravan
 
         public void TryOpenComms(Pawn negotiator)
         {
-            DialogUtilities.tempCaravan = this;
-            DialogUtilities.tempPawn = negotiator;
-            DialogUtilities.OpenDialog(DialogMaker_TryToContact.PrologueNode());
+            DialogUtilities.BeginCaravanDialog(negotiator, this);
         }
 
         public Faction GetFaction()

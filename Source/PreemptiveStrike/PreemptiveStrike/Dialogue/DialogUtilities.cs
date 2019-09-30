@@ -6,6 +6,7 @@ using RimWorld;
 using Verse;
 using UnityEngine;
 using PreemptiveStrike.IncidentCaravan;
+using PreemptiveStrike.Mod;
 
 namespace PreemptiveStrike.Dialogue
 {
@@ -13,6 +14,21 @@ namespace PreemptiveStrike.Dialogue
     {
         public static Pawn tempPawn;
         public static TravelingIncidentCaravan tempCaravan;
+
+        public static void BeginCaravanDialog(Pawn pawn, TravelingIncidentCaravan caravan)
+        {
+            tempCaravan = caravan;
+            tempPawn = pawn;
+            if(!caravan.CommunicationEstablished)
+                OpenDialog(DialogMaker_TryToContact.PrologueNode());
+            else
+            {
+                if(caravan.incident.IntelLevel == Interceptor.IncidentIntelLevel.Danger)
+                    OpenDialog(DialogMaker_TryToContact.PrologueNode());
+                else if(caravan.incident.IntelLevel == Interceptor.IncidentIntelLevel.Neutral)
+                    OpenDialog(DialogMaker_Friendly.FriendlyNode());
+            }
+        }
 
         public static void OpenDialog(DiaNode node)
         {
@@ -48,7 +64,10 @@ namespace PreemptiveStrike.Dialogue
 
         public static Action ResolveActionByOdds(float odds, Action SuccessAction, DiaNode SuccessNode, Action FailAction, DiaNode FailNode)
         {
-            if (new FloatRange(0f, 1f).RandomInRange <= odds)
+            float dice = new FloatRange(0f, 1f).RandomInRange;
+            if (PES_Settings.DebugModeOn) Messages.Message(string.Format("odds: {0} dice:{1}", odds, dice), MessageTypeDefOf.NeutralEvent);
+
+            if (dice <= odds)
                 return () => { SuccessAction?.Invoke(); OpenDialog(SuccessNode); };
             else
                 return () => { FailAction?.Invoke(); OpenDialog(FailNode); };
@@ -57,6 +76,7 @@ namespace PreemptiveStrike.Dialogue
         public static Action ResolveActionByOdds(float odds1, Action action1, DiaNode diaNode1, float odds2, Action action2, DiaNode diaNode2, Action FailAction, DiaNode FailNode)
         {
             float dice = new FloatRange(0f, 1f).RandomInRange;
+            if (PES_Settings.DebugModeOn) Messages.Message(string.Format("odds: {0}-{1} dice:{2}", odds1, odds2, dice), MessageTypeDefOf.NeutralEvent);
             if (dice <= odds1)
                 return () => { action1?.Invoke(); OpenDialog(diaNode1); };
             if (dice <= odds1 + odds2)

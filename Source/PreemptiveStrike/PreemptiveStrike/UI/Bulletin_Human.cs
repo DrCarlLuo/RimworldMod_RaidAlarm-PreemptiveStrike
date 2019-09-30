@@ -54,7 +54,7 @@ namespace PreemptiveStrike.UI
 
                     string strategyString = "Error";
                     if (incident1.raidStrategy_revealed)
-                        strategyString = incident1.RaidStrategy.label;
+                        strategyString = incident1.StrategyString;
                     else
                         strategyString = "Unknown";
 
@@ -119,7 +119,15 @@ namespace PreemptiveStrike.UI
         {
             Text.Font = GameFont.Tiny;
             Widgets.Label(new Rect(x, y, 100f, UIConstants.TinyLabelHeight), "ETA: " + Caravan.remainingTick);
-            Widgets.ButtonText(new Rect(x + 110f, y, 290f, UIConstants.TinyLabelHeight), "Incoming Direction: unknown", false);
+            Rect directionRect = new Rect(x + 110f, y, 290f, UIConstants.TinyLabelHeight);
+            if(Widgets.ButtonText(directionRect, Incident_Human.spawnPosition_revealed ? "Incoming Direction: known" : "Incoming Direction: unknown", false) && Incident_Human.spawnPosition_revealed)
+            {
+                CameraJumper.TryJump(Incident_Human.lookTargets.TryGetPrimaryTarget());
+            }
+            if (Incident_Human.spawnPosition_revealed && Mouse.IsOver(directionRect))
+            {
+                Incident_Human.lookTargets.TryHighlight();
+            }
         }
 
     }

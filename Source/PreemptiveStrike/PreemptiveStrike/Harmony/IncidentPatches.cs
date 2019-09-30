@@ -18,7 +18,21 @@ namespace PreemptiveStrike.Harmony
         {
             if (IncidentInterceptorUtility.IsIntercepting_IncidentExcecution)
             {
-                if(IncidentInterceptorUtility.Intercept_Raid_EdgeWalkIn(parms))
+                if(IncidentInterceptorUtility.Intercept_Raid(parms))
+                    __result = false;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(PawnsArrivalModeWorker_EdgeWalkInGroups), "TryResolveRaidSpawnCenter")]
+    static class Patch_EdgeWalkInGroups_TryResolveRaidSpawnCenter
+    {
+        [HarmonyPostfix]
+        static void Postfix(PawnsArrivalModeWorker_EdgeWalkIn __instance, IncidentParms parms, ref bool __result)
+        {
+            if (IncidentInterceptorUtility.IsIntercepting_IncidentExcecution)
+            {
+                if (IncidentInterceptorUtility.Intercept_Raid(parms, true))
                     __result = false;
             }
         }
@@ -37,6 +51,23 @@ namespace PreemptiveStrike.Harmony
             else
                 __result = new List<Pawn>();
             IncidentInterceptorUtility.IsIntercepting_PawnGeneration = PawnPatchType.Generate;
+            return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(PawnsArrivalModeWorkerUtility), "SplitIntoRandomGroupsNearMapEdge")]
+    static class Patch_PawnsArrivalModeWorkerUtility_SplitIntoRandomGroupsNearMapEdge
+    {
+        [HarmonyPrefix]
+        static bool Prefix(ref List<Pair<List<Pawn>, IntVec3>> __result)
+        {
+            if (IncidentInterceptorUtility.IsIntercepting_GroupSpliter == PawnPatchType.Generate)
+                return true;
+            if (IncidentInterceptorUtility.IsIntercepting_GroupSpliter == PawnPatchType.ReturnTempList)
+                __result = IncidentInterceptorUtility.tempGroupList;
+            else
+                __result = new List<Pair<List<Pawn>, IntVec3>>();
+            IncidentInterceptorUtility.IsIntercepting_GroupSpliter = PawnPatchType.Generate;
             return false;
         }
     }
