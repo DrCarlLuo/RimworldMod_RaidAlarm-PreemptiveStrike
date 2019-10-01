@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>PES_CombatFervor</defName>
+    <label>Combat Fervor</label>
+    <initialSeverity>1</initialSeverity>
+    <defaultLabelColor>(0.514, 0.886, 0.922)</defaultLabelColor>      
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.0</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>Combat Fervor</label>
+        <painFactor>0.8</painFactor>
+        <restFallFactor>0.6</restFallFactor>
+        <hungerRateFactor>0.2</hungerRateFactor>
+        <socialFightChanceFactor>0.01</socialFightChanceFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.1</offset>
+            </li>
+            <li>
+              <capacity>Sight</capacity>
+              <offset>0.2</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.2</offset>
+            </li>
+          </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>PES_CombatFervor_Thought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PES_CombatFervor</hediff>
+    <stages>
+      <li>
+        <label>Combat Fervor</label>
+        <description>It is my honor to fight to the death for the freedom of the colony.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef>
+    <defName>PES_CombatTiredness</defName>
+    <label>Combat Tiredness</label>
+    <initialSeverity>1</initialSeverity>
+    <defaultLabelColor>(0.451, 0.141, 0.157)</defaultLabelColor>      
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.0</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>Combat Tiredness</label>
+        <restFallFactor>1.1</restFallFactor>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>-0.1</offset>
+            </li>
+          </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+      <defName>PES_CombatTiredness_Thought</defName>
+      <workerClass>ThoughtWorker_Hediff</workerClass>
+      <hediff>PES_CombatTiredness</hediff>
+      <stages>
+        <li>
+          <label>Tired of combat</label>
+          <description>We could have avoided this combat, but now we may get injured from this, or even die. This is a meaningless fight.</description>
+          <baseMoodEffect>-10</baseMoodEffect>
+        </li>
+      </stages>
+    </ThoughtDef>
+</Defs>

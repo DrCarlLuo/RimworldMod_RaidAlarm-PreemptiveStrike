@@ -26,7 +26,8 @@ namespace PreemptiveStrike.Interceptor
 
         private string incidentTitle_Unknow = null;
         public abstract string IncidentTitle_Unknow { get; }
-        
+
+        public abstract string IntentionStr { get; }
 
         public abstract IncidentIntelLevel IntelLevel { get; }
 

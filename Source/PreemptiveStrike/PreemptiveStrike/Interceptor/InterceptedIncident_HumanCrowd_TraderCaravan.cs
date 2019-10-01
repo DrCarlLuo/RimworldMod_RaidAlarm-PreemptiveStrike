@@ -14,6 +14,8 @@ namespace PreemptiveStrike.Interceptor
 
         public TraderKindDef traderKind = null;
 
+        public override string IntentionStr => "PES_Intention_TradeCaravan".Translate();
+
         public override void ExposeData()
         {
             base.ExposeData();

@@ -14,6 +14,8 @@ namespace PreemptiveStrike.Interceptor
     {
         public override bool IsHostileToPlayer => false;
 
+        public override string IntentionStr => "PES_Intention_FarmAnimalsWanderIn".Translate();
+
         protected override void SetInterceptFlag(WorkerPatchType value)
         {
             IncidentInterceptorUtility.isIntercepting_FarmAnimalsWanderIn = value;

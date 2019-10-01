@@ -24,7 +24,7 @@ namespace PreemptiveStrike.Dialogue
             else
             {
                 if(caravan.incident.IntelLevel == Interceptor.IncidentIntelLevel.Danger)
-                    OpenDialog(DialogMaker_TryToContact.PrologueNode());
+                    OpenDialog(DialogMaker_RaidNegotiation.PrologueNode());
                 else if(caravan.incident.IntelLevel == Interceptor.IncidentIntelLevel.Neutral)
                     OpenDialog(DialogMaker_Friendly.FriendlyNode());
             }

@@ -11,6 +11,8 @@ namespace PreemptiveStrike.Interceptor
     {
         private List<Pair<List<Pawn>, IntVec3>> GroupList;
 
+        public override string IntentionStr => "PES_Intention_RaidGroup".Translate();
+
         protected override void ResolveLookTargets()
         {
             IncidentInterceptorUtility.IsIntercepting_GroupSpliter = PawnPatchType.Generate;

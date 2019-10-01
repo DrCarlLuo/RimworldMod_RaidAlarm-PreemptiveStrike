@@ -23,6 +23,7 @@ namespace PreemptiveStrike.IncidentCaravan
 
         private bool arrived;
         public int remainingTick = 0;
+        public int stageRemainingTick = 0;
         //private float traveledPct;
 
         public InterceptedIncident incident;
@@ -48,6 +49,7 @@ namespace PreemptiveStrike.IncidentCaravan
             Scribe_Values.Look(ref destinationTile, "destinationTile", 0, false);
             Scribe_Values.Look(ref arrived, "arrived", false, false);
             Scribe_Values.Look(ref remainingTick, "remainingTick", 0, false);
+            Scribe_Values.Look(ref stageRemainingTick, "stageRemainingTick", 0, false);
             Scribe_Deep.Look(ref incident, "incident");
             Scribe_Values.Look(ref detected, "detected", false, false);
             Scribe_Values.Look(ref confirmed, "confirmed", false, false);
@@ -70,6 +72,12 @@ namespace PreemptiveStrike.IncidentCaravan
         public override void Tick()
         {
             base.Tick();
+            if(stageRemainingTick > 0)
+            {
+                --stageRemainingTick;
+                return;
+            }
+
             if (remainingTick > 0)
                 curPos = Vector3.Slerp(curPos, DestinationPos, 1f / remainingTick);
             else
@@ -132,6 +140,11 @@ namespace PreemptiveStrike.IncidentCaravan
                 }
                 
             }
+        }
+
+        public void StageForThreeHours()
+        {
+            stageRemainingTick = 7500;
         }
 
         //I dont know how to conceal a world object(to make it unselectable), so I just hide it in the core of the planet...XD

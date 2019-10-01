@@ -17,6 +17,8 @@ namespace PreemptiveStrike.Interceptor
 
         public override bool IsHostileToPlayer => true;
 
+        public override string IntentionStr => "PES_Intention_AlphaBeavers".Translate();
+
         public override void ExposeData()
         {
             base.ExposeData();

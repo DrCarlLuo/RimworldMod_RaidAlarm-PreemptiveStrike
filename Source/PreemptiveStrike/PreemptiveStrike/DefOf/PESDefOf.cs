@@ -34,5 +34,8 @@ namespace PreemptiveStrike
         public static WeatherDef RainyThunderstorm;
         public static WeatherDef FoggyRain;
         public static WeatherDef SnowHard;
+
+        public static HediffDef PES_CombatFervor;
+        public static HediffDef PES_CombatTiredness;
     }
 }

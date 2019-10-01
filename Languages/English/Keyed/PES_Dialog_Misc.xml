@@ -6,6 +6,7 @@
   <PES_intimidate_noun>intimidation</PES_intimidate_noun>
   <PES_beguile_noun>beguilement</PES_beguile_noun>
 
+  <PES_SimpleConfirm>confirm</PES_SimpleConfirm>
   <PES_Disconnect>Disconnect</PES_Disconnect>
   <PES_Cancel>Never mind</PES_Cancel>
   <PES_ConfirmChoice>This worth a try</PES_ConfirmChoice>
@@ -23,6 +24,7 @@
   <PES_Reassuring>reassuring</PES_Reassuring>
   <PES_RaiseAlarm>Enemy incoming! Raise the alarm!</PES_RaiseAlarm>
   <PES_trembling>trembling</PES_trembling>
+  <PES_DAMNIT>Damn it!</PES_DAMNIT>
 
   <PES_Friendly_Greeting>People from {0} greets {1} warmly and say that they are arriving very soon.</PES_Friendly_Greeting>
   <PES_Friendly_Dismiss>Tell them it is not a good timing to come here and dismiss them</PES_Friendly_Dismiss>

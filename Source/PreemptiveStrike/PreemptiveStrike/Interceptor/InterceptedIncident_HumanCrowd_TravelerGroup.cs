@@ -10,6 +10,8 @@ namespace PreemptiveStrike.Interceptor
 {
     class InterceptedIncident_HumanCrowd_TravelerGroup : InterceptedIncident_HumanCrowd_Neutral
     {
+        public override string IntentionStr => "PES_Intention_Traveler".Translate();
+
         protected override void SetInterceptFlag(bool value)
         {
             IncidentInterceptorUtility.isIntercepting_TravelerGroup = value;

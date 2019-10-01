@@ -149,13 +149,18 @@ namespace PreemptiveStrike.Dialogue
                     if (incident.faction_revealed)
                     {
                         sb.AppendLine(string.Format(@"<i>{0}</i>", "PES_TryContact_Beguilement_FactionConfirmed".Translate(pawn.Name.ToStringShort, incident.SourceFaction.Name, Faction.OfPlayer.Name)));
-                        sb.AppendLine(OddsIndicator(2, EnemyContactOdds, "PES_TryOutcome_Positive", EnemyLeaveOdds, "PES_TryOutcome_Leave"));
+                        sb.AppendLine(OddsIndicator(0, EnemyContactOdds, "PES_TryOutcome_Positive", EnemyLeaveOdds, "PES_TryOutcome_Leave"));
                     }
                     else
                     {
                         sb.AppendLine(string.Format(@"<i>{0}</i>", "PES_TryContact_Beguilement".Translate(pawn.Name.ToStringShort, Faction.OfPlayer.Name)));
-                        sb.AppendLine(OddsIndicator(1, friendlyFleeOdds, "PES_TryOutcome_Scared"));
-                        sb.AppendLine(OddsIndicator(2, EnemyContactOdds, "PES_TryOutcome_Positive", EnemyLeaveOdds, "PES_TryOutcome_Scared"));
+                        if (incident.IntelLevel == IncidentIntelLevel.Danger)
+                            sb.AppendLine(OddsIndicator(0, EnemyContactOdds, "PES_TryOutcome_Positive", EnemyLeaveOdds, "PES_TryOutcome_Scared"));
+                        else
+                        {
+                            sb.AppendLine(OddsIndicator(1, friendlyFleeOdds, "PES_TryOutcome_Scared"));
+                            sb.AppendLine(OddsIndicator(2, EnemyContactOdds, "PES_TryOutcome_Positive", EnemyLeaveOdds, "PES_TryOutcome_Scared"));
+                        }
                     }
                     option = new DiaOption(sb.ToString());
                     if (incident.IsHostileToPlayer)

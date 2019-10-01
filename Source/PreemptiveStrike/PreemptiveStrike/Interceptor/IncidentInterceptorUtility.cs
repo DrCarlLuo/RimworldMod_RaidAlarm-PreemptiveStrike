@@ -77,6 +77,7 @@ namespace PreemptiveStrike.Interceptor
             incident.parms = parms;
             if (!incident.ManualDeterminParams())
                 return false;
+            RaidingGoalUtility.ResolveRaidGoal(incident as InterceptedIncident_HumanCrowd_RaidEnemy);
             if (!IncidentCaravanUtility.AddNewIncidentCaravan(incident))
             {
                 Log.Error("Fail to create Incident Caravan");

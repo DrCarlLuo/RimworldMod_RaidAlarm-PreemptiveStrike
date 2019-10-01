@@ -5,16 +5,24 @@ using System.Text;
 using RimWorld;
 using Verse;
 using PreemptiveStrike.Mod;
+using PreemptiveStrike.IncidentCaravan;
 
 namespace PreemptiveStrike.Interceptor
 {
     class InterceptedIncident_HumanCrowd_RaidEnemy : InterceptedIncident_HumanCrowd
     {
+        public IncidentCaravan.RaidGoal raidGoal;
+
         public override bool IsHostileToPlayer => true;
 
         public bool raidStrategy_revealed = false;
 
+        public override string IntentionStr => "PES_Intention_Raid".Translate();
+
         private string strategyString;
+
+        public int CombatMoral = 0;
+
         public virtual string StrategyString
         {
             get
@@ -82,6 +90,7 @@ namespace PreemptiveStrike.Interceptor
         {
             base.ExposeData();
             Scribe_Values.Look<bool>(ref raidStrategy_revealed, "raidStrategy_revealed", false, false);
+            Scribe_Values.Look(ref CombatMoral, "CombatMoral", 0, false);
         }
 
         public override void ExecuteNow()
@@ -90,8 +99,13 @@ namespace PreemptiveStrike.Interceptor
             IncidentInterceptorUtility.IsIntercepting_PawnGeneration = PawnPatchType.ReturnTempList;
             IncidentInterceptorUtility.tmpPawnList = this.pawnList;
 
-            if (this.incidentDef != null && this.parms != null)
-                this.incidentDef.Worker.TryExecute(this.parms);
+            if (incidentDef != null && this.parms != null)
+            {
+                if(incidentDef.Worker.TryExecute(this.parms))
+                {
+                    RaidingGoalUtility.CombatMoralResolver(this);
+                }
+            }
             else
                 Log.Error("No IncidentDef or parms in InterceptedIncident!");
 

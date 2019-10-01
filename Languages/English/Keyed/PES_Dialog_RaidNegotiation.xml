@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <PES_RaidNeg_Proglog>A member of the raiding team &quot;{0}&quot; answers the call. This raiding team is from {1}.</PES_RaidNeg_Proglog>
+
+    <PES_RaidNeg_SurrenderSuccess>After their demand is met, the raiding team {0} is not longer heading toward our colony.</PES_RaidNeg_SurrenderSuccess>
+
+    <PES_RaidNeg_Attitude_Rude>Muttering an insult, </PES_RaidNeg_Attitude_Rude>
+    <PES_RaidNeg_Attitude_Polite>Speaking with unexpected courtesy, </PES_RaidNeg_Attitude_Polite>
+
+    <!-- Goal explanation-->
+    <PES_RaidNeg_GoalExp_Extortion>they tell us they launched this raid in order to force us to pay them tribute of {0} </PES_RaidNeg_GoalExp_Extortion>
+    <PES_RaidNeg_GoalExp_Rescue>they tell us they launched this raid in order to resue some of their fellows that were taken prisoner by our colony. The prisoners they demand us to release including: </PES_RaidNeg_GoalExp_Rescue>
+    <PES_RaidNeg_GoalExp_Revenge>they tell us they launched this raid in order to revenge for the death of {0} who was killed by our colony. They demand us to execute the murderer {1}. </PES_RaidNeg_GoalExp_Revenge>
+    <PES_RaidNeg_GoalExp_Despoil>they tell us they launched this raid simply out of the need of despoliation. They demand us to hand over the following things: </PES_RaidNeg_GoalExp_Despoil>
+    <PES_RaidNeg_GoalExp_Enslave>they tell us this is a slave raid, and they want to enslave and take away the following colonist: </PES_RaidNeg_GoalExp_Enslave>
+    <PES_RaidNeg_GoalExp_Conquer>they tell us they launched this raid in order to conquer this land for their fraction, making this colony to be their territory. </PES_RaidNeg_GoalExp_Conquer>
+
+    <PES_RaidNeg_DemandSurrender_rude>They demand our immediate surrender. Were their demand not met, they say to use, our colony would be razed to the ground.</PES_RaidNeg_DemandSurrender_rude>
+    <PES_RaidNeg_DemandSurrender_Polite>They ask us to consider their demand and wish to avoid unnecessary casualty.</PES_RaidNeg_DemandSurrender_Polite>
+
+    <!-- Rebuff words-->
+    <PES_RaidNeg_Rebuff_Head>[Rebuff and Insult]: </PES_RaidNeg_Rebuff_Head>
+    <PES_RaidNeg_Rebuff_Rescue>EXECUTE these prisoners RIGHT NOW! Tell them to stop their reveries and their destiny will, inevitably, be the same with these pathetic prisoners!</PES_RaidNeg_Rebuff_Rescue>
+    <PES_RaidNeg_Rebuff_Despoil>Tell them to expect nothing from us and we shall fight to the death to defend our properties from the barbarians like them!</PES_RaidNeg_Rebuff_Despoil>
+    <PES_RaidNeg_Rebuff_Revenge> </PES_RaidNeg_Rebuff_Revenge>
+    <PES_RaidNeg_Rebuff_Enslave> </PES_RaidNeg_Rebuff_Enslave>
+    <PES_RaidNeg_Rebuff_Conquer> </PES_RaidNeg_Rebuff_Conquer>
+    <PES_RaidNeg_Rebuff_Extortion>Tell them to expect nothing from us and we shall fight to the death to defend our properties from the barbarians like them!</PES_RaidNeg_Rebuff_Extortion>
+
+    <PES_RaidNeg_Rebuff_Confirmation>Are you sure you want to do this?</PES_RaidNeg_Rebuff_Confirmation>
+    <PES_RaidNeg_Rebuff_Confirmation_Rescue>Are you sure you want to do this? The following prisoners will be executed immediately: </PES_RaidNeg_Rebuff_Confirmation_Rescue>
+    <PES_RaidNeg_Rebuff_Explanation>Doing this will boost the morale of all the colonists. When the raiders arrive, all colonists will get a mood buff and combat buff based on the social skill of {0}. But beware, if the current negotiator is too poor in social skill, this buff will change to a debuff. \n\nHowever, the enemy will become furious. The raiding goal of this raiding team will change to SMITE and you can no longer communicate with them. Also, this raiding team will be reinforced (randomly from 25% to 100% of the current power).\n</PES_RaidNeg_Rebuff_Explanation>
+
+    <PES_RaidNeg_NegDeeper>Try to negotiate over their demand</PES_RaidNeg_NegDeeper>
+    <PES_RaidNeg_NegDeeper_Prolog>How do you want to negotiate?</PES_RaidNeg_NegDeeper_Prolog>
+
+    <PES_RaidNeg_NegDeeper_Surrender>We have no choice but accept their demand...</PES_RaidNeg_NegDeeper_Surrender>
+    <PES_RaidNeg_NegDeeper_Surrender_Fail_Conquer>Not available. If we accept, this game is no longer playable.</PES_RaidNeg_NegDeeper_Surrender_Fail_Conquer>
+    <PES_RaidNeg_NegDeeper_Surrender_Fail_NoMoney>Not available. We don't have {0}.</PES_RaidNeg_NegDeeper_Surrender_Fail_NoMoney>
+
+    <PES_RaidNeg_NegDeeper_Bargain>Try to bargain about their demand</PES_RaidNeg_NegDeeper_Bargain>
+    <PES_RaidNeg_NegDeeper_Remedy>It's not possible to meet their demand. Try to give them other things as a remedy.\n</PES_RaidNeg_NegDeeper_Remedy>
+
+    <!-- delays-->
+    <PES_RaidNeg_Delay>Ask them to slow down their marching so that we can better think about their demand, or earn us some time to prepare for upcoming combat</PES_RaidNeg_Delay>
+    <PES_RaidNeg_Delay_Intro>What should we say to them to ask them to stop approaching our colony?</PES_RaidNeg_Delay_Intro>
+
+    <PES_RaidNeg_Delay_Success_Name>to delay the raiding</PES_RaidNeg_Delay_Success_Name>
+    <PES_RaidNeg_Delay_Smite_Name>to make them angry and punish us</PES_RaidNeg_Delay_Smite_Name>
+
+    <PES_RaidNeg_Delay_Persuasion>"Give us some time to think about it. This is good for both you and us."</PES_RaidNeg_Delay_Persuasion>
+
+    <PES_RaidNeg_Delay_Intimidation_Rescue>"We need time to discuss your suggestion. Do not approach our colony any more, or we will execute the prisoners you want right now!"</PES_RaidNeg_Delay_Intimidation_Rescue>
+    <PES_RaidNeg_Delay_Intimidation_Despoil>"We need time to discuss your suggestion. Do not approach our colony any more, or you will get nothing but our mortar fire!"</PES_RaidNeg_Delay_Intimidation_Despoil>
+    <PES_RaidNeg_Delay_Intimidation_Revenge>"We need time to discuss your suggestion. Do not approach our colony any more, or you will get nothing but our mortar fire!"</PES_RaidNeg_Delay_Intimidation_Revenge>
+    <PES_RaidNeg_Delay_Intimidation_Enslave>"We need time to discuss your suggestion. Do not approach our colony any more, or you will get nothing but our mortar fire!"</PES_RaidNeg_Delay_Intimidation_Enslave>
+    <PES_RaidNeg_Delay_Intimidation_Extortion>"We need time to discuss your suggestion. Do not approach our colony any more, or you will get nothing but our mortar fire!"</PES_RaidNeg_Delay_Intimidation_Extortion>
+
+    <PES_RaidNeg_Delay_Beguilement_Rescue>"The prisoners you want is in one of our trading caravan. Stop your marching and give us some time to send them back here."</PES_RaidNeg_Delay_Beguilement_Rescue>
+    <PES_RaidNeg_Delay_Beguilement_Despoil>"We don't have sufficient resources here in our colony. We are transporting some resouces from our trading caravan. Give us some time and stop your marching."</PES_RaidNeg_Delay_Beguilement_Despoil>
+    <PES_RaidNeg_Delay_Beguilement_Revenge>"The person you want is not here in this colony but in one of our trading caravan. We are sending that person back, so stop your matching and give us some time."</PES_RaidNeg_Delay_Beguilement_Revenge>
+    <PES_RaidNeg_Delay_Beguilement_Enslave>"The person you want is not here in this colony but in one of our trading caravan. We are sending that person back, so stop your matching and give us some time."</PES_RaidNeg_Delay_Beguilement_Enslave>
+    <PES_RaidNeg_Delay_Beguilement_Extortion>"We don't have enough silver here in our colony. We are recalling our trading caravan to bring back some silver. Give us some time and stop your marching."</PES_RaidNeg_Delay_Beguilement_Extortion>
+
+    <PES_RaidNeg_Delay_Success>{0} agree to stop for a while. However, they say that they will only stop for three hours. After three hours, if their demand is still not met, they will keep heading towards our colony.</PES_RaidNeg_Delay_Success>
+    <PES_RaidNeg_Delay_Fail>They spurn our suggestion and keep on marching towards our colony.</PES_RaidNeg_Delay_Fail>
+    <PES_RaidNeg_Delay_Smite>They get really angry about the intimidation and consider it as an insult. They decide to give us a punishment and will not communicate with us any more.</PES_RaidNeg_Delay_Smite>
+    
+</LanguageData>

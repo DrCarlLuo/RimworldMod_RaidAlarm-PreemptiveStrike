@@ -20,6 +20,8 @@ namespace PreemptiveStrike.Interceptor
 
         public override bool IsHostileToPlayer => false;
 
+        public override string IntentionStr => "PES_Intention_HerdMigration".Translate();
+
         public override void ExposeData()
         {
             base.ExposeData();

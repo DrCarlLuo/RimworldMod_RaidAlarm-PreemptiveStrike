@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <PES_Intention_Raid>Raid (Concentrated Attack)</PES_Intention_Raid>
+    <PES_Intention_RaidGroup>Raid (Separate Attack)</PES_Intention_RaidGroup>
+    <PES_Intention_TradeCaravan>Trade Caravan</PES_Intention_TradeCaravan>
+    <PES_Intention_Traveler>Passer-by</PES_Intention_Traveler>
+    <PES_Intention_Visitor>Visitors</PES_Intention_Visitor>
+    <PES_Intention_AlphaBeavers>Dendrovorous Beavers</PES_Intention_AlphaBeavers>
+    <PES_Intention_FarmAnimalsWanderIn>Join Colony</PES_Intention_FarmAnimalsWanderIn>
+    <PES_Intention_HerdMigration>Herd Migration</PES_Intention_HerdMigration>
+    <PES_Intention_ManHunterPack>Manhunter Pack</PES_Intention_ManHunterPack>
+    <PES_Intention_ThrumboPass>Thrumbo Passes</PES_Intention_ThrumboPass>
+
+    <PES_RaidGoalName_Rescue>Rescue Prisoner</PES_RaidGoalName_Rescue>
+    <PES_RaidGoalName_Despoil>Despoil</PES_RaidGoalName_Despoil>
+    <PES_RaidGoalName_Revenge>Revenge</PES_RaidGoalName_Revenge>
+    <PES_RaidGoalName_Enslave>Slave Raiding</PES_RaidGoalName_Enslave>
+    <PES_RaidGoalName_Conquer>Conquer</PES_RaidGoalName_Conquer>
+    <PES_RaidGoalName_Extortion>Extortion</PES_RaidGoalName_Extortion>
+    <PES_RaidGOalName_Smite>SMITE</PES_RaidGOalName_Smite>
+
+</LanguageData>

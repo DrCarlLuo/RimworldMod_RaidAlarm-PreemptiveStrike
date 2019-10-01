@@ -53,6 +53,7 @@
     <Compile Include="DefOf\PESDefOf.cs" />
     <Compile Include="DetectionSystem\DetectDangerUtilities.cs" />
     <Compile Include="Dialogue\DialogMaker_Friendly.cs" />
+    <Compile Include="Dialogue\DialogMaker_RaidNegotiation.cs" />
     <Compile Include="Dialogue\DialogMaker_TryToContact.cs" />
     <Compile Include="Dialogue\DialogUtilities.cs" />
     <Compile Include="EventManger.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Harmony\IncidentPatches.cs" />
     <Compile Include="Harmony\WorldObjectsHolderPatches.cs" />
     <Compile Include="IncidentCaravan\IncidentCaravanUtility.cs" />
+    <Compile Include="IncidentCaravan\RaidingGoalUtility.cs" />
     <Compile Include="IncidentCaravan\TravelingIncidentCaravan.cs" />
     <Compile Include="Interceptor\IncidentInterceptorUtility.cs" />
     <Compile Include="Interceptor\InterceptedIncident.cs" />

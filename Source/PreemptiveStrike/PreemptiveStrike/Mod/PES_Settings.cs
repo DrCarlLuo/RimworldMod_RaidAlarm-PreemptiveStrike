@@ -28,7 +28,7 @@ namespace PreemptiveStrike.Mod
 
         public static int TickForIncidentCaravanCoverOneTile = 500; //default: 2500 for one hour
 
-        //Negotiate Changes
+        //Make contact chances
         public static float BasePersuadeChance_Friendly = 0.3f;
         public static float BasePersuadeChance_Hostile = 0.1f;
 
@@ -40,6 +40,12 @@ namespace PreemptiveStrike.Mod
         public static float BaseBeguilementFrightenChance_Friendly = 0.9f;
         public static float BaseBeguilementFrightenChance_Hostile = 0.25f;
         public static float BaseBeguilementContactChance_Hostile = 0.25f;
+
+        //Delay raid chances
+        public static float BaseDelayPersuasionChance = 0.2f;
+        public static float BaseDelayIntimidationSuccessChance = 0.3f;
+        public static float BaseDelayIntimidationSmiteChance = 0.3f;
+        public static float BaseDelayBeguilementChance = 0.4f;
 
         public static bool DebugModeOn = true;
     }
