@@ -62,11 +62,11 @@ namespace PreemptiveStrike.Interceptor
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look<bool>(ref intention_revealed, "intention_revealed", false, false);
-            Scribe_Values.Look<bool>(ref faction_revealed, "faction_revealed", false, false);
-            Scribe_Values.Look<bool>(ref crowdSize_revealed, "crowdSize_revealed", false, false);
-            Scribe_Values.Look<bool>(ref spawnPosition_revealed, "spawnPosition_revealed", false, false);
-            Scribe_Collections.Look<Pawn>(ref pawnList, "pawnList", LookMode.Deep);
+            Scribe_Values.Look(ref intention_revealed, "intention_revealed", false, false);
+            Scribe_Values.Look(ref faction_revealed, "faction_revealed", false, false);
+            Scribe_Values.Look(ref crowdSize_revealed, "crowdSize_revealed", false, false);
+            Scribe_Values.Look(ref spawnPosition_revealed, "spawnPosition_revealed", false, false);
+            Scribe_Collections.Look(ref pawnList, "pawnList", LookMode.Deep);
         }
 
         protected virtual void RevealIntention()

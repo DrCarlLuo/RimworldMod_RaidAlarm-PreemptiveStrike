@@ -2,4 +2,6 @@
 
 <LanguageData>
 <PES_CaravanDismiss>{0} is no longer heading towards our colony and tracked by our reconnaissance system.</PES_CaravanDismiss>
+<PES_PrisonerDead>{0} is getting really angry now because one of the prisoner they want is dead. They will now revenge on the colony.</PES_PrisonerDead>
+<PES_AllSlaveDead>{0} changes their raiding goal to Extortion, because all the colonists they want to enslave are dead.</PES_AllSlaveDead>
 </LanguageData>

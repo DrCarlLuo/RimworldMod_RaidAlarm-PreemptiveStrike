@@ -23,7 +23,11 @@ namespace PreemptiveStrike.IncidentCaravan
 
         private bool arrived;
         public int remainingTick = 0;
+        public int broadcastMessageCoolDownTick = 0;
+        public int negotiateCoolDownTick = 0;
+        public int delayCoolDownTick = 0;
         public int stageRemainingTick = 0;
+        public bool StagedBefore = false;
         //private float traveledPct;
 
         public InterceptedIncident incident;
@@ -50,6 +54,10 @@ namespace PreemptiveStrike.IncidentCaravan
             Scribe_Values.Look(ref arrived, "arrived", false, false);
             Scribe_Values.Look(ref remainingTick, "remainingTick", 0, false);
             Scribe_Values.Look(ref stageRemainingTick, "stageRemainingTick", 0, false);
+            Scribe_Values.Look(ref broadcastMessageCoolDownTick, "broadcastMessageCoolDownTick", 0, false);
+            Scribe_Values.Look(ref negotiateCoolDownTick, "negotiateCoolDownTick", 0, false);
+            Scribe_Values.Look(ref delayCoolDownTick, "delayCoolDownTick", 0, false);
+            Scribe_Values.Look(ref StagedBefore, "StagedBefore", false, false);
             Scribe_Deep.Look(ref incident, "incident");
             Scribe_Values.Look(ref detected, "detected", false, false);
             Scribe_Values.Look(ref confirmed, "confirmed", false, false);
@@ -72,7 +80,14 @@ namespace PreemptiveStrike.IncidentCaravan
         public override void Tick()
         {
             base.Tick();
-            if(stageRemainingTick > 0)
+
+            //This is a little hard-coding, need fixes
+            if (incident is InterceptedIncident_HumanCrowd_RaidEnemy raidIncident) raidIncident.goal.GoalTick();
+
+            if (broadcastMessageCoolDownTick > 0) --broadcastMessageCoolDownTick;
+            if (negotiateCoolDownTick > 0) --negotiateCoolDownTick;
+            if (delayCoolDownTick > 0) --delayCoolDownTick;
+            if (stageRemainingTick > 0)
             {
                 --stageRemainingTick;
                 return;
@@ -98,10 +113,10 @@ namespace PreemptiveStrike.IncidentCaravan
             Find.WorldGrid.GetTileNeighbors(Tile, neighbors);
             float minDist = Vector3.Distance(curPos, Find.WorldGrid.GetTileCenter(Tile));
             int p = -1;
-            foreach(int x in neighbors)
+            foreach (int x in neighbors)
             {
                 float curDist = Vector3.Distance(curPos, Find.WorldGrid.GetTileCenter(x));
-                if(curDist<minDist)
+                if (curDist < minDist)
                 {
                     minDist = curDist;
                     p = x;
@@ -138,14 +153,19 @@ namespace PreemptiveStrike.IncidentCaravan
                     detected = newDetected;
                     EventManger.NotifyCaravanListChange?.Invoke();
                 }
-                
+
             }
         }
 
         public void StageForThreeHours()
         {
             stageRemainingTick = 7500;
+            StagedBefore = true;
         }
+
+        public void ApplyNegotiationCoolDown() { negotiateCoolDownTick = 2500; }
+        public void ApplyBroadCastCoolDown() { broadcastMessageCoolDownTick = 2500; }
+        public void ApplyDelayCoolDown() { delayCoolDownTick = 2500; }
 
         //I dont know how to conceal a world object(to make it unselectable), so I just hide it in the core of the planet...XD
         public override Vector3 DrawPos
@@ -154,13 +174,13 @@ namespace PreemptiveStrike.IncidentCaravan
             {
                 if (PES_Settings.DebugModeOn)
                     return curPos;
-                return detected? curPos : Vector3.zero;
+                return detected ? curPos : Vector3.zero;
             }
         }
 
         public override void Draw()
         {
-            if(PES_Settings.DebugModeOn)
+            if (PES_Settings.DebugModeOn)
             {
                 if (confirmed)
                     Material.color = Color.white;
@@ -188,8 +208,8 @@ namespace PreemptiveStrike.IncidentCaravan
         public void Dismiss()
         {
             Find.WorldObjects.Remove(this);
-            Messages.Message("PES_CaravanDismiss".Translate(CaravanTitle),MessageTypeDefOf.NeutralEvent);
-            
+            Messages.Message("PES_CaravanDismiss".Translate(CaravanTitle), MessageTypeDefOf.NeutralEvent);
+
         }
 
         #region Communication
@@ -200,11 +220,11 @@ namespace PreemptiveStrike.IncidentCaravan
 
         public void EstablishCommunication()
         {
-            if(!CommunicationEstablished)
+            if (!CommunicationEstablished)
             {
                 CommunicationEstablished = true;
                 incident.RevealInformationWhenCommunicationEstablished();
-                if(!incident.IsHostileToPlayer)
+                if (!incident.IsHostileToPlayer)
                     confirmed = detected = true;
                 EventManger.NotifyCaravanListChange?.Invoke();
             }

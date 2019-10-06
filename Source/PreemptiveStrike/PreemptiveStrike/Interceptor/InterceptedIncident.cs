@@ -16,6 +16,7 @@ namespace PreemptiveStrike.Interceptor
 
     abstract class InterceptedIncident : IExposable
     {
+        public IncidentCaravan.TravelingIncidentCaravan parentCaravan;
         public IncidentDef incidentDef;
         public IncidentParms parms;
 
@@ -37,8 +38,11 @@ namespace PreemptiveStrike.Interceptor
 
         public virtual void ExposeData()
         {
-            Scribe_Defs.Look<IncidentDef>(ref incidentDef, "incidentDef");
-            Scribe_Deep.Look<IncidentParms>(ref parms, "parms");
+            Scribe_Defs.Look(ref incidentDef, "incidentDef");
+            Scribe_Deep.Look(ref parms, "parms");
+            Scribe_References.Look(ref parentCaravan, "parentCaravan");
+            Scribe_Deep.Look(ref lookTargets, "lookTargets");
+
         }
 
         public virtual bool SubstituionWorkerExecution()

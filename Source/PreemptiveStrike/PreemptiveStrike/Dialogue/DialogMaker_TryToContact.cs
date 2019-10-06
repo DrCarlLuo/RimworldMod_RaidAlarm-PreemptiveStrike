@@ -20,6 +20,9 @@ namespace PreemptiveStrike.Dialogue
 
             if (!(caravan.incident is InterceptedIncident_HumanCrowd incident))
                 return null;
+            if (caravan.broadcastMessageCoolDownTick > 0)
+                return ContactCoolDownNode();
+
             string prologue;
             string key;
             if (incident.IntelLevel == IncidentIntelLevel.Unknown)
@@ -40,6 +43,16 @@ namespace PreemptiveStrike.Dialogue
             dianode.options.Add(DialogUtilities.NormalCancelOption());
 
             return dianode;
+        }
+
+        public static DiaNode ContactCoolDownNode()
+        {
+            TravelingIncidentCaravan caravan = DialogUtilities.tempCaravan;
+            Pawn pawn = DialogUtilities.tempPawn;
+
+            DiaNode diaNode = new DiaNode("PES_TryContact_CoolDown".Translate(GenDate.ToStringTicksToPeriod(caravan.broadcastMessageCoolDownTick)));
+            diaNode.options.Add(DialogUtilities.CurtOption("PES_Disconnect", null, null, true));
+            return diaNode;
         }
 
         public static DiaNode BroadCastMessageChoiceNode()
@@ -71,8 +84,9 @@ namespace PreemptiveStrike.Dialogue
             else
             {
                 string key;
-                void CommEstablishAction() { caravan.EstablishCommunication(); }
-                void LeaveAction() { caravan.Dismiss(); }
+                void CommEstablishAction() { caravan.EstablishCommunication(); caravan.ApplyBroadCastCoolDown(); }
+                void LeaveAction() { caravan.Dismiss(); caravan.ApplyBroadCastCoolDown(); }
+                void FailAction() { caravan.ApplyBroadCastCoolDown(); }
 
                 float MessageOdds = incident.SourceFaction == Faction.OfMechanoids ? 0f : DialogUtilities.MessageReceiveChance;
 
@@ -107,9 +121,9 @@ namespace PreemptiveStrike.Dialogue
                 //Action
                 option = new DiaOption(sb.ToString());
                 if (incident.IsHostileToPlayer)
-                    option.action = DialogUtilities.ResolveActionByOdds(hostileOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), null, ContactFailNode());
+                    option.action = DialogUtilities.ResolveActionByOdds(hostileOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), FailAction, ContactFailNode());
                 else
-                    option.action = DialogUtilities.ResolveActionByOdds(friendlyOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), null, ContactFailNode());
+                    option.action = DialogUtilities.ResolveActionByOdds(friendlyOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), FailAction, ContactFailNode());
                 diaNode.options.Add(option);
                 #endregion
 
@@ -132,9 +146,9 @@ namespace PreemptiveStrike.Dialogue
                     sb.AppendLine(OddsIndicator(0, friendlyContactOdds, "PES_TryOutcome_Positive", friendlyFleeOdds, "PES_TryOutcome_Scared"));
                 option = new DiaOption(sb.ToString());
                 if (incident.IsHostileToPlayer)
-                    option.action = DialogUtilities.ResolveActionByOdds(friendlyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), friendlyFleeOdds * MessageOdds, LeaveAction, IntimidationSuccessNode(), null, ContactFailNode());
+                    option.action = DialogUtilities.ResolveActionByOdds(friendlyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), friendlyFleeOdds * MessageOdds, LeaveAction, IntimidationSuccessNode(), FailAction, ContactFailNode());
                 else
-                    option.action = DialogUtilities.ResolveActionByOdds(EnemyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), EnemyFleeOdds * MessageOdds, LeaveAction, IntimidationSuccessNode(), null, ContactFailNode());
+                    option.action = DialogUtilities.ResolveActionByOdds(EnemyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), EnemyFleeOdds * MessageOdds, LeaveAction, IntimidationSuccessNode(), FailAction, ContactFailNode());
                 diaNode.options.Add(option);
                 #endregion
 
@@ -164,9 +178,9 @@ namespace PreemptiveStrike.Dialogue
                     }
                     option = new DiaOption(sb.ToString());
                     if (incident.IsHostileToPlayer)
-                        option.action = DialogUtilities.ResolveActionByOdds(EnemyLeaveOdds * MessageOdds, LeaveAction, BeguilementSuccessNode(incident.faction_revealed), EnemyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), null, ContactFailNode());
+                        option.action = DialogUtilities.ResolveActionByOdds(EnemyLeaveOdds * MessageOdds, LeaveAction, BeguilementSuccessNode(incident.faction_revealed), EnemyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), FailAction, ContactFailNode());
                     else
-                        option.action = DialogUtilities.ResolveActionByOdds(friendlyFleeOdds * MessageOdds, LeaveAction, BeguilementSuccessNode(incident.faction_revealed), null, ContactFailNode());
+                        option.action = DialogUtilities.ResolveActionByOdds(friendlyFleeOdds * MessageOdds, LeaveAction, BeguilementSuccessNode(incident.faction_revealed), FailAction, ContactFailNode());
                     diaNode.options.Add(option);
                 }
                 #endregion

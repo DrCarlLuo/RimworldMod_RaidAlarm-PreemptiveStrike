@@ -40,6 +40,7 @@ namespace PreemptiveStrike.IncidentCaravan
             int approxTileDist = Mathf.CeilToInt(Find.WorldGrid.ApproxDistanceInTiles(travalingCaravan.Tile, travalingCaravan.destinationTile));
             travalingCaravan.remainingTick = Mod.PES_Settings.TickForIncidentCaravanCoverOneTile * approxTileDist;
             travalingCaravan.incident = incident;
+            incident.parentCaravan = travalingCaravan;
             Find.WorldObjects.Add(travalingCaravan);
             return true;
         }

@@ -11,7 +11,8 @@ namespace PreemptiveStrike.Interceptor
 {
     class InterceptedIncident_HumanCrowd_RaidEnemy : InterceptedIncident_HumanCrowd
     {
-        public IncidentCaravan.RaidGoal raidGoal;
+        public RaidGoalType raidGoalType;
+        public RaidingGoal goal;
 
         public override bool IsHostileToPlayer => true;
 
@@ -91,6 +92,11 @@ namespace PreemptiveStrike.Interceptor
             base.ExposeData();
             Scribe_Values.Look<bool>(ref raidStrategy_revealed, "raidStrategy_revealed", false, false);
             Scribe_Values.Look(ref CombatMoral, "CombatMoral", 0, false);
+            Scribe_Deep.Look(ref goal, "goal");
+            if(Scribe.mode != LoadSaveMode.Saving)
+            {
+                goal.incident = this;
+            }
         }
 
         public override void ExecuteNow()

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <PES_TryToCallOnRadio>Try to contact {0}</PES_TryToCallOnRadio>
+  <PES_TryContact_CoolDown>We can only broadcast message to a certain object once per hour. Remaining Time: {0}</PES_TryContact_CoolDown>
 
   <PES_TryContactPrologue_Unknown>Since we have not established communication with "{0}", we can try to broadcast a message from this comms console, hoping they could receive this message and reply to us. \n\nBut beware, we don't know they are our allies or enemies.\n</PES_TryContactPrologue_Unknown>
 

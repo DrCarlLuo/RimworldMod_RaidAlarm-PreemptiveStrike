@@ -47,6 +47,16 @@ namespace PreemptiveStrike.Mod
         public static float BaseDelayIntimidationSmiteChance = 0.3f;
         public static float BaseDelayBeguilementChance = 0.4f;
 
+        public static float BaseBargainPersuasionChance = 0.3f;
+        public static float BaseBargainIntimidationSuccessChance = 0.4f;
+        public static float BaseBargainIntimidationSmiteChance = 0.4f;
+        public static float BaseBargainBeguilementChance = 0.5f;
+
+        public static float BaseRemedyPersuasionChance = 0.3f;
+        public static float BaseRemedyIntimidationSuccessChance = 0.4f;
+        public static float BaseRemedyIntimidationSmiteChance = 0.4f;
+        public static float BaseRemedyBeguilementChance = 0.5f;
+
         public static bool DebugModeOn = true;
     }
 }

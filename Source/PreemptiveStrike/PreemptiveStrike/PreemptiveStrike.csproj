@@ -62,6 +62,7 @@
     <Compile Include="Harmony\IncidentPatches.cs" />
     <Compile Include="Harmony\WorldObjectsHolderPatches.cs" />
     <Compile Include="IncidentCaravan\IncidentCaravanUtility.cs" />
+    <Compile Include="IncidentCaravan\RaidingGoal.cs" />
     <Compile Include="IncidentCaravan\RaidingGoalUtility.cs" />
     <Compile Include="IncidentCaravan\TravelingIncidentCaravan.cs" />
     <Compile Include="Interceptor\IncidentInterceptorUtility.cs" />
