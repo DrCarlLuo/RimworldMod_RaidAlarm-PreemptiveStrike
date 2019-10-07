@@ -8,6 +8,7 @@ using UnityEngine;
 using PreemptiveStrike.IncidentCaravan;
 using PreemptiveStrike.Interceptor;
 using PreemptiveStrike.Mod;
+using PreemptiveStrike.RaidGoal;
 
 namespace PreemptiveStrike.Dialogue
 {
@@ -22,6 +23,9 @@ namespace PreemptiveStrike.Dialogue
 
             if (incident == null) return null;
             if (incident.raidGoalType == RaidGoalType.Smite) return null;
+
+            if (incident.SourceFaction == Faction.OfMechanoids)
+                return DialogMaker_TryToContact.MechanoidAnswers();
 
             StringBuilder sb = new StringBuilder("PES_RaidNeg_Proglog".Translate(caravan.CaravanTitle, incident.SourceFaction));
             sb.AppendLine();
@@ -190,14 +194,14 @@ namespace PreemptiveStrike.Dialogue
                         rOption = new DiaOption("PES_RaidNeg_Sub_Rescue".Translate());
                         if (!RaidingGoal_Rescue.IsAvailableToIncident(incident, out failReason))
                             rOption.Disable(failReason);
-                        rOption.link = RemedyDetail(() => { (new RaidingGoal_Rescue()).ResolveToIncident(incident); });
+                        rOption.link = RemedyDetail(() => { (new RaidingGoal_Rescue()).ApplyToIncident(incident); });
                         rNode.options.Add(rOption);
                     }
 
                     if (incident.raidGoalType != RaidGoalType.Extortion)
                     {
                         rOption = new DiaOption("PES_RaidNeg_Sub_Extortion".Translate());
-                        rOption.link = RemedyDetail(() => { (new RaidingGoal_Extortion()).ResolveToIncident(incident); });
+                        rOption.link = RemedyDetail(() => { (new RaidingGoal_Extortion()).ApplyToIncident(incident); });
                         rNode.options.Add(rOption);
                         rNode.options.Add(DialogUtilities.CurtOption("PES_Cancel", null, null, true));
                     }

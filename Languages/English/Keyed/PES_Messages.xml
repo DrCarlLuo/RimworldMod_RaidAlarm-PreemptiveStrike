@@ -4,4 +4,19 @@
 <PES_CaravanDismiss>{0} is no longer heading towards our colony and tracked by our reconnaissance system.</PES_CaravanDismiss>
 <PES_PrisonerDead>{0} is getting really angry now because one of the prisoner they want is dead. They will now revenge on the colony.</PES_PrisonerDead>
 <PES_AllSlaveDead>{0} changes their raiding goal to Extortion, because all the colonists they want to enslave are dead.</PES_AllSlaveDead>
+<PES_CommunicationEstablished>We have established communication with {0}. Use Comms Console to contact them.</PES_CommunicationEstablished>
+
+<PES_Detected_Title_Human>Crowd Incoming</PES_Detected_Title_Human>
+<PES_Detected_Title_Animal>Herd Incoming</PES_Detected_Title_Animal>
+<PES_Detected_Text_Human>The reconnaissance system in our colony has detected that an unknown human crowd is moving toward our colony. Their faction and intention are unknown. The reconnaissance system is trying to identify more information about it. Detail information is in the security report.</PES_Detected_Text_Human>
+<PES_Detected_Text_Animal>The reconnaissance system in our colony detected that an unusual animal herd is moving toward our colony. The reconnaissance system is trying to identify more information about it. Detail information is in the security report.</PES_Detected_Text_Animal>
+
+<PES_Hostile_Confirmed>Hostile Entity Confirmed</PES_Hostile_Confirmed>
+<PES_Hostile_Text_Human>The reconnaissance system in our colony has confirmed the incoming human crowed is a hostile raiding team. More information is in the security report.</PES_Hostile_Text_Human>
+<PES_Hostile_Text_Animal>The reconnaissance system in our colony has confirmed the incoming animal herd are mad animals. More information is in the security report.</PES_Hostile_Text_Animal>
+
+<PES_Neutral_Message>The reconnaissance system in our colony has confirmed the incoming crowd is nonhostile. See more in security report.</PES_Neutral_Message>
+<PES_Neutral_Message_Animal>The reconnaissance system in our colony has confirmed the incoming crowd is nonhostile. See more in security report.</PES_Neutral_Message_Animal>
+
+<PES_Caravan_Confirmed>"{0}" has entered the vision range of our colony, all information revealed. </PES_Caravan_Confirmed>
 </LanguageData>

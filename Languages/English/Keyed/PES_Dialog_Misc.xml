@@ -24,7 +24,7 @@
   <PES_Reassuring>reassuring</PES_Reassuring>
   <PES_Nice>nice</PES_Nice>
   <PES_RaiseAlarm>Enemy incoming! Raise the alarm!</PES_RaiseAlarm>
-  <PES_trembling>trembling</PES_trembling>
+  <PES_trembling>trembling...</PES_trembling>
   <PES_DAMNIT>Damn it!</PES_DAMNIT>
 
   <PES_Friendly_Greeting>People from {0} greets {1} warmly and say that they are arriving very soon.</PES_Friendly_Greeting>

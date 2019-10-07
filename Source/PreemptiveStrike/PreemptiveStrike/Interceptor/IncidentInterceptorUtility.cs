@@ -5,6 +5,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 using PreemptiveStrike.IncidentCaravan;
+using PreemptiveStrike.RaidGoal;
 
 namespace PreemptiveStrike.Interceptor
 {

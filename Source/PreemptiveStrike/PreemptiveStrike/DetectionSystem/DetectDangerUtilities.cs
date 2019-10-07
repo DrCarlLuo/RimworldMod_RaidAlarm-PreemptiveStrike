@@ -38,10 +38,13 @@ namespace PreemptiveStrike.DetectionSystem
             {
                 if (new IntRange(1, 100).RandomInRange <= PES_Settings.DetectionChance)
                 {
-                    Messages.Message("Caravan Detected", MessageTypeDefOf.NegativeEvent);
+                    if (PES_Settings.DebugModeOn)
+                        Log.Message("Try Detect: Success");
                     return true;
                 }
             }
+            if (PES_Settings.DebugModeOn)
+                Log.Message("Try Detect: Fail");
             return false;
         }
 
@@ -68,7 +71,8 @@ namespace PreemptiveStrike.DetectionSystem
                 return false; //if the colony has no vision, then dont do it at all
             if (remainingTiles <= visionRange)
             {
-                Messages.Message("Caravan Spotted!", MessageTypeDefOf.NegativeEvent);
+                if (PES_Settings.DebugModeOn)
+                    Log.Message("Caravan enter vision range");
                 return true;
             }
             return false;

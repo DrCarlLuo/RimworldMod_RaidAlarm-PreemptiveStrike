@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <PES_UI_Title>Security Report</PES_UI_Title>
+    <PES_UI_Ranges>Current Vision Range: {0}   Detection Range: {1}</PES_UI_Ranges>
+    <PES_UI_Bulletins>Danger: {0}  Neutral: {1} Unidentified: {2}</PES_UI_Bulletins>
+    <PES_UI_Unknown>Unknown</PES_UI_Unknown>
+    <PES_UI_UnknownIntention>Unknown Intention</PES_UI_UnknownIntention>
+    <PES_UI_Strategy>Strategy: {0}</PES_UI_Strategy>
+    <PES_UI_Faction>Faction: </PES_UI_Faction>
+    <PES_UI_Corps>Corps Size: </PES_UI_Corps>
+    <PES_UI_Herd>Herd Size: </PES_UI_Herd>
+    <PES_UI_ETA>ETA: </PES_UI_ETA>
+    <PES_UI_Direction_unknown>Incoming Direction: Unknown</PES_UI_Direction_unknown>
+    <PES_UI_Direction_known>Incoming Direction (Click to see)</PES_UI_Direction_known>
+
+    <PES_UI_Letter_ReadMore>Read more in security report</PES_UI_Letter_ReadMore>
+</LanguageData>

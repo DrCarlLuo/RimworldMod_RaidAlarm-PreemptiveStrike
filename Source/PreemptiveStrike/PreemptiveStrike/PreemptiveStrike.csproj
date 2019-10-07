@@ -62,8 +62,8 @@
     <Compile Include="Harmony\IncidentPatches.cs" />
     <Compile Include="Harmony\WorldObjectsHolderPatches.cs" />
     <Compile Include="IncidentCaravan\IncidentCaravanUtility.cs" />
-    <Compile Include="IncidentCaravan\RaidingGoal.cs" />
-    <Compile Include="IncidentCaravan\RaidingGoalUtility.cs" />
+    <Compile Include="RaidGoal\RaidingGoal.cs" />
+    <Compile Include="RaidGoal\RaidingGoalUtility.cs" />
     <Compile Include="IncidentCaravan\TravelingIncidentCaravan.cs" />
     <Compile Include="Interceptor\IncidentInterceptorUtility.cs" />
     <Compile Include="Interceptor\InterceptedIncident.cs" />
@@ -91,6 +91,12 @@
     <Compile Include="Mod\PES_Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DefOf\Textures.cs" />
+    <Compile Include="RaidGoal\RaidingGoal_Conquer.cs" />
+    <Compile Include="RaidGoal\RaidingGoal_Enslave.cs" />
+    <Compile Include="RaidGoal\RaidingGoal_Extermination.cs" />
+    <Compile Include="RaidGoal\RaidingGoal_Extortion.cs" />
+    <Compile Include="RaidGoal\RaidingGoal_Rescue.cs" />
+    <Compile Include="RaidGoal\RaidingGoal_Smite.cs" />
     <Compile Include="Things\CompBuildingAlarm.cs" />
     <Compile Include="Things\CompBuildingAlarm_Primitive.cs" />
     <Compile Include="Things\CompDetection.cs" />
@@ -108,6 +114,7 @@
     <Compile Include="UI\Bulletin_Animal.cs" />
     <Compile Include="UI\Bulletin_Human.cs" />
     <Compile Include="UI\ColonySecurityDashBoard_Window.cs" />
+    <Compile Include="Dialogue\OpenUILetter.cs" />
     <Compile Include="UI\PES_UIComponent.cs" />
     <Compile Include="UI\UIConstants.cs" />
   </ItemGroup>

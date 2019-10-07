@@ -7,6 +7,7 @@ using RimWorld;
 using UnityEngine;
 using PreemptiveStrike.IncidentCaravan;
 using PreemptiveStrike.Interceptor;
+using PreemptiveStrike.Mod;
 
 namespace PreemptiveStrike.UI
 {
@@ -41,7 +42,7 @@ namespace PreemptiveStrike.UI
 
             if(!Incident_Animal.intention_revealed)
             {
-                intentionStr = "Unknown Intention";
+                intentionStr = "PES_UI_UnknownIntention".Translate();
                 intentionColor = Color.white;
             }
             else
@@ -49,26 +50,26 @@ namespace PreemptiveStrike.UI
                 if(Incident_Animal is InterceptedIncident_AnimalHerd_ManhunterPack)
                 {
                     intentionColor = Color.red;
-                    intentionStr = "Manhunting Pack";
+                    intentionStr = "PES_Intention_ManHunterPack".Translate();
                 }
                 else if(Incident_Animal is InterceptedIncident_AnimalHerd_Alphabeavers)
                 {
-                    intentionStr = "Wood Eating";
+                    intentionStr = "PES_Intention_AlphaBeavers".Translate();
                     intentionColor = Color.red;
                 }
                 else if(Incident_Animal is InterceptedIncident_AnimalHerd_FarmAnimalsWanderIn)
                 {
-                    intentionStr = "Join Colony";
+                    intentionStr = "PES_Intention_FarmAnimalsWanderIn".Translate();
                     intentionColor = Color.cyan;
                 }
                 else if(Incident_Animal is InterceptedIncident_AnimalHerd_HerdMigration)
                 {
-                    intentionStr = "Herd Migration";
+                    intentionStr = "PES_Intention_HerdMigration".Translate();
                     intentionColor = Color.cyan;
                 }
                 else if(Incident_Animal is InterceptedIncident_AnimalHerd_ThrumboPasses)
                 {
-                    intentionStr = "Wandering";
+                    intentionStr = "PES_Intention_ThrumboPass".Translate();
                     intentionColor = Color.cyan;
                 }
             }
@@ -85,24 +86,29 @@ namespace PreemptiveStrike.UI
             if (Incident_Animal.animalType_revealed)
                 kindStr = Incident_Animal.AnimalType.label;
             else
-                kindStr = "Unidentified Animal Type";
+                kindStr = "PES_AnimalType_Unknown".Translate();
 
             Widgets.Label(new Rect(x, y, 200f, UIConstants.TinyLabelHeight), kindStr);
 
-            string numberStr = "Herd Size: ";
+            string numberStr = "PES_UI_Herd".Translate();
             if (Incident_Animal.animalNum_revealed)
                 numberStr += Incident_Animal.AnimalNum.ToString();
             else
-                numberStr += "unknown";
+                numberStr += "PES_UI_Unknown".Translate();
             Widgets.Label(new Rect(x + 210f, y, 190f, UIConstants.TinyLabelHeight), numberStr);
         }
 
         protected override void DrawThirdLine(float x, float y)
         {
             Text.Font = GameFont.Tiny;
-            Widgets.Label(new Rect(x, y, 100f, UIConstants.TinyLabelHeight), "ETA: " + Caravan.remainingTick);
+            string timeStr = "";
+            if (PES_Settings.DebugModeOn)
+                timeStr = "PES_UI_ETA".Translate() + Caravan.remainingTick;
+            else
+                timeStr = "PES_UI_ETA".Translate() + GenDate.ToStringTicksToPeriod(Caravan.remainingTick);
+            Widgets.Label(new Rect(x, y, 100f, UIConstants.TinyLabelHeight), timeStr);
             Rect directionRect = new Rect(x + 110f, y, 290f, UIConstants.TinyLabelHeight);
-            if(Widgets.ButtonText(directionRect, Incident_Animal.spawnPosition_revealed? "Incoming Direction: known" : "Incoming Direction: unknown", false) && Incident_Animal.spawnPosition_revealed)
+            if (Widgets.ButtonText(directionRect, Incident_Animal.spawnPosition_revealed ? "PES_UI_Direction_known".Translate() : "PES_UI_Direction_unknown".Translate(), false) && Incident_Animal.spawnPosition_revealed)
             {
                 CameraJumper.TryJump(Incident_Animal.lookTargets.TryGetPrimaryTarget());
             }

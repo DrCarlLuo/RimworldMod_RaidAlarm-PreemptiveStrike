@@ -23,9 +23,9 @@ namespace PreemptiveStrike.Dialogue
                 OpenDialog(DialogMaker_TryToContact.PrologueNode());
             else
             {
-                if(caravan.incident.IntelLevel == Interceptor.IncidentIntelLevel.Danger)
+                if (caravan.incident.IntelLevel == Interceptor.IncidentIntelLevel.Danger)
                     OpenDialog(DialogMaker_RaidNegotiation.PrologueNode());
-                else if(caravan.incident.IntelLevel == Interceptor.IncidentIntelLevel.Neutral)
+                else if (caravan.incident.IntelLevel == Interceptor.IncidentIntelLevel.Neutral)
                     OpenDialog(DialogMaker_Friendly.FriendlyNode());
             }
         }
@@ -109,6 +109,11 @@ namespace PreemptiveStrike.Dialogue
             if (pawn.GetStatValue(StatDefOf.NegotiationAbility) == 0)
                 return 2.0f;
             return 1f/ pawn.GetStatValue(StatDefOf.NegotiationAbility);
+        }
+
+        public static bool MapHasCommsConsole(Map map)
+        {
+            return map.listerThings.ThingsOfDef(ThingDefOf.CommsConsole).Any(thing => thing.Faction == Faction.OfPlayer);
         }
 
     }

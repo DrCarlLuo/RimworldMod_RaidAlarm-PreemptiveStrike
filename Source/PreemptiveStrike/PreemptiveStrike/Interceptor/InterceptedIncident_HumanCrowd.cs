@@ -43,17 +43,8 @@ namespace PreemptiveStrike.Interceptor
         {
             get
             {
-                if(faction_revealed)
-                {
-                    if (SourceFaction.PlayerRelationKind == FactionRelationKind.Hostile)
-                        return IncidentIntelLevel.Danger;
-                    else
-                        return IncidentIntelLevel.Neutral;
-                }
-                if(intention_revealed)
-                {
+                if(faction_revealed|| intention_revealed)
                     return this.IsHostileToPlayer ? IncidentIntelLevel.Danger : IncidentIntelLevel.Neutral;
-                }
                 return IncidentIntelLevel.Unknown;
             }
         }
@@ -104,7 +95,6 @@ namespace PreemptiveStrike.Interceptor
                 RevealSpawnPosition();
             if (!crowdSize_revealed)
                 RevealCrowdSize();
-            EventManger.NotifyCaravanListChange?.Invoke();
         }
 
     }

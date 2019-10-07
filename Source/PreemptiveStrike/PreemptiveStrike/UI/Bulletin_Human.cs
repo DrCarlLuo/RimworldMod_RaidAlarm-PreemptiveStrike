@@ -7,6 +7,7 @@ using RimWorld;
 using UnityEngine;
 using PreemptiveStrike.IncidentCaravan;
 using PreemptiveStrike.Interceptor;
+using PreemptiveStrike.Mod;
 
 namespace PreemptiveStrike.UI
 {
@@ -39,7 +40,7 @@ namespace PreemptiveStrike.UI
 
             if (!Incident_Human.intention_revealed)
             {
-                intentionStr = "Unknown Intention";
+                intentionStr = "PES_UI_UnknownIntention".Translate();
                 Widgets.Label(new Rect(x, y, 300f, UIConstants.TinyLabelHeight), intentionStr);
             }
             else
@@ -49,24 +50,30 @@ namespace PreemptiveStrike.UI
                     var incident1 = Incident_Human as InterceptedIncident_HumanCrowd_RaidEnemy;
 
                     GUI.color = Color.red;
-                    intentionStr = "Raid(Concentrate Invade)";
+                    intentionStr = "PES_Intention_Raid".Translate();
+                    if (Caravan.CommunicationEstablished || Caravan.confirmed)
+                        intentionStr += string.Format(@"({0})", incident1.goal.Lable);
                     Widgets.Label(new Rect(x, y, 150f, UIConstants.TinyLabelHeight), intentionStr);
 
                     string strategyString = "Error";
                     if (incident1.raidStrategy_revealed)
+                    {
                         strategyString = incident1.StrategyString;
+                        if (Incident_Human is InterceptedIncident_HumanCrowd_RaidEnemy_Groups)
+                            strategyString += "PES_Intention_RaidInGroups".Translate();
+                    }
                     else
-                        strategyString = "Unknown";
+                        strategyString = "PES_UI_Unknown".Translate();
 
                     GUI.color = Color.white;
-                    Widgets.Label(new Rect(x + 160f, y, 240f, UIConstants.TinyLabelHeight), "Strategy: " + strategyString);
+                    Widgets.Label(new Rect(x + 160f, y, 240f, UIConstants.TinyLabelHeight), "PES_UI_Strategy".Translate(strategyString));
                 }
                 else if (Incident_Human is InterceptedIncident_HumanCrowd_TraderCaravan)
                 {
                     var incident1 = Incident_Human as InterceptedIncident_HumanCrowd_TraderCaravan;
 
                     GUI.color = Color.cyan;
-                    intentionStr = "Trade Caravan";
+                    intentionStr = "PES_Intention_TradeCaravan".Translate();
                     Widgets.Label(new Rect(x, y, 150f, UIConstants.TinyLabelHeight), intentionStr);
 
                     if (incident1.caravanType_revealed && incident1.traderKind != null)
@@ -77,12 +84,12 @@ namespace PreemptiveStrike.UI
                 }
                 else if (Incident_Human is InterceptedIncident_HumanCrowd_TravelerGroup)
                 {
-                    intentionStr = "Travelers";
+                    intentionStr = "PES_Intention_Traveler".Translate();
                     Widgets.Label(new Rect(x, y, 300f, UIConstants.TinyLabelHeight), intentionStr);
                 }
                 else if (Incident_Human is InterceptedIncident_HumanCrowd_VisitorGroup)
                 {
-                    intentionStr = "Visitors";
+                    intentionStr = "PES_Intention_Visitor".Translate();
                     Widgets.Label(new Rect(x, y, 300f, UIConstants.TinyLabelHeight), intentionStr);
                 }
             }
@@ -91,36 +98,41 @@ namespace PreemptiveStrike.UI
 
         protected override void DrawSecondLine(float x, float y)
         {
-            StringBuilder sb = new StringBuilder("Faction: ");
+            StringBuilder sb = new StringBuilder("PES_UI_Faction".Translate());
             if (!Incident_Human.faction_revealed)
-                sb.Append("unknown");
+                sb.Append("PES_UI_Unknown".Translate());
             else
             {
                 sb.Append(Incident_Human.SourceFaction.Name);
                 if (Incident_Human.SourceFaction.PlayerRelationKind == FactionRelationKind.Hostile)
-                    sb.Append(@"(<color=red>Hostile</color>)");
+                    sb.Append(string.Format(@"(<color=red>{0}</color>)", "Hostile".Translate()));
                 else if (Incident_Human.SourceFaction.PlayerRelationKind == FactionRelationKind.Ally)
-                    sb.Append(@"(<color=blue>Ally</color>)");
+                    sb.Append(string.Format(@"(<color=blue>{0}</color>)", "Ally".Translate()));
                 else
-                    sb.Append(@"(<color=white>Neutral</color>)");
+                    sb.Append(string.Format(@"(<color=white>{0}</color>)", "Neutral".Translate()));
             }
             Text.Font = GameFont.Tiny;
             Widgets.Label(new Rect(x, y, 200f, UIConstants.TinyLabelHeight), sb.ToString());
 
-            string numberStr = "Corps Size: ";
+            string numberStr = "PES_UI_Corps".Translate();
             if (Incident_Human.crowdSize_revealed)
                 numberStr += Incident_Human.CrowdSize.ToString();
             else
-                numberStr += "unknown";
+                numberStr += "PES_UI_Unknown".Translate();
             Widgets.Label(new Rect(x + 210f, y, 190f, UIConstants.TinyLabelHeight), numberStr);
         }
 
         protected override void DrawThirdLine(float x, float y)
         {
             Text.Font = GameFont.Tiny;
-            Widgets.Label(new Rect(x, y, 100f, UIConstants.TinyLabelHeight), "ETA: " + Caravan.remainingTick);
+            string timeStr = "";
+            if (PES_Settings.DebugModeOn)
+                timeStr = "PES_UI_ETA".Translate() + Caravan.remainingTick;
+            else
+                timeStr = "PES_UI_ETA".Translate() + GenDate.ToStringTicksToPeriod(Caravan.remainingTick);
+            Widgets.Label(new Rect(x, y, 100f, UIConstants.TinyLabelHeight), timeStr);
             Rect directionRect = new Rect(x + 110f, y, 290f, UIConstants.TinyLabelHeight);
-            if(Widgets.ButtonText(directionRect, Incident_Human.spawnPosition_revealed ? "Incoming Direction: known" : "Incoming Direction: unknown", false) && Incident_Human.spawnPosition_revealed)
+            if(Widgets.ButtonText(directionRect, Incident_Human.spawnPosition_revealed ? "PES_UI_Direction_known".Translate() : "PES_UI_Direction_unknown".Translate(), false) && Incident_Human.spawnPosition_revealed)
             {
                 CameraJumper.TryJump(Incident_Human.lookTargets.TryGetPrimaryTarget());
             }

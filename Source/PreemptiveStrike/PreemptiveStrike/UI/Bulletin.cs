@@ -10,13 +10,6 @@ using PreemptiveStrike.Interceptor;
 
 namespace PreemptiveStrike.UI
 {
-    enum BulletinCategory
-    {
-        Danger,
-        Unknown,
-        Neutral
-    }
-
     abstract class Bulletin
     {
         public string MainLabel;
@@ -39,7 +32,10 @@ namespace PreemptiveStrike.UI
 
         protected virtual void DrawIcon(float x,float y)
         {
-            Widgets.ButtonImage(new Rect(x, y, UIConstants.BulletinIconSize, UIConstants.BulletinIconSize), MainIcon);
+            if(Widgets.ButtonImage(new Rect(x, y, UIConstants.BulletinIconSize, UIConstants.BulletinIconSize), MainIcon))
+            {
+                CameraJumper.TryJumpAndSelect(Caravan);
+            }
         }
 
         protected virtual void DrawMainLabel(float x, float y)
@@ -70,8 +66,9 @@ namespace PreemptiveStrike.UI
 
         public void OnDraw(float x, float y)
         {
+            if (RemainSparkCnt > 0)
+                DoSpark(x, y);
             GUI.BeginGroup(new Rect(x,y,UIConstants.BulletinWidth,UIConstants.BulletinHeight));
-
             DrawIcon(0, UIConstants.BulletinIconIntend);
             float labelX = UIConstants.BulletinIconSize + UIConstants.BulletinIconIntend;
             DrawMainLabel(labelX, 0f);
@@ -80,6 +77,33 @@ namespace PreemptiveStrike.UI
             DrawThirdLine(labelX, UIConstants.MainLabelHeight + UIConstants.MainLabelIntend + UIConstants.TinyLabelHeight*2 + UIConstants.TinyLabelIntend*2);
 
             GUI.EndGroup();
+        }
+
+        private int RemainSparkCnt;
+        private readonly static Color sparkColorA = new Color(0f, 0f, 0f, 0f);
+        private readonly static Color sparkColorB = new Color(0.788f,0.259f,0.365f);//201,66,93
+        private readonly static float sparkInterval = 0.25f;
+        private float RemainSparkTime;
+        private void DoSpark(float x, float y)
+        {
+            Color curColor;
+            if (RemainSparkCnt % 2 == 0)
+                curColor = Color.Lerp(sparkColorB, sparkColorA, RemainSparkTime);
+            else
+                curColor = Color.Lerp(sparkColorA, sparkColorB, RemainSparkTime);
+            GUI.DrawTexture(new Rect(x, y, UIConstants.BulletinWidth, UIConstants.BulletinHeight), SolidColorMaterials.NewSolidColorTexture(curColor));
+            RemainSparkTime -= Time.deltaTime;
+            if (RemainSparkTime <= 0)
+            {
+                --RemainSparkCnt;
+                RemainSparkTime = sparkInterval;
+            }
+        }
+
+        public void BeginSpark(int times)
+        {
+            RemainSparkCnt = times * 2;
+            RemainSparkTime = sparkInterval;
         }
     }
 }

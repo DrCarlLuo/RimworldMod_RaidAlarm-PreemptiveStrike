@@ -33,6 +33,7 @@ namespace PreemptiveStrike.IncidentCaravan
         public InterceptedIncident incident;
         public bool detected;
         public bool confirmed;
+        private bool relationInformed = false;
 
         public string CaravanTitle
         {
@@ -63,6 +64,7 @@ namespace PreemptiveStrike.IncidentCaravan
             Scribe_Values.Look(ref confirmed, "confirmed", false, false);
             Scribe_Values.Look(ref CommunicationEstablished, "CommunicationEstablished", false, false);
             Scribe_Values.Look(ref Communicable, "Communicable", false, false);
+            Scribe_Values.Look(ref relationInformed, "relationInformed", false, false);
         }
 
         public override void PostAdd()
@@ -140,21 +142,66 @@ namespace PreemptiveStrike.IncidentCaravan
                 else
                 {
                     if (DetectDangerUtilities.TryDetectCaravanDetail(this))
+                    {
                         incident.RevealRandomInformation();
+                        TryNotifyCaravanIntel();
+                    }
                 }
 
                 confirmed = DetectDangerUtilities.TryConfirmCaravanWithinVision(this);
                 if (confirmed)
+                {
                     incident.RevealAllInformation();
+                    if (Communicable) EstablishCommunication();
+                    TryNotifyCaravanIntel();
+                    NotifyConfirmed();
+                }
                 newDetected = newDetected || confirmed;
 
                 if (newDetected != detected)
                 {
                     detected = newDetected;
+                    if (!confirmed) NotifyDetected();
                     EventManger.NotifyCaravanListChange?.Invoke();
                 }
 
             }
+        }
+
+        public void NotifyDetected()
+        {
+            if (incident is InterceptedIncident_AnimalHerd)
+                OpenUILetter.Make("PES_Detected_Title_Animal".Translate(), "PES_Detected_Text_Animal".Translate(), LetterDefOf.NeutralEvent);
+            else
+                OpenUILetter.Make("PES_Detected_Title_Human".Translate(), "PES_Detected_Text_Human".Translate(), LetterDefOf.NeutralEvent);
+        }
+
+        public void NotifyConfirmed()
+        {
+            Messages.Message("PES_Caravan_Confirmed".Translate(CaravanTitle), MessageTypeDefOf.NeutralEvent);
+        }
+
+        public void TryNotifyCaravanIntel()
+        {
+            if (incident.IntelLevel == IncidentIntelLevel.Unknown)
+                return;
+            if (relationInformed)
+                return;
+            if (incident.IntelLevel == IncidentIntelLevel.Neutral)
+            {
+                if (incident is InterceptedIncident_AnimalHerd)
+                    Messages.Message("PES_Neutral_Message_Animal".Translate(), MessageTypeDefOf.NeutralEvent);
+                else
+                    Messages.Message("PES_Neutral_Message".Translate(), MessageTypeDefOf.NeutralEvent);
+            }
+            else
+            {
+                if (incident is InterceptedIncident_AnimalHerd)
+                    SparkUILetter.Make("PES_Hostile_Confirmed".Translate(), "PES_Hostile_Text_Animal".Translate(), LetterDefOf.ThreatBig, this);
+                else
+                    SparkUILetter.Make("PES_Hostile_Confirmed".Translate(), "PES_Hostile_Text_Human".Translate(), LetterDefOf.ThreatBig, this);
+            }
+            relationInformed = true;
         }
 
         public void StageForThreeHours()
@@ -178,29 +225,28 @@ namespace PreemptiveStrike.IncidentCaravan
             }
         }
 
-        public override void Draw()
+        private static Material hostileMat = MaterialPool.MatFrom(WorldObjectDefOf.Caravan.texture, ShaderDatabase.WorldOverlayTransparentLit, Color.red, WorldMaterials.DynamicObjectRenderQueue);
+        private static Material AllyMat = MaterialPool.MatFrom(WorldObjectDefOf.Caravan.texture, ShaderDatabase.WorldOverlayTransparentLit, Color.cyan, WorldMaterials.DynamicObjectRenderQueue);
+        private static Material UnknownMat = MaterialPool.MatFrom(WorldObjectDefOf.Caravan.texture, ShaderDatabase.WorldOverlayTransparentLit, Color.white, WorldMaterials.DynamicObjectRenderQueue);
+        public override Material Material
         {
-            if (PES_Settings.DebugModeOn)
+            get
             {
-                if (confirmed)
-                    Material.color = Color.white;
-                else if (detected)
-                    Material.color = Color.cyan;
+                if (incident.IntelLevel == IncidentIntelLevel.Danger)
+                    return hostileMat;
+                else if (incident.IntelLevel == IncidentIntelLevel.Neutral)
+                    return AllyMat;
                 else
-                    Material.color = Color.black;
-                base.Draw();
-                return;
+                    return UnknownMat;
             }
-
-            if (detected)
-                base.Draw();
         }
 
         private void Arrive()
         {
+            if (PES_Settings.DebugModeOn)
+                Log.Message("Carravan try arrive");
             if (arrived) return;
             arrived = true;
-            Messages.Message("Enemy Caravan Arrived!!!", MessageTypeDefOf.NeutralEvent);
             incident.ExecuteNow();
             Find.WorldObjects.Remove(this);
         }
@@ -220,12 +266,20 @@ namespace PreemptiveStrike.IncidentCaravan
 
         public void EstablishCommunication()
         {
+            if (!Communicable)
+                throw new Exception("Try to establish communication with non-commnicable!");
             if (!CommunicationEstablished)
             {
                 CommunicationEstablished = true;
                 incident.RevealInformationWhenCommunicationEstablished();
                 if (!incident.IsHostileToPlayer)
+                {
                     confirmed = detected = true;
+                    incident.RevealAllInformation();
+                }
+                TryNotifyCaravanIntel();
+                if (DialogUtilities.MapHasCommsConsole(incident.parms.target as Map))
+                    Messages.Message("PES_CommunicationEstablished".Translate(CaravanTitle), MessageTypeDefOf.NeutralEvent);
                 EventManger.NotifyCaravanListChange?.Invoke();
             }
         }

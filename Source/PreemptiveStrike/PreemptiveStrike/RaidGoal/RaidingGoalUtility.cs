@@ -1,4 +1,5 @@
-﻿using PreemptiveStrike.Interceptor;
+﻿using PreemptiveStrike.IncidentCaravan;
+using PreemptiveStrike.Interceptor;
 using PreemptiveStrike.Mod;
 using RimWorld;
 using System;
@@ -7,13 +8,21 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 
-namespace PreemptiveStrike.IncidentCaravan
+namespace PreemptiveStrike.RaidGoal
 {
 
     static class RaidingGoalUtility
     {
         public static void ResolveRaidGoal(InterceptedIncident_HumanCrowd_RaidEnemy incident)
         {
+            if (incident.SourceFaction == Faction.OfMechanoids)
+            {
+                new RaidingGoal_Extermination().ApplyToIncident(incident);
+                if (PES_Settings.DebugModeOn)
+                    Log.Message("Figure out raid goal: " + RaidGoalType.Extermination.ToString());
+                return;
+            }
+
             Map map = incident.parms.target as Map;
             Dictionary<RaidGoalType, float> weightDic = new Dictionary<RaidGoalType, float>()
             {
@@ -58,7 +67,7 @@ namespace PreemptiveStrike.IncidentCaravan
             if (PES_Settings.DebugModeOn)
                 Log.Message("Figure out raid goal: " + theChosenOne.ToString());
             RaidingGoal goal = Activator.CreateInstance(RaidingGoal.GetRaidClassByEnum(theChosenOne)) as RaidingGoal;
-            goal.ResolveToIncident(incident);
+            goal.ApplyToIncident(incident);
         }
 
         public static void RebuffDemandAndSmiteThePlayer(TravelingIncidentCaravan caravan, Pawn pawn)

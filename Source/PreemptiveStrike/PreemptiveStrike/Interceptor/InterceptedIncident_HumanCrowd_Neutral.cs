@@ -51,6 +51,7 @@ namespace PreemptiveStrike.Interceptor
                 Action OneToReveal = availables.RandomElement<Action>();
                 OneToReveal();
             }
+            parentCaravan.TryNotifyCaravanIntel();
         }
 
         public override void RevealInformationWhenCommunicationEstablished()

@@ -6,6 +6,7 @@ using RimWorld;
 using Verse;
 using PreemptiveStrike.Mod;
 using PreemptiveStrike.IncidentCaravan;
+using PreemptiveStrike.RaidGoal;
 
 namespace PreemptiveStrike.Interceptor
 {
@@ -32,15 +33,15 @@ namespace PreemptiveStrike.Interceptor
                 {
                     Type workerClass = parms.raidStrategy.workerClass;
                     if (workerClass == typeof(RaidStrategyWorker_ImmediateAttack))
-                        strategyString = "Frontal assault";
+                        strategyString = "PES_Strategy_Normal".Translate();
                     if (workerClass == typeof(RaidStrategyWorker_ImmediateAttackSappers))
-                        strategyString = "Sappers";
+                        strategyString = "PES_Strategy_Sapper".Translate();
                     if (workerClass == typeof(RaidStrategyWorker_ImmediateAttackSmart))
-                        strategyString = "Smart Attack";
+                        strategyString = "PES_Strategy_Smart".Translate();
                     if (workerClass == typeof(RaidStrategyWorker_Siege))
-                        strategyString = "Siege";
+                        strategyString = "PES_Strategy_Siege".Translate();
                     if (workerClass == typeof(RaidStrategyWorker_StageThenAttack))
-                        strategyString = "Stage then attack";
+                        strategyString = "PES_Strategy_Stage".Translate();
                 }
                 return strategyString;
             }
@@ -137,6 +138,7 @@ namespace PreemptiveStrike.Interceptor
                 Action OneToReveal = availables.RandomElement<Action>();
                 OneToReveal();
             }
+            parentCaravan.TryNotifyCaravanIntel();
         }
 
         public override void RevealAllInformation()
@@ -144,6 +146,7 @@ namespace PreemptiveStrike.Interceptor
             base.RevealAllInformation();
             if (!raidStrategy_revealed)
                 RevealStrategy();
+
         }
 
         public override void RevealInformationWhenCommunicationEstablished()
