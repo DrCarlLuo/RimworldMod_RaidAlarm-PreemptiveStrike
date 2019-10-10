@@ -16,8 +16,9 @@ namespace PreemptiveStrike.Jobs
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             Pawn pawn = this.pawn;
-            LocalTargetInfo targetA = this.job.targetA;
+            LocalTargetInfo targetA = this.job.targetA.Thing.InteractionCell;
             Job job = this.job;
+            //Reserve Interaction Cell, so that this job wouldn't affect refueling job or updation job
             return pawn.Reserve(targetA, job, 1, -1, null, errorOnFailed);
         }
 

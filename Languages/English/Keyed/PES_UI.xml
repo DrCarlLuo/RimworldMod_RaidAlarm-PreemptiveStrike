@@ -14,4 +14,13 @@
     <PES_UI_Direction_known>Incoming Direction (Click to see)</PES_UI_Direction_known>
 
     <PES_UI_Letter_ReadMore>Read more in security report</PES_UI_Letter_ReadMore>
+
+    <PES_UI_CaravanMoving>Moving towards {0}</PES_UI_CaravanMoving>
+    <PES_UI_CaravanStaging>Staging.</PES_UI_CaravanStaging>
+
+    <PES_UI_SkyFaller_Spot_Big>Predicted Impact Spot (Click to see)</PES_UI_SkyFaller_Spot_Big>
+    <PES_UI_SkyFaller_Spot_Small>Predicted Landfall Spot (Click to see)</PES_UI_SkyFaller_Spot_Small>
+    <PES_UI_SkyFaller_Spot_Unknown>Unable to predict dropping spot</PES_UI_SkyFaller_Spot_Unknown>
+
+    <PES_UI_Infestation_Spot>Emerging Spot (Click to see)</PES_UI_Infestation_Spot>
 </LanguageData>

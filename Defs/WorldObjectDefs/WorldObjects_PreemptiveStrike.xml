@@ -13,7 +13,17 @@
     <expandingIconTexture>World/WorldObjects/Expanding/Caravan</expandingIconTexture>
     <expandingIconPriority>100</expandingIconPriority>
     <expandMore>true</expandMore>
-    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+    <allowCaravanIncidentsWhichGenerateMap>false</allowCaravanIncidentsWhichGenerateMap>
+  </WorldObjectDef>
+
+  <WorldObjectDef>
+    <defName>PES_RaidingCaravan_Simple</defName>
+    <label>Incoming Raiding Caravan</label>
+    <description>An enemy raiding caravan heading towards your settlement! Prepare for it or conduct a preemptive strike!</description>
+    <worldObjectClass>PreemptiveStrike.IncidentCaravan.TravelingIncidentCaravan_Simple</worldObjectClass>
+    <texture>World/WorldObjects/Caravan</texture>
+    <useDynamicDrawer>false</useDynamicDrawer>
+    <allowCaravanIncidentsWhichGenerateMap>false</allowCaravanIncidentsWhichGenerateMap>
   </WorldObjectDef>
 
 </Defs>

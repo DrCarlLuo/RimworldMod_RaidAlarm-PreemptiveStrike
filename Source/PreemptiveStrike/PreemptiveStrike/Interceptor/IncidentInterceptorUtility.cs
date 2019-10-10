@@ -9,7 +9,7 @@ using PreemptiveStrike.RaidGoal;
 
 namespace PreemptiveStrike.Interceptor
 {
-    enum PawnPatchType
+    enum GeneratorPatchFlag
     {
         Generate,
         ReturnZero,
@@ -29,8 +29,8 @@ namespace PreemptiveStrike.Interceptor
         #region Intercepting Switches
         //Used in harmony Patches
         public static bool IsIntercepting_IncidentExcecution;
-        public static PawnPatchType IsIntercepting_PawnGeneration;
-        public static PawnPatchType IsIntercepting_GroupSpliter;
+        public static GeneratorPatchFlag IsIntercepting_PawnGeneration;
+        public static GeneratorPatchFlag IsIntercepting_GroupSpliter;
 
         public static bool isIntercepting_TraderCaravan_Worker;
         public static bool isIntercepting_TravelerGroup;
@@ -43,16 +43,36 @@ namespace PreemptiveStrike.Interceptor
         public static WorkerPatchType isIntercepting_ManhunterPack;
         #endregion
 
+        #region Simple Interception Switches
+        public static bool isIntercepting_EdgeDrop;
+        public static bool isIntercepting_CenterDrop;
+        public static bool isIntercepting_EdgeDropGroup;
+        public static bool isIntercepting_RandomDrop;
+
+        public static GeneratorPatchFlag IsIntercepting_SkyfallerCell_Loose;
+        public static GeneratorPatchFlag IsIntercepting_RandomDropSpot;
+        public static GeneratorPatchFlag IsIntercepting_InfestationCell;
+        public static WorkerPatchType IsIntercepting_Meteorite;
+        public static WorkerPatchType IsIntercepting_ShipChunk;
+        public static WorkerPatchType IsIntercepting_ShipPart;
+        public static WorkerPatchType IsIntercepting_TransportPod;
+        public static WorkerPatchType IsIntercepting_ResourcePod;
+        public static WorkerPatchType IsIntercepting_Infestation;
+        #endregion
+
         public static List<Pawn> tmpPawnList;
         public static InterceptedIncident tmpIncident;
         public static List<Pair<List<Pawn>, IntVec3>> tempGroupList;
+        public static IntVec3 tempSkyfallerCellLoose;
+        public static IntVec3 tempRandomDropCell;
+        public static IntVec3 tempInfestationCell;
 
         static IncidentInterceptorUtility()
         {
             IsIntercepting_IncidentExcecution = true;
-            IsIntercepting_PawnGeneration = PawnPatchType.Generate;
+            IsIntercepting_PawnGeneration = GeneratorPatchFlag.Generate;
 
-            IsIntercepting_GroupSpliter = PawnPatchType.Generate;
+            IsIntercepting_GroupSpliter = GeneratorPatchFlag.Generate;
 
             isIntercepting_TraderCaravan_Worker = true;
             isIntercepting_TravelerGroup = true;
@@ -63,6 +83,22 @@ namespace PreemptiveStrike.Interceptor
             isIntercepting_ThrumboPasses = WorkerPatchType.Forestall;
             isIntercepting_Alphabeavers = WorkerPatchType.Forestall;
             isIntercepting_ManhunterPack = WorkerPatchType.Forestall;
+
+            isIntercepting_EdgeDrop = true;
+            isIntercepting_CenterDrop = true;
+            isIntercepting_EdgeDropGroup = true;
+            isIntercepting_RandomDrop = true;
+
+            IsIntercepting_SkyfallerCell_Loose = GeneratorPatchFlag.Generate;
+            IsIntercepting_RandomDropSpot = GeneratorPatchFlag.Generate;
+            IsIntercepting_InfestationCell = GeneratorPatchFlag.Generate;
+
+            IsIntercepting_Meteorite = WorkerPatchType.Forestall;
+            IsIntercepting_ShipChunk = WorkerPatchType.Forestall;
+            IsIntercepting_ShipPart = WorkerPatchType.Forestall;
+            IsIntercepting_TransportPod = WorkerPatchType.Forestall;
+            IsIntercepting_ResourcePod = WorkerPatchType.Forestall;
+            IsIntercepting_Infestation = WorkerPatchType.Forestall;
         }
 
         public static bool Intercept_Raid(IncidentParms parms, bool splitInGroups = false)
@@ -92,7 +128,7 @@ namespace PreemptiveStrike.Interceptor
             InterceptedIncident incident = new T();
             incident.incidentDef = incidentDef;
             incident.parms = parms;
-            IsIntercepting_PawnGeneration = PawnPatchType.ReturnZero;
+            IsIntercepting_PawnGeneration = GeneratorPatchFlag.ReturnZero;
             if (!IncidentCaravanUtility.AddNewIncidentCaravan(incident))
             {
                 Log.Error("Fail to create Incident Caravan");
@@ -116,9 +152,53 @@ namespace PreemptiveStrike.Interceptor
             return true;
         }
 
+        public static bool Intercept_SkyFaller<T>(IncidentDef incidentDef, IncidentParms parms) where T : InterceptedIncident_SkyFaller, new()
+        {
+            InterceptedIncident_SkyFaller incident = new T();
+            incident.incidentDef = incidentDef;
+            incident.parms = parms;
+            if (incident.FallerType == SkyFallerType.Big && !PESDefOf.PES_SkyIDL.IsFinished)
+                return false;
+            if (incident.FallerType == SkyFallerType.Small && !PESDefOf.PES_SkyIDS.IsFinished)
+                return false;
+            if (!incident.PreCalculateDroppingSpot())
+            {
+                return false;
+            }
+            if (!IncidentCaravanUtility.AddSimpleIncidentCaravan(incident,2500,1250))
+            {
+                Log.Error("Fail to create Incident Caravan");
+                return false;
+            }
+            return true;
+        }
+
+        public static bool Intercept_Infestation(IncidentParms parms)
+        {
+            if (!PESDefOf.PES_InfestationDetection.IsFinished)
+                return false;
+            Map map = parms.target as Map;
+            if (!map.listerBuildings.allBuildingsColonist.Any(b => b.def == DefDatabase<ThingDef>.GetNamed("GroundPenetratingScanner")))
+                return false;
+
+            InterceptedIncident_Infestation incident = new InterceptedIncident_Infestation();
+            incident.incidentDef = DefDatabase<IncidentDef>.GetNamed("Infestation");
+            incident.parms = parms;
+            if (!incident.DeterminSpot())
+                return false;
+            if (!IncidentCaravanUtility.AddSimpleIncidentCaravan(incident, 2500, 1250,true))
+            {
+                Log.Error("Fail to create Incident Caravan");
+                return false;
+            }
+            Dialogue.SparkUILetter.Make("PES_Infestation_Letter".Translate(), "PES_Infestation_Text".Translate(), LetterDefOf.ThreatBig, incident.parentCaravan);
+            Find.TickManager.slower.SignalForceNormalSpeedShort();
+            return true;
+        }
+
         public static List<Pawn> GenerateRaidPawns(IncidentParms parms)
         {
-            IsIntercepting_PawnGeneration = PawnPatchType.Generate;
+            IsIntercepting_PawnGeneration = GeneratorPatchFlag.Generate;
 
             PawnGroupKindDef combat = PawnGroupKindDefOf.Combat;
             parms.points = IncidentWorker_Raid.AdjustedRaidPoints(parms.points, parms.raidArrivalMode, parms.raidStrategy, parms.faction, combat);
@@ -131,11 +211,13 @@ namespace PreemptiveStrike.Interceptor
 
         public static List<Pawn> GenerateNeutralPawns(PawnGroupKindDef pawnGroupKind, IncidentParms parms)
         {
-            IsIntercepting_PawnGeneration = PawnPatchType.Generate;
+            IsIntercepting_PawnGeneration = GeneratorPatchFlag.Generate;
 
             PawnGroupMakerParms defaultPawnGroupMakerParms = IncidentParmsUtility.GetDefaultPawnGroupMakerParms(pawnGroupKind, parms, true);
             List<Pawn> list = PawnGroupMakerUtility.GeneratePawns(defaultPawnGroupMakerParms, false).ToList<Pawn>();
             return list;
         }
+
+        
     }
 }

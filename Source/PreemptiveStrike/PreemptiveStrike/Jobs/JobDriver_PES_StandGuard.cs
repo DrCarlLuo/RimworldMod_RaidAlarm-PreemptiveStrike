@@ -15,7 +15,8 @@ namespace PreemptiveStrike.Jobs
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
+            //Reserve Interaction Cell, so that this job wouldn't affect refueling job or updation job
+            return pawn.Reserve(job.targetA.Thing.InteractionCell, job, 1, -1, null, errorOnFailed);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()

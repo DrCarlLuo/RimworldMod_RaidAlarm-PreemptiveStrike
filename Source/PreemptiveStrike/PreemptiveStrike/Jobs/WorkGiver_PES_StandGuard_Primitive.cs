@@ -48,7 +48,8 @@ namespace PreemptiveStrike.Jobs
                 return false;
             if (building.IsBurning())
                 return false;
-            LocalTargetInfo target = building;
+            //Reserve Interaction Cell, so that this job wouldn't affect refueling job or updation job
+            LocalTargetInfo target = building.InteractionCell;
             if (!pawn.CanReserve(target, 1, -1, null, forced))
                 return false;
             CompDetection_ManualDevice comp = building.TryGetComp<CompDetection_ManualDevice>();

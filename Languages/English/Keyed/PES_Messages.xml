@@ -19,4 +19,23 @@
 <PES_Neutral_Message_Animal>The reconnaissance system in our colony has confirmed the incoming crowd is nonhostile. See more in security report.</PES_Neutral_Message_Animal>
 
 <PES_Caravan_Confirmed>"{0}" has entered the vision range of our colony, all information revealed. </PES_Caravan_Confirmed>
+
+<PES_Update_NeedSkill>A colonist with at least Level {0} in construction is required to construct this upgrading</PES_Update_NeedSkill>
+
+<PES_Spot_SkyFaller_Big>The reconnaissance system in our colony has spotted an anomalous large object in the sky</PES_Spot_SkyFaller_Big>
+<PES_Spot_SkyFaller_Small>The reconnaissace system in our colony has spotted incoming drop pods</PES_Spot_SkyFaller_Small>
+
+<PES_Warning_Meteorite>Warning: Meteorite Impact</PES_Warning_Meteorite>
+<PES_Warning_Meteorite_Text>The reconnaissance system in our colony has confirmed that the incoming large object is a meteorite. The impact spot has been successfully calculated. See the security report for more information.</PES_Warning_Meteorite_Text>
+
+<PES_Warning_ShipPart>Warning: Ship Part Impact</PES_Warning_ShipPart>
+<PES_Warning_Shippart_Text>The reconnaissance system in our colony has confirmed that the incoming large object is a large piece of an ancient ship! The impact spot has been successfully calculated. See the security report for more information.</PES_Warning_Shippart_Text>
+
+<PES_Warning_DropPodAssault>Warning: Drop Pod Assault</PES_Warning_DropPodAssault>
+<PES_Warning_DropPodAssault_Text>The reconnaissance system inour colony has confirmed that the incoming drop pods are actually containing enemies! Their landing spot has been successfully calculated. See the security report of more information.</PES_Warning_DropPodAssault_Text>
+
+<PES_Notify_ResoucePod>The incoming drop pods have been confirmed to be resouce pods.</PES_Notify_ResoucePod>
+<PES_Notify_RefugeePod>The incoming drop pods have been confirmed to be containing a refugee.</PES_Notify_RefugeePod>
+<PES_Notify_ShipChunk>The incoming large object in the sky has been confirmed to be ship chunks.</PES_Notify_ShipChunk>
 </LanguageData>
+

@@ -113,5 +113,25 @@ namespace PreemptiveStrike.Things
                 useSearchlight = true;
         }
 
+        public override string CompInspectStringExtra()
+        {
+            StringBuilder sb = new StringBuilder("");
+            bool nothing = true;
+            if (!useSearchlight && Props.NotUsableUnderDarkness && this.parent.Map.skyManager.CurSkyGlow <= 0.3)
+            {
+                nothing = false;
+                sb.Append("PES_Building_UnUsableDark".Translate());
+            }
+            string baseStr = base.CompInspectStringExtra();
+            if (baseStr != null)
+            {
+                if(!nothing)
+                    sb.AppendLine();
+                nothing = false;
+                sb.Append(baseStr);
+            }
+            if (nothing) return null;
+            return sb.ToString();
+        }
     }
 }

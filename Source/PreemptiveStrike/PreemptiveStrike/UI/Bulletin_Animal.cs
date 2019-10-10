@@ -26,9 +26,9 @@ namespace PreemptiveStrike.UI
             if (bulletinIntelLevel == IncidentIntelLevel.Unknown)
                 MainIcon = Textures.IconUnknown;
             else if (bulletinIntelLevel == IncidentIntelLevel.Danger)
-                MainIcon = Textures.IconAnimal;
+                MainIcon = Textures.IconRaidAnimal;
             else if (bulletinIntelLevel == IncidentIntelLevel.Neutral)
-                MainIcon = Textures.IconAnimal;
+                MainIcon = Textures.IconHerd;
             base.DrawIcon(x, y);
         }
 

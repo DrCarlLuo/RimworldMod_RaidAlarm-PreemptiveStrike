@@ -10,15 +10,21 @@ namespace PreemptiveStrike
     [StaticConstructorOnStartup]
     static class Textures
     {
-        public static readonly Texture2D IconSword = ContentFinder<Texture2D>.Get("UI/swords");
+        public static readonly Texture2D IconRaidHuman = ContentFinder<Texture2D>.Get("UI/PES_Raid_Human");
+        public static readonly Texture2D IconRaidAnimal = ContentFinder<Texture2D>.Get("UI/PES_Raid_Animal");
+        public static readonly Texture2D IconHerd = ContentFinder<Texture2D>.Get("UI/PES_AnimalHerd");
+        public static readonly Texture2D IconTrader = ContentFinder<Texture2D>.Get("UI/PES_Trader");
+        public static readonly Texture2D IconTraveler = ContentFinder<Texture2D>.Get("UI/PES_Traveler");
+        public static readonly Texture2D IconUnknown = ContentFinder<Texture2D>.Get("UI/PES_unknown");
 
-        public static readonly Texture2D IconUnknown = ContentFinder<Texture2D>.Get("UI/unknown");
+        public static readonly Texture2D IconPlusIcon = ContentFinder<Texture2D>.Get("UI/PES_PlusIcon");
 
-        public static readonly Texture2D IconAnimal = ContentFinder<Texture2D>.Get("UI/animals");
+        public static readonly Texture2D IconLargeSkyObj_Hostile = ContentFinder<Texture2D>.Get("UI/PES_LargeSkyObj_Hostile");
+        public static readonly Texture2D IconLargeSkyObj_Neutral = ContentFinder<Texture2D>.Get("UI/PES_LargeSkyObj_Neutral");
+        public static readonly Texture2D IconSmallSkyObj_Hostile = ContentFinder<Texture2D>.Get("UI/PES_SmallSkyObj_Hostile");
+        public static readonly Texture2D IconSmallSkyObj_Neutral = ContentFinder<Texture2D>.Get("UI/PES_SmallSkyObj_Neutral");
 
-        public static readonly Texture2D IconMerchant = ContentFinder<Texture2D>.Get("UI/Merchant");
-
-        public static readonly Texture2D IconPlusIcon = ContentFinder<Texture2D>.Get("UI/PlusIcon");
+        public static readonly Texture2D IconInfestation = ContentFinder<Texture2D>.Get("UI/PES_Infestation");
 
     }
 }

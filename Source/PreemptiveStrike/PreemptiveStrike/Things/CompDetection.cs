@@ -46,7 +46,7 @@ namespace PreemptiveStrike.Things
         {
             var upgradeList = parent.AllComps.OfType<CompUpgrade>();
             bool none = true;
-            StringBuilder sb = new StringBuilder("Installed Upgrade: ");
+            StringBuilder sb = new StringBuilder("PES_Building_Installed".Translate());
             foreach (var comp in upgradeList)
             {
                 if(comp.complete)

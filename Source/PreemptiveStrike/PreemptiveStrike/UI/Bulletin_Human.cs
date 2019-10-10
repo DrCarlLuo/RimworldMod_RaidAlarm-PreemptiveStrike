@@ -26,9 +26,14 @@ namespace PreemptiveStrike.UI
             if (bulletinIntelLevel == IncidentIntelLevel.Unknown)
                 MainIcon = Textures.IconUnknown;
             else if (bulletinIntelLevel == IncidentIntelLevel.Danger)
-                MainIcon = Textures.IconSword;
+                MainIcon = Textures.IconRaidHuman;
             else if (bulletinIntelLevel == IncidentIntelLevel.Neutral)
-                MainIcon = Textures.IconMerchant;
+            {
+                if (Incident_Human is InterceptedIncident_HumanCrowd_TraderCaravan)
+                    MainIcon = Textures.IconTrader;
+                else
+                    MainIcon = Textures.IconTraveler;
+            }
             base.DrawIcon(x, y);
         }
 

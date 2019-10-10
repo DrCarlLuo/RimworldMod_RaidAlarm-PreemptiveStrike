@@ -23,7 +23,7 @@ namespace PreemptiveStrike.Interceptor
         public override void ExecuteNow()
         {
             SetInterceptFlag(false);
-            IncidentInterceptorUtility.IsIntercepting_PawnGeneration = PawnPatchType.ReturnTempList;
+            IncidentInterceptorUtility.IsIntercepting_PawnGeneration = GeneratorPatchFlag.ReturnTempList;
             IncidentInterceptorUtility.tmpPawnList = this.pawnList;
 
             if (this.incidentDef != null && this.parms != null)

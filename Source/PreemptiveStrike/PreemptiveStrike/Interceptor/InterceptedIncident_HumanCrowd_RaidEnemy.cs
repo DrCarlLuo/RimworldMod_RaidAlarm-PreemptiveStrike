@@ -103,7 +103,7 @@ namespace PreemptiveStrike.Interceptor
         public override void ExecuteNow()
         {
             IncidentInterceptorUtility.IsIntercepting_IncidentExcecution = false;
-            IncidentInterceptorUtility.IsIntercepting_PawnGeneration = PawnPatchType.ReturnTempList;
+            IncidentInterceptorUtility.IsIntercepting_PawnGeneration = GeneratorPatchFlag.ReturnTempList;
             IncidentInterceptorUtility.tmpPawnList = this.pawnList;
 
             if (incidentDef != null && this.parms != null)
@@ -117,6 +117,7 @@ namespace PreemptiveStrike.Interceptor
                 Log.Error("No IncidentDef or parms in InterceptedIncident!");
 
             IncidentInterceptorUtility.tmpPawnList = null;
+            IncidentInterceptorUtility.IsIntercepting_PawnGeneration = GeneratorPatchFlag.Generate;
             IncidentInterceptorUtility.IsIntercepting_IncidentExcecution = true;
         }
 

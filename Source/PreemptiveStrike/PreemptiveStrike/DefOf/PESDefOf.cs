@@ -37,5 +37,9 @@ namespace PreemptiveStrike
 
         public static HediffDef PES_CombatFervor;
         public static HediffDef PES_CombatTiredness;
+
+        public static ResearchProjectDef PES_SkyIDS;
+        public static ResearchProjectDef PES_SkyIDL;
+        public static ResearchProjectDef PES_InfestationDetection;
     }
 }

@@ -44,13 +44,13 @@ namespace PreemptiveStrike.Harmony
         [HarmonyPrefix]
         static bool Prefix(ref IEnumerable<Pawn> __result)
         {
-            if (IncidentInterceptorUtility.IsIntercepting_PawnGeneration == PawnPatchType.Generate)
+            if (IncidentInterceptorUtility.IsIntercepting_PawnGeneration == GeneratorPatchFlag.Generate)
                 return true;
-            if (IncidentInterceptorUtility.IsIntercepting_PawnGeneration == PawnPatchType.ReturnTempList)
+            if (IncidentInterceptorUtility.IsIntercepting_PawnGeneration == GeneratorPatchFlag.ReturnTempList)
                 __result = IncidentInterceptorUtility.tmpPawnList;
             else
                 __result = new List<Pawn>();
-            IncidentInterceptorUtility.IsIntercepting_PawnGeneration = PawnPatchType.Generate;
+            IncidentInterceptorUtility.IsIntercepting_PawnGeneration = GeneratorPatchFlag.Generate;
             return false;
         }
     }
@@ -61,13 +61,13 @@ namespace PreemptiveStrike.Harmony
         [HarmonyPrefix]
         static bool Prefix(ref List<Pair<List<Pawn>, IntVec3>> __result)
         {
-            if (IncidentInterceptorUtility.IsIntercepting_GroupSpliter == PawnPatchType.Generate)
+            if (IncidentInterceptorUtility.IsIntercepting_GroupSpliter == GeneratorPatchFlag.Generate)
                 return true;
-            if (IncidentInterceptorUtility.IsIntercepting_GroupSpliter == PawnPatchType.ReturnTempList)
+            if (IncidentInterceptorUtility.IsIntercepting_GroupSpliter == GeneratorPatchFlag.ReturnTempList)
                 __result = IncidentInterceptorUtility.tempGroupList;
             else
                 __result = new List<Pair<List<Pawn>, IntVec3>>();
-            IncidentInterceptorUtility.IsIntercepting_GroupSpliter = PawnPatchType.Generate;
+            IncidentInterceptorUtility.IsIntercepting_GroupSpliter = GeneratorPatchFlag.Generate;
             return false;
         }
     }

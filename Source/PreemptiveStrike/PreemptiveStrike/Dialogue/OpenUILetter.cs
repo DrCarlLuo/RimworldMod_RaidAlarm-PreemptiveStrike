@@ -50,6 +50,7 @@ namespace PreemptiveStrike.Dialogue
                 {
                     if (caravan != null)
                         ColonySecurityDashBoard_Window.DoSparkWithBulletin(caravan);
+                    ColonySecurityDashBoard_Window.Instance.Minified = false;
                     Find.LetterStack.RemoveLetter(this);
                 };
                 option.resolveTree = true;

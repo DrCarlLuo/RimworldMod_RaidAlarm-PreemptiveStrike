@@ -45,6 +45,19 @@ namespace PreemptiveStrike.IncidentCaravan
             return true;
         }
 
+        public static bool AddSimpleIncidentCaravan(InterceptedIncident incident, int DelayTick, int revealTick, bool InitialDetected = false)
+        {
+            TravelingIncidentCaravan_Simple travalingCaravan = (TravelingIncidentCaravan_Simple)WorldObjectMaker.MakeWorldObject(DefDatabase<WorldObjectDef>.GetNamed("PES_RaidingCaravan_Simple", true));
+            travalingCaravan.Tile = 0;
+            travalingCaravan.remainingTick = DelayTick;
+            travalingCaravan.RemainingRevealTick = revealTick;
+            travalingCaravan.incident = incident;
+            incident.parentCaravan = travalingCaravan;
+            if (InitialDetected) travalingCaravan.detected = true;
+            Find.WorldObjects.Add(travalingCaravan);
+            return true;
+        }
+
         private static bool TryFindTile(int targetTile, out int tile)
         {
             //IntRange banditCampQuestSiteDistanceRange = SiteTuning.BanditCampQuestSiteDistanceRange;

@@ -23,7 +23,9 @@ namespace PreemptiveStrike.UI
             foreach (var x in IncidentCaravanUtility.IncidentCaravans)
             {
                 if (x.detected)
+                {
                     BulletinCache.Add(Bulletin.Create(x));
+                }
             }
             int danger = 0, neutral = 0, uid = 0;
             foreach (var x in BulletinCache)

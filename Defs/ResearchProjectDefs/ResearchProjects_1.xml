@@ -4,7 +4,7 @@
   <ResearchProjectDef>
     <defName>PES_PrimitiveTower</defName>
     <label>Primitive tower construction</label>
-    <description>111</description>
+    <description>Build primitive watch tower to provide basic reconnaissance ability.</description>
     <baseCost>400</baseCost>
     <techLevel>Medieval</techLevel>
     <tags>
@@ -16,6 +16,7 @@
     <tab>PreemptiveStrike</tab>
   </ResearchProjectDef>
 
+  <!--
   <ResearchProjectDef>
     <defName>PES_Astrology</defName>
     <label>Astrology</label>
@@ -46,11 +47,12 @@
     </prerequisites>
     <tab>PreemptiveStrike</tab>
   </ResearchProjectDef>
+-->
 
   <ResearchProjectDef>
     <defName>PES_ModernTower</defName>
     <label>Modern watchTower</label>
-    <description>111</description>
+    <description>Build mordern watch towers which provide better reconnaissance ability to the colony and can be installed with various upgrades.</description>
     <baseCost>600</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>1</researchViewX>
@@ -65,7 +67,7 @@
   <ResearchProjectDef>
     <defName>PES_FoodSupply</defName>
     <label>Sentinel food supply solution</label>
-    <description>111</description>
+    <description>Install mini nutrient past in watch tower to provide food supply for sentinels.</description>
     <baseCost>200</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>2</researchViewX>
@@ -80,7 +82,7 @@
   <ResearchProjectDef>
     <defName>PES_JoyRadio</defName>
     <label>Recreational Radio</label>
-    <description>111</description>
+    <description>Install radio in watch tower to provide recreation for sentinels.</description>
     <baseCost>100</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>2</researchViewX>
@@ -95,7 +97,7 @@
   <ResearchProjectDef>
     <defName>PES_SearchLight</defName>
     <label>Advanced lighting technology</label>
-    <description>111</description>
+    <description>Install search light in a watch tower so that it can be used during night.</description>
     <baseCost>1500</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>2</researchViewX>
@@ -110,7 +112,7 @@
   <ResearchProjectDef>
     <defName>PES_SkyIDL</defName>
     <label>Large sky object identification</label>
-    <description>111</description>
+    <description>Unlock the ability for the colony to identify large sky object, such as ship chunks and meteorites, and predict their impact position, which can help the colony reduce some loss.</description>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>2</researchViewX>
@@ -124,7 +126,7 @@
   <ResearchProjectDef>
     <defName>PES_RADAR</defName>
     <label>Radio detection and ranging</label>
-    <description>111</description>
+    <description>Building radar, an unmanned reconn building provide great detection range.</description>
     <baseCost>1500</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>2.5</researchViewX>
@@ -139,7 +141,7 @@
   <ResearchProjectDef>
     <defName>PES_SkyIDS</defName>
     <label>Small sky object identification</label>
-    <description>111</description>
+    <description>Unlock the ability for the colony to identify small sky object, such as drop pods, and predict their impact position, which can help the colony reduce some loss.</description>
     <baseCost>1500</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>3</researchViewX>
@@ -152,9 +154,23 @@
   </ResearchProjectDef>
 
   <ResearchProjectDef>
+    <defName>PES_InfestationDetection</defName>
+    <label>Earthquake Early Warning System</label>
+    <description>Add the ability of detect infestation to the ground-penetrating scanner.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>4</researchViewX>
+    <researchViewY>0</researchViewY>
+    <prerequisites>
+      <li>GroundPenetratingScanner</li>
+    </prerequisites>
+    <tab>PreemptiveStrike</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
     <defName>PES_SentryArray</defName>
     <label>Reconnaissance drones</label>
-    <description>111</description>
+    <description>Build sentry drone array, the ultimate reconn facility that provide a large vision range.</description>
     <baseCost>3000</baseCost>
     <techLevel>Spacer</techLevel>
     <researchViewX>4</researchViewX>
@@ -172,7 +188,7 @@
   <ResearchProjectDef>
     <defName>PES_Satellite</defName>
     <label>Satellite communication</label>
-    <description>111</description>
+    <description>Build reconnaissance satellite uplink, the ultimate recoon facility that provide a huge detection range</description>
     <baseCost>4000</baseCost>
     <techLevel>Spacer</techLevel>
     <researchViewX>5</researchViewX>

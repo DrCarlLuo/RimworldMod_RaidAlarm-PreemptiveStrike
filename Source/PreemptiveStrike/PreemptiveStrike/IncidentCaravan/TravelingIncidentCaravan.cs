@@ -19,9 +19,9 @@ namespace PreemptiveStrike.IncidentCaravan
         public Vector3 curPos;
         public int destinationTile = -1;
 
-        private Vector3 DestinationPos { get { return Find.WorldGrid.GetTileCenter(destinationTile); } }
+        protected Vector3 DestinationPos { get { return Find.WorldGrid.GetTileCenter(destinationTile); } }
 
-        private bool arrived;
+        protected bool arrived;
         public int remainingTick = 0;
         public int broadcastMessageCoolDownTick = 0;
         public int negotiateCoolDownTick = 0;
@@ -33,9 +33,9 @@ namespace PreemptiveStrike.IncidentCaravan
         public InterceptedIncident incident;
         public bool detected;
         public bool confirmed;
-        private bool relationInformed = false;
+        protected bool relationInformed = false;
 
-        public string CaravanTitle
+        public virtual string CaravanTitle
         {
             get
             {
@@ -45,6 +45,8 @@ namespace PreemptiveStrike.IncidentCaravan
                     return incident.IncidentTitle_Unknow;
             }
         }
+
+        public override string Label => CaravanTitle;
 
         public override void ExposeData()
         {
@@ -109,7 +111,7 @@ namespace PreemptiveStrike.IncidentCaravan
             TileChangingTick();
         }
 
-        private void TileChangingTick()
+        protected virtual void TileChangingTick()
         {
             List<int> neighbors = new List<int>();
             Find.WorldGrid.GetTileNeighbors(Tile, neighbors);
@@ -181,7 +183,7 @@ namespace PreemptiveStrike.IncidentCaravan
             Messages.Message("PES_Caravan_Confirmed".Translate(CaravanTitle), MessageTypeDefOf.NeutralEvent);
         }
 
-        public void TryNotifyCaravanIntel()
+        public virtual void TryNotifyCaravanIntel()
         {
             if (incident.IntelLevel == IncidentIntelLevel.Unknown)
                 return;
@@ -241,7 +243,14 @@ namespace PreemptiveStrike.IncidentCaravan
             }
         }
 
-        private void Arrive()
+        public override string GetInspectString()
+        {
+            if (stageRemainingTick > 0)
+                return "PES_UI_CaravanStaging".Translate();
+            return "PES_UI_CaravanMoving".Translate((incident.parms.target as Map).Parent.Label);
+        }
+
+        protected void Arrive()
         {
             if (PES_Settings.DebugModeOn)
                 Log.Message("Carravan try arrive");
@@ -255,7 +264,7 @@ namespace PreemptiveStrike.IncidentCaravan
         {
             Find.WorldObjects.Remove(this);
             Messages.Message("PES_CaravanDismiss".Translate(CaravanTitle), MessageTypeDefOf.NeutralEvent);
-
+            
         }
 
         #region Communication

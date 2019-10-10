@@ -141,13 +141,13 @@ namespace PreemptiveStrike.Things
             {
                 yield return new Command_Toggle
                 {
-                    defaultLabel = "Install: " + Props.TruncatedName,
+                    defaultLabel = "PES_Building_ToInstall".Translate(Props.TruncatedName),
                     defaultDesc = Props.DescriptionOnGizmo,
                     toggleAction = delegate ()
                     {
                         if (!beginUpgrade && !AllPawnInColonyMeetSkillRequirement)
                         {
-                            Messages.Message("A colonist with at least Level " + Props.needConstructionSkill + " in construction is required to construct this upgrading", this.parent, MessageTypeDefOf.RejectInput, false);
+                            Messages.Message("PES_Update_NeedSkill".Translate(Props.needConstructionSkill), this.parent, MessageTypeDefOf.RejectInput, false);
                         }
                         else
                         {
@@ -173,14 +173,8 @@ namespace PreemptiveStrike.Things
             StringBuilder sb = new StringBuilder("");
             if (beginUpgrade)
             {
-                sb.Append("Installing Upgrade: ");
-                sb.Append(Props.name);
-                sb.AppendLine();
-                sb.Append("Progress: ");
-                sb.Append(Mathf.RoundToInt(FinishPercentage * 100f));
-                sb.Append("%\n");
-                sb.Append("Delivered: ");
-                sb.Append(ingredients.ContentsString);
+                sb.AppendLine("PES_Building_UpdateInstalling".Translate(Props.name, Mathf.RoundToInt(FinishPercentage * 100f)));
+                sb.Append("PES_Building_Delivered".Translate(ingredients.ContentsString));
             }
             return sb.ToString();
         }

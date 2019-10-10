@@ -27,6 +27,10 @@ namespace PreemptiveStrike.UI
                 return new Bulletin_Human(caravan);
             if (incident is InterceptedIncident_AnimalHerd)
                 return new Bulletin_Animal(caravan);
+            if (incident is InterceptedIncident_SkyFaller)
+                return new Bulletin_SkyFaller(caravan);
+            if (incident is InterceptedIncident_Infestation)
+                return new Bulletin_Infestation(caravan);
             return null;
         }
 
@@ -69,7 +73,7 @@ namespace PreemptiveStrike.UI
             if (RemainSparkCnt > 0)
                 DoSpark(x, y);
             GUI.BeginGroup(new Rect(x,y,UIConstants.BulletinWidth,UIConstants.BulletinHeight));
-            DrawIcon(0, UIConstants.BulletinIconIntend);
+            DrawIcon(0, UIConstants.BulletinIconIntend + 5f);
             float labelX = UIConstants.BulletinIconSize + UIConstants.BulletinIconIntend;
             DrawMainLabel(labelX, 0f);
             DrawFirstLine(labelX, UIConstants.MainLabelHeight+UIConstants.MainLabelIntend);

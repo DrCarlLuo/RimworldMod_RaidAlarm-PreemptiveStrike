@@ -52,7 +52,7 @@
 
   <WorkGiverDef>
     <defName>PES_Refuel</defName>
-    <label>refuel fuelable buildings</label>
+    <label>refuel reconn facilities</label>
     <giverClass>PreemptiveStrike.Jobs.WorkGiver_PES_Refuel</giverClass>
     <workType>Hauling</workType>
     <verb>refuel</verb>
