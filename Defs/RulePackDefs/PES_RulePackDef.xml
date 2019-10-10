@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>PES_NamerArmy</defName>
+
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[armyname]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>armyname->Names/Army</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+</Defs>

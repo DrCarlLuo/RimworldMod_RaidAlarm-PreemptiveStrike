@@ -22,10 +22,10 @@ namespace PreemptiveStrike.Interceptor
 
         public LookTargets lookTargets = null;
 
-        private string incidentTitle_Confirmed = null;
+        protected string incidentTitle_Confirmed = null;
         public abstract string IncidentTitle_Confirmed { get; }
 
-        private string incidentTitle_Unknow = null;
+        protected string incidentTitle_Unknow = null;
         public abstract string IncidentTitle_Unknow { get; }
 
         public abstract string IntentionStr { get; }

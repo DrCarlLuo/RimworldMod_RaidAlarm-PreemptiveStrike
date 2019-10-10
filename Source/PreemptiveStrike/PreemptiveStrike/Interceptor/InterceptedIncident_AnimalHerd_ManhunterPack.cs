@@ -19,6 +19,18 @@ namespace PreemptiveStrike.Interceptor
 
         public override string IntentionStr => "PES_Intention_ManHunterPack".Translate();
 
+        public override string IncidentTitle_Confirmed
+        {
+            get
+            {
+                if (incidentTitle_Confirmed == null)
+                {
+                    incidentTitle_Confirmed = PES_NameGenerator.ManhunterName(AnimalType.label);
+                }
+                return incidentTitle_Confirmed;
+            }
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();

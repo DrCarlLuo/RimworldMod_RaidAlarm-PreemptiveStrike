@@ -16,6 +16,18 @@ namespace PreemptiveStrike.Interceptor
 
         public override string IntentionStr => "PES_Intention_FarmAnimalsWanderIn".Translate();
 
+        public override string IncidentTitle_Confirmed
+        {
+            get
+            {
+                if (incidentTitle_Confirmed == null)
+                {
+                    incidentTitle_Confirmed = PES_NameGenerator.FarmAnimalName(AnimalType.label);
+                }
+                return incidentTitle_Confirmed;
+            }
+        }
+
         protected override void SetInterceptFlag(WorkerPatchType value)
         {
             IncidentInterceptorUtility.isIntercepting_FarmAnimalsWanderIn = value;

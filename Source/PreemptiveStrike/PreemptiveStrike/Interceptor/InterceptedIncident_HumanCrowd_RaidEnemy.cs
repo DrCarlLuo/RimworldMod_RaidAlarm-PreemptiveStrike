@@ -25,6 +25,21 @@ namespace PreemptiveStrike.Interceptor
 
         public int CombatMoral = 0;
 
+        public override string IncidentTitle_Confirmed
+        {
+            get
+            {
+                if(incidentTitle_Confirmed == null)
+                {
+                    if (SourceFaction == Faction.OfMechanoids)
+                        incidentTitle_Confirmed = PES_NameGenerator.MechArmyName();
+                    else
+                        incidentTitle_Confirmed = PES_NameGenerator.ArmyName();
+                }
+                return incidentTitle_Confirmed;
+            }
+        }
+
         public virtual string StrategyString
         {
             get

@@ -19,6 +19,18 @@ namespace PreemptiveStrike.Interceptor
 
         public override string IntentionStr => "PES_Intention_ThrumboPass".Translate();
 
+        public override string IncidentTitle_Confirmed
+        {
+            get
+            {
+                if (incidentTitle_Confirmed == null)
+                {
+                    incidentTitle_Confirmed = PES_NameGenerator.ThrumboName();
+                }
+                return incidentTitle_Confirmed;
+            }
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();

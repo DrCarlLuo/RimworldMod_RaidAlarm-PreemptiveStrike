@@ -22,6 +22,18 @@ namespace PreemptiveStrike.Interceptor
             Scribe_Values.Look<bool>(ref caravanType_revealed, "caravanType_revealed", false, false);
         }
 
+        public override string IncidentTitle_Confirmed
+        {
+            get
+            {
+                if (incidentTitle_Confirmed == null)
+                {
+                    incidentTitle_Confirmed = PES_NameGenerator.TraderName(SourceFaction.Name);
+                }
+                return incidentTitle_Confirmed;
+            }
+        }
+
         protected override void SetInterceptFlag(bool value)
         {
             IncidentInterceptorUtility.isIntercepting_TraderCaravan_Worker = value;

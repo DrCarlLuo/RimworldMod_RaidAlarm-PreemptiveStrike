@@ -12,6 +12,18 @@ namespace PreemptiveStrike.Interceptor
     {
         public override string IntentionStr => "PES_Intention_Visitor".Translate();
 
+        public override string IncidentTitle_Confirmed
+        {
+            get
+            {
+                if (incidentTitle_Confirmed == null)
+                {
+                    incidentTitle_Confirmed = PES_NameGenerator.VisitorName(SourceFaction.Name);
+                }
+                return incidentTitle_Confirmed;
+            }
+        }
+
         protected override void SetInterceptFlag(bool value)
         {
             IncidentInterceptorUtility.isIntercepting_VisitorGroup = value;

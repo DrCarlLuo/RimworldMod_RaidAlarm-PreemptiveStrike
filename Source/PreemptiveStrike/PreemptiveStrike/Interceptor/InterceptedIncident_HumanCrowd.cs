@@ -20,22 +20,11 @@ namespace PreemptiveStrike.Interceptor
         public virtual int CrowdSize => pawnList != null ? pawnList.Count : 0;
         public virtual IntVec3 SpawnPosition => parms.spawnCenter;
 
-        public override string IncidentTitle_Confirmed
-        {
-            get
-            {
-                if (IsHostileToPlayer)
-                    return "1st Legion of Mighty Roman Empire";
-                else
-                    return "Venetian Merchants";
-            }
-        }
-
         public override string IncidentTitle_Unknow
         {
             get
             {
-                return "Unidentified Corps";
+                return "PES_Unknown_HumanCrowd".Translate();
             }
         }
 

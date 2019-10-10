@@ -18,22 +18,12 @@ namespace PreemptiveStrike.Interceptor
         public PawnKindDef AnimalType;
         public int AnimalNum;
 
-        public override string IncidentTitle_Confirmed
-        {
-            get
-            {
-                if (IsHostileToPlayer)
-                    return "Devouring Swarms";
-                else
-                    return "Puppy and kittens";
-            }
-        }
 
         public override string IncidentTitle_Unknow
         {
             get
             {
-                return "Unidentified Animal Herd";
+                return "PES_Unknown_AnimalHerd".Translate();
             }
         }
 

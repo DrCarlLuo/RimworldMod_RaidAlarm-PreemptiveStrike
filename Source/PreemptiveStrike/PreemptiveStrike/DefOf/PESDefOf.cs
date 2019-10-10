@@ -41,5 +41,7 @@ namespace PreemptiveStrike
         public static ResearchProjectDef PES_SkyIDS;
         public static ResearchProjectDef PES_SkyIDL;
         public static ResearchProjectDef PES_InfestationDetection;
+
+        public static RulePackDef PES_NamerArmy;
     }
 }
