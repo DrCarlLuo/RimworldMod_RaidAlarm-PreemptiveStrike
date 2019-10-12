@@ -153,7 +153,7 @@ namespace PreemptiveStrike.Dialogue
                 #endregion
 
                 #region Beguilement
-                if (incident.IntelLevel != IncidentIntelLevel.Neutral)
+                if (incident.IntelLevel != IncidentIntelLevel.Neutral && pawn.skills.GetSkill(SkillDefOf.Social).Level >= 15)
                 {
                     friendlyFleeOdds = Mathf.Clamp01(PES_Settings.BaseBeguilementFrightenChance_Friendly * pawn.NegotiatePowerFactor());
                     EnemyContactOdds = Mathf.Clamp01(PES_Settings.BaseBeguilementContactChance_Hostile * pawn.NegotiatePowerFactor());

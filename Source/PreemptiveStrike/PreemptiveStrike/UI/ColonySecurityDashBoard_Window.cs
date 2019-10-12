@@ -27,6 +27,8 @@ namespace PreemptiveStrike.UI
                     BulletinCache.Add(Bulletin.Create(x));
                 }
             }
+            BulletinCache.Sort();
+
             int danger = 0, neutral = 0, uid = 0;
             foreach (var x in BulletinCache)
             {
@@ -65,8 +67,9 @@ namespace PreemptiveStrike.UI
             get { return minified; }
             set
             {
+                bool changed = minified != value;
                 minified = value;
-                ReCalulateSize();
+                ReCalulateSize(changed);
             }
         }
 
@@ -75,14 +78,22 @@ namespace PreemptiveStrike.UI
         public int uidNum;
         //private WindowResizer Resizer = new WindowResizer();
 
-        public static void ReCalulateSize()
+        public static void ReCalulateSize(bool changeMinified = false)
         {
+            float x = Instance.windowRect.x;
+            float y = Instance.windowRect.y;
             if (Instance.Minified)
-                Instance.windowRect = new Rect(Instance.windowRect.x, Instance.windowRect.y, 300f, 100f);
+            {
+                if(changeMinified)
+                    x += UIConstants.DiffOfOrgAndMinify;
+                Instance.windowRect = new Rect(x, y, UIConstants.MinifiedWindowWidth, 100f);
+            }
             else
             {
+                if (changeMinified)
+                    x -= UIConstants.DiffOfOrgAndMinify;
                 float height = (UIConstants.BulletinHeight + UIConstants.BulletinIntend) * Math.Min(BulletinCache.Count, 3);
-                Instance.windowRect = new Rect(Instance.windowRect.x, Instance.windowRect.y, UIConstants.DefaultWindowWidth, UIConstants.TitleHeight + UIConstants.TitleIntend + height + 35f);
+                Instance.windowRect = new Rect(x, y, UIConstants.DefaultWindowWidth, UIConstants.TitleHeight + UIConstants.TitleIntend + height + 35f);
             }
             float curWidth = Instance.windowRect.width;
             float curHeight = Instance.windowRect.height;
@@ -131,27 +142,12 @@ namespace PreemptiveStrike.UI
 
         public override void DoWindowContents(Rect inRect)
         {
-            int bulletinNum = BulletinCache.Count;
             if (Minified)
             {
-                Rect rect = new Rect(0f, 0f, 300f, 28f);
-                if (Widgets.ButtonInvisible(rect))
-                {
-                    if (BulletinCache.Count > 0)
-                        Minified = false;
-                }
-                Widgets.DrawHighlightIfMouseover(rect);
-                Text.Font = GameFont.Medium;
-                Widgets.Label(new Rect(0f, 0f, 250f, 30f), string.Format(@"<b>{0}</b>", "PES_UI_Title".Translate()));
-                if (bulletinNum != 0)
-                    GUI.DrawTexture(new Rect(225f, 0f, 25f, 25f), Textures.IconPlusIcon);
-                GUI.DrawTexture(new Rect(0, 30f, 250f, 1f), BaseContent.GreyTex);
-                Text.Font = GameFont.Tiny;
-                Widgets.Label(new Rect(0f, 32f, 300f, 17f), DetectionAbility);
-                Widgets.Label(new Rect(0f, 50f, 300f, 17f), BulltinBrief);
+                DoMinifiedContent(inRect);
                 return;
             }
-
+            int bulletinNum = BulletinCache.Count;
             GUI.Label(new Rect(5f, -2.5f, 150f, 25f), "PES_UI_Title".Translate());
             if (Widgets.ButtonImage(new Rect(380f, 5f, 20f, 5f), BaseContent.WhiteTex))
                 Minified = true;
@@ -179,6 +175,26 @@ namespace PreemptiveStrike.UI
             GUI.Label(new Rect(10f, 30f + scrollHeight + 0f, 400f, 25f), DetectionAbility);
         }
 
+        public void DoMinifiedContent(Rect inRect)
+        {
+            int bulletinNum = BulletinCache.Count;
+            Rect rect = new Rect(0f, 0f, 300f, 28f);
+            if (Widgets.ButtonInvisible(rect))
+            {
+                if (BulletinCache.Count > 0)
+                    Minified = false;
+            }
+            Widgets.DrawHighlightIfMouseover(rect);
+            Text.Font = GameFont.Medium;
+            Widgets.Label(new Rect(0f, 0f, 250f, 30f), string.Format(@"<b>{0}</b>", "PES_UI_Title".Translate()));
+            if (bulletinNum != 0)
+                GUI.DrawTexture(new Rect(225f, 0f, 25f, 25f), Textures.IconPlusIcon);
+            GUI.DrawTexture(new Rect(0, 30f, 250f, 1f), BaseContent.GreyTex);
+            Text.Font = GameFont.Tiny;
+            Widgets.Label(new Rect(0f, 32f, 300f, 17f), DetectionAbility);
+            Widgets.Label(new Rect(0f, 50f, 300f, 17f), BulltinBrief);
+        }
+
         private string DetectionAbility
         {
             get
@@ -195,7 +211,10 @@ namespace PreemptiveStrike.UI
                         VisionRange = res.Vision;
                         DetectionRange = res.Detection;
                     }
-                    return "PES_UI_Ranges".Translate(VisionRange, DetectionRange);
+                    return "PES_UI_Ranges".Translate(
+                        ChangeColorZero(VisionRange,"white","brown"),
+                        ChangeColorZero(DetectionRange, "white", "brown")
+                        );
                 }
                 return "";
             }
@@ -206,11 +225,16 @@ namespace PreemptiveStrike.UI
             get
             {
                 return "PES_UI_Bulletins".Translate(
-                    (dangerNum == 0 ? "0" : string.Format(@"<color=red>{0}</color>", dangerNum)),
-                    neutralNum.ToString(),
-                    uidNum.ToString()
+                    ChangeColorZero(dangerNum, "red"),
+                    ChangeColorZero(neutralNum, "cyan"),
+                    ChangeColorZero(uidNum, "lime")
                 );
             }
+        }
+
+        public string ChangeColorZero(int num, string normalColor = "white", string zeroColor = "white")
+        {
+            return string.Format(@"<color={0}>{1}</color>", num == 0 ? zeroColor : normalColor, num.ToString());
         }
     }
 }

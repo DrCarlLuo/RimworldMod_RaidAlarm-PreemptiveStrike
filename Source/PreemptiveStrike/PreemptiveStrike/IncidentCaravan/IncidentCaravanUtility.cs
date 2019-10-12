@@ -7,6 +7,7 @@ using RimWorld.Planet;
 using UnityEngine;
 using PreemptiveStrike.Interceptor;
 using Verse;
+using PreemptiveStrike.Mod;
 using PreemptiveStrike.DetectionSystem;
 
 namespace PreemptiveStrike.IncidentCaravan
@@ -61,8 +62,40 @@ namespace PreemptiveStrike.IncidentCaravan
         private static bool TryFindTile(int targetTile, out int tile)
         {
             //IntRange banditCampQuestSiteDistanceRange = SiteTuning.BanditCampQuestSiteDistanceRange;
-            IntRange banditCampQuestSiteDistanceRange = new IntRange(10,11);
-            return TileFinder.TryFindNewSiteTile(out tile, banditCampQuestSiteDistanceRange.min, banditCampQuestSiteDistanceRange.max, false, true, -1);
+            int detectionRange = DetectDangerUtilities.GetDetectionRangeOfMap(targetTile);
+            detectionRange = Math.Max(detectionRange, DetectDangerUtilities.GetVisionRangeOfMap(targetTile));
+            detectionRange = Math.Max(detectionRange, 6);
+            IntRange banditCampQuestSiteDistanceRange = new IntRange(detectionRange,detectionRange + 5);
+            if(!TileFinder.TryFindNewSiteTile(out tile, banditCampQuestSiteDistanceRange.min, banditCampQuestSiteDistanceRange.max, false, true, -1))
+            {
+                return ForceFindTile_Dfs(targetTile, targetTile, detectionRange + 1, out tile);
+            }
+            return true;
+        }
+
+        private static bool ForceFindTile_Dfs(int curTile, int orgTile, int wantDist, out int res)
+        {
+            int thisDist = Mathf.CeilToInt(Find.WorldGrid.ApproxDistanceInTiles(curTile, orgTile));
+            if(thisDist >= wantDist)
+            {
+                res = curTile;
+                return true;
+            }
+            List<int> choices = new List<int>();
+            List<int> neighbors = new List<int>();
+            Find.WorldGrid.GetTileNeighbors(curTile, neighbors);
+            foreach(var x in neighbors)
+            {
+                int newDist = Mathf.CeilToInt(Find.WorldGrid.ApproxDistanceInTiles(x, orgTile));
+                if (newDist > thisDist)
+                    choices.Add(x);
+            }
+            if (choices.Count <= 0)
+            {
+                res = -1;
+                return false;
+            }
+            return ForceFindTile_Dfs(choices.RandomElement(), orgTile, wantDist, out res);
         }
     }
 }

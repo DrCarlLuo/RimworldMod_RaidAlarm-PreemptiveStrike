@@ -24,5 +24,8 @@ namespace PreemptiveStrike.UI
         public static readonly float DefaultWindowWidth = BulletinWidth + 50f;
         public static readonly float TitleHeight = 30f;
         public static readonly float TitleIntend = 20f;
+
+        public static readonly float MinifiedWindowWidth = 300f;
+        public static readonly float DiffOfOrgAndMinify = DefaultWindowWidth - MinifiedWindowWidth;
     }
 }

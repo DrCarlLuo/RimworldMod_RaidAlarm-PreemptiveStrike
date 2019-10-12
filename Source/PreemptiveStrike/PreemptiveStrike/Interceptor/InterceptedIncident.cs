@@ -9,9 +9,9 @@ namespace PreemptiveStrike.Interceptor
 {
     enum IncidentIntelLevel
     {
-        Danger,
-        Unknown,
-        Neutral
+        Danger = 1,
+        Unknown = 2,
+        Neutral = 3
     }
 
     abstract class InterceptedIncident : IExposable

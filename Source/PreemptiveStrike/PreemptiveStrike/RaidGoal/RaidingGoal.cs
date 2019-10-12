@@ -47,6 +47,8 @@ namespace PreemptiveStrike.RaidGoal
         public virtual string RemedyIntimidationStr => "";
         public virtual string RemedyBeguilementStr => "";
 
+        //public abstract float ActiveContactOdds { get; }
+
         public virtual void ApplyToIncident(InterceptedIncident_HumanCrowd_RaidEnemy _incident)
         {
             _incident.goal = this;

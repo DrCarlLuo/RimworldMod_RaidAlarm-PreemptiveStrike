@@ -97,7 +97,7 @@ namespace PreemptiveStrike.Dialogue
             return "PES_Odds_VeryLow".Translate();
         }
 
-        public static float MessageReceiveChance => Mathf.Clamp01(1f - 0.2f * Find.Storyteller.difficulty.difficulty);
+        public static float MessageReceiveChance => Mathf.Clamp01(1f - 0.2f * Find.Storyteller.difficulty.difficulty + PES_Settings.MessageRecieveOffset);
 
         public static float NegotiatePowerFactor(this Pawn pawn)
         {

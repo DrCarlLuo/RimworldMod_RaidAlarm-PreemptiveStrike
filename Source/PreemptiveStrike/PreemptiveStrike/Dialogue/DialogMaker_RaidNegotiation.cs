@@ -276,12 +276,15 @@ namespace PreemptiveStrike.Dialogue
             bargainNode.options.Add(option);
 
             //Beguilement
-            successOdds = Mathf.Clamp01(PES_Settings.BaseBargainBeguilementChance * pawn.NegotiatePowerFactor() * difficultFactor);
-            sb = new StringBuilder(string.Format("[{0}]: {1}\n", "PES_beguile_noun".Translate(), goal.BargainBeguilementStr));
-            sb.AppendLine(OddsIndicator(successOdds, "PES_raidNeg_NegDeeper_Bargain_Success_Name"));
-            option = new DiaOption(sb.ToString());
-            option.action = DialogUtilities.ResolveActionByOdds(successOdds, null, bargainSuccessNode(), null, bargainFailNode());
-            bargainNode.options.Add(option);
+            if (pawn.skills.GetSkill(SkillDefOf.Social).Level >= 15)
+            {
+                successOdds = Mathf.Clamp01(PES_Settings.BaseBargainBeguilementChance * pawn.NegotiatePowerFactor() * difficultFactor);
+                sb = new StringBuilder(string.Format("[{0}]: {1}\n", "PES_beguile_noun".Translate(), goal.BargainBeguilementStr));
+                sb.AppendLine(OddsIndicator(successOdds, "PES_raidNeg_NegDeeper_Bargain_Success_Name"));
+                option = new DiaOption(sb.ToString());
+                option.action = DialogUtilities.ResolveActionByOdds(successOdds, null, bargainSuccessNode(), null, bargainFailNode());
+                bargainNode.options.Add(option);
+            }
 
             bargainNode.options.Add(DialogUtilities.CurtOption("PES_Cancel", null, null, true));
 
@@ -348,12 +351,15 @@ namespace PreemptiveStrike.Dialogue
             remedyNode.options.Add(option);
 
             //Beguilement
-            successOdds = Mathf.Clamp01(PES_Settings.BaseRemedyBeguilementChance * pawn.NegotiatePowerFactor());
-            sb = new StringBuilder(string.Format("[{0}]: {1}\n", "PES_beguile_noun".Translate(), goal.RemedyBeguilementStr));
-            sb.AppendLine(OddsIndicator(successOdds, "PES_raidNeg_NegDeeper_Bargain_Success_Name"));
-            option = new DiaOption(sb.ToString());
-            option.action = DialogUtilities.ResolveActionByOdds(successOdds, null, RemedySuccessNode(), null, RemedyFailNode());
-            remedyNode.options.Add(option);
+            if (pawn.skills.GetSkill(SkillDefOf.Social).Level >= 15)
+            {
+                successOdds = Mathf.Clamp01(PES_Settings.BaseRemedyBeguilementChance * pawn.NegotiatePowerFactor());
+                sb = new StringBuilder(string.Format("[{0}]: {1}\n", "PES_beguile_noun".Translate(), goal.RemedyBeguilementStr));
+                sb.AppendLine(OddsIndicator(successOdds, "PES_raidNeg_NegDeeper_Bargain_Success_Name"));
+                option = new DiaOption(sb.ToString());
+                option.action = DialogUtilities.ResolveActionByOdds(successOdds, null, RemedySuccessNode(), null, RemedyFailNode());
+                remedyNode.options.Add(option);
+            }
 
             remedyNode.options.Add(DialogUtilities.CurtOption("PES_Cancel", null, null, true));
 
@@ -415,13 +421,16 @@ namespace PreemptiveStrike.Dialogue
             delayNode.options.Add(option);
 
             //Beguilement
-            successOdds = Mathf.Clamp01(PES_Settings.BaseDelayBeguilementChance * pawn.NegotiatePowerFactor());
-            string beguilementText = ("PES_RaidNeg_Delay_Beguilement_" + incident.raidGoalType.ToString()).Translate();
-            sb = new StringBuilder(string.Format("[{0}]: {1}\n", "PES_beguile_noun".Translate(), beguilementText));
-            sb.AppendLine(OddsIndicator(successOdds, "PES_RaidNeg_Delay_Success_Name"));
-            option = new DiaOption(sb.ToString());
-            option.action = DialogUtilities.ResolveActionByOdds(successOdds, null, delaySuccessNode(), null, delayFailNode());
-            delayNode.options.Add(option);
+            if (pawn.skills.GetSkill(SkillDefOf.Social).Level >= 15)
+            {
+                successOdds = Mathf.Clamp01(PES_Settings.BaseDelayBeguilementChance * pawn.NegotiatePowerFactor());
+                string beguilementText = ("PES_RaidNeg_Delay_Beguilement_" + incident.raidGoalType.ToString()).Translate();
+                sb = new StringBuilder(string.Format("[{0}]: {1}\n", "PES_beguile_noun".Translate(), beguilementText));
+                sb.AppendLine(OddsIndicator(successOdds, "PES_RaidNeg_Delay_Success_Name"));
+                option = new DiaOption(sb.ToString());
+                option.action = DialogUtilities.ResolveActionByOdds(successOdds, null, delaySuccessNode(), null, delayFailNode());
+                delayNode.options.Add(option);
+            }
 
             delayNode.options.Add(DialogUtilities.CurtOption("PES_Cancel", null, null, true));
 

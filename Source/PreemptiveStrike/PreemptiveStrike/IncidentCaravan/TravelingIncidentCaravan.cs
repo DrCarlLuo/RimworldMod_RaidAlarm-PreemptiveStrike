@@ -143,7 +143,7 @@ namespace PreemptiveStrike.IncidentCaravan
                     newDetected = DetectDangerUtilities.TryDetectIncidentCaravan(this);
                 else
                 {
-                    if (DetectDangerUtilities.TryDetectCaravanDetail(this))
+                    if (DetectDangerUtilities.TryDetectIncidentCaravanDetail(this))
                     {
                         incident.RevealRandomInformation();
                         TryNotifyCaravanIntel();
@@ -166,8 +166,13 @@ namespace PreemptiveStrike.IncidentCaravan
                     if (!confirmed) NotifyDetected();
                     EventManger.NotifyCaravanListChange?.Invoke();
                 }
-
             }
+
+            //if(incident is InterceptedIncident_HumanCrowd_RaidEnemy ii)
+            //{
+            //    if (Communicable && !CommunicationEstablished)
+            //        ii.TryActiveMakeContact();
+            //}
         }
 
         public void NotifyDetected()
@@ -280,6 +285,7 @@ namespace PreemptiveStrike.IncidentCaravan
             if (!CommunicationEstablished)
             {
                 CommunicationEstablished = true;
+                detected = true;
                 incident.RevealInformationWhenCommunicationEstablished();
                 if (!incident.IsHostileToPlayer)
                 {

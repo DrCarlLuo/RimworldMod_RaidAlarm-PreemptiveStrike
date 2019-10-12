@@ -6,6 +6,7 @@ using RimWorld;
 using Verse;
 using PreemptiveStrike.IncidentCaravan;
 using PreemptiveStrike.RaidGoal;
+using PreemptiveStrike.Mod;
 
 namespace PreemptiveStrike.Interceptor
 {
@@ -165,7 +166,9 @@ namespace PreemptiveStrike.Interceptor
             {
                 return false;
             }
-            if (!IncidentCaravanUtility.AddSimpleIncidentCaravan(incident,2500,1250))
+            int totDuration = incident.FallerType == SkyFallerType.Big ? PES_Settings.LargeSkyFallerDuration : PES_Settings.SmallSkyFallerDuration;
+            int decTime = incident.FallerType == SkyFallerType.Big ? PES_Settings.LargeSkyFallerIdentificationTime : PES_Settings.SmallSkyFallerIdentificationTime;
+            if (!IncidentCaravanUtility.AddSimpleIncidentCaravan(incident, totDuration, decTime))
             {
                 Log.Error("Fail to create Incident Caravan");
                 return false;
@@ -186,7 +189,7 @@ namespace PreemptiveStrike.Interceptor
             incident.parms = parms;
             if (!incident.DeterminSpot())
                 return false;
-            if (!IncidentCaravanUtility.AddSimpleIncidentCaravan(incident, 2500, 1250,true))
+            if (!IncidentCaravanUtility.AddSimpleIncidentCaravan(incident, PES_Settings.InfestationDuration, 1250,true))
             {
                 Log.Error("Fail to create Incident Caravan");
                 return false;

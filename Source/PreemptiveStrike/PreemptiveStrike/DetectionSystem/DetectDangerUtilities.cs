@@ -30,35 +30,56 @@ namespace PreemptiveStrike.DetectionSystem
     {
         public static Dictionary<int, DetectionEffect> DetectionAbilityInMapTile;
 
-        public static bool TryDetectIncidentCaravan(TravelingIncidentCaravan caravan)
+        public static bool DitectionOddsOfCaravan(TravelingIncidentCaravan caravan, out float odds)
         {
             int targetTile = caravan.incident.parms.target.Tile;
             int remainingTiles = Mathf.CeilToInt(ApproxTileNumBetweenCaravanTarget(caravan));
-            if (remainingTiles <= GetDetectionRangeOfMap(targetTile))
+            int curDetectionRange = GetDetectionRangeOfMap(targetTile);
+            int curVisionRange = GetVisionRangeOfMap(targetTile);
+            if(remainingTiles > curDetectionRange || curDetectionRange == curVisionRange)
             {
-                if (new IntRange(1, 100).RandomInRange <= PES_Settings.DetectionChance)
-                {
-                    if (PES_Settings.DebugModeOn)
-                        Log.Message("Try Detect: Success");
-                    return true;
-                }
+                odds = 0;
+                return false;
+            }
+            float C = curDetectionRange - curVisionRange;
+            float y = remainingTiles - curVisionRange;
+            odds = (C - y) / C;
+            odds *= PES_Settings.DetectionCoefficient;
+            return true;
+        }
+
+        public static bool TryDetectIncidentCaravan(TravelingIncidentCaravan caravan)
+        {
+            float odds = 0;
+            if (!DitectionOddsOfCaravan(caravan, out odds))
+                return false;
+            odds = Mathf.Clamp(odds, 0.1f, 0.8f);
+            if (new FloatRange(0f,1f).RandomInRange <= odds)
+            {
+                if (PES_Settings.DebugModeOn)
+                    Log.Message("Try Detect with odds "+ odds +" : Success");
+                return true;
             }
             if (PES_Settings.DebugModeOn)
-                Log.Message("Try Detect: Fail");
+                Log.Message("Try Detect with odds " + odds + " : Fail");
             return false;
         }
 
-        public static bool TryDetectCaravanDetail(TravelingIncidentCaravan caravan)
+        public static bool TryDetectIncidentCaravanDetail(TravelingIncidentCaravan caravan)
         {
-            int targetTile = caravan.incident.parms.target.Tile;
-            int remainingTiles = Mathf.CeilToInt(ApproxTileNumBetweenCaravanTarget(caravan));
-            if (caravan.detected && remainingTiles <= GetDetectionRangeOfMap(targetTile))
+            float odds = 0;
+            if (!DitectionOddsOfCaravan(caravan, out odds))
+                return false;
+            odds *= 2;
+            odds = Mathf.Clamp(odds, 0.2f, 0.95f);
+            if (new FloatRange(0f, 1f).RandomInRange <= odds)
             {
-                if (new IntRange(1, 100).RandomInRange <= PES_Settings.DetectionChance)
-                {
-                    return true;
-                }
+                if (PES_Settings.DebugModeOn)
+                    Log.Message("Try Detect Detail with odds " + odds + " : Success");
+                return true;
             }
+            if (PES_Settings.DebugModeOn)
+                Log.Message("Try Detect Detail with odds " + odds + " : Fail");
             return false;
         }
 

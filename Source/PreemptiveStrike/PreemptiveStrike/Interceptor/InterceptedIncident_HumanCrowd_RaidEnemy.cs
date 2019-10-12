@@ -171,5 +171,14 @@ namespace PreemptiveStrike.Interceptor
             RevealIntention();
         }
 
+        //public void TryActiveMakeContact()
+        //{
+        //    if((new FloatRange(0f,1f)).RandomInRange < goal.ActiveContactOdds)
+        //    {
+        //        RevealIntention();
+        //        parentCaravan.EstablishCommunication();
+        //    }
+        //}
+
     }
 }

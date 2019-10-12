@@ -10,7 +10,7 @@ using PreemptiveStrike.Interceptor;
 
 namespace PreemptiveStrike.UI
 {
-    abstract class Bulletin
+    abstract class Bulletin : IComparable<Bulletin>
     {
         public string MainLabel;
         public Texture2D MainIcon;
@@ -108,6 +108,15 @@ namespace PreemptiveStrike.UI
         {
             RemainSparkCnt = times * 2;
             RemainSparkTime = sparkInterval;
+        }
+
+        public int CompareTo(Bulletin other)
+        {
+            if (bulletinIntelLevel != other.bulletinIntelLevel)
+                return bulletinIntelLevel.CompareTo(other.bulletinIntelLevel);
+            if (Caravan.remainingTick != other.Caravan.remainingTick)
+                return Caravan.remainingTick.CompareTo(other.Caravan.remainingTick);
+            return Caravan.ID.CompareTo(other.Caravan.ID);
         }
     }
 }
