@@ -199,12 +199,12 @@ namespace PreemptiveStrike.Harmony
         }
     }
 
-    //TODO: I have no choice but do the patch like this
-    //'cause the incidentworker for shippart is an internal class
-    //and manual patching doesn't work
     [HarmonyPatch(typeof(IncidentWorker), "TryExecute")]
-    class Patch_ShipPartCrash_TryExecute
+    class Patch_IncidentWorker_TryExecute
     {
+        //TODO: I have no choice but do the patch like this
+        //'cause the incidentworker for shippart is an internal class
+        //and manual patching doesn't work
         [HarmonyPrefix]
         static bool Prefix(IncidentWorker __instance, ref bool __result, IncidentParms parms)
         {
@@ -219,6 +219,15 @@ namespace PreemptiveStrike.Harmony
                     return true;
                 __result = false;
                 return false;
+            }
+        }
+
+        static void Postfix(ref bool __result)
+        {
+            if (IncidentInterceptorUtility.IsHoaxingStoryTeller)
+            {
+                __result = true;
+                IncidentInterceptorUtility.IsHoaxingStoryTeller = false;
             }
         }
     }

@@ -50,7 +50,7 @@
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 	  <passability>PassThroughOnly</passability>
     <pathCost>10</pathCost>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>PES_Reconnaissance</designationCategory>
     <rotatable>false</rotatable>
     <canOverlapZones>false</canOverlapZones>
     <size>(3, 5)</size>
@@ -195,7 +195,7 @@
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 	  <passability>PassThroughOnly</passability>
     <pathCost>10</pathCost>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>PES_Reconnaissance</designationCategory>
     <rotatable>false</rotatable>
     <canOverlapZones>false</canOverlapZones>
     <size>(6, 6)</size>
@@ -252,7 +252,7 @@
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 	  <passability>PassThroughOnly</passability>
     <pathCost>25</pathCost>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>PES_Reconnaissance</designationCategory>
     <rotatable>true</rotatable>
     <canOverlapZones>false</canOverlapZones>
     <size>(3, 4)</size>
@@ -337,7 +337,7 @@
     <interactionCellOffset>(0,0,3)</interactionCellOffset>
     <interactionCellIcon>DiningChair</interactionCellIcon>
     <interactionCellIconReverse>true</interactionCellIconReverse>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>PES_Reconnaissance</designationCategory>
     <rotatable>true</rotatable>
     <canOverlapZones>false</canOverlapZones>
     <size>(7, 5)</size>
@@ -391,7 +391,7 @@
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 	  <passability>PassThroughOnly</passability>
     <pathCost>25</pathCost>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>PES_Reconnaissance</designationCategory>
     <canOverlapZones>false</canOverlapZones>
     <size>(2, 2)</size>
     <rotatable>false</rotatable>

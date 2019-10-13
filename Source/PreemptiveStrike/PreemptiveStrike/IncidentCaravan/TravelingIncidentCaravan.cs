@@ -83,8 +83,13 @@ namespace PreemptiveStrike.IncidentCaravan
 
         public override void Tick()
         {
-            base.Tick();
+            //fail-safe
+            if (remainingTick <= -10)
+            {
+                Find.WorldObjects.Remove(this);
+            }
 
+            base.Tick();
             //This is a little hard-coding, need fixes
             if (incident is InterceptedIncident_HumanCrowd_RaidEnemy raidIncident) raidIncident.goal.GoalTick();
 
@@ -104,7 +109,6 @@ namespace PreemptiveStrike.IncidentCaravan
             --remainingTick;
             if (remainingTick <= 0)
             {
-                remainingTick = 0;
                 Arrive();
                 return;
             }
@@ -232,19 +236,31 @@ namespace PreemptiveStrike.IncidentCaravan
             }
         }
 
-        private static Material hostileMat = MaterialPool.MatFrom(WorldObjectDefOf.Caravan.texture, ShaderDatabase.WorldOverlayTransparentLit, Color.red, WorldMaterials.DynamicObjectRenderQueue);
-        private static Material AllyMat = MaterialPool.MatFrom(WorldObjectDefOf.Caravan.texture, ShaderDatabase.WorldOverlayTransparentLit, Color.cyan, WorldMaterials.DynamicObjectRenderQueue);
-        private static Material UnknownMat = MaterialPool.MatFrom(WorldObjectDefOf.Caravan.texture, ShaderDatabase.WorldOverlayTransparentLit, Color.white, WorldMaterials.DynamicObjectRenderQueue);
+        private Material hostileMat;
+        private Material AllyMat;
+        private Material UnknownMat;
         public override Material Material
         {
             get
             {
                 if (incident.IntelLevel == IncidentIntelLevel.Danger)
+                {
+                    if(hostileMat == null)
+                        hostileMat = MaterialPool.MatFrom(def.texture, ShaderDatabase.WorldOverlayTransparentLit, Color.red, WorldMaterials.DynamicObjectRenderQueue);
                     return hostileMat;
+                }
                 else if (incident.IntelLevel == IncidentIntelLevel.Neutral)
+                {
+                    if (AllyMat == null)
+                        AllyMat = MaterialPool.MatFrom(def.texture, ShaderDatabase.WorldOverlayTransparentLit, Color.cyan, WorldMaterials.DynamicObjectRenderQueue);
                     return AllyMat;
+                }
                 else
+                {
+                    if (UnknownMat == null)
+                        UnknownMat = MaterialPool.MatFrom(def.texture, ShaderDatabase.WorldOverlayTransparentLit, Color.white, WorldMaterials.DynamicObjectRenderQueue);
                     return UnknownMat;
+                }
             }
         }
 
@@ -261,6 +277,7 @@ namespace PreemptiveStrike.IncidentCaravan
                 Log.Message("Carravan try arrive");
             if (arrived) return;
             arrived = true;
+            if (!confirmed) incident.RevealAllInformation();
             incident.ExecuteNow();
             Find.WorldObjects.Remove(this);
         }

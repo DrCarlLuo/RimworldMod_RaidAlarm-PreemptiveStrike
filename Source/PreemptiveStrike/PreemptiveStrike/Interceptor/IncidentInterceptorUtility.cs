@@ -59,6 +59,8 @@ namespace PreemptiveStrike.Interceptor
         public static WorkerPatchType IsIntercepting_TransportPod;
         public static WorkerPatchType IsIntercepting_ResourcePod;
         public static WorkerPatchType IsIntercepting_Infestation;
+
+        public static bool IsHoaxingStoryTeller;
         #endregion
 
         public static List<Pawn> tmpPawnList;
@@ -100,6 +102,8 @@ namespace PreemptiveStrike.Interceptor
             IsIntercepting_TransportPod = WorkerPatchType.Forestall;
             IsIntercepting_ResourcePod = WorkerPatchType.Forestall;
             IsIntercepting_Infestation = WorkerPatchType.Forestall;
+
+            IsHoaxingStoryTeller = false;
         }
 
         public static bool Intercept_Raid(IncidentParms parms, bool splitInGroups = false)
@@ -121,6 +125,9 @@ namespace PreemptiveStrike.Interceptor
                 Log.Error("Fail to create Incident Caravan");
                 return false;
             }
+            IsHoaxingStoryTeller = true;
+            if (PES_Settings.DebugModeOn)
+                Messages.Message("PES_Debug: Successfully intercepted a raid Incident", MessageTypeDefOf.NeutralEvent);
             return true;
         }
 
@@ -135,6 +142,9 @@ namespace PreemptiveStrike.Interceptor
                 Log.Error("Fail to create Incident Caravan");
                 return false;
             }
+            IsHoaxingStoryTeller = true;
+            if (PES_Settings.DebugModeOn)
+                Messages.Message("PES_Debug: Successfully intercepted a neutral Incident", MessageTypeDefOf.NeutralEvent);
             return true;
         }
 
@@ -150,6 +160,9 @@ namespace PreemptiveStrike.Interceptor
                 Log.Error("Fail to create Incident Caravan");
                 return false;
             }
+            IsHoaxingStoryTeller = true;
+            if (PES_Settings.DebugModeOn)
+                Messages.Message("PES_Debug: Successfully intercepted an animal Incident", MessageTypeDefOf.NeutralEvent);
             return true;
         }
 
@@ -173,6 +186,9 @@ namespace PreemptiveStrike.Interceptor
                 Log.Error("Fail to create Incident Caravan");
                 return false;
             }
+            IsHoaxingStoryTeller = true;
+            if (PES_Settings.DebugModeOn)
+                Messages.Message("PES_Debug: Successfully intercepted a skyfaller Incident", MessageTypeDefOf.NeutralEvent);
             return true;
         }
 
@@ -196,6 +212,9 @@ namespace PreemptiveStrike.Interceptor
             }
             Dialogue.SparkUILetter.Make("PES_Infestation_Letter".Translate(), "PES_Infestation_Text".Translate(), LetterDefOf.ThreatBig, incident.parentCaravan);
             Find.TickManager.slower.SignalForceNormalSpeedShort();
+            IsHoaxingStoryTeller = true;
+            if (PES_Settings.DebugModeOn)
+                Messages.Message("PES_Debug: Successfully intercepted an infestation Incident", MessageTypeDefOf.NeutralEvent);
             return true;
         }
 
