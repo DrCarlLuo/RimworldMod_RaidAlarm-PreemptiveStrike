@@ -250,4 +250,14 @@ namespace PreemptiveStrike.Harmony
         }
     }
 
+    [HarmonyPatch(typeof(IncidentWorker_MakeGameCondition), "TryExecuteWorker")]
+    class Patch_MakeGameCondition_TryExecuteWorker
+    {
+        [HarmonyPrefix]
+        static bool PreFix(IncidentWorker_MakeGameCondition __instance, ref bool __result, IncidentParms parms)
+        {
+            return __instance.def != IncidentDefOf.SolarFlare || !IncidentInterceptorUtility.Intercept_SolarFlare(parms);
+        }
+    }
+
 }

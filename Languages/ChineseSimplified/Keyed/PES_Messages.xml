@@ -77,5 +77,10 @@
 <!-- <PES_Notify_RefugeePod>The incoming drop pods have been confirmed to be containing a refugee.</PES_Notify_RefugeePod> -->
 <PES_Notify_ShipChunk>即将到来的大型空中物体被证实为飞船碎片。</PES_Notify_ShipChunk>
 <!-- <PES_Notify_ShipChunk>The incoming large object in the sky has been confirmed to be ship chunks.</PES_Notify_ShipChunk> -->
+
+<PES_Warning_Flare_Early>太阳耀斑（早期）</PES_Warning_Flare_Early>
+<!-- <PES_Warning_Flare_Early>Solar Flare(Early Stage)</PES_Warning_Flare_Early> -->
+<PES_Warning_Flare_Early_Text>一场太阳耀斑即将冲击这个星球，雷达和卫星上行链路已经停止工作。其他电气设备预计将再过12小时左右当耀斑最终冲击到这个星球时停止工作。</PES_Warning_Flare_Early_Text>
+<!-- <PES_Warning_Flare_Early_Text>A solar flare is about to blast the planet. Radar and statellite uplink has already stop functioning because of the electromagnetic interference. Other electronic devices are predicted to stop working in about 12 hours when the solar flare finally hit this planet.</PES_Warning_Flare_Early_Text> -->
 </LanguageData>
 

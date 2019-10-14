@@ -53,6 +53,7 @@ namespace PreemptiveStrike.IncidentCaravan
             travalingCaravan.remainingTick = DelayTick;
             travalingCaravan.RemainingRevealTick = revealTick;
             travalingCaravan.incident = incident;
+            travalingCaravan.detected = false;
             incident.parentCaravan = travalingCaravan;
             if (InitialDetected) travalingCaravan.detected = true;
             Find.WorldObjects.Add(travalingCaravan);

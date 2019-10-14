@@ -218,6 +218,20 @@ namespace PreemptiveStrike.Interceptor
             return true;
         }
 
+        public static bool Intercept_SolarFlare(IncidentParms parms)
+        {
+            foreach(QueuedIncident qi in Find.Storyteller.incidentQueue)
+            {
+                if (qi.FiringIncident.def == IncidentDefOf.SolarFlare && qi.FiringIncident.parms == parms)
+                    return false;
+            }
+            Find.Storyteller.incidentQueue.Add(new QueuedIncident(new FiringIncident(IncidentDefOf.SolarFlare, null, parms), Find.TickManager.TicksGame + 2500 * 12));
+            if (PES_Settings.DebugModeOn)
+                Messages.Message("PES_Debug: Successfully intercepted an solar flare",MessageTypeDefOf.NeutralEvent);
+            Dialogue.OpenUILetter.Make("PES_Warning_Flare_Early".Translate(), "PES_Warning_Flare_Early_Text".Translate(), LetterDefOf.NegativeEvent);
+            return true;
+        }
+
         public static List<Pawn> GenerateRaidPawns(IncidentParms parms)
         {
             IsIntercepting_PawnGeneration = GeneratorPatchFlag.Generate;

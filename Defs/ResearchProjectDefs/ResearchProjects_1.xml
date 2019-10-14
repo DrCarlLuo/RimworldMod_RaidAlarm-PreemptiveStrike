@@ -67,7 +67,7 @@
   <ResearchProjectDef>
     <defName>PES_FoodSupply</defName>
     <label>Sentinel food supply solution</label>
-    <description>Install mini nutrient past in watch tower to provide food supply for sentinels.</description>
+    <description>Install mini nutrient past dispenser in watch tower to provide food supply for sentinels.</description>
     <baseCost>200</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>2</researchViewX>

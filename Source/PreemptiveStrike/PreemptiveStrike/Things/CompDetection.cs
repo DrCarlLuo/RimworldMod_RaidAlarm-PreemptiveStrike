@@ -11,6 +11,7 @@ namespace PreemptiveStrike.Things
 {
     abstract class CompDetection : ThingComp
     {
+        public bool EnableDetection = true;
 
         public virtual CompProperties_Detection Props => props as CompProperties_Detection;
 
@@ -29,6 +30,7 @@ namespace PreemptiveStrike.Things
 
         protected virtual void UpdateDetectionAbility(int visionRange, int detectionRange)
         {
+            if (!EnableDetection) return;
             int tile = parent.Map.Tile;
             int curTick = Find.TickManager.TicksGame;
             var dic = DetectDangerUtilities.DetectionAbilityInMapTile;
@@ -60,6 +62,15 @@ namespace PreemptiveStrike.Things
             }
             if (none) return null;
             return sb.ToString();
+        }
+
+        public override void ReceiveCompSignal(string signal)
+        {
+            base.ReceiveCompSignal(signal);
+            if (signal == "DisableDetection")
+                EnableDetection = false;
+            else if (signal == "EnableDetection")
+                EnableDetection = true;
         }
     }
 }

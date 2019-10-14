@@ -113,12 +113,14 @@
     <Compile Include="RaidGoal\RaidingGoal_Extortion.cs" />
     <Compile Include="RaidGoal\RaidingGoal_Rescue.cs" />
     <Compile Include="RaidGoal\RaidingGoal_Smite.cs" />
+    <Compile Include="Things\CompAffectedBySolarFlareEarly.cs" />
     <Compile Include="Things\CompBuildingAlarm.cs" />
     <Compile Include="Things\CompBuildingAlarm_Primitive.cs" />
     <Compile Include="Things\CompDetection.cs" />
     <Compile Include="Things\CompDetection_AutoDevice.cs" />
     <Compile Include="Things\CompDetection_ManualDevice.cs" />
     <Compile Include="Things\CompNeedSustain.cs" />
+    <Compile Include="Things\CompProperties_AffectedBySolarFlareEarly.cs" />
     <Compile Include="Things\CompProperties_BuildingAlarm_Primitive.cs" />
     <Compile Include="Things\CompProperties_Detection.cs" />
     <Compile Include="Things\CompProperties_NeedSustain.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="Jobs\WorkGiver_PES_Refuel.cs" />
     <Compile Include="UI\Bulletin.cs" />
     <Compile Include="UI\Bulletin_Animal.cs" />
+    <Compile Include="UI\Bulletin_Flare.cs" />
     <Compile Include="UI\Bulletin_Human.cs" />
     <Compile Include="UI\Bulletin_Infestation.cs" />
     <Compile Include="UI\Bulletin_SkyFaller.cs" />

@@ -18,7 +18,7 @@ namespace PreemptiveStrike.UI
 
         public InterceptedIncident incident => Caravan.incident;
 
-        public IncidentIntelLevel bulletinIntelLevel => incident.IntelLevel;
+        public virtual IncidentIntelLevel bulletinIntelLevel => incident.IntelLevel;
 
         public static Bulletin Create(TravelingIncidentCaravan caravan)
         {
@@ -36,7 +36,7 @@ namespace PreemptiveStrike.UI
 
         protected virtual void DrawIcon(float x,float y)
         {
-            if(Widgets.ButtonImage(new Rect(x, y, UIConstants.BulletinIconSize, UIConstants.BulletinIconSize), MainIcon))
+            if(Widgets.ButtonImage(new Rect(x, y, UIConstants.BulletinIconSize, UIConstants.BulletinIconSize), MainIcon) && Caravan!=null && (incident is InterceptedIncident_AnimalHerd || incident is InterceptedIncident_HumanCrowd))
             {
                 CameraJumper.TryJumpAndSelect(Caravan);
             }
@@ -114,6 +114,8 @@ namespace PreemptiveStrike.UI
         {
             if (bulletinIntelLevel != other.bulletinIntelLevel)
                 return bulletinIntelLevel.CompareTo(other.bulletinIntelLevel);
+            if (Caravan == null) return 1;
+            if (other.Caravan == null) return -1;
             if (Caravan.remainingTick != other.Caravan.remainingTick)
                 return Caravan.remainingTick.CompareTo(other.Caravan.remainingTick);
             return Caravan.ID.CompareTo(other.Caravan.ID);

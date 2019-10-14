@@ -137,7 +137,6 @@ namespace PreemptiveStrike.UI
                 timeStr = "PES_UI_ETA".Translate() + GenDate.ToStringTicksToPeriod(Caravan.remainingTick);
             float timeWidth = Text.CurFontStyle.CalcSize(new GUIContent(timeStr)).x;
             Widgets.Label(new Rect(x, y, timeWidth + 5f, UIConstants.TinyLabelHeight), timeStr);
-            Log.Message(timeWidth.ToString());
             Rect directionRect = new Rect(x + timeWidth + 5f, y, 290f, UIConstants.TinyLabelHeight);
             if(Widgets.ButtonText(directionRect, Incident_Human.spawnPosition_revealed ? "PES_UI_Direction_known".Translate() : "PES_UI_Direction_unknown".Translate(), false) && Incident_Human.spawnPosition_revealed)
             {

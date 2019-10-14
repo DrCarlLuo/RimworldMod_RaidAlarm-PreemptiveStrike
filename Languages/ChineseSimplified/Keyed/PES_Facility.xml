@@ -14,4 +14,7 @@
 
     <PES_Building_UnUsableDark>天黑时不可用</PES_Building_UnUsableDark>
     <!-- <PES_Building_UnUsableDark>Unusable when it's dark.</PES_Building_UnUsableDark> -->
+
+    <PES_Building_UnUsableSolarFlare>信号被早期太阳耀斑所干扰。</PES_Building_UnUsableSolarFlare>
+    <!-- <PES_Building_UnUsableSolarFlare>Signal jammed by early-stage solar flare.</PES_Building_UnUsableSolarFlare> -->
 </LanguageData>

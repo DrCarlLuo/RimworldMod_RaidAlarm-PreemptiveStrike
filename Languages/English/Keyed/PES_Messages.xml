@@ -40,5 +40,8 @@
 <PES_Notify_ResoucePod>The incoming drop pods have been confirmed to be resouce pods.</PES_Notify_ResoucePod>
 <PES_Notify_RefugeePod>The incoming drop pods have been confirmed to be containing a refugee.</PES_Notify_RefugeePod>
 <PES_Notify_ShipChunk>The incoming large object in the sky has been confirmed to be ship chunks.</PES_Notify_ShipChunk>
+
+<PES_Warning_Flare_Early>Solar Flare(Early Stage)</PES_Warning_Flare_Early>
+<PES_Warning_Flare_Early_Text>A solar flare is about to blast the planet. Radar and statellite uplink has already stop functioning because of the electromagnetic interference. Other electronic devices are predicted to stop working in about 12 hours when the solar flare finally hit this planet.</PES_Warning_Flare_Early_Text>
 </LanguageData>
 

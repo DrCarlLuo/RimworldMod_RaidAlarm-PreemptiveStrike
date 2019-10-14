@@ -27,6 +27,14 @@ namespace PreemptiveStrike.UI
                     BulletinCache.Add(Bulletin.Create(x));
                 }
             }
+            //Naive incidents
+            foreach(QueuedIncident qi in Find.Storyteller.incidentQueue)
+            {
+                if(qi.FiringIncident.def == IncidentDefOf.SolarFlare)
+                {
+                    BulletinCache.Add(new Bulletin_Flare(qi));
+                }
+            }
             BulletinCache.Sort();
 
             int danger = 0, neutral = 0, uid = 0;

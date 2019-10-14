@@ -37,7 +37,8 @@ namespace PreemptiveStrike.UI
                 timeStr = "PES_UI_ETA".Translate() + Caravan.remainingTick;
             else
                 timeStr = "PES_UI_ETA".Translate() + GenDate.ToStringTicksToPeriod(Caravan.remainingTick);
-            Widgets.Label(new Rect(x, y, 100f, UIConstants.TinyLabelHeight), timeStr);
+            float timeWidth = Text.CurFontStyle.CalcSize(new GUIContent(timeStr)).x;
+            Widgets.Label(new Rect(x, y, timeWidth + 5f, UIConstants.TinyLabelHeight), timeStr);
         }
 
         protected override void DrawSecondLine(float x, float y)
