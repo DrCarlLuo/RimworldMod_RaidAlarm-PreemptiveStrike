@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <PES_UnknownFaction>不明派系 </PES_UnknownFaction>
+  <!-- <PES_UnknownFaction>Unknown Faction</PES_UnknownFaction> -->
+
+  <PES_Persuade_noun>劝说</PES_Persuade_noun>
+  <!-- <PES_Persuade_noun>persuasion</PES_Persuade_noun> -->
+  <PES_intimidate_noun>威胁</PES_intimidate_noun>
+  <!-- <PES_intimidate_noun>intimidation</PES_intimidate_noun> -->
+  <PES_beguile_noun>欺骗</PES_beguile_noun>
+  <!-- <PES_beguile_noun>beguilement</PES_beguile_noun> -->
+
+  <PES_SimpleConfirm>确认</PES_SimpleConfirm>
+  <!-- <PES_SimpleConfirm>confirm</PES_SimpleConfirm> -->
+  <PES_Disconnect>挂断</PES_Disconnect>
+  <!-- <PES_Disconnect>Disconnect</PES_Disconnect> -->
+  <PES_Cancel>算了</PES_Cancel>
+  <!-- <PES_Cancel>Never mind</PES_Cancel> -->
+  <PES_ConfirmChoice>这值得一试</PES_ConfirmChoice>
+  <!-- <PES_ConfirmChoice>This worth a try</PES_ConfirmChoice> -->
+
+  <PES_Condition_Neutral>对于友军</PES_Condition_Neutral>
+  <!-- <PES_Condition_Neutral>for friends</PES_Condition_Neutral> -->
+  <PES_Condition_Hostile>对于敌人</PES_Condition_Hostile>
+  <!-- <PES_Condition_Hostile>for enemies</PES_Condition_Hostile> -->
+
+  <PES_Odds_VeryHigh>&lt;color=lime&gt;非常高的几率&lt;/color&gt;</PES_Odds_VeryHigh>
+  <!-- <PES_Odds_VeryHigh>&lt;color=lime&gt;VERY HIGH chance&lt;/color&gt;</PES_Odds_VeryHigh> -->
+  <PES_Odds_High>&lt;color=green&gt;较高几率&lt;/color&gt;</PES_Odds_High>
+  <!-- <PES_Odds_High>&lt;color=green&gt;HIGH chance&lt;/color&gt;</PES_Odds_High> -->
+  <PES_Odds_Medium>&lt;color=cyan&gt;中等几率&lt;/color&gt;</PES_Odds_Medium>
+  <!-- <PES_Odds_Medium>&lt;color=cyan&gt;MEDIUM chance&lt;/color&gt;</PES_Odds_Medium> -->
+  <PES_Odds_Low>&lt;color=#f0a1aa&gt;较低几率&lt;/color&gt;</PES_Odds_Low>
+  <!-- <PES_Odds_Low>&lt;color=#f0a1aa&gt;LOW chance&lt;/color&gt;</PES_Odds_Low> -->
+  <PES_Odds_VeryLow>&lt;color=red&gt;非常低的几率&lt;/color&gt;</PES_Odds_VeryLow>
+  <!-- <PES_Odds_VeryLow>&lt;color=red&gt;VERY LOW chance&lt;/color&gt;</PES_Odds_VeryLow> -->
+
+  <PES_ASHAME>不幸</PES_ASHAME>
+  <!-- <PES_ASHAME>unfortunate</PES_ASHAME> -->
+  <PES_Reassuring>长舒一口气</PES_Reassuring>
+  <!-- <PES_Reassuring>reassuring</PES_Reassuring> -->
+  <PES_Nice>太棒了</PES_Nice>
+  <!-- <PES_Nice>nice</PES_Nice> -->
+  <PES_RaiseAlarm>敌人来袭！拉响警报！</PES_RaiseAlarm>
+  <!-- <PES_RaiseAlarm>Enemy incoming! Raise the alarm!</PES_RaiseAlarm> -->
+  <PES_trembling>颤抖...</PES_trembling>
+  <!-- <PES_trembling>trembling...</PES_trembling> -->
+  <PES_DAMNIT>该死!</PES_DAMNIT>
+  <!-- <PES_DAMNIT>Damn it!</PES_DAMNIT> -->
+
+  <PES_Friendly_Greeting>{0}中的人们热情地向{1}打招呼，并且说他们马上就会到来。</PES_Friendly_Greeting>
+  <!-- <PES_Friendly_Greeting>People from {0} greets {1} warmly and say that they are arriving very soon.</PES_Friendly_Greeting> -->
+  <PES_Friendly_Dismiss>告诉他们现在不是来的好时机</PES_Friendly_Dismiss>
+  <!-- <PES_Friendly_Dismiss>Tell them it is not a good timing to come here and dismiss them</PES_Friendly_Dismiss> -->
+  <PES_Friendly_Dismissed>他们表示收到了我们的信息并且已经不再朝我方移动了。</PES_Friendly_Dismissed>
+  <!-- <PES_Friendly_Dismissed>They say that the message is acknowledged and they will not head toward our colony.</PES_Friendly_Dismissed> -->
+
+</LanguageData>

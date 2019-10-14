@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <PES_Building_Installed>已安装的升级组件：</PES_Building_Installed>
+    <!-- <PES_Building_Installed>Installed Upgrade: </PES_Building_Installed> -->
+
+    <PES_Building_ToInstall>安装: {0}</PES_Building_ToInstall>
+    <!-- <PES_Building_ToInstall>Install: {0}</PES_Building_ToInstall> -->
+
+    <PES_Building_UpdateInstalling>正在安装升级组件: {0}\n进度: {1}%</PES_Building_UpdateInstalling>
+    <!-- <PES_Building_UpdateInstalling>Installing Upgrade: {0}\nProgress: {1}%</PES_Building_UpdateInstalling> -->
+
+    <PES_Building_Delivered>已搬运: {0}</PES_Building_Delivered>
+    <!-- <PES_Building_Delivered>Delivered: {0}</PES_Building_Delivered> -->
+
+    <PES_Building_UnUsableDark>天黑时不可用</PES_Building_UnUsableDark>
+    <!-- <PES_Building_UnUsableDark>Unusable when it's dark.</PES_Building_UnUsableDark> -->
+</LanguageData>

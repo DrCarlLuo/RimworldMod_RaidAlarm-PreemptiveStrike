@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_CombatFervor.label>战斗热忱</PES_CombatFervor.label>
+  <PES_CombatFervor.stages.Combat_Fervor.label>战斗热忱</PES_CombatFervor.stages.Combat_Fervor.label>
+
+  <PES_CombatTiredness.label>战斗怠惰</PES_CombatTiredness.label>
+  <PES_CombatTiredness.stages.Combat_Tiredness.label>战斗怠惰</PES_CombatTiredness.stages.Combat_Tiredness.label>
+</LanguageData>

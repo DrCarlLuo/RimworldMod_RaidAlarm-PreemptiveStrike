@@ -84,9 +84,10 @@ namespace PreemptiveStrike.Dialogue
             else
             {
                 string key;
-                void CommEstablishAction() { caravan.EstablishCommunication(); caravan.ApplyBroadCastCoolDown(); }
-                void LeaveAction() { caravan.Dismiss(); caravan.ApplyBroadCastCoolDown(); }
-                void FailAction() { caravan.ApplyBroadCastCoolDown(); }
+                void CommEstablishAction() { caravan.EstablishCommunication(); caravan.ApplyBroadCastCoolDown(); DialogUtilities.NegotiatorLearnSocial(true); }
+                void LeaveAction() { caravan.Dismiss(); caravan.ApplyBroadCastCoolDown(); DialogUtilities.NegotiatorLearnSocial(true); }
+                void LeaveActionBad() { caravan.Dismiss(); caravan.ApplyBroadCastCoolDown(); DialogUtilities.NegotiatorLearnSocial(false); }
+                void FailAction() { caravan.ApplyBroadCastCoolDown(); DialogUtilities.NegotiatorLearnSocial(false); }
 
                 float MessageOdds = incident.SourceFaction == Faction.OfMechanoids ? 0f : DialogUtilities.MessageReceiveChance;
 
@@ -145,8 +146,8 @@ namespace PreemptiveStrike.Dialogue
                 else
                     sb.AppendLine(OddsIndicator(0, friendlyContactOdds, "PES_TryOutcome_Positive", friendlyFleeOdds, "PES_TryOutcome_Scared"));
                 option = new DiaOption(sb.ToString());
-                if (incident.IsHostileToPlayer)
-                    option.action = DialogUtilities.ResolveActionByOdds(friendlyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), friendlyFleeOdds * MessageOdds, LeaveAction, IntimidationSuccessNode(), FailAction, ContactFailNode());
+                if (!incident.IsHostileToPlayer)
+                    option.action = DialogUtilities.ResolveActionByOdds(friendlyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), friendlyFleeOdds * MessageOdds, LeaveActionBad, IntimidationSuccessNode(), FailAction, ContactFailNode());
                 else
                     option.action = DialogUtilities.ResolveActionByOdds(EnemyContactOdds * MessageOdds, CommEstablishAction, PersuasionSuccessNode(), EnemyFleeOdds * MessageOdds, LeaveAction, IntimidationSuccessNode(), FailAction, ContactFailNode());
                 diaNode.options.Add(option);

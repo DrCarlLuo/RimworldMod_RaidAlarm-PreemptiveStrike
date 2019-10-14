@@ -86,7 +86,7 @@ namespace PreemptiveStrike.UI
             {
                 if(changeMinified)
                     x += UIConstants.DiffOfOrgAndMinify;
-                Instance.windowRect = new Rect(x, y, UIConstants.MinifiedWindowWidth, 100f);
+                Instance.windowRect = new Rect(x, y, UIConstants.MinifiedWindowWidth, 105f);
             }
             else
             {
@@ -191,8 +191,8 @@ namespace PreemptiveStrike.UI
                 GUI.DrawTexture(new Rect(225f, 0f, 25f, 25f), Textures.IconPlusIcon);
             GUI.DrawTexture(new Rect(0, 30f, 250f, 1f), BaseContent.GreyTex);
             Text.Font = GameFont.Tiny;
-            Widgets.Label(new Rect(0f, 32f, 300f, 17f), DetectionAbility);
-            Widgets.Label(new Rect(0f, 50f, 300f, 17f), BulltinBrief);
+            Widgets.Label(new Rect(0f, 32f, 300f, 20f), DetectionAbility);
+            Widgets.Label(new Rect(0f, 52f, 300f, 20f), BulltinBrief);
         }
 
         private string DetectionAbility

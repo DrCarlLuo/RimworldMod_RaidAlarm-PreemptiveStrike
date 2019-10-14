@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <PES_UI_Title>安全简报</PES_UI_Title>
+    <!-- <PES_UI_Title>Security Report</PES_UI_Title> -->
+
+    <PES_UI_Ranges>当前视距范围: {0}   当前侦测范围: {1}</PES_UI_Ranges>
+    <!-- <PES_UI_Ranges>Current Vision Range: {0}   Detection Range: {1}</PES_UI_Ranges> -->
+
+    <PES_UI_Bulletins>威胁: {0}  中立: {1} 未识别: {2}</PES_UI_Bulletins>
+    <!-- <PES_UI_Bulletins>Danger: {0}  Neutral: {1} Unidentified: {2}</PES_UI_Bulletins> -->
+
+    <PES_UI_Unknown>尚未确认</PES_UI_Unknown>
+    <!-- <PES_UI_Unknown>Unknown</PES_UI_Unknown> -->
+
+    <PES_UI_UnknownIntention>意图不明</PES_UI_UnknownIntention>
+    <!-- <PES_UI_UnknownIntention>Unknown Intention</PES_UI_UnknownIntention> -->
+
+    <PES_UI_Strategy>策略: {0}</PES_UI_Strategy>
+    <!-- <PES_UI_Strategy>Strategy: {0}</PES_UI_Strategy> -->
+
+    <PES_UI_Faction>派系: </PES_UI_Faction>
+    <!-- <PES_UI_Faction>Faction: </PES_UI_Faction> -->
+
+    <PES_UI_Corps>人数: </PES_UI_Corps>
+    <!-- <PES_UI_Corps>Corps Size: </PES_UI_Corps> -->
+
+    <PES_UI_Herd>动物数: </PES_UI_Herd>
+    <!-- <PES_UI_Herd>Herd Size: </PES_UI_Herd> -->
+
+    <PES_UI_ETA>预计到达时间: </PES_UI_ETA>
+    <!-- <PES_UI_ETA>ETA: </PES_UI_ETA> -->
+
+    <PES_UI_Direction_unknown>到达方向: 尚未确认</PES_UI_Direction_unknown>
+    <!-- <PES_UI_Direction_unknown>Incoming Direction: Unknown</PES_UI_Direction_unknown> -->
+    <PES_UI_Direction_known>到达方向 (点击查看)</PES_UI_Direction_known>
+    <!-- <PES_UI_Direction_known>Incoming Direction (Click to see)</PES_UI_Direction_known> -->
+
+    <PES_UI_Letter_ReadMore>查看安全简报</PES_UI_Letter_ReadMore>
+    <!-- <PES_UI_Letter_ReadMore>Read more in security report</PES_UI_Letter_ReadMore> -->
+
+    <PES_UI_CaravanMoving>朝{0}移动</PES_UI_CaravanMoving>
+    <!-- <PES_UI_CaravanMoving>Moving towards {0}</PES_UI_CaravanMoving> -->
+    <PES_UI_CaravanStaging>等待中.</PES_UI_CaravanStaging>
+    <!-- <PES_UI_CaravanStaging>Staging.</PES_UI_CaravanStaging> -->
+
+    <PES_UI_SkyFaller_Spot_Big>预测撞击点 (点击查看)</PES_UI_SkyFaller_Spot_Big>
+    <!-- <PES_UI_SkyFaller_Spot_Big>Predicted Impact Spot (Click to see)</PES_UI_SkyFaller_Spot_Big> -->
+    <PES_UI_SkyFaller_Spot_Small>预测着陆点 (点击查看)</PES_UI_SkyFaller_Spot_Small>
+    <!-- <PES_UI_SkyFaller_Spot_Small>Predicted Landfall Spot (Click to see)</PES_UI_SkyFaller_Spot_Small> -->
+    <PES_UI_SkyFaller_Spot_Unknown>无法确认着陆点</PES_UI_SkyFaller_Spot_Unknown>
+    <!-- <PES_UI_SkyFaller_Spot_Unknown>Unable to predict dropping spot</PES_UI_SkyFaller_Spot_Unknown> -->
+
+    <PES_UI_Infestation_Spot>出现点 (点击查看)</PES_UI_Infestation_Spot>
+    <!-- <PES_UI_Infestation_Spot>Emerging Spot (Click to see)</PES_UI_Infestation_Spot> -->
+</LanguageData>

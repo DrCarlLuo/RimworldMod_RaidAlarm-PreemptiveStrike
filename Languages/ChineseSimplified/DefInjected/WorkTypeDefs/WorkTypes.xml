@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Recon.labelShort>侦察</Recon.labelShort>
+  <Recon.description>为殖民地进行侦察任务，侦测即将到来的敌人</Recon.description>
+  <Recon.gerundLabel>执行侦察任务</Recon.gerundLabel>
+  <Recon.pawnLabel>哨兵</Recon.pawnLabel>
+  <Recon.verb>执行侦察任务</Recon.verb>
+</LanguageData>

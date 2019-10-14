@@ -16,7 +16,7 @@
 <PES_Hostile_Text_Animal>The reconnaissance system in our colony has confirmed the incoming animal herd are mad animals. More information is in the security report.</PES_Hostile_Text_Animal>
 
 <PES_Neutral_Message>The reconnaissance system in our colony has confirmed the incoming crowd is nonhostile. See more in security report.</PES_Neutral_Message>
-<PES_Neutral_Message_Animal>The reconnaissance system in our colony has confirmed the incoming crowd is nonhostile. See more in security report.</PES_Neutral_Message_Animal>
+<PES_Neutral_Message_Animal>The reconnaissance system in our colony has confirmed the incoming herd is nonhostile. See more in security report.</PES_Neutral_Message_Animal>
 
 <PES_Caravan_Confirmed>"{0}" has entered the vision range of our colony, all information revealed. </PES_Caravan_Confirmed>
 
@@ -33,6 +33,9 @@
 
 <PES_Warning_DropPodAssault>Warning: Drop Pod Assault</PES_Warning_DropPodAssault>
 <PES_Warning_DropPodAssault_Text>The reconnaissance system inour colony has confirmed that the incoming drop pods are actually containing enemies! Their landing spot has been successfully calculated. See the security report of more information.</PES_Warning_DropPodAssault_Text>
+
+<PES_Infestation_Letter>Unusual Deep-Ground Motion Detected</PES_Infestation_Letter>
+<PES_Infestation_Text>The ground-penetrating scanner in the colony has detected an anomolous movement deep in the gound. It is clear that this is a sign for upcoming infestation.</PES_Infestation_Text>
 
 <PES_Notify_ResoucePod>The incoming drop pods have been confirmed to be resouce pods.</PES_Notify_ResoucePod>
 <PES_Notify_RefugeePod>The incoming drop pods have been confirmed to be containing a refugee.</PES_Notify_RefugeePod>

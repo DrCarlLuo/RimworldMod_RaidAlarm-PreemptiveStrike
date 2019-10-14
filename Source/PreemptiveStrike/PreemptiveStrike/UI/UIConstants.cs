@@ -9,7 +9,7 @@ namespace PreemptiveStrike.UI
     static class UIConstants
     {
         public static readonly float MainLabelHeight = 30f;
-        public static readonly float TinyLabelHeight = 17f;
+        public static readonly float TinyLabelHeight = 20f;//17
         public static readonly float MainLabelIntend = 0f;
         public static readonly float TinyLabelIntend = -1f;
 

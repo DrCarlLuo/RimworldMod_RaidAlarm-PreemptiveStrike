@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_StandGuard_Primitive.reportString>在TargetA站岗。</PES_StandGuard_Primitive.reportString>
+  <PES_StandGuard.reportString>在TargetA站岗。</PES_StandGuard.reportString>
+  <PES_OperateSentryArray.reportString>在TargetA监控无人机的侦查行动。</PES_OperateSentryArray.reportString>
+  <PES_Job_InstallUpgrade.reportString>在TargetA安装升级组件。</PES_Job_InstallUpgrade.reportString>
+
+</LanguageData>

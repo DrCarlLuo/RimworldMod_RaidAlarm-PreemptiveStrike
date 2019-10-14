@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+        <PES_CombatFervor_Thought.stages.Combat_Fervor.label>战斗热忱</PES_CombatFervor_Thought.stages.Combat_Fervor.label>
+        <PES_CombatFervor_Thought.stages.Combat_Fervor.description>能为我们的殖民地的自由战斗到死是我的荣耀！</PES_CombatFervor_Thought.stages.Combat_Fervor.description>
+
+        <PES_CombatTiredness_Thought.stages.Tired_of_combat.label>战斗怠惰</PES_CombatTiredness_Thought.stages.Tired_of_combat.label>
+        <PES_CombatTiredness_Thought.stages.Tired_of_combat.description>我们本来可以避免这场战斗的，但现在我们可能会因此受伤，甚至死去。这是一场没有意义的抵抗。</PES_CombatTiredness_Thought.stages.Tired_of_combat.description>
+</LanguageData>

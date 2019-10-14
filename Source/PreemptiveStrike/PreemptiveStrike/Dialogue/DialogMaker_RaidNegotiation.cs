@@ -233,13 +233,17 @@ namespace PreemptiveStrike.Dialogue
                 {
                     successAction();
                     caravan.ApplyNegotiationCoolDown();
+                    DialogUtilities.NegotiatorLearnSocial(true);
                 }, true));
                 return diaNode;
             }
             DiaNode bargainFailNode()
             {
                 DiaNode diaNode = new DiaNode("PES_RaidNeg_NegDeeper_Bargain_Fail".Translate());
-                diaNode.options.Add(DialogUtilities.CurtOption("PES_ASHAME", null, () => { caravan.ApplyNegotiationCoolDown(); }, true));
+                diaNode.options.Add(DialogUtilities.CurtOption("PES_ASHAME", null, () => {
+                    caravan.ApplyNegotiationCoolDown();
+                    DialogUtilities.NegotiatorLearnSocial(false);
+                }, true));
                 return diaNode;
             }
             DiaNode bargainSmiteNode()
@@ -251,6 +255,7 @@ namespace PreemptiveStrike.Dialogue
                     incident.raidGoalType = RaidGoalType.Smite;
                     incident.goal = null;
                     caravan.ApplyNegotiationCoolDown();
+                    DialogUtilities.NegotiatorLearnSocial(false);
                 }, true));
                 return diaNode;
             }
@@ -308,13 +313,17 @@ namespace PreemptiveStrike.Dialogue
                 {
                     successAction();
                     caravan.ApplyNegotiationCoolDown();
+                    DialogUtilities.NegotiatorLearnSocial(true);
                 }, true));
                 return diaNode;
             }
             DiaNode RemedyFailNode()
             {
                 DiaNode diaNode = new DiaNode("PES_RaidNeg_Sub_Fail".Translate());
-                diaNode.options.Add(DialogUtilities.CurtOption("PES_ASHAME", null, () => { caravan.ApplyNegotiationCoolDown(); }, true));
+                diaNode.options.Add(DialogUtilities.CurtOption("PES_ASHAME", null, () => {
+                    caravan.ApplyNegotiationCoolDown();
+                    DialogUtilities.NegotiatorLearnSocial(false);
+                }, true));
                 return diaNode;
             }
             DiaNode RemedySmiteNode()
@@ -326,6 +335,7 @@ namespace PreemptiveStrike.Dialogue
                     incident.raidGoalType = RaidGoalType.Smite;
                     incident.goal = null;
                     caravan.ApplyNegotiationCoolDown();
+                    DialogUtilities.NegotiatorLearnSocial(false);
                 }, true));
                 return diaNode;
             }
@@ -378,13 +388,19 @@ namespace PreemptiveStrike.Dialogue
             DiaNode delaySuccessNode()
             {
                 DiaNode diaNode = new DiaNode("PES_RaidNeg_Delay_Success".Translate(caravan.CaravanTitle));
-                diaNode.options.Add(DialogUtilities.CurtOption("PES_Reassuring", null, () => { caravan.StageForThreeHours(); }, true));
+                diaNode.options.Add(DialogUtilities.CurtOption("PES_Reassuring", null, () => {
+                    caravan.StageForThreeHours();
+                    DialogUtilities.NegotiatorLearnSocial(true);
+                }, true));
                 return diaNode;
             }
             DiaNode delayFailNode()
             {
                 DiaNode diaNode = new DiaNode("PES_RaidNeg_Delay_Fail".Translate());
-                diaNode.options.Add(DialogUtilities.CurtOption("PES_DAMNIT", null, () => { caravan.ApplyDelayCoolDown(); }, true));
+                diaNode.options.Add(DialogUtilities.CurtOption("PES_DAMNIT", null, () => {
+                    caravan.ApplyDelayCoolDown();
+                    DialogUtilities.NegotiatorLearnSocial(false);
+                }, true));
                 return diaNode;
             }
             DiaNode delaySmiteNode()
@@ -395,6 +411,7 @@ namespace PreemptiveStrike.Dialogue
                     caravan.Communicable = false;
                     incident.raidGoalType = RaidGoalType.Smite;
                     incident.goal = null;
+                    DialogUtilities.NegotiatorLearnSocial(false);
                 }, true));
                 return diaNode;
             }

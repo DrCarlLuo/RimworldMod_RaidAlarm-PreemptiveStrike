@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_PrimitiveTower.label>原始木塔建造</PES_PrimitiveTower.label>
+  <PES_PrimitiveTower.description>建造原始瞭望塔来提供基础的侦察能力。</PES_PrimitiveTower.description>
+
+  <PES_ModernTower.label>现代瞭望塔</PES_ModernTower.label>
+  <PES_ModernTower.description>建造现代瞭望塔来给殖民地提供更好的侦察能力，同时可以在其上安装各种升级组件。</PES_ModernTower.description>
+
+  <PES_FoodSupply.label>哨兵食物供应解决方案</PES_FoodSupply.label>
+  <PES_FoodSupply.description>在瞭望塔中安装小型营养膏合成机，来让哨兵在不中断侦察任务的同时获得食物补充。</PES_FoodSupply.description>
+
+  <PES_JoyRadio.label>娱乐用收音机</PES_JoyRadio.label>
+  <PES_JoyRadio.description>在瞭望塔中安装收音机来满足哨兵的娱乐需求。</PES_JoyRadio.description>
+
+  <PES_SearchLight.label>高级光照技术</PES_SearchLight.label>
+  <PES_SearchLight.description>在瞭望塔中安装探照灯从而可以在夜间使用</PES_SearchLight.description>
+
+  <PES_SkyIDL.label>大型空中物体识别</PES_SkyIDL.label>
+  <PES_SkyIDL.description>解锁识别大型空中物体的能力，比如飞船碎片和陨石，同时预测它们的撞击点，帮助减少它们对殖民地带来的损失。</PES_SkyIDL.description>
+
+  <PES_RADAR.label>无线电侦测和定距</PES_RADAR.label>
+  <PES_RADAR.description>建造雷达，一种不需要人操作的侦察设备，提供不错的侦测距离。</PES_RADAR.description>
+
+  <PES_SkyIDS.label>小型空中物体识别</PES_SkyIDS.label>
+  <PES_SkyIDS.description>解锁识别小型空中物体的能力，比如空投仓，并预测它们的降落点，帮助减少殖民地的损失。</PES_SkyIDS.description>
+
+  <PES_InfestationDetection.label>地震早期预警系统</PES_InfestationDetection.label>
+  <PES_InfestationDetection.description>为地质探测仪解锁预警虫灾的能力。</PES_InfestationDetection.description>
+
+  <PES_SentryArray.label>侦查无人机</PES_SentryArray.label>
+  <PES_SentryArray.description>建造哨兵无人机阵列，一种终极的侦查设备，为殖民地提供了极大的视距范围。</PES_SentryArray.description>
+
+  <PES_Satellite.label>卫星通讯</PES_Satellite.label>
+  <PES_Satellite.description>建造间谍卫星上行链路节点，一种终极的侦查设备，为殖民地提供非常大的侦测范围。</PES_Satellite.description>
+</LanguageData>

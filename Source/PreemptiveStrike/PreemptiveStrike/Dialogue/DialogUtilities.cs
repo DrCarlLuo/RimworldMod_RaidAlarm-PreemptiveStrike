@@ -116,5 +116,12 @@ namespace PreemptiveStrike.Dialogue
             return map.listerThings.ThingsOfDef(ThingDefOf.CommsConsole).Any(thing => thing.Faction == Faction.OfPlayer);
         }
 
+        public static void NegotiatorLearnSocial(bool success)
+        {
+            if (success)
+                tempPawn.skills.Learn(SkillDefOf.Social, 1000f, true);
+            else
+                tempPawn.skills.Learn(SkillDefOf.Social, 6000f, true);
+        }
     }
 }

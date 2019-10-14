@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_StandGuard_Primitive.label>在原始瞭望塔站岗</PES_StandGuard_Primitive.label>
+  <PES_StandGuard_Primitive.verb>站岗</PES_StandGuard_Primitive.verb>
+  <PES_StandGuard_Primitive.gerund>站岗</PES_StandGuard_Primitive.gerund>
+
+  <PES_StandGuard.label>在瞭望塔站岗</PES_StandGuard.label>
+  <PES_StandGuard.verb>站岗</PES_StandGuard.verb>
+  <PES_StandGuard.gerund>站岗</PES_StandGuard.gerund>
+
+  <PES_OperateSentryArray.label>监视哨兵无人机阵列终端</PES_OperateSentryArray.label>
+  <PES_OperateSentryArray.verb>监视</PES_OperateSentryArray.verb>
+  <PES_OperateSentryArray.gerund>监视</PES_OperateSentryArray.gerund>
+
+  <PES_InstallUpgrade.label>在侦察设备上安装升级</PES_InstallUpgrade.label>
+  <PES_InstallUpgrade.verb>安装升级</PES_InstallUpgrade.verb>
+  <PES_InstallUpgrade.gerund>安装升级</PES_InstallUpgrade.gerund>
+
+  <PES_Refuel.label>为侦察设备补充食物</PES_Refuel.label>
+  <PES_Refuel.gerund>补充食物</PES_Refuel.gerund>
+  <PES_Refuel.verb>补充食物</PES_Refuel.verb>
+</LanguageData>

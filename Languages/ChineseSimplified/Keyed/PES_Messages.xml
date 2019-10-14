@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>
+<PES_CaravanDismiss>{0} 已经不再朝着殖民地移动了，我方侦查系统不再追踪其动向。</PES_CaravanDismiss>
+<!-- <PES_CaravanDismiss>{0} is no longer heading towards our colony and tracked by our reconnaissance system.</PES_CaravanDismiss> -->
+
+<PES_PrisonerDead>由于 {0} 要求释放的囚犯已经死亡，他们非常生气并决定向殖民地复仇！</PES_PrisonerDead>
+<!-- <PES_PrisonerDead>{0} is getting really angry now because one of the prisoner they want is dead. They will now revenge on the colony.</PES_PrisonerDead> -->
+
+<PES_AllSlaveDead>{0} 将他们的袭击目标改为了勒索，因为所有他们想要奴役的殖民者已经死亡。</PES_AllSlaveDead>
+<!-- <PES_AllSlaveDead>{0} changes their raiding goal to Extortion, because all the colonists they want to enslave are dead.</PES_AllSlaveDead> -->
+
+<PES_CommunicationEstablished>我们已经和 {0} 建立了通讯。使用通讯台来和他们联系。</PES_CommunicationEstablished>
+<!-- <PES_CommunicationEstablished>We have established communication with {0}. Use Comms Console to contact them.</PES_CommunicationEstablished> -->
+
+<PES_Detected_Title_Human>侦测到不明人群</PES_Detected_Title_Human>
+<!-- <PES_Detected_Title_Human>Crowd Incoming</PES_Detected_Title_Human> -->
+
+<PES_Detected_Title_Animal>侦测到不明兽群</PES_Detected_Title_Animal>
+<!-- <PES_Detected_Title_Animal>Herd Incoming</PES_Detected_Title_Animal> -->
+
+<PES_Detected_Text_Human>我方侦查系统发现有一队不明人群正朝向我方殖民地移动。他们来自的派系和目的尚不清楚。侦查系统正尝试识别其更多信息。详细信息请见安全简报。</PES_Detected_Text_Human>
+<!-- <PES_Detected_Text_Human>The reconnaissance system in our colony has detected that an unknown human crowd is moving toward our colony. Their faction and intention are unknown. The reconnaissance system is trying to identify more information about it. Detail information is in the security report.</PES_Detected_Text_Human> -->
+
+<PES_Detected_Text_Animal>我方侦查系统发现有一群不明动物正朝向我方殖民地移动。侦查系统正尝试识别其更多信息。详细信息请见安全简报</PES_Detected_Text_Animal>
+<!-- <PES_Detected_Text_Animal>The reconnaissance system in our colony detected that an unusual animal herd is moving toward our colony. The reconnaissance system is trying to identify more information about it. Detail information is in the security report.</PES_Detected_Text_Animal> -->
+
+<PES_Hostile_Confirmed>已确认：敌对目标</PES_Hostile_Confirmed>
+<!-- <PES_Hostile_Confirmed>Hostile Entity Confirmed</PES_Hostile_Confirmed> -->
+
+<PES_Hostile_Text_Human>我方侦查系统已经确认即将到来的人群是一队敌对的袭击者。详细信息参见安全简报。</PES_Hostile_Text_Human>
+<!-- <PES_Hostile_Text_Human>The reconnaissance system in our colony has confirmed the incoming human crowed is a hostile raiding team. More information is in the security report.</PES_Hostile_Text_Human> -->
+
+<PES_Hostile_Text_Animal>我方侦查系统已经确认即将到来的兽群是一群发狂的动物。详细信息参见安全简报。</PES_Hostile_Text_Animal>
+<!-- <PES_Hostile_Text_Animal>The reconnaissance system in our colony has confirmed the incoming animal herd are mad animals. More information is in the security report.</PES_Hostile_Text_Animal> -->
+
+<PES_Neutral_Message>我方侦查系统已经确认即将到来的人群是非敌对目标。详细信息参见安全简报。</PES_Neutral_Message>
+<!-- <PES_Neutral_Message>The reconnaissance system in our colony has confirmed the incoming crowd is nonhostile. See more in security report.</PES_Neutral_Message> -->
+
+<PES_Neutral_Message_Animal>我方侦查系统已经确认即将到来的兽群是非敌对目标。详细信息参见安全简报。</PES_Neutral_Message_Animal>
+
+<PES_Caravan_Confirmed>"{0}" 已经进入了殖民地视距范围，已确认其所有信息。</PES_Caravan_Confirmed>
+<!-- <PES_Caravan_Confirmed>"{0}" has entered the vision range of our colony, all information revealed. </PES_Caravan_Confirmed> -->
+
+<PES_Update_NeedSkill>殖民者至少需要{0}级建造技能才能安装这个升级组件。</PES_Update_NeedSkill>
+<!-- <PES_Update_NeedSkill>A colonist with at least Level {0} in construction is required to construct this upgrading</PES_Update_NeedSkill> -->
+
+<PES_Spot_SkyFaller_Big>我方侦查系统侦测到空中有异常的大型物体！</PES_Spot_SkyFaller_Big>
+<!-- <PES_Spot_SkyFaller_Big>The reconnaissance system in our colony has spotted an anomalous large object in the sky</PES_Spot_SkyFaller_Big> -->
+
+<PES_Spot_SkyFaller_Small>我方侦查系统侦测到近空中有靠近的空投仓！</PES_Spot_SkyFaller_Small>
+<!-- <PES_Spot_SkyFaller_Small>The reconnaissace system in our colony has spotted incoming drop pods</PES_Spot_SkyFaller_Small> -->
+
+<PES_Warning_Meteorite>警告：陨石撞击</PES_Warning_Meteorite>
+<!-- <PES_Warning_Meteorite>Warning: Meteorite Impact</PES_Warning_Meteorite> -->
+<PES_Warning_Meteorite_Text>我方侦查系统已经证实，即将到来的大型空中物体为陨石。其撞击点已被成功计算出来。查看安全简报获取更多信息。</PES_Warning_Meteorite_Text>
+<!-- <PES_Warning_Meteorite_Text>The reconnaissance system in our colony has confirmed that the incoming large object is a meteorite. The impact spot has been successfully calculated. See the security report for more information.</PES_Warning_Meteorite_Text> -->
+
+<PES_Warning_ShipPart>警告：飞船部件撞击</PES_Warning_ShipPart>
+<!-- <PES_Warning_ShipPart>Warning: Ship Part Impact</PES_Warning_ShipPart> -->
+<PES_Warning_Shippart_Text>我方侦查系统已经证实，即将到来的大型空中物体为古老飞船的大块部件。其撞击点已被成功计算。查看安全简报获取更多信息。</PES_Warning_Shippart_Text>
+<!-- <PES_Warning_Shippart_Text>The reconnaissance system in our colony has confirmed that the incoming large object is a large piece of an ancient ship! The impact spot has been successfully calculated. See the security report for more information.</PES_Warning_Shippart_Text> -->
+
+<PES_Warning_DropPodAssault>警告：空投仓袭击</PES_Warning_DropPodAssault>
+<!-- <PES_Warning_DropPodAssault>Warning: Drop Pod Assault</PES_Warning_DropPodAssault> -->
+<PES_Warning_DropPodAssault_Text>我方侦查系统已经证实，即将到来的空投仓集群中装满了袭击者！它们的降落点已被成功计算出来。查看安全简报获取更多信息。</PES_Warning_DropPodAssault_Text>
+<!-- <PES_Warning_DropPodAssault_Text>The reconnaissance system inour colony has confirmed that the incoming drop pods are actually containing enemies! Their landing spot has been successfully calculated. See the security report of more information.</PES_Warning_DropPodAssault_Text> -->
+
+<PES_Infestation_Letter>探测到异常地下运动</PES_Infestation_Letter>
+<!-- <PES_Infestation_Letter>Unusual Deep-Ground Motion Detected</PES_Infestation_Letter> -->
+<PES_Infestation_Text>地质探测器探测到地下深处有异常的运动迹象。这应该是虫灾来袭的前兆。</PES_Infestation_Text>
+<!-- <PES_Infestation_Text>The ground-penetrating scanner in the colony has detected an anomolous movement deep in the gound. It is clear that this is a sign for upcoming infestation.</PES_Infestation_Text> -->
+
+<PES_Notify_ResoucePod>即将到来的空投仓已被证实为资源舱。</PES_Notify_ResoucePod>
+<!-- <PES_Notify_ResoucePod>The incoming drop pods have been confirmed to be resouce pods.</PES_Notify_ResoucePod> -->
+<PES_Notify_RefugeePod>即将到来的空投仓被证实为逃生舱。</PES_Notify_RefugeePod>
+<!-- <PES_Notify_RefugeePod>The incoming drop pods have been confirmed to be containing a refugee.</PES_Notify_RefugeePod> -->
+<PES_Notify_ShipChunk>即将到来的大型空中物体被证实为飞船碎片。</PES_Notify_ShipChunk>
+<!-- <PES_Notify_ShipChunk>The incoming large object in the sky has been confirmed to be ship chunks.</PES_Notify_ShipChunk> -->
+</LanguageData>
+

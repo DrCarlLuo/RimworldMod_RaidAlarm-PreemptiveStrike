@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <PES_RaidNeg_Proglog>袭击团队{0}中的一位成员回答了这次呼叫。他们来自{1}</PES_RaidNeg_Proglog>
+    <!-- <PES_RaidNeg_Proglog>A member of the raiding team &quot;{0}&quot; answers the call. This raiding team is from {1}.</PES_RaidNeg_Proglog> -->
+
+    <PES_RaidNeg_SurrenderSuccess>在要求得到了满足以后，{0} 不再朝着我方移动了。</PES_RaidNeg_SurrenderSuccess>
+    <!-- <PES_RaidNeg_SurrenderSuccess>After their demand is met, the raiding team {0} is not longer heading toward our colony.</PES_RaidNeg_SurrenderSuccess> -->
+
+    <PES_RaidNeg_Attitude_Rude>骂了几句之后, </PES_RaidNeg_Attitude_Rude>
+    <!-- <PES_RaidNeg_Attitude_Rude>Muttering an insult, </PES_RaidNeg_Attitude_Rude> -->
+    <PES_RaidNeg_Attitude_Polite>他们以一种出乎我们意料的礼貌的语气, </PES_RaidNeg_Attitude_Polite>
+    <!-- <PES_RaidNeg_Attitude_Polite>Speaking with unexpected courtesy, </PES_RaidNeg_Attitude_Polite> -->
+
+    <!-- Goal explanation-->
+    <PES_RaidNeg_GoalExp_Extortion>他们告诉我们他们发动这场袭击是为了向我们索取一下的贡金：\n {0}x 白银\n(用白银或者黄金或者两者一起支付都可以, 1 黄金 = 10 白银) </PES_RaidNeg_GoalExp_Extortion>
+    <!-- <PES_RaidNeg_GoalExp_Extortion>they tell us they launched this raid in order to force us to pay them tribute of:\n {0}x Silver\n(can be paid with silver or gold or both combined, 1 gold = 10 silver) </PES_RaidNeg_GoalExp_Extortion> -->
+    <PES_RaidNeg_GoalExp_Rescue>他们称他们发动这场袭击是为了营救被我方关押的他们的同伴。他们要求我们释放的囚犯有：\n{0}</PES_RaidNeg_GoalExp_Rescue>
+    <!-- <PES_RaidNeg_GoalExp_Rescue>they tell us they launched this raid in order to resue some of their fellows that were taken prisoner by our colony. The prisoners they demand us to release including:\n{0} </PES_RaidNeg_GoalExp_Rescue> -->
+    <PES_RaidNeg_GoalExp_Revenge>他们称他们发动这场袭击是为之前被我方杀死的同伴{0}复仇。 他们要求处决杀人犯 {1}。 </PES_RaidNeg_GoalExp_Revenge>
+    <!-- <PES_RaidNeg_GoalExp_Revenge>they tell us they launched this raid in order to revenge for the death of {0} who was killed by our colony. They demand us to execute the murderer {1}. </PES_RaidNeg_GoalExp_Revenge> -->
+    <PES_RaidNeg_GoalExp_Despoil>他们称他们发动这场袭击就是为了劫掠。他们要求我们上交：</PES_RaidNeg_GoalExp_Despoil>
+    <!-- <PES_RaidNeg_GoalExp_Despoil>they tell us they launched this raid simply out of the need of despoliation. They demand us to hand over the following things: </PES_RaidNeg_GoalExp_Despoil> -->
+    <PES_RaidNeg_GoalExp_Enslave>他们称他们发动这场袭击是为了获取更多奴隶。他们要带走:\n{0}</PES_RaidNeg_GoalExp_Enslave>
+    <!-- <PES_RaidNeg_GoalExp_Enslave>they tell us this is a slave raid, and they want to enslave and take away the following colonist:\n{0}</PES_RaidNeg_GoalExp_Enslave> -->
+    <PES_RaidNeg_GoalExp_Conquer>他们告诉我们他们发动这场袭击是为他们的派系征服新的土地。 </PES_RaidNeg_GoalExp_Conquer>
+    <!-- <PES_RaidNeg_GoalExp_Conquer>they tell us they launched this raid in order to conquer this land for their faction, making this colony their new territory. </PES_RaidNeg_GoalExp_Conquer> -->
+
+    <PES_RaidNeg_DemandSurrender_rude>他们要求我们立即投降。如果他们的要求得不到满足，按照他们的说法，会将我方殖民地夷为平地。</PES_RaidNeg_DemandSurrender_rude>
+    <!-- <PES_RaidNeg_DemandSurrender_rude>They demand our immediate surrender. Were their demand not met, they say to us, our colony would be razed to the ground.</PES_RaidNeg_DemandSurrender_rude> -->
+    <PES_RaidNeg_DemandSurrender_Polite>他们要求我们考虑一下他们的要求，以避免不必要的人员伤亡。</PES_RaidNeg_DemandSurrender_Polite>
+    <!-- <PES_RaidNeg_DemandSurrender_Polite>They ask us to consider their demand and wish to avoid unnecessary casualty.</PES_RaidNeg_DemandSurrender_Polite> -->
+
+    <!-- Rebuff words-->
+    <PES_RaidNeg_Rebuff_Head>[断然拒绝并辱骂]: </PES_RaidNeg_Rebuff_Head>
+    <!-- <PES_RaidNeg_Rebuff_Head>[Rebuff and Insult]: </PES_RaidNeg_Rebuff_Head> -->
+    <PES_RaidNeg_Rebuff_Rescue>立即处决这些囚犯！告诉他们不要再做白日梦了，并且告诉他们，他们的下场也必将，无法避免地，和这些可悲的囚犯们一样！</PES_RaidNeg_Rebuff_Rescue>
+    <!-- <PES_RaidNeg_Rebuff_Rescue>EXECUTE these prisoners RIGHT NOW! Tell them to stop their reveries and their destiny will, inevitably, be the same with these pathetic prisoners!</PES_RaidNeg_Rebuff_Rescue> -->
+    <PES_RaidNeg_Rebuff_Despoil>告诉他们，他们从我们这里什么也得不到！面对他们这样的野蛮人，我们会战斗到死来保卫我们的殖民地！</PES_RaidNeg_Rebuff_Despoil>
+    <!-- <PES_RaidNeg_Rebuff_Despoil>Tell them to expect nothing from us and we shall fight to the death to defend our properties from the barbarians like them!</PES_RaidNeg_Rebuff_Despoil> -->
+    <PES_RaidNeg_Rebuff_Revenge> </PES_RaidNeg_Rebuff_Revenge>
+    <PES_RaidNeg_Rebuff_Enslave> </PES_RaidNeg_Rebuff_Enslave>
+    <PES_RaidNeg_Rebuff_Conquer> </PES_RaidNeg_Rebuff_Conquer>
+    <PES_RaidNeg_Rebuff_Extortion>告诉他们，他们从我们这里什么也得不到！面对他们这样的野蛮人，我们会战斗到死来保卫我们的殖民地！</PES_RaidNeg_Rebuff_Extortion>
+    <!-- <PES_RaidNeg_Rebuff_Extortion>Tell them to expect nothing from us and we shall fight to the death to defend our properties from the barbarians like them!</PES_RaidNeg_Rebuff_Extortion> -->
+
+    <PES_RaidNeg_Rebuff_Rescue_Fail>不可用。这名谈话者无法进行暴力行为。</PES_RaidNeg_Rebuff_Rescue_Fail>
+    <!-- <PES_RaidNeg_Rebuff_Rescue_Fail>Not available. This negotiator is incapable of violence.</PES_RaidNeg_Rebuff_Rescue_Fail> -->
+
+    <PES_RaidNeg_Rebuff_Confirmation>你确定要这样做吗？</PES_RaidNeg_Rebuff_Confirmation>
+    <!-- <PES_RaidNeg_Rebuff_Confirmation>Are you sure you want to do this?</PES_RaidNeg_Rebuff_Confirmation> -->
+    <PES_RaidNeg_Rebuff_Confirmation_Rescue>下列囚犯会被立即处决：</PES_RaidNeg_Rebuff_Confirmation_Rescue>
+    <!-- <PES_RaidNeg_Rebuff_Confirmation_Rescue>The following prisoners will be executed immediately: </PES_RaidNeg_Rebuff_Confirmation_Rescue> -->
+    <PES_RaidNeg_Rebuff_Explanation>这样做会提升我方殖民者的士气。根据 {0} 社交技能的高低，当袭击者到来之时，所有的殖民者会得到心情加成和战斗能力加成。注意，如果当前交谈者社交能力过低，会反而造成减成。\n\n 但同时，敌方也会非常生气。他们的袭击目标会改为惩戒，你无法再与他们交流。同时,他们会叫上更多援军。（25%到100%当前袭击点数）\n</PES_RaidNeg_Rebuff_Explanation>
+    <!-- <PES_RaidNeg_Rebuff_Explanation>Doing this will boost the morale of all the colonists. When the raiders arrive, all colonists will get a mood buff and combat buff based on the social skill of {0}. But beware, if the current negotiator is too poor in social skill, this buff will change to a debuff. \n\nHowever, the enemy will become furious. The raiding goal of this raiding team will change to SMITE and you can no longer communicate with them. Also, this raiding team will be reinforced (randomly from 25% to 100% of the current power).\n</PES_RaidNeg_Rebuff_Explanation> -->
+
+    <PES_RaidNeg_NegDeeper>就他们的要求进行深入谈判</PES_RaidNeg_NegDeeper>
+    <!-- <PES_RaidNeg_NegDeeper>Try to negotiate over their demand</PES_RaidNeg_NegDeeper> -->
+    <PES_RaidNeg_NegDeeper_Prolog>从哪个角度和他们谈判?</PES_RaidNeg_NegDeeper_Prolog>
+    <!-- <PES_RaidNeg_NegDeeper_Prolog>How do you want to negotiate?</PES_RaidNeg_NegDeeper_Prolog> -->
+
+    <PES_RaidNeg_NegDeeper_Surrender>我们别无选择，只能接受他们的要求...</PES_RaidNeg_NegDeeper_Surrender>
+    <!-- <PES_RaidNeg_NegDeeper_Surrender>We have no choice but accept their demand...</PES_RaidNeg_NegDeeper_Surrender> -->
+    <PES_RaidNeg_NegDeeper_Bargain>就他们的要求讨价还价</PES_RaidNeg_NegDeeper_Bargain>
+    <!-- <PES_RaidNeg_NegDeeper_Bargain>Try to bargain about their demand</PES_RaidNeg_NegDeeper_Bargain> -->
+
+    <!-- delays-->
+    <PES_RaidNeg_Delay>叫他们暂缓行进的脚步，让我们可以更好的思考他们的要求，或者为即将到来的战斗争取更多的准备时间。</PES_RaidNeg_Delay>
+    <!-- <PES_RaidNeg_Delay>Ask them to slow down their marching so that we can better think about their demand, or earn us some time to prepare for upcoming combat</PES_RaidNeg_Delay> -->
+    <PES_RaidNeg_Delay_Intro>我们要怎么和他们说来让他们停下来呢？</PES_RaidNeg_Delay_Intro>
+    <!-- <PES_RaidNeg_Delay_Intro>What should we say to them to ask them to stop approaching our colony?</PES_RaidNeg_Delay_Intro> -->
+
+    <PES_RaidNeg_Delay_Staging>他们已经暂缓了行进。 剩余时间: {0}</PES_RaidNeg_Delay_Staging>
+    <!-- <PES_RaidNeg_Delay_Staging>They've already stopped marching. Remaining Time: {0}</PES_RaidNeg_Delay_Staging> -->
+    <PES_RaidNeg_Delay_CoolDown>我们只能每隔一个小时对他们提出这样的要求。 剩余时间: {0}</PES_RaidNeg_Delay_CoolDown>
+    <!-- <PES_RaidNeg_Delay_CoolDown>We can only try to ask them to do this every one hour. Remaining Time: {0}</PES_RaidNeg_Delay_CoolDown> -->
+    <PES_RaidNeg_Delay_DoneBefore>我们只能让他们停下来一次。</PES_RaidNeg_Delay_DoneBefore>
+    <!-- <PES_RaidNeg_Delay_DoneBefore>We can only ask them for doing this once.</PES_RaidNeg_Delay_DoneBefore> -->
+
+    <PES_RaidNeg_Delay_Success_Name>让他们停下来</PES_RaidNeg_Delay_Success_Name>
+    <!-- <PES_RaidNeg_Delay_Success_Name>to delay the raiding</PES_RaidNeg_Delay_Success_Name> -->
+    <PES_RaidNeg_Delay_Smite_Name>让他们非常生气并且惩罚我们</PES_RaidNeg_Delay_Smite_Name>
+    <!-- <PES_RaidNeg_Delay_Smite_Name>to make them angry and punish us</PES_RaidNeg_Delay_Smite_Name> -->
+
+    <PES_RaidNeg_Delay_Persuasion>“给我们一点思考的时间。这对你们和我们都有好处。”</PES_RaidNeg_Delay_Persuasion>
+    <!-- <PES_RaidNeg_Delay_Persuasion>"Give us some time to think about it. This is good for both you and us."</PES_RaidNeg_Delay_Persuasion> -->
+
+    <PES_RaidNeg_Delay_Intimidation_Rescue>"我们需要思考的时间！不要再靠近了，否则我们会立即处决这些囚犯！"</PES_RaidNeg_Delay_Intimidation_Rescue>
+    <!-- <PES_RaidNeg_Delay_Intimidation_Rescue>"We need time to discuss your suggestion. Do not approach our colony any more, or we will execute the prisoners you want right now!"</PES_RaidNeg_Delay_Intimidation_Rescue> -->
+    <PES_RaidNeg_Delay_Intimidation_Despoil>"我们需要思考的时间！不要再靠近了，否则你们能得到的只有我们的迫击炮弹！"</PES_RaidNeg_Delay_Intimidation_Despoil>
+    <!-- <PES_RaidNeg_Delay_Intimidation_Despoil>"We need time to discuss your suggestion. Do not approach our colony any more, or you will get nothing but our mortar fire!"</PES_RaidNeg_Delay_Intimidation_Despoil> -->
+    <PES_RaidNeg_Delay_Intimidation_Revenge>"我们需要思考的时间！不要再靠近了，否则你们能得到的只有我们的迫击炮弹！"</PES_RaidNeg_Delay_Intimidation_Revenge>
+    <PES_RaidNeg_Delay_Intimidation_Enslave>"我们需要思考的时间！不要再靠近了，否则你们能得到的只有我们的迫击炮弹！"</PES_RaidNeg_Delay_Intimidation_Enslave>
+    <PES_RaidNeg_Delay_Intimidation_Extortion>"我们需要思考的时间！不要再靠近了，否则你们能得到的只有我们的迫击炮弹！"</PES_RaidNeg_Delay_Intimidation_Extortion>
+
+    <PES_RaidNeg_Delay_Beguilement_Rescue>"你们要的囚犯在我们的一个远行队中，停下你们的脚步，给我们一点时间把他们调回来。"</PES_RaidNeg_Delay_Beguilement_Rescue>
+    <!-- <PES_RaidNeg_Delay_Beguilement_Rescue>"The prisoners you want is in one of our trading caravan. Stop your marching and give us some time to send them back here."</PES_RaidNeg_Delay_Beguilement_Rescue> -->
+    <PES_RaidNeg_Delay_Beguilement_Despoil>"我们殖民地中目前暂时没有这么多资源。我们正在从我们的远行队中调回资源。给我们点时间并且停下你们的脚步。"</PES_RaidNeg_Delay_Beguilement_Despoil>
+    <!-- <PES_RaidNeg_Delay_Beguilement_Despoil>"We don't have sufficient resources here in our colony. We are transporting some resouces from our trading caravan. Give us some time and stop your marching."</PES_RaidNeg_Delay_Beguilement_Despoil> -->
+    <PES_RaidNeg_Delay_Beguilement_Revenge>"你们要的那个人现在我们的一个远行队中，我们正在让他回来。所以停下你们的脚步给我们点时间！"</PES_RaidNeg_Delay_Beguilement_Revenge>
+    <!-- <PES_RaidNeg_Delay_Beguilement_Revenge>"The person you want is not here in this colony but in one of our trading caravan. We are sending that person back, so stop your matching and give us some time."</PES_RaidNeg_Delay_Beguilement_Revenge> -->
+    <PES_RaidNeg_Delay_Beguilement_Enslave>"你们要的人在我们的远行队中，我们正叫他们回来。停下你们的脚步，给我们点时间。"</PES_RaidNeg_Delay_Beguilement_Enslave>
+    <!-- <PES_RaidNeg_Delay_Beguilement_Enslave>"The person you want is not here in this colony but in one of our trading caravan. We are sending that person back, so stop your matching and give us some time."</PES_RaidNeg_Delay_Beguilement_Enslave> -->
+    <PES_RaidNeg_Delay_Beguilement_Extortion>"我们殖民地中暂时没有这么多钱。我们正在召回我们的远行队把资源调回来。给我们点时间并且不要再靠近了。"</PES_RaidNeg_Delay_Beguilement_Extortion>
+    <!-- <PES_RaidNeg_Delay_Beguilement_Extortion>"We don't have enough silver here in our colony. We are recalling our trading caravan to bring back some silver. Give us some time and stop your marching."</PES_RaidNeg_Delay_Beguilement_Extortion> -->
+
+    <PES_RaidNeg_Delay_Success>{0}同意暂时停止行进一小会。但是他们只保证等待三小时。在这之后，如果他们的条件还得不到满足，他们就会发动他们的进攻。</PES_RaidNeg_Delay_Success>
+    <!-- <PES_RaidNeg_Delay_Success>{0} agree to stop for a while. However, they say that they will only stop for three hours. After three hours, if their demand is still not met, they will keep heading towards our colony.</PES_RaidNeg_Delay_Success> -->
+    <PES_RaidNeg_Delay_Fail>他们傲慢地拒绝了我们的要求，并且继续朝着我方移动。</PES_RaidNeg_Delay_Fail>
+    <!-- <PES_RaidNeg_Delay_Fail>They spurn our suggestion and keep on marching towards our colony.</PES_RaidNeg_Delay_Fail> -->
+    <PES_RaidNeg_Delay_Smite>他们对我们的威胁非常生气，并认为这是对他们的侮辱。他们决定给我们一点教训，并且不再与我们进行联系。</PES_RaidNeg_Delay_Smite>
+    <!-- <PES_RaidNeg_Delay_Smite>They get really angry about the intimidation and consider it as an insult. They decide to give us a punishment and will not communicate with us any more.</PES_RaidNeg_Delay_Smite> -->
+    
+    <!-- Goals -->
+    <PES_RaidNeg_NegCoolDown>我们只能每隔一小时进行一次谈判. 剩余时间: {0}</PES_RaidNeg_NegCoolDown>
+    <!-- <PES_RaidNeg_NegCoolDown>We can only do negotiation every one hour. Remaining Time: {0}</PES_RaidNeg_NegCoolDown> -->
+
+    <PES_RaidNeg_NegDeeper_Surrender_Comfirmation>你确定你要向他们屈服吗？</PES_RaidNeg_NegDeeper_Surrender_Comfirmation>
+    <!-- <PES_RaidNeg_NegDeeper_Surrender_Comfirmation>Are you sure you are going to capitulate to their demand?</PES_RaidNeg_NegDeeper_Surrender_Comfirmation> -->
+
+    <PES_RaidNeg_NegDeeper_Surrender_Fail_Conquer>不可用。如果我们接受了，游戏无法再进行下去。</PES_RaidNeg_NegDeeper_Surrender_Fail_Conquer>
+    <!-- <PES_RaidNeg_NegDeeper_Surrender_Fail_Conquer>Not available. If we accept, this game is no longer playable.</PES_RaidNeg_NegDeeper_Surrender_Fail_Conquer> -->
+    <PES_RaidNeg_NegDeeper_Surrender_Fail_NoMoney>不可用。我们没有足够的黄金白银。</PES_RaidNeg_NegDeeper_Surrender_Fail_NoMoney>
+    <!-- <PES_RaidNeg_NegDeeper_Surrender_Fail_NoMoney>Not available. We don't have enough silver or gold.</PES_RaidNeg_NegDeeper_Surrender_Fail_NoMoney> -->
+    <PES_RaidNeg_NegDeeper_Surrender_Fail_Prisoner>不可用。至少有一个囚犯不在地图中。</PES_RaidNeg_NegDeeper_Surrender_Fail_Prisoner>
+    <!-- <PES_RaidNeg_NegDeeper_Surrender_Fail_Prisoner>Not available. At least one of the prisoners are not available.</PES_RaidNeg_NegDeeper_Surrender_Fail_Prisoner> -->
+    <PES_RaidNeg_NegDeeper_Surrender_Fail_Enslave>不可用。只要有一位他们要求的殖民者不在地图中。</PES_RaidNeg_NegDeeper_Surrender_Fail_Enslave>
+    <!-- <PES_RaidNeg_NegDeeper_Surrender_Fail_Enslave>Not available. At least one of the colonists they want are not available.</PES_RaidNeg_NegDeeper_Surrender_Fail_Enslave> -->
+    
+    <PES_RaidNeg_NegDeeper_Bargain_Intro>你想让他们把要求削减到什么程度？</PES_RaidNeg_NegDeeper_Bargain_Intro>
+    <!-- <PES_RaidNeg_NegDeeper_Bargain_Intro>To what extent do you want to redue their demand to?</PES_RaidNeg_NegDeeper_Bargain_Intro> -->
+    <PES_RaidNeg_NegDeeper_Bargin_Begin>我们该怎么说？</PES_RaidNeg_NegDeeper_Bargin_Begin>
+    <!-- <PES_RaidNeg_NegDeeper_Bargin_Begin>What should we say to them?</PES_RaidNeg_NegDeeper_Bargin_Begin> -->
+
+    <PES_RaidNeg_NegDeeper_Bargain_Invalid_Conquer>不可用，他们想要完全控制殖民地。</PES_RaidNeg_NegDeeper_Bargain_Invalid_Conquer>
+    <!-- <PES_RaidNeg_NegDeeper_Bargain_Invalid_Conquer>Not available. They want the fully control of our colony.</PES_RaidNeg_NegDeeper_Bargain_Invalid_Conquer> -->
+    <PES_RaidNeg_NegDeeper_Bargain_Invalid_OnePrisoner>不可用，他们只想要一位囚犯，没有减少的余地了。</PES_RaidNeg_NegDeeper_Bargain_Invalid_OnePrisoner>
+    <!-- <PES_RaidNeg_NegDeeper_Bargain_Invalid_OnePrisoner>Not available. They only want one prisoner. Cannot reduce this demand further.</PES_RaidNeg_NegDeeper_Bargain_Invalid_OnePrisoner> -->
+    <PES_RaidNeg_NegDeeper_Bargain_Invalid_OneSlave>不可用，他们只想要一位殖民者，没有减少的余地了。</PES_RaidNeg_NegDeeper_Bargain_Invalid_OneSlave>
+    <!-- <PES_RaidNeg_NegDeeper_Bargain_Invalid_OneSlave>Not available. They only want one colonist. Cannot reduce this demand further</PES_RaidNeg_NegDeeper_Bargain_Invalid_OneSlave> -->
+
+    <PES_RaidNeg_NegDeeper_Bargain_Option_Prisoner>减少{0}名囚犯</PES_RaidNeg_NegDeeper_Bargain_Option_Prisoner>
+    <!-- <PES_RaidNeg_NegDeeper_Bargain_Option_Prisoner>{0} less prisoner(s)</PES_RaidNeg_NegDeeper_Bargain_Option_Prisoner> -->
+
+    <PES_RaidNeg_NegDeeper_Bargain_Option_Enslave>减少{0}名殖民者</PES_RaidNeg_NegDeeper_Bargain_Option_Enslave>
+    <!-- <PES_RaidNeg_NegDeeper_Bargain_Option_Enslave>{0} less colonist(s)</PES_RaidNeg_NegDeeper_Bargain_Option_Enslave> -->
+
+    <PES_RaidNeg_NegDeeper_Bargain_Success>他们同意削减他们的要求</PES_RaidNeg_NegDeeper_Bargain_Success>
+    <!-- <PES_RaidNeg_NegDeeper_Bargain_Success>They agreed to reduce their demand.</PES_RaidNeg_NegDeeper_Bargain_Success> -->
+    <PES_RaidNeg_NegDeeper_Bargain_Fail>他们拒绝减少他们的要求。</PES_RaidNeg_NegDeeper_Bargain_Fail>
+    <!-- <PES_RaidNeg_NegDeeper_Bargain_Fail>They refuse to accept our suggestion about reducing their demand. Their deman will remain the same.</PES_RaidNeg_NegDeeper_Bargain_Fail> -->
+    <PES_raidNeg_NegDeeper_Bargain_Smite>他们对我们的威胁非常生气，并认为这是对他们的侮辱。他们决定给我们一点教训，并且不再与我们进行联系。</PES_raidNeg_NegDeeper_Bargain_Smite>
+    <!-- <PES_raidNeg_NegDeeper_Bargain_Smite>They get really angry about the intimidation and consider it as an insult. They decide to give us a punishment and will not communicate with us any more.</PES_raidNeg_NegDeeper_Bargain_Smite> -->
+
+    <PES_raidNeg_NegDeeper_Bargain_Success_Name>让他们接受我们的提议</PES_raidNeg_NegDeeper_Bargain_Success_Name>
+    <!-- <PES_raidNeg_NegDeeper_Bargain_Success_Name>to make them accept our suggestion</PES_raidNeg_NegDeeper_Bargain_Success_Name> -->
+    <PES_RaidNeg_Negdeeper_Bargain_Smite_Name>让他们非常生气并且惩罚我们</PES_RaidNeg_Negdeeper_Bargain_Smite_Name>
+
+    <!--Remedy-->
+    <PES_RaidNeg_NegDeeper_Remedy>我们不可能满足他们的要求。尝试给他们点其他东西。\n</PES_RaidNeg_NegDeeper_Remedy>
+    <!-- <PES_RaidNeg_NegDeeper_Remedy>It's not possible to meet their demand. Try to give them something else as a remedy.\n</PES_RaidNeg_NegDeeper_Remedy> -->
+    <PES_RaidNeg_Sub_Intro>我们能够提供：</PES_RaidNeg_Sub_Intro>
+    <!-- <PES_RaidNeg_Sub_Intro>We can offer them:</PES_RaidNeg_Sub_Intro> -->
+    <PES_RaidNeg_Sub_Rescue>释放他们的囚犯</PES_RaidNeg_Sub_Rescue>
+    <!-- <PES_RaidNeg_Sub_Rescue>Release their prisoners instead</PES_RaidNeg_Sub_Rescue> -->
+    <PES_RaidNeg_Sub_Extortion>给他们钱，破财消灾</PES_RaidNeg_Sub_Extortion>
+    <!-- <PES_RaidNeg_Sub_Extortion>Pay them some money instead</PES_RaidNeg_Sub_Extortion> -->
+    <PES_RaidNeg_Sub_Rescue_NoPrisoner>我们没有关押他们派系的囚犯</PES_RaidNeg_Sub_Rescue_NoPrisoner>
+    <!-- <PES_RaidNeg_Sub_Rescue_NoPrisoner>No prisoner from their faction is in our custody</PES_RaidNeg_Sub_Rescue_NoPrisoner> -->
+
+    <PES_RaidNeg_Sub_success>他们同意了我们的提议!他们的袭击目标已经改变。</PES_RaidNeg_Sub_success>
+    <PES_RaidNeg_Sub_Fail>他们拒绝了我们的提议！他们的袭击目标保持不变...</PES_RaidNeg_Sub_Fail>
+</LanguageData>

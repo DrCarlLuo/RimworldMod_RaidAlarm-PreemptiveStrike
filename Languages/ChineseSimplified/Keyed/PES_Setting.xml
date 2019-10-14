@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <PES_setting_default>重置为默认值</PES_setting_default>
+    <!-- <PES_setting_default>Reset to default</PES_setting_default> -->
+    
+    <PES_setting_notes>提示:\n1. 每个公式中的符号有对应的解释，鼠标指向它就会显示\n2. 1小时 = 2500 ticks</PES_setting_notes>
+    <!-- <PES_setting_notes>Notes:\n1. There is a detailed explanation on the formulas of the setting below. Hover your mouse on it and it will show up\n2. 1 hour = 2500 ticks</PES_setting_notes> -->
+
+    <PES_setting_detectioncoefficient>侦测系数</PES_setting_detectioncoefficient>
+    <!-- <PES_setting_detectioncoefficient>Detection Coefficient</PES_setting_detectioncoefficient> -->
+
+    <PE_setting_detectionMechanism>侦测机制设置</PE_setting_detectionMechanism>
+    <!-- <PE_setting_detectionMechanism>Detection Mechanism Settings</PE_setting_detectionMechanism> -->
+
+    <PES_setting_detectionFormula>侦测概率公式： P = ( c - y ) / c * k\n接着这个值会被约束到[0.1, 0.8] (探测未知的事件实体) or [0.2, 0.95] (探测事件实体的详细信息)</PES_setting_detectionFormula>
+    <!-- <PES_setting_detectionFormula>Detection probability Formula: P = ( c - y ) / c * k\nThen this value will be clamped to [0.1, 0.8] (detect unknown caravan) or [0.2, 0.95] (detect detail information)</PES_setting_detectionFormula> -->
+
+    <PES_setting_detectionExplain>A = 侦测范围\nB = 视距范围\nC = A - B\nx = 剩余格数\ny = x - B\nk = 下面这个系数\nP是侦测概率</PES_setting_detectionExplain>
+    <!-- <PES_setting_detectionExplain>A = Detection range\nB = Vision Range\nC = A - B\nx = remaining tiles\ny = x - B\nk = the coefficient below\nP is the final probability</PES_setting_detectionExplain> -->
+
+    <PES_setting_caravanSpeed>事件实体走一格的时间 (in ticks)</PES_setting_caravanSpeed>
+    <!-- <PES_setting_caravanSpeed>Time for an incident caravan to cover one tile in map (in ticks)</PES_setting_caravanSpeed> -->
+
+    <PES_setting_skyObject>空中物体：</PES_setting_skyObject>
+    <!-- <PES_setting_skyObject>Sky Objects:</PES_setting_skyObject> -->
+    <PES_setting_skyObject_Large_a>大型空中物体撞击的提前警报时间 (in ticks)</PES_setting_skyObject_Large_a>
+    <!-- <PES_setting_skyObject_Large_a>Alarming time before large sky object impacts (in ticks)</PES_setting_skyObject_Large_a> -->
+    <PES_setting_skyObject_Large_b>分辨大型空中物体所需的时间(in ticks)</PES_setting_skyObject_Large_b>
+    <!-- <PES_setting_skyObject_Large_b>Time before identifying large sky objects (in ticks)</PES_setting_skyObject_Large_b> -->
+    <PES_setting_skyObject_Small_a>小型空中物体降落的提前警报时间(in ticks)</PES_setting_skyObject_Small_a>
+    <!-- <PES_setting_skyObject_Small_a>Alarming time before small sky object landing(in ticks)</PES_setting_skyObject_Small_a> -->
+    <PES_setting_skyObject_Small_b>分辨小型空中物体所需的时间(in ticks)</PES_setting_skyObject_Small_b>
+    <!-- <PES_setting_skyObject_Small_b>Time before identifying small sky objects (in ticks)</PES_setting_skyObject_Small_b> -->
+
+    <PES_setting_infestation>虫灾的提前警报时间(in ticks)</PES_setting_infestation>
+    <!-- <PES_setting_infestation>Alarming time for infestation(in ticks)</PES_setting_infestation> -->
+
+    <PES_setting_negotiationProb>谈判设置</PES_setting_negotiationProb>
+    <!-- <PES_setting_negotiationProb>Negotiation Settings</PES_setting_negotiationProb> -->
+
+    <PES_setting_negotiationIntro>以下的所有概率都只是一个基础值。每一种谈判方式的最终概率按如下方式计算: \n如果产生的是正面结果: P = Base * NA\n如果产生的是负面结果: P = Base * (1 / NA); P = Base / 2 (如果NA等于零)\n同时P会被约束到[0, 1]</PES_setting_negotiationIntro>
+    <!-- <PES_setting_negotiationIntro>All of the following probabilities are only base values. The final probablities for each to happen is based on this formula: \nFor positive outcome: P = Base * NA\nFor negative outcome: P = Base * (1 / NA); P = Base / 2 (if NA is zero)\nAnd P will be clamped to [0, 1]</PES_setting_negotiationIntro> -->
+    <PES_setting_negotiationTip>Base = 概率基础值\nNA是小人的外交力，和小人的社交技能有关，具体的值可以在游戏中小人的详细属性面板中查看。对于一个正常健康的小人，社交1级时外交力是40%，20级是190% </PES_setting_negotiationTip>
+
+    <PES_setting_commintro>和事件实体建立通讯的概率：</PES_setting_commintro>
+    <!-- <PES_setting_commintro>The probabilities when making contact with incident caravan:</PES_setting_commintro> -->
+
+    <PES_setting_commpersuation_hostile>成功劝说(对敌人)</PES_setting_commpersuation_hostile>
+    <!-- <PES_setting_commpersuation_hostile>Successful persuasion (hostile)</PES_setting_commpersuation_hostile> -->
+    <PES_setting_commpersuation_friend>成功劝说(对中立)</PES_setting_commpersuation_friend>
+    <!-- <PES_setting_commpersuation_friend>Successful persuasion (neutral)</PES_setting_commpersuation_friend> -->
+    <PES_setting_commintimidation_contact_friend>威胁成功并取得联系(对中立)</PES_setting_commintimidation_contact_friend>
+    <!-- <PES_setting_commintimidation_contact_friend>Successful intimidation and make contact (neutral)</PES_setting_commintimidation_contact_friend> -->
+    <PES_setting_commintimidation_frighten_friend>威胁成功并吓跑对方(对中立)</PES_setting_commintimidation_frighten_friend>
+    <!-- <PES_setting_commintimidation_frighten_friend>Successful intimidation and frighten off(neutral)</PES_setting_commintimidation_frighten_friend> -->
+    <PES_setting_commintimidation_contact_Hostile>威胁成功并取得联系(对敌方)</PES_setting_commintimidation_contact_Hostile>
+    <!-- <PES_setting_commintimidation_contact_Hostile>Successful intimidation and make contact (Hostile)</PES_setting_commintimidation_contact_Hostile> -->
+    <PES_setting_commintimidation_frighten_Hostile>威胁成功并吓跑对方(对敌人)</PES_setting_commintimidation_frighten_Hostile>
+    <!-- <PES_setting_commintimidation_frighten_Hostile>Successful intimidation and frighten off(Hostile)</PES_setting_commintimidation_frighten_Hostile> -->
+    <PES_setting_commbeguilment_friend>欺骗成功(对中立)</PES_setting_commbeguilment_friend>
+    <!-- <PES_setting_commbeguilment_friend>Successful beguilement (neutral)</PES_setting_commbeguilment_friend> -->
+    <PES_setting_commbeguilment_Contact_hostile>欺骗成功并取得联系(对敌人)</PES_setting_commbeguilment_Contact_hostile>
+    <!-- <PES_setting_commbeguilment_Contact_hostile>Successful beguilement and make contact(hostile)</PES_setting_commbeguilment_Contact_hostile> -->
+    <PES_setting_commbeguildment_frighten_hostile>欺骗成功并吓跑对方(对敌人)</PES_setting_commbeguildment_frighten_hostile>
+    <!-- <PES_setting_commbeguildment_frighten_hostile>Successful beguilement and frighten off(hostile)</PES_setting_commbeguildment_frighten_hostile> -->
+
+    <PES_setting_negintro>和袭击目标有关的概率:</PES_setting_negintro>
+    <!-- <PES_setting_negintro>The probablilites when negotiating about raid goal:</PES_setting_negintro> -->
+    <PES_setting_neg_delay>关于让袭击团队等待:</PES_setting_neg_delay>
+    <!-- <PES_setting_neg_delay>About trying to make them stop for a while:</PES_setting_neg_delay> -->
+    <PES_setting_delay_persuasion>成功劝说</PES_setting_delay_persuasion>
+    <!-- <PES_setting_delay_persuasion>Successful persuation</PES_setting_delay_persuasion> -->
+    <PES_setting_delay_intimidation_s>成功威胁</PES_setting_delay_intimidation_s>
+    <!-- <PES_setting_delay_intimidation_s>Successul intimidation</PES_setting_delay_intimidation_s> -->
+    <PES_setting_delay_intimidation_b>威胁失败并产生负面效果</PES_setting_delay_intimidation_b>
+    <!-- <PES_setting_delay_intimidation_b>Fail intimidation and back fire</PES_setting_delay_intimidation_b> -->
+    <PES_setting_delay_beguilment>成功欺骗</PES_setting_delay_beguilment>
+    <!-- <PES_setting_delay_beguilment>Successful beguilement</PES_setting_delay_beguilment> -->
+    <PES_setting_neg_bargain>关于讨价还价：</PES_setting_neg_bargain>
+    <!-- <PES_setting_neg_bargain>About trying to bargain with them</PES_setting_neg_bargain> -->
+    <PES_setting_bargain_persuasion>成功劝说</PES_setting_bargain_persuasion>
+    <!-- <PES_setting_bargain_persuasion>Successful persuation</PES_setting_bargain_persuasion> -->
+    <PES_setting_bargain_intimidation_s>成功威胁</PES_setting_bargain_intimidation_s>
+    <!-- <PES_setting_bargain_intimidation_s>Successul intimidation</PES_setting_bargain_intimidation_s> -->
+    <PES_setting_bargain_intimidation_b>威胁失败并产生负面效果</PES_setting_bargain_intimidation_b>
+    <!-- <PES_setting_bargain_intimidation_b>Fail intimidation and back fire</PES_setting_bargain_intimidation_b> -->
+    <PES_setting_bargain_beguilment>成功欺骗</PES_setting_bargain_beguilment>
+    <!-- <PES_setting_bargain_beguilment>Successful beguilement</PES_setting_bargain_beguilment> -->
+    <PES_setting_neg_remedy>关于让袭击团队改变袭击目标：</PES_setting_neg_remedy>
+    <!-- <PES_setting_neg_remedy>About trying to ask them change a raid goal</PES_setting_neg_remedy> -->
+    <PES_setting_remedy_persuasion>成功劝说</PES_setting_remedy_persuasion>
+    <!-- <PES_setting_remedy_persuasion>Successful persuation</PES_setting_remedy_persuasion> -->
+    <PES_setting_remedy_intimidation_s>成功威胁</PES_setting_remedy_intimidation_s>
+    <!-- <PES_setting_remedy_intimidation_s>Successul intimidation</PES_setting_remedy_intimidation_s> -->
+    <PES_setting_remedy_intimidation_b>威胁失败并产生负面效果</PES_setting_remedy_intimidation_b>
+    <!-- <PES_setting_remedy_intimidation_b>Fail intimidation and back fire</PES_setting_remedy_intimidation_b> -->
+    <PES_setting_remedy_beguilment>成功欺骗</PES_setting_remedy_beguilment>
+    <!-- <PES_setting_remedy_beguilment>Successful beguilement</PES_setting_remedy_beguilment> -->
+
+    <PES_setting_mesintro>当尝试与一个事件实体建立通讯时，除了上述概率会被检测之外，还有一个广播出去的消息是否能被收到的概率。它是这样计算的：</PES_setting_mesintro>
+    <!-- <PES_setting_mesintro>When tryting to make contact with a caravan, before the above probablities are tested, there is a probablity of whether this broadcasted message can be received by them or not, it is calculated by:</PES_setting_mesintro> -->
+    <PES_setting_mesExp>P = 1 - 0.2 * difficulty + offset   (P会被约束到[0, 1])</PES_setting_mesExp>
+    <!-- <PES_setting_mesExp>P = 1 - 0.2 * difficulty + offset   (P will be clamped to [0, 1])</PES_setting_mesExp> -->
+    <PES_setting_megTip>和平难度下difficulty为0，冷酷无情下为5，线性递增（包括如其他mod新增的难度）;\noffset则是下面这个值</PES_setting_megTip>
+    <!-- <PES_setting_megTip>difficulty is 0 for Peaceful, 5 for Merciless;\noffset is the following value</PES_setting_megTip> -->
+    <PES_setting_mesOffset>消息接收概率修正值：</PES_setting_mesOffset>
+</LanguageData>

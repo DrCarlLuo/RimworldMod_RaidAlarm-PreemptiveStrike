@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_PremitiveWatchtower.label>原始瞭望塔</PES_PremitiveWatchtower.label>
+  <PES_PremitiveWatchtower.description>可以为哨兵提供站岗位置的原始高塔，哨兵在上面随时保持警惕，并且一旦危险临近，会通过烽火及时通知所有殖民者。</PES_PremitiveWatchtower.description>
+
+  <PES_watchtower.label>瞭望塔</PES_watchtower.label>
+  <PES_watchtower.description>现代建筑技术使得建造比原始高塔更高的高塔。除了更高的高度，一些现代的电子设备也能使得其上的哨兵看得更远。可以在没有电的情况下使用，但只有一半的效率。</PES_watchtower.description>
+
+  <PES_watchtower.comps.CompUpgrade-0.name>小型营养膏合成机</PES_watchtower.comps.CompUpgrade-0.name>
+  <PES_watchtower.comps.CompUpgrade-0.description>安装一个小型的营养膏合成机，这样哨兵在站岗是就不需要时不时地下来补充食物。</PES_watchtower.comps.CompUpgrade-0.description>
+
+  <PES_watchtower.comps.CompUpgrade-1.name>收音机</PES_watchtower.comps.CompUpgrade-1.name>
+  <PES_watchtower.comps.CompUpgrade-1.description>在瞭望塔里面安装一个收音机，这样执行哨兵任务的殖民者就可以在侦察的同时满足其娱乐需求。</PES_watchtower.comps.CompUpgrade-1.description>
+
+  <PES_watchtower.comps.CompUpgrade-2.name>探照灯</PES_watchtower.comps.CompUpgrade-2.name>
+  <PES_watchtower.comps.CompUpgrade-2.description>有了探照灯之后，这个瞭望塔就可以在夜间以60%的效率工作，但同时在夜间也需要额外消耗500W的电力。</PES_watchtower.comps.CompUpgrade-2.description>
+
+  <PES_watchtower.comps.CompUpgrade-3.name>战术望远镜</PES_watchtower.comps.CompUpgrade-3.name>
+  <PES_watchtower.comps.CompUpgrade-3.description>在安装了望远镜之后，哨兵在瞭望塔上可以看得更远。\n+50%视距范围\n+50%侦测距离</PES_watchtower.comps.CompUpgrade-3.description>
+
+  <PES_Radar.label>雷达</PES_Radar.label>
+  <PES_Radar.description>雷达将电磁能量以定向的方式发射至空间中，通过接受空间内存在物体所反射的电波，来计算出该物体的方向、高度和速度。较大地扩展了殖民地的侦测范围。</PES_Radar.description>
+
+  <PES_SentryDroneArray.label>哨兵无人机阵列</PES_SentryDroneArray.label>
+  <PES_SentryDroneArray.description>哨兵无人机的监控和操纵终端，极大地扩展了殖民地的视距范围。</PES_SentryDroneArray.description>
+  <PES_SentryDroneArray.comps.CompUpgrade.name>收音机</PES_SentryDroneArray.comps.CompUpgrade.name>
+  <PES_SentryDroneArray.comps.CompUpgrade.description>在瞭望塔里面安装一个收音机，这样执行哨兵任务的殖民者就可以在侦察的同时满足其娱乐需求。</PES_SentryDroneArray.comps.CompUpgrade.description>
+
+  <PES_SpySatellite.label>间谍卫星上行链路接口</PES_SpySatellite.label>
+  <PES_SpySatellite.description>一个在间谍卫星和殖民地之间接收和传输数据的上行链路基站，极大地扩展了殖民地的侦测范围。</PES_SpySatellite.description>
+</LanguageData>
