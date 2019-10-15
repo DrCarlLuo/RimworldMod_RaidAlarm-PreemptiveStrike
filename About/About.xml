@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Raiding Alarm and Preemptive Strike</name>
+	<name>Preemptive Strike</name>
 	<author>DrCarl</author>
 	<targetVersion>1.0</targetVersion>
-	<description>Use various ways to reconnoiter around your colony, detecting the incoming raids and show them in world map liking a REAL incoming rading caravan</description>
+	<description>This mod can be count as a small overhaul of the spawn mechanism of vanilla raid and other incidents. When raids, manhunter packs and other incidents is triggered, the enemies will no longer be like “teleported” to the corner of your colony while none of your colonists are able to notice their incoming, as if your enemies are using a jump drive or something (Psi Jump for tribal raiders, I guess?). Instead, in this mod, each time a group of people or a herd of animals are going to “visit” your colony (whether they are hostile or not), they will be spawned as a real entity in the world map and move towards your colony. During their march to your colony, you can use various facilities and techs provided by this mod to detect their incoming, so that your colonists can be well-prepared for the incoming threat.\nWith this mechanism, during your enemies’ incoming, you can also conduct your “pre-emptive strike”. You can use your comms console to contact them actively, bargain with their raid goal (in this mod, every raid is offered a raid goal), succumb to their demand , or raise the moral of your colonists by insulting your enemies. All of these are achieved by your high social skill colonist to negotiate by persuasion, intimidation and beguilement. Of Course, you can even fight outside your colony and defend your colony a thousand miles from your colony. (but I guess no one is gonna do this)</description>
 </ModMetaData>

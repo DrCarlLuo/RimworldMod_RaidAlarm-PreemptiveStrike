@@ -56,7 +56,6 @@ namespace PreemptiveStrike.RaidGoal
                 Slaves.Remove(pawn);
             if (Slaves.Count <= 0)
             {
-                incident.raidGoalType = RaidGoalType.Extortion;
                 RaidingGoal_Extortion newGoal = new RaidingGoal_Extortion();
                 newGoal.ApplyToIncident(incident);
                 Messages.Message("PES_AllSlaveDead".Translate(), MessageTypeDefOf.NeutralEvent);

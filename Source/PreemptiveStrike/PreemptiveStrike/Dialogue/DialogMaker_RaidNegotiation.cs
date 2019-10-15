@@ -88,14 +88,13 @@ namespace PreemptiveStrike.Dialogue
             TravelingIncidentCaravan caravan = DialogUtilities.tempCaravan;
             Pawn pawn = DialogUtilities.tempPawn;
             InterceptedIncident_HumanCrowd_RaidEnemy incident = caravan.incident as InterceptedIncident_HumanCrowd_RaidEnemy;
-
             if (incident == null) return null;
             if (incident.raidGoalType == RaidGoalType.Smite) return null;
-
             StringBuilder sb = new StringBuilder("PES_RaidNeg_Rebuff_Confirmation".Translate());
             sb.AppendLine();
             if (incident.raidGoalType == RaidGoalType.Rescue)
             {
+                Log.Message(incident.raidGoalType.ToString());
                 sb.AppendLine("PES_RaidNeg_Rebuff_Confirmation_Rescue".Translate());
                 RaidingGoal_Rescue goal = incident.goal as RaidingGoal_Rescue;
                 foreach (var p in goal.Prisoners)
@@ -107,7 +106,6 @@ namespace PreemptiveStrike.Dialogue
             sb.Append(@"<i>");
             sb.Append("PES_RaidNeg_Rebuff_Explanation".Translate(pawn.Name.ToStringShort));
             sb.Append(@"</i>");
-
             DiaNode diaNode = new DiaNode(sb.ToString());
 
             void rebuffAction() { RaidingGoalUtility.RebuffDemandAndSmiteThePlayer(caravan, pawn); }
@@ -205,6 +203,7 @@ namespace PreemptiveStrike.Dialogue
                         rNode.options.Add(rOption);
                         rNode.options.Add(DialogUtilities.CurtOption("PES_Cancel", null, null, true));
                     }
+                    rNode.options.Add(DialogUtilities.CurtOption("PES_Cancel", null, null, true));
                     return rNode;
                 }
                 option.link = RemedyNode();
@@ -252,8 +251,7 @@ namespace PreemptiveStrike.Dialogue
                 diaNode.options.Add(DialogUtilities.CurtOption("PES_DAMNIT", null, () =>
                 {
                     caravan.Communicable = false;
-                    incident.raidGoalType = RaidGoalType.Smite;
-                    incident.goal = null;
+                    incident.goal = new RaidingGoal_Smite();
                     caravan.ApplyNegotiationCoolDown();
                     DialogUtilities.NegotiatorLearnSocial(false);
                 }, true));
@@ -332,8 +330,7 @@ namespace PreemptiveStrike.Dialogue
                 diaNode.options.Add(DialogUtilities.CurtOption("PES_DAMNIT", null, () =>
                 {
                     caravan.Communicable = false;
-                    incident.raidGoalType = RaidGoalType.Smite;
-                    incident.goal = null;
+                    incident.goal = new RaidingGoal_Smite();
                     caravan.ApplyNegotiationCoolDown();
                     DialogUtilities.NegotiatorLearnSocial(false);
                 }, true));
@@ -409,8 +406,7 @@ namespace PreemptiveStrike.Dialogue
                 diaNode.options.Add(DialogUtilities.CurtOption("PES_DAMNIT", null, () =>
                 {
                     caravan.Communicable = false;
-                    incident.raidGoalType = RaidGoalType.Smite;
-                    incident.goal = null;
+                    incident.goal = new RaidingGoal_Smite();
                     DialogUtilities.NegotiatorLearnSocial(false);
                 }, true));
                 return diaNode;

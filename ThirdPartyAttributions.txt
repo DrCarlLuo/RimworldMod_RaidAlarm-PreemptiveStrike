@@ -1,0 +1,48 @@
+These icons were from thenounproject.com:
+
+UI/PES_SolarFlare
+sun by Theo K. from the Noun Project
+https://thenounproject.com/term/sun/119810/
+
+UI/PES_AnimalHerd
+goats by Yu luck from the Noun Project
+https://thenounproject.com/term/goats/304365/
+
+UI/PES_LargeSkyObj_Hostile
+meteorite by Adrien Coquet from the Noun Project
+https://thenounproject.com/term/goats/304365/
+
+UI/PES_Raid_Animal
+Fox by prasong tadoungsorn from the Noun Project
+https://thenounproject.com/term/fox/2602077/
+
+UI/PES_Raid_Human
+War by Alina Oleynik from the Noun Project
+https://thenounproject.com/term/war/653188/
+
+UI/PES_Traveler
+Suitcase by Thengakola from the Noun Project
+https://thenounproject.com/term/Suitcase/854911/
+
+UpgradeDesignation
+setting by throwaway icons from the Noun Project
+https://thenounproject.com/term/setting/365295/
+
+These icons were from flaticon.com:
+
+UI/Update_Radio
+Icon made by Good Ware
+https://www.flaticon.com/free-icon/radio_2067782
+
+UI/Update_searchlight
+Icon made by Freepik
+https://www.flaticon.com/free-icon/spotlight_1082696
+
+Other sources:
+
+Buildings/PrimitiveWatchTower
+Made by openclipart
+https://www.freepik.com/free-vector/rpg-map-symbols-watchtower_518916.htm
+
+Buildings/Watchtower
+https://dlpng.com/png/1492403

@@ -101,6 +101,7 @@ namespace PreemptiveStrike.DetectionSystem
 
         public static int GetDetectionRangeOfMap(int MapTile)
         {
+            //Log.Message("a" + DetectionAbilityInMapTile[MapTile].LastTick + "??" + Find.TickManager.TicksGame);
             if (DetectionAbilityInMapTile.TryGetValue(MapTile, out DetectionEffect effect) && effect.LastTick == Find.TickManager.TicksGame)
                 return effect.Detection;
             return 0;

@@ -53,7 +53,6 @@ namespace PreemptiveStrike.RaidGoal
         {
             _incident.goal = this;
             this.incident = _incident;
-            incident.raidGoalType = RaidType;
         }
 
         public static Type GetRaidClassByEnum(RaidGoalType e)

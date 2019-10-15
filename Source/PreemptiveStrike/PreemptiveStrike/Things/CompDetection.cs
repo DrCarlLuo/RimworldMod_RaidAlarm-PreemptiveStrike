@@ -34,7 +34,7 @@ namespace PreemptiveStrike.Things
             int tile = parent.Map.Tile;
             int curTick = Find.TickManager.TicksGame;
             var dic = DetectDangerUtilities.DetectionAbilityInMapTile;
-            if (!dic.TryGetValue(tile, out DetectionEffect oldEffect) || oldEffect.LastTick < curTick)
+            if (!dic.TryGetValue(tile, out DetectionEffect oldEffect) || oldEffect.LastTick != curTick)
             {
                 dic[tile] = new DetectionEffect(curTick, visionRange, detectionRange);
                 return;

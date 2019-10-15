@@ -12,7 +12,7 @@ namespace PreemptiveStrike.Interceptor
 {
     class InterceptedIncident_HumanCrowd_RaidEnemy : InterceptedIncident_HumanCrowd
     {
-        public RaidGoalType raidGoalType;
+        public RaidGoalType raidGoalType => goal.RaidType;
         public RaidingGoal goal;
 
         public override bool IsHostileToPlayer => true;

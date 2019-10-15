@@ -35,7 +35,7 @@
     <!-- <PES_RaidNeg_Rebuff_Head>[Rebuff and Insult]: </PES_RaidNeg_Rebuff_Head> -->
     <PES_RaidNeg_Rebuff_Rescue>立即处决这些囚犯！告诉他们不要再做白日梦了，并且告诉他们，他们的下场也必将，无法避免地，和这些可悲的囚犯们一样！</PES_RaidNeg_Rebuff_Rescue>
     <!-- <PES_RaidNeg_Rebuff_Rescue>EXECUTE these prisoners RIGHT NOW! Tell them to stop their reveries and their destiny will, inevitably, be the same with these pathetic prisoners!</PES_RaidNeg_Rebuff_Rescue> -->
-    <PES_RaidNeg_Rebuff_Despoil>告诉他们，他们从我们这里什么也得不到！面对他们这样的野蛮人，我们会战斗到死来保卫我们的殖民地！</PES_RaidNeg_Rebuff_Despoil>
+    <PES_RaidNeg_Rebuff_Despoil>告诉他们，他们从我们这里什么也别想得到！面对他们这样的野蛮人，我们会战斗到死来保卫我们的殖民地！</PES_RaidNeg_Rebuff_Despoil>
     <!-- <PES_RaidNeg_Rebuff_Despoil>Tell them to expect nothing from us and we shall fight to the death to defend our properties from the barbarians like them!</PES_RaidNeg_Rebuff_Despoil> -->
     <PES_RaidNeg_Rebuff_Revenge> </PES_RaidNeg_Rebuff_Revenge>
     <PES_RaidNeg_Rebuff_Enslave> </PES_RaidNeg_Rebuff_Enslave>
@@ -64,7 +64,7 @@
     <!-- <PES_RaidNeg_NegDeeper_Bargain>Try to bargain about their demand</PES_RaidNeg_NegDeeper_Bargain> -->
 
     <!-- delays-->
-    <PES_RaidNeg_Delay>叫他们暂缓行进的脚步，让我们可以更好的思考他们的要求，或者为即将到来的战斗争取更多的准备时间。</PES_RaidNeg_Delay>
+    <PES_RaidNeg_Delay>叫他们暂缓行进的脚步，让我们可以更好的思考一下他们的要求，或者为即将到来的战斗争取更多的准备时间。</PES_RaidNeg_Delay>
     <!-- <PES_RaidNeg_Delay>Ask them to slow down their marching so that we can better think about their demand, or earn us some time to prepare for upcoming combat</PES_RaidNeg_Delay> -->
     <PES_RaidNeg_Delay_Intro>我们要怎么和他们说来让他们停下来呢？</PES_RaidNeg_Delay_Intro>
     <!-- <PES_RaidNeg_Delay_Intro>What should we say to them to ask them to stop approaching our colony?</PES_RaidNeg_Delay_Intro> -->

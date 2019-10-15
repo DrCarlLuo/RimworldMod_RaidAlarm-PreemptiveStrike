@@ -53,8 +53,7 @@ namespace PreemptiveStrike.RaidGoal
             {
                 if (pawn.Dead)
                 {
-                    incident.raidGoalType = RaidGoalType.Smite;
-                    incident.goal = null;
+                    incident.goal = new RaidingGoal_Smite();
                     caravan.Communicable = false;
                     Messages.Message("PES_PrisonerDead".Translate(), MessageTypeDefOf.NegativeEvent);
                     break;

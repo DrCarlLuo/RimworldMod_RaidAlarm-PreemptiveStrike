@@ -5,7 +5,7 @@
   <PES_TryContact_CoolDown>我们只能每隔一个小时向特定目标广播消息。 剩余时间: {0}</PES_TryContact_CoolDown>
   <!-- <PES_TryContact_CoolDown>We can only broadcast message to a certain object once per hour. Remaining Time: {0}</PES_TryContact_CoolDown> -->
 
-  <PES_TryContactPrologue_Unknown>由于我们尚未与"{0}"建立通讯，我们可以尝试从这个通讯台向他们广播一条消息, 让他们受到并且与我们建立通讯。\n\n但小心，我们不知道他们是敌是友。\n</PES_TryContactPrologue_Unknown>
+  <PES_TryContactPrologue_Unknown>由于我们尚未与"{0}"建立通讯，我们可以尝试从这个通讯台向他们广播一条消息, 让他们收到并且与我们建立通讯。\n\n但小心，我们不知道他们是敌是友。\n</PES_TryContactPrologue_Unknown>
   <!-- <PES_TryContactPrologue_Unknown>Since we have not established communication with "{0}", we can try to broadcast a message from this comms console, hoping they could receive this message and reply to us. \n\nBut beware, we don't know they are our allies or enemies.\n</PES_TryContactPrologue_Unknown> -->
 
   <PES_TryContactPrologue_Neutral>尽管我们的侦查系统一起确认{0}是友军，但我们目前仍未与他们建立通讯\n\n我们可以向他们广播消息，让他们尽快与我们取得联系。\n</PES_TryContactPrologue_Neutral>
@@ -39,7 +39,7 @@
   <PES_TryContact_Beguilement_FactionConfirmed>"这是来自{1}的{0}的信息：{2}目前正由{1}占领。任何未表明目的前来的军团都将被视作对{1}的威胁"</PES_TryContact_Beguilement_FactionConfirmed>
   <!-- <PES_TryContact_Beguilement_FactionConfirmed>"This is {0} from {1} speaking. {1} is currently occupying {2}. Any incoming corps with unidentifiable intention would be recognized as a threat to {1}"</PES_TryContact_Beguilement_FactionConfirmed> -->
 
-  <PES_Condition_Received>如果这条消息被受到</PES_Condition_Received>
+  <PES_Condition_Received>如果这条消息被收到</PES_Condition_Received>
   <!-- <PES_Condition_Received>were this message received</PES_Condition_Received> -->
 
   <PES_TryOutcome_Positive>与我们建立联系</PES_TryOutcome_Positive>
@@ -49,7 +49,7 @@
   <PES_TryOutcome_Scared>被吓跑</PES_TryOutcome_Scared>
   <!-- <PES_TryOutcome_Scared>to be frightened off</PES_TryOutcome_Scared> -->
 
-  <PES_Contact_Fail>{0}从通讯台中没有受到任何消息。我们不知道是他们根本没有收到我们的消息，还是他们选择保持沉默。</PES_Contact_Fail>
+  <PES_Contact_Fail>{0}从通讯台中没有收到任何消息。我们不知道是他们根本没有收到我们的消息，还是他们选择保持沉默。</PES_Contact_Fail>
   <!-- <PES_Contact_Fail>{0} received nothing from the comms console. We do not know if they didn't manage to receice this message at all, or they just chose to keep silent.</PES_Contact_Fail> -->
 
   <PES_Persuasion_Success_Hostile>我们收到了他们的回复！他们来自{0}！现在我们知道了他们的意图和袭击目标\n\n通讯已建立。</PES_Persuasion_Success_Hostile>

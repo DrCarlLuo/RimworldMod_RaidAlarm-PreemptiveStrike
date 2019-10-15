@@ -84,8 +84,7 @@ namespace PreemptiveStrike.RaidGoal
                     ExecutionUtility.DoExecutionByCut(pawn, p);
                 }
             }
-            incident.raidGoalType = RaidGoalType.Smite;
-            incident.goal = null;
+            incident.goal = new RaidingGoal_Smite();
             if (pawn.skills.GetSkill(SkillDefOf.Social).Level < 5)
                 incident.CombatMoral = -1;
             else if (pawn.skills.GetSkill(SkillDefOf.Social).Level < 10)
