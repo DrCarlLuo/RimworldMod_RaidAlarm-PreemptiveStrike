@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <PES_RaidingCaravan.label>即将来袭的袭击团队</PES_RaidingCaravan.label>
-  <PES_RaidingCaravan.description>朝殖民地行进的袭击团队。</PES_RaidingCaravan.description>
+  <PES_RaidingCaravan.label>事件实体</PES_RaidingCaravan.label>
+  <PES_RaidingCaravan.description>这个人群/兽群已被殖民地的侦察系统所侦测到，请查看安全简报获取更多信息。</PES_RaidingCaravan.description>
 
-  <PES_RaidingCaravan_Simple.label>即将来袭的袭击团队</PES_RaidingCaravan_Simple.label>
-  <PES_RaidingCaravan_Simple.description>朝殖民地行进的袭击团队。</PES_RaidingCaravan_Simple.description>
+  <PES_RaidingCaravan_Simple.label>事件实体</PES_RaidingCaravan_Simple.label>
+  <PES_RaidingCaravan_Simple.description>这个人群/兽群已被殖民地的侦察系统所侦测到，请查看安全简报获取更多信息。</PES_RaidingCaravan_Simple.description>
 </LanguageData>

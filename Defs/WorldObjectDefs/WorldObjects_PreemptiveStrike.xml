@@ -4,8 +4,8 @@
 
   <WorldObjectDef>
     <defName>PES_RaidingCaravan</defName>
-    <label>Incoming Raiding Caravan</label>
-    <description>An enemy raiding caravan heading towards your settlement! Prepare for it or conduct a preemptive strike!</description>
+    <label>Incoming Entity</label>
+    <description>This crowd/animal pack has been detected by the reconaissance system in our colony. For more detail information, check the security report.</description>
     <worldObjectClass>PreemptiveStrike.IncidentCaravan.TravelingIncidentCaravan</worldObjectClass>
     <texture>World/WorldObjects/Caravan</texture>
     <useDynamicDrawer>true</useDynamicDrawer>
@@ -18,8 +18,8 @@
 
   <WorldObjectDef>
     <defName>PES_RaidingCaravan_Simple</defName>
-    <label>Incoming Raiding Caravan</label>
-    <description>An enemy raiding caravan heading towards your settlement! Prepare for it or conduct a preemptive strike!</description>
+    <label>Incoming Entity</label>
+    <description>This crowd/animal pack has been detected by the reconaissance system in our colony. For more detail information, check the security report.</description>
     <worldObjectClass>PreemptiveStrike.IncidentCaravan.TravelingIncidentCaravan_Simple</worldObjectClass>
     <texture>World/WorldObjects/Caravan</texture>
     <useDynamicDrawer>false</useDynamicDrawer>
