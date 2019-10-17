@@ -58,7 +58,7 @@ namespace PreemptiveStrike.UI
                 tex = Textures.IconReportNormal;
             if(Widgets.ButtonImage(rect, tex))
             {
-                if (ColonySecurityDashBoard_Window.IsOpen)
+                if (ColonySecurityDashBoard_Window.IsOpening)
                     ColonySecurityDashBoard_Window.CloseIt();
                 else
                     ColonySecurityDashBoard_Window.OpenIt();

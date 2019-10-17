@@ -58,12 +58,12 @@ namespace PreemptiveStrike.Interceptor
 
         public override void RevealInformationWhenCommunicationEstablished()
         {
-            throw new Exception("Should be called with infestation");
+            throw new Exception("Should not be called with infestation");
         }
 
         public override void RevealRandomInformation()
         {
-            throw new Exception("Should be called with infestation");
+            throw new Exception("Should not be called with infestation");
         }
     }
 }

@@ -76,6 +76,7 @@
     <Compile Include="Interceptor\InterceptedIncident_SkyFaller_ShipChunk.cs" />
     <Compile Include="Interceptor\InterceptedIncident_SkyFaller_ShipPartCrash.cs" />
     <Compile Include="Interceptor\InterceptedIncident_SkyFaller_TransportPod.cs" />
+    <Compile Include="Interceptor\InterceptedIncident_SolarFlare.cs" />
     <Compile Include="Mod\Main.cs" />
     <Compile Include="Mod\NameGenerator.cs" />
     <Compile Include="RaidGoal\RaidingGoal.cs" />

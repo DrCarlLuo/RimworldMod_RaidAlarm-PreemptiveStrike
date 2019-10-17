@@ -20,6 +20,12 @@ namespace PreemptiveStrike.IncidentCaravan
 
         public override void Tick()
         {
+            //fail-safe
+            if (remainingTick <= -10)
+            {
+                Find.WorldObjects.Remove(this);
+            }
+
             --RemainingRevealTick;
             --remainingTick;
             if (CheckInVisionRange())
@@ -36,7 +42,6 @@ namespace PreemptiveStrike.IncidentCaravan
                 incident.RevealAllInformation();
             if (remainingTick <= 0)
             {
-                remainingTick = 0;
                 Arrive();
                 return;
             }
@@ -44,7 +49,9 @@ namespace PreemptiveStrike.IncidentCaravan
 
         public bool CheckInVisionRange()
         {
+            if (incident.parms.target == null) return false;
             Map map = incident.parms.target as Map;
+            if (map == null) return false;
             return DetectDangerUtilities.GetVisionRangeOfMap(map.Tile) >= 1;
         }
 
@@ -64,6 +71,10 @@ namespace PreemptiveStrike.IncidentCaravan
             base.PostAdd();
             Tile = 0;
             Communicable = false;
+            if (incident is InterceptedIncident_Infestation)
+                detected = true;
+            if (incident is InterceptedIncident_SolarFlare)
+                detected = true;
         }
 
         public override void ExposeData()

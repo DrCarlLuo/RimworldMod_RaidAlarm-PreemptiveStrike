@@ -21,8 +21,10 @@ namespace PreemptiveStrike.Harmony
         static void Postfix(WorldObjectsHolder __instance, WorldObject o)
         {
             if (o is TravelingIncidentCaravan)
+            {
                 IncidentCaravanUtility.IncidentCaravans.Add((TravelingIncidentCaravan)o);
-            EventManger.NotifyCaravanListChange?.Invoke();
+                EventManger.NotifyCaravanListChange?.Invoke();
+            }
         }
     }
 
@@ -33,8 +35,10 @@ namespace PreemptiveStrike.Harmony
         static void Postfix(WorldObjectsHolder __instance, WorldObject o)
         {
             if (o is TravelingIncidentCaravan)
+            {
                 IncidentCaravanUtility.IncidentCaravans.Remove((TravelingIncidentCaravan)o);
-            EventManger.NotifyCaravanListChange?.Invoke();
+                EventManger.NotifyCaravanListChange?.Invoke();
+            }
         }
     }
 

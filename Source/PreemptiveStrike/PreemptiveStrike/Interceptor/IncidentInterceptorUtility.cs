@@ -59,6 +59,7 @@ namespace PreemptiveStrike.Interceptor
         public static WorkerPatchType IsIntercepting_TransportPod;
         public static WorkerPatchType IsIntercepting_ResourcePod;
         public static WorkerPatchType IsIntercepting_Infestation;
+        public static WorkerPatchType IsIntercepting_SolarFlare;
 
         public static bool IsHoaxingStoryTeller;
         #endregion
@@ -102,6 +103,7 @@ namespace PreemptiveStrike.Interceptor
             IsIntercepting_TransportPod = WorkerPatchType.Forestall;
             IsIntercepting_ResourcePod = WorkerPatchType.Forestall;
             IsIntercepting_Infestation = WorkerPatchType.Forestall;
+            IsIntercepting_SolarFlare = WorkerPatchType.Forestall;
 
             IsHoaxingStoryTeller = false;
         }
@@ -220,15 +222,28 @@ namespace PreemptiveStrike.Interceptor
 
         public static bool Intercept_SolarFlare(IncidentParms parms)
         {
-            foreach(QueuedIncident qi in Find.Storyteller.incidentQueue)
+            //foreach(QueuedIncident qi in Find.Storyteller.incidentQueue)
+            //{
+            //    if (qi.FiringIncident.def == IncidentDefOf.SolarFlare && qi.FiringIncident.parms == parms)
+            //        return false;
+            //}
+            //Find.Storyteller.incidentQueue.Add(new QueuedIncident(new FiringIncident(IncidentDefOf.SolarFlare, null, parms), Find.TickManager.TicksGame + 2500 * 12));
+            //if (PES_Settings.DebugModeOn)
+            //    Messages.Message("PES_Debug: Successfully intercepted an solar flare",MessageTypeDefOf.NeutralEvent);
+            //Dialogue.OpenUILetter.Make("PES_Warning_Flare_Early".Translate(), "PES_Warning_Flare_Early_Text".Translate(), LetterDefOf.NegativeEvent);
+            //return true;
+            InterceptedIncident_SolarFlare incident = new InterceptedIncident_SolarFlare();
+            incident.incidentDef = DefDatabase<IncidentDef>.GetNamed("SolarFlare");
+            incident.parms = parms;
+            if(!IncidentCaravanUtility.AddSimpleIncidentCaravan(incident, 2500 * 12,0,true))
             {
-                if (qi.FiringIncident.def == IncidentDefOf.SolarFlare && qi.FiringIncident.parms == parms)
-                    return false;
+                Log.Error("Fail to create Incident Caravan");
+                return false;
             }
-            Find.Storyteller.incidentQueue.Add(new QueuedIncident(new FiringIncident(IncidentDefOf.SolarFlare, null, parms), Find.TickManager.TicksGame + 2500 * 12));
             if (PES_Settings.DebugModeOn)
-                Messages.Message("PES_Debug: Successfully intercepted an solar flare",MessageTypeDefOf.NeutralEvent);
+                Messages.Message("PES_Debug: Successfully intercepted an solar flare", MessageTypeDefOf.NeutralEvent);
             Dialogue.OpenUILetter.Make("PES_Warning_Flare_Early".Translate(), "PES_Warning_Flare_Early_Text".Translate(), LetterDefOf.NegativeEvent);
+            IsHoaxingStoryTeller = true;
             return true;
         }
 
@@ -254,6 +269,15 @@ namespace PreemptiveStrike.Interceptor
             return list;
         }
 
+        public static bool IncidentInQueue(IncidentParms parms, IncidentDef incidentDef)
+        {
+            foreach(QueuedIncident qi in Find.Storyteller.incidentQueue)
+            {
+                if (qi.FiringIncident.parms == parms && qi.FiringIncident.def == incidentDef)
+                    return true;
+            }
+            return false;
+        }
         
     }
 }

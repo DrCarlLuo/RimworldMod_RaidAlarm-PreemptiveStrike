@@ -14,20 +14,20 @@ namespace PreemptiveStrike.UI
     class ColonySecurityDashBoard_Window : Window
     {
         public static ColonySecurityDashBoard_Window Instance { get; } = new ColonySecurityDashBoard_Window();
-        public static bool IsOpen;
+        public static bool IsOpening = false;
         public static void OpenIt()
         {
-            if (IsOpen) return;
+            if (IsOpening) return;
             Find.WindowStack.Add(Instance);
-            IsOpen = true;
+            IsOpening = true;
             ReCalulateSize();
         }
 
         public static void CloseIt()
         {
-            if (!IsOpen) return;
+            if (!IsOpening) return;
             Instance.Close();
-            IsOpen = false;
+            IsOpening = false;
         }
 
         public static List<Bulletin> BulletinCache = new List<Bulletin>();
@@ -43,13 +43,13 @@ namespace PreemptiveStrike.UI
                 }
             }
             //Naive incidents
-            foreach (QueuedIncident qi in Find.Storyteller.incidentQueue)
-            {
-                if (qi.FiringIncident.def == IncidentDefOf.SolarFlare)
-                {
-                    BulletinCache.Add(new Bulletin_Flare(qi));
-                }
-            }
+            //foreach (QueuedIncident qi in Find.Storyteller.incidentQueue)
+            //{
+            //    if (qi.FiringIncident.def == IncidentDefOf.SolarFlare)
+            //    {
+            //        BulletinCache.Add(new Bulletin_Flare(qi));
+            //    }
+            //}
             BulletinCache.Sort();
 
             int danger = 0, neutral = 0, uid = 0;
@@ -135,7 +135,7 @@ namespace PreemptiveStrike.UI
             this.closeOnAccept = false;
             this.closeOnClickedOutside = false;
             this.focusWhenOpened = false;
-            this.draggable = true;
+            this.draggable = false;
             this.resizeable = false;
             this.layer = WindowLayer.GameUI;
             this.soundAppear = null;
@@ -149,7 +149,7 @@ namespace PreemptiveStrike.UI
             //this.Resizer.minWindowSize.x = 200.0f;
             //this.Resizer.minWindowSize.y = 100.0f;
             //this.windowRect = new Rect(Verse.UI.screenWidth - 435f, 100f, 420f, 420f);
-            IsOpen = true;
+            IsOpening = true;
         }
 
         static ColonySecurityDashBoard_Window()

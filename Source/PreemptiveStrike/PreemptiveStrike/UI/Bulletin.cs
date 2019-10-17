@@ -31,6 +31,8 @@ namespace PreemptiveStrike.UI
                 return new Bulletin_SkyFaller(caravan);
             if (incident is InterceptedIncident_Infestation)
                 return new Bulletin_Infestation(caravan);
+            if (incident is InterceptedIncident_SolarFlare)
+                return new Bulletin_Flare(caravan);
             return null;
         }
 

@@ -14,13 +14,14 @@ namespace PreemptiveStrike.UI
     class Bulletin_Flare : Bulletin
     {
         public Bulletin_Flare() { }
-        public Bulletin_Flare(QueuedIncident qi)
+        public Bulletin_Flare(TravelingIncidentCaravan travelingIncidentCaravan)
         {
-            queuedIncident = qi;
+            Caravan = travelingIncidentCaravan;
+            simpleCaravan = travelingIncidentCaravan as TravelingIncidentCaravan_Simple;
         }
 
-        private int RemainingTick => queuedIncident.FireTick - Find.TickManager.TicksGame;
-        private QueuedIncident queuedIncident;
+        private TravelingIncidentCaravan_Simple simpleCaravan;
+        private InterceptedIncident_SolarFlare Incident_Flare => incident as InterceptedIncident_SolarFlare;
 
         public override IncidentIntelLevel bulletinIntelLevel => IncidentIntelLevel.Danger;
 
@@ -44,17 +45,12 @@ namespace PreemptiveStrike.UI
 
         protected override void DrawSecondLine(float x, float y)
         {
-            if (queuedIncident == null || queuedIncident.FireTick < Find.TickManager.TicksGame)
-            {
-                EventManger.NotifyCaravanListChange?.Invoke();
-                return;
-            }
             Text.Font = GameFont.Tiny;
             string timeStr = "";
             if (PES_Settings.DebugModeOn)
-                timeStr = "PES_UI_ETA".Translate() + RemainingTick;
+                timeStr = "PES_UI_ETA".Translate() + Caravan.remainingTick;
             else
-                timeStr = "PES_UI_ETA".Translate() + GenDate.ToStringTicksToPeriod(RemainingTick);
+                timeStr = "PES_UI_ETA".Translate() + GenDate.ToStringTicksToPeriod(Caravan.remainingTick);
             float timeWidth = Text.CurFontStyle.CalcSize(new GUIContent(timeStr)).x;
             Widgets.Label(new Rect(x, y, timeWidth + 5f, UIConstants.TinyLabelHeight), timeStr);
         }

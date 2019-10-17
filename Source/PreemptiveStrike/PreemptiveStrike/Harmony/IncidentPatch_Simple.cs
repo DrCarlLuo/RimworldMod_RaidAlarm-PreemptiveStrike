@@ -256,7 +256,17 @@ namespace PreemptiveStrike.Harmony
         [HarmonyPrefix]
         static bool PreFix(IncidentWorker_MakeGameCondition __instance, ref bool __result, IncidentParms parms)
         {
-            return __instance.def != IncidentDefOf.SolarFlare || !IncidentInterceptorUtility.Intercept_SolarFlare(parms);
+            //return __instance.def != IncidentDefOf.SolarFlare || !IncidentInterceptorUtility.Intercept_SolarFlare(parms);
+            if (__instance.def != IncidentDefOf.SolarFlare || IncidentInterceptorUtility.IsIntercepting_SolarFlare == WorkerPatchType.ExecuteOrigin)
+            {
+                return true;
+            }
+            {
+                if (!IncidentInterceptorUtility.Intercept_SolarFlare(parms))
+                    return true;
+                __result = false;
+                return false;
+            }
         }
     }
 

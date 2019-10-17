@@ -5,6 +5,8 @@ using System.Text;
 using RimWorld;
 using Verse;
 using UnityEngine;
+using PreemptiveStrike.IncidentCaravan;
+using PreemptiveStrike.Interceptor;
 
 namespace PreemptiveStrike.Things
 {
@@ -19,12 +21,10 @@ namespace PreemptiveStrike.Things
             --counter;
             if (counter <= 0)
             {
-                var queue = Find.Storyteller.incidentQueue;
-                bool org = found;
                 found = false;
-                foreach (QueuedIncident qi in queue)
+                foreach(var c in IncidentCaravanUtility.IncidentCaravans)
                 {
-                    if (qi.FiringIncident.def == IncidentDefOf.SolarFlare && qi.FireTick - Find.TickManager.TicksGame <= 2500 * 12)
+                    if (c.incident is InterceptedIncident_SolarFlare)
                     {
                         found = true;
                         break;
@@ -34,8 +34,6 @@ namespace PreemptiveStrike.Things
                     parent.BroadcastCompSignal("DisableDetection");
                 else
                     parent.BroadcastCompSignal("EnableDetection");
-                if (org != found)
-                    EventManger.NotifyCaravanListChange?.Invoke();
                 counter = 250;
             }
         }
