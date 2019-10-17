@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_Intention_Raid>Raid</PES_Intention_Raid>
+  <PES_Intention_TradeCaravan>Trade Caravan</PES_Intention_TradeCaravan>
+  <PES_Intention_Traveler>Passer-by</PES_Intention_Traveler>
+  <PES_Intention_Visitor>Visitors</PES_Intention_Visitor>
+  <PES_Intention_AlphaBeavers>Dendrovorous Beavers</PES_Intention_AlphaBeavers>
+  <PES_Intention_FarmAnimalsWanderIn>Join Colony</PES_Intention_FarmAnimalsWanderIn>
+  <PES_Intention_HerdMigration>Herd Migration</PES_Intention_HerdMigration>
+  <PES_Intention_ManHunterPack>Manhunter Pack</PES_Intention_ManHunterPack>
+  <PES_Intention_ThrumboPass>Thrumbo Passes</PES_Intention_ThrumboPass>
+
+  <PES_Intention_RaidInGroups>(In groups)</PES_Intention_RaidInGroups>
+
+  <PES_RaidGoalName_Rescue>Rescue Prisoner</PES_RaidGoalName_Rescue>
+  <PES_RaidGoalName_Despoil>Despoil</PES_RaidGoalName_Despoil>
+  <PES_RaidGoalName_Revenge>Revenge</PES_RaidGoalName_Revenge>
+  <PES_RaidGoalName_Enslave>Slave Raiding</PES_RaidGoalName_Enslave>
+  <PES_RaidGoalName_Conquer>Conquer</PES_RaidGoalName_Conquer>
+  <PES_RaidGoalName_Extortion>Extortion</PES_RaidGoalName_Extortion>
+  <PES_RaidGoalName_Smite>SMITE</PES_RaidGoalName_Smite>
+  <PES_RaidGoalName_Extermination>EXTERMINATION</PES_RaidGoalName_Extermination>
+
+  <PES_Strategy_Normal>Frontal assault</PES_Strategy_Normal>
+  <PES_Strategy_Sapper>Sappers</PES_Strategy_Sapper>
+  <PES_Strategy_Smart>Smart Attack</PES_Strategy_Smart>
+  <PES_Strategy_Siege>Siege</PES_Strategy_Siege>
+  <PES_Strategy_Stage>Stage then attack</PES_Strategy_Stage>
+
+  <PES_AnimalType_Unknown>Unidentified Animal Type</PES_AnimalType_Unknown>
+
+  <PES_Unknown_SkyObject_Large>Unidentified Large Sky Object</PES_Unknown_SkyObject_Large>
+  <PES_Unknown_SkyObject_Small>Unidentified Small Sky Object</PES_Unknown_SkyObject_Small>
+  <PES_Skyfaller_raid>Incoming Enemy Drop Pod Assault</PES_Skyfaller_raid>
+  <PES_Skyfaller_Meteorite>Falling Meteorite</PES_Skyfaller_Meteorite>
+  <PES_Skyfaller_ResourcePod>Incoming Resource Pod</PES_Skyfaller_ResourcePod>
+  <PES_Skyfaller_RefugeePod>Incoming Refugee Pod</PES_Skyfaller_RefugeePod>
+  <PES_Skyfaller_ShipChunk>Falling Ship Chunks</PES_Skyfaller_ShipChunk>
+  <PES_Skyfaller_ShipPart>Falling Ancient Ship Part</PES_Skyfaller_ShipPart>
+
+  <PES_Infestation_Title>Infestation Alert</PES_Infestation_Title>
+
+  <PES_Unknown_HumanCrowd>Unidentified Human Crowd</PES_Unknown_HumanCrowd>
+  <PES_Unknown_AnimalHerd>Unidentified Animal Herd</PES_Unknown_AnimalHerd>
+
+</LanguageData>
