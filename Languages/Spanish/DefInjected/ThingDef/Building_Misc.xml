@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_PremitiveWatchtower.label>Premitive WatchTower</PES_PremitiveWatchtower.label>
+  <PES_PremitiveWatchtower.description>A premitive tall tower where one colonist can go on sentry duty, keeping a vigilant eye on the surrounding, and when danger approaches, alert the colony in time by making smoke signal.</PES_PremitiveWatchtower.description>
+  <PES_PremitiveWatchtower_Blueprint.label>Premitive WatchTower (blueprint)</PES_PremitiveWatchtower_Blueprint.label>
+  <PES_PremitiveWatchtower_Frame.label>Premitive WatchTower (building)</PES_PremitiveWatchtower_Frame.label>
+  <PES_PremitiveWatchtower_Frame.description>A premitive tall tower where one colonist can go on sentry duty, keeping a vigilant eye on the surrounding, and when danger approaches, alert the colony in time by making smoke signal.</PES_PremitiveWatchtower_Frame.description>
+
+  <PES_watchtower.label>WatchTower</PES_watchtower.label>
+  <PES_watchtower.description>Modern construction technology made it possible to build a watch tower much taller than a primitive one. Besides the height, some modern electronic devices can make the colonist on sentry duty see further. Can work without electricity, but only provide half the vision range and detection range.</PES_watchtower.description>
+  <PES_watchtower.comps.4.name>Mini Nutrient Paste Dispenser</PES_watchtower.comps.4.name>
+  <PES_watchtower.comps.4.description>Install a nutrient paste dispenser inside the tower, so that the sentinel colonist does not need to leave the watchtower occasionally for food. Accept Raw food inside.</PES_watchtower.comps.4.description>
+  <PES_watchtower.comps.5.name>Radio</PES_watchtower.comps.5.name>
+  <PES_watchtower.comps.5.description>Install a radio inside the watchtower, so that the sentinel colonist can listen to it while being on sentry duty. Keep the sentinel's recreational need at a moderate level</PES_watchtower.comps.5.description>
+  <PES_watchtower.comps.6.name>Searchlight</PES_watchtower.comps.6.name>
+  <PES_watchtower.comps.6.description>With a search light, the watchtower can be used with 60% efficiency when it's dark at the cost of extra 500W power consumption.</PES_watchtower.comps.6.description>
+  <PES_watchtower.comps.7.name>Tactical Telescope</PES_watchtower.comps.7.name>
+  <PES_watchtower.comps.7.description>With a telescope installed, the sentinel can see even further on the tower.\n+50% Vision Range\n+50% Detection Range</PES_watchtower.comps.7.description>
+  <PES_watchtower_Blueprint.label>WatchTower (blueprint)</PES_watchtower_Blueprint.label>
+  <PES_watchtower_Frame.label>WatchTower (building)</PES_watchtower_Frame.label>
+  <PES_watchtower_Frame.description>Modern construction technology made it possible to build a watch tower much taller than a primitive one. Besides the height, some modern electronic devices can make the colonist on sentry duty see further. Can work without electricity, but only provide half the vision range and detection range.</PES_watchtower_Frame.description>
+
+  <PES_Radar.label>Radar</PES_Radar.label>
+  <PES_Radar.description>A detection system that uses radio waves to determine the range, angle, or velocity of objects. Can be used to extend the detection range of the cology.</PES_Radar.description>
+  <PES_Radar_Blueprint.label>Radar (blueprint)</PES_Radar_Blueprint.label>
+  <PES_Radar_Frame.label>Radar (building)</PES_Radar_Frame.label>
+  <PES_Radar_Frame.description>A detection system that uses radio waves to determine the range, angle, or velocity of objects. Can be used to extend the detection range of the cology.</PES_Radar_Frame.description>
+
+  <PES_SentryDroneArray.label>Sentry Drone Array</PES_SentryDroneArray.label>
+  <PES_SentryDroneArray.description>An operation and monitor console for several sentry drones which are used for reconnaissance duty and greatly expand the vision range of the colony</PES_SentryDroneArray.description>
+  <PES_SentryDroneArray.comps.4.name>Radio</PES_SentryDroneArray.comps.4.name>
+  <PES_SentryDroneArray.comps.4.description>Install a radio near this console, so that the operator can listen to it while monitor the drones. Keep the operator's recreational need at a moderate level</PES_SentryDroneArray.comps.4.description>
+  <PES_SentryDroneArray_Blueprint.label>Sentry Drone Array (blueprint)</PES_SentryDroneArray_Blueprint.label>
+  <PES_SentryDroneArray_Frame.label>Sentry Drone Array (building)</PES_SentryDroneArray_Frame.label>
+  <PES_SentryDroneArray_Frame.description>An operation and monitor console for several sentry drones which are used for reconnaissance duty and greatly expand the vision range of the colony</PES_SentryDroneArray_Frame.description>
+
+  <PES_SpySatellite.label>Reconnaissance Satellite Uplink</PES_SpySatellite.label>
+  <PES_SpySatellite.description>An uplink station receiving and transmitting data between a spy satellite and the colony, extending the detection range of the colony to cover a huge area on this planet</PES_SpySatellite.description>
+  <PES_SpySatellite_Blueprint.label>Reconnaissance Satellite Uplink (blueprint)</PES_SpySatellite_Blueprint.label>
+  <PES_SpySatellite_Frame.label>Reconnaissance Satellite Uplink (building)</PES_SpySatellite_Frame.label>
+  <PES_SpySatellite_Frame.description>An uplink station receiving and transmitting data between a spy satellite and the colony, extending the detection range of the colony to cover a huge area on this planet</PES_SpySatellite_Frame.description>
+
+
+</LanguageData>

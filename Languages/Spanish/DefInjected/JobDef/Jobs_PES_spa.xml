@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_StandGuard_Primitive.reportString>Haciendo guardia en TargetA.</PES_StandGuard_Primitive.reportString>
+  <PES_StandGuard.reportString>Haciendo guardia en TargetA.</PES_StandGuard.reportString>
+  <PES_OperateSentryArray.reportString>Monitoreando los drones de reconocimiento en TargetA.</PES_OperateSentryArray.reportString>
+  <PES_Job_InstallUpgrade.reportString>Instalando actualización en TargetA.</PES_Job_InstallUpgrade.reportString>
+
+
+</LanguageData>

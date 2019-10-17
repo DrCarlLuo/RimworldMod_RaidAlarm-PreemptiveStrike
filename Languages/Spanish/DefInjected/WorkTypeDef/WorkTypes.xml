@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Recon.label>Recon</Recon.label>
+  <Recon.description>Do sentry job in the colony, make reconnaissance of the surrounding area, and detect incoming enemy</Recon.description>
+  <Recon.labelShort>Recon</Recon.labelShort>
+  <Recon.pawnLabel>Sentry</Recon.pawnLabel>
+  <Recon.gerundLabel>being on sentry duty</Recon.gerundLabel>
+  <Recon.verb>Do sentry duty</Recon.verb>
+
+
+</LanguageData>

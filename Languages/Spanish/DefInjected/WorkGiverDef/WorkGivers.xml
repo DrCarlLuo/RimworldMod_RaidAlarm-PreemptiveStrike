@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_StandGuard_Primitive.label>StandGuard at Primitive WatchTower</PES_StandGuard_Primitive.label>
+  <PES_StandGuard_Primitive.verb>stand guard</PES_StandGuard_Primitive.verb>
+  <PES_StandGuard_Primitive.gerund>standing guard</PES_StandGuard_Primitive.gerund>
+
+  <PES_StandGuard.label>StandGuard at WatchTower</PES_StandGuard.label>
+  <PES_StandGuard.verb>stand guard</PES_StandGuard.verb>
+  <PES_StandGuard.gerund>standing guard</PES_StandGuard.gerund>
+
+  <PES_OperateSentryArray.label>Monitor Sentry Drone Array Console</PES_OperateSentryArray.label>
+  <PES_OperateSentryArray.verb>monitor</PES_OperateSentryArray.verb>
+  <PES_OperateSentryArray.gerund>monitoring at</PES_OperateSentryArray.gerund>
+
+  <PES_InstallUpgrade.label>Install Upgrade in Recon Buildings</PES_InstallUpgrade.label>
+  <PES_InstallUpgrade.verb>upgrade</PES_InstallUpgrade.verb>
+  <PES_InstallUpgrade.gerund>upgrading</PES_InstallUpgrade.gerund>
+
+  <PES_Refuel.label>refuel reconn facilities</PES_Refuel.label>
+  <PES_Refuel.verb>refuel</PES_Refuel.verb>
+  <PES_Refuel.gerund>refueling</PES_Refuel.gerund>
+
+
+</LanguageData>
