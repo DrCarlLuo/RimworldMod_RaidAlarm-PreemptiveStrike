@@ -210,7 +210,7 @@
     <defName>PES_Radar</defName>
     <label>Radar</label>
 	  <thingClass>Building</thingClass>
-    <description>A detection system that uses radio waves to determine the range, angle, or velocity of objects. Can be used to extend the detection range of the cology.</description>
+    <description>A detection system that uses radio waves to determine the range, angle, or velocity of objects. Can be used to extend the detection range of the colony.</description>
     <graphicData>
       <texPath>Things/Buildings/Radar</texPath>
       <graphicClass>Graphic_Multi</graphicClass>

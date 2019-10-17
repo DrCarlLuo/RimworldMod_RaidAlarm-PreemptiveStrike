@@ -27,5 +27,8 @@ namespace PreemptiveStrike.UI
 
         public static readonly float MinifiedWindowWidth = 300f;
         public static readonly float DiffOfOrgAndMinify = DefaultWindowWidth - MinifiedWindowWidth;
+
+        public static readonly float TinyWindowSize = 50f;
+        public static readonly float TinyWindowPinIntend = 5f;
     }
 }

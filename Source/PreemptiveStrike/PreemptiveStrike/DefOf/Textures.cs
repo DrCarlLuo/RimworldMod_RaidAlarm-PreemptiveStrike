@@ -27,5 +27,9 @@ namespace PreemptiveStrike
         public static readonly Texture2D IconInfestation = ContentFinder<Texture2D>.Get("UI/PES_Infestation");
 
         public static readonly Texture2D IconSolarFlare = ContentFinder<Texture2D>.Get("UI/PES_SolarFlare");
+
+        public static readonly Texture2D IconReportNormal = ContentFinder<Texture2D>.Get("UI/PES_Report_Normal");
+        public static readonly Texture2D IconReportWarning = ContentFinder<Texture2D>.Get("UI/PES_Report_Warning");
+        public static readonly Texture2D IconReportDanger = ContentFinder<Texture2D>.Get("UI/PES_Report_Danger");
     }
 }

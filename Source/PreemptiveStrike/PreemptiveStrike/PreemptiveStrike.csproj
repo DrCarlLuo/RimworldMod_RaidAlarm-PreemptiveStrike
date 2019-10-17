@@ -137,6 +137,7 @@
     <Compile Include="UI\ColonySecurityDashBoard_Window.cs" />
     <Compile Include="Dialogue\OpenUILetter.cs" />
     <Compile Include="UI\PES_UIComponent.cs" />
+    <Compile Include="UI\TinyReportWindow.cs" />
     <Compile Include="UI\UIConstants.cs" />
   </ItemGroup>
   <ItemGroup />

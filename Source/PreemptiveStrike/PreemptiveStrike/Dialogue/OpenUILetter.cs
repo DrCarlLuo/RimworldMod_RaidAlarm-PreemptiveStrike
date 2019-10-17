@@ -18,7 +18,7 @@ namespace PreemptiveStrike.Dialogue
                 DiaOption option = new DiaOption("PES_UI_Letter_ReadMore".Translate());
                 option.action = () =>
                 {
-                    ColonySecurityDashBoard_Window.Instance.Minified = false;
+                    ColonySecurityDashBoard_Window.OpenIt();
                     Find.LetterStack.RemoveLetter(this);
                 };
                 option.resolveTree = true;
@@ -50,7 +50,7 @@ namespace PreemptiveStrike.Dialogue
                 {
                     if (caravan != null)
                         ColonySecurityDashBoard_Window.DoSparkWithBulletin(caravan);
-                    ColonySecurityDashBoard_Window.Instance.Minified = false;
+                    ColonySecurityDashBoard_Window.OpenIt();
                     Find.LetterStack.RemoveLetter(this);
                 };
                 option.resolveTree = true;

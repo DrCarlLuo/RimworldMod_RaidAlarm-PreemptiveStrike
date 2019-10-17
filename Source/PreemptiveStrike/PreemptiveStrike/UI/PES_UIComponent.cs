@@ -13,7 +13,8 @@ namespace PreemptiveStrike.UI
         public override void FinalizeInit()
         {
             base.FinalizeInit();
-            Find.WindowStack.Add(ColonySecurityDashBoard_Window.Instance);
+            //Find.WindowStack.Add(ColonySecurityDashBoard_Window.Instance);
+            Find.WindowStack.Add(TinyReportWindow.Instance);
         }
 
         public PES_UIComponent(Game game)
