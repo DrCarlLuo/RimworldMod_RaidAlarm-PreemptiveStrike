@@ -14,6 +14,7 @@ namespace PreemptiveStrike.UI
         {
             base.FinalizeInit();
             //Find.WindowStack.Add(ColonySecurityDashBoard_Window.Instance);
+            //ColonySecurityDashBoard_Window.CloseIt();
             Find.WindowStack.Add(TinyReportWindow.Instance);
         }
 

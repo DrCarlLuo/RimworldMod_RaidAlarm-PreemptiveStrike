@@ -7,6 +7,7 @@ using Verse;
 using UnityEngine;
 using PreemptiveStrike.IncidentCaravan;
 using PreemptiveStrike.DetectionSystem;
+using System.Reflection;
 
 namespace PreemptiveStrike.UI
 {
@@ -42,14 +43,25 @@ namespace PreemptiveStrike.UI
                     BulletinCache.Add(Bulletin.Create(x));
                 }
             }
-            //Naive incidents
-            //foreach (QueuedIncident qi in Find.Storyteller.incidentQueue)
-            //{
-            //    if (qi.FiringIncident.def == IncidentDefOf.SolarFlare)
-            //    {
-            //        BulletinCache.Add(new Bulletin_Flare(qi));
-            //    }
-            //}
+
+            //----- This code is to help player remove some corrupted information in the save caused by bugs in the last version
+            QueuedIncident toremove = null;
+            foreach (QueuedIncident qi in Find.Storyteller.incidentQueue)
+            {
+                if (qi.FiringIncident.def == IncidentDefOf.SolarFlare)
+                {
+                    toremove = qi;
+                    break;                    
+                }
+            }
+            if(toremove != null)
+            {
+                List<QueuedIncident> tmpQue = typeof(IncidentQueue).GetField("queuedIncidents", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(Find.Storyteller.incidentQueue) as List<QueuedIncident>;
+                if (tmpQue != null)
+                    tmpQue.Remove(toremove);
+            }
+            //-------
+
             BulletinCache.Sort();
 
             int danger = 0, neutral = 0, uid = 0;
@@ -155,6 +167,7 @@ namespace PreemptiveStrike.UI
         static ColonySecurityDashBoard_Window()
         {
             EventManger.NotifyCaravanListChange += Recache;
+            IsOpening = false;
         }
 
         protected override void SetInitialSizeAndPosition()

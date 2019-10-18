@@ -3,7 +3,7 @@
 <Defs>
 	<ThingDef ParentName="BuildingBase">
     <defName>PES_PremitiveWatchtower</defName>
-    <label>Premitive WatchTower</label>
+    <label>Primitive WatchTower</label>
 	  <thingClass>Building</thingClass>
     <description>A premitive tall tower where one colonist can go on sentry duty, keeping a vigilant eye on the surrounding, and when danger approaches, alert the colony in time by making smoke signal.</description>
     <graphicData>

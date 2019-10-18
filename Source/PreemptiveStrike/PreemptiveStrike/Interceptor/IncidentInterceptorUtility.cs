@@ -27,6 +27,8 @@ namespace PreemptiveStrike.Interceptor
     [StaticConstructorOnStartup]
     class IncidentInterceptorUtility
     {
+        public static IncidentDef CurrentIncidentDef;
+
         #region Intercepting Switches
         //Used in harmony Patches
         public static bool IsIntercepting_IncidentExcecution;
@@ -117,7 +119,7 @@ namespace PreemptiveStrike.Interceptor
                 incident = new InterceptedIncident_HumanCrowd_RaidEnemy_Groups();
             else
                 incident = new InterceptedIncident_HumanCrowd_RaidEnemy();
-            incident.incidentDef = IncidentDefOf.RaidEnemy;
+            incident.incidentDef = CurrentIncidentDef;
             incident.parms = parms;
             if (!incident.ManualDeterminParams())
                 return false;
@@ -133,10 +135,10 @@ namespace PreemptiveStrike.Interceptor
             return true;
         }
 
-        public static bool CreateIncidentCaraven_HumanNeutral<T>(IncidentDef incidentDef, IncidentParms parms) where T : InterceptedIncident, new()
+        public static bool CreateIncidentCaraven_HumanNeutral<T>(IncidentParms parms) where T : InterceptedIncident, new()
         {
             InterceptedIncident incident = new T();
-            incident.incidentDef = incidentDef;
+            incident.incidentDef = CurrentIncidentDef;
             incident.parms = parms;
             IsIntercepting_PawnGeneration = GeneratorPatchFlag.ReturnZero;
             if (!IncidentCaravanUtility.AddNewIncidentCaravan(incident))
@@ -150,10 +152,10 @@ namespace PreemptiveStrike.Interceptor
             return true;
         }
 
-        public static bool CreateIncidentCaravan_Animal<T>(IncidentDef incidentDef, IncidentParms parms) where T : InterceptedIncident, new()
+        public static bool CreateIncidentCaravan_Animal<T>(IncidentParms parms) where T : InterceptedIncident, new()
         {
             InterceptedIncident incident = new T();
-            incident.incidentDef = incidentDef;
+            incident.incidentDef = CurrentIncidentDef;
             incident.parms = parms;
             if (!incident.ManualDeterminParams())
                 return false;
@@ -162,14 +164,18 @@ namespace PreemptiveStrike.Interceptor
                 Log.Error("Fail to create Incident Caravan");
                 return false;
             }
-            IsHoaxingStoryTeller = true;
+            //Hoxing Should be done in the patch
+            //IsHoaxingStoryTeller = true;
             if (PES_Settings.DebugModeOn)
                 Messages.Message("PES_Debug: Successfully intercepted an animal Incident", MessageTypeDefOf.NeutralEvent);
             return true;
         }
 
-        public static bool Intercept_SkyFaller<T>(IncidentDef incidentDef, IncidentParms parms) where T : InterceptedIncident_SkyFaller, new()
+        public static bool Intercept_SkyFaller<T>(IncidentDef incidentDef, IncidentParms parms, bool needHoaxing = false, bool checkHostileFaction = false) where T : InterceptedIncident_SkyFaller, new()
         {
+            if (checkHostileFaction && parms.faction.PlayerRelationKind != FactionRelationKind.Hostile)
+                return false;
+
             InterceptedIncident_SkyFaller incident = new T();
             incident.incidentDef = incidentDef;
             incident.parms = parms;
@@ -188,7 +194,8 @@ namespace PreemptiveStrike.Interceptor
                 Log.Error("Fail to create Incident Caravan");
                 return false;
             }
-            IsHoaxingStoryTeller = true;
+            if(needHoaxing)
+                IsHoaxingStoryTeller = true;
             if (PES_Settings.DebugModeOn)
                 Messages.Message("PES_Debug: Successfully intercepted a skyfaller Incident", MessageTypeDefOf.NeutralEvent);
             return true;
@@ -222,15 +229,8 @@ namespace PreemptiveStrike.Interceptor
 
         public static bool Intercept_SolarFlare(IncidentParms parms)
         {
-            //foreach(QueuedIncident qi in Find.Storyteller.incidentQueue)
-            //{
-            //    if (qi.FiringIncident.def == IncidentDefOf.SolarFlare && qi.FiringIncident.parms == parms)
-            //        return false;
-            //}
-            //Find.Storyteller.incidentQueue.Add(new QueuedIncident(new FiringIncident(IncidentDefOf.SolarFlare, null, parms), Find.TickManager.TicksGame + 2500 * 12));
-            //if (PES_Settings.DebugModeOn)
-            //    Messages.Message("PES_Debug: Successfully intercepted an solar flare",MessageTypeDefOf.NeutralEvent);
-            //Dialogue.OpenUILetter.Make("PES_Warning_Flare_Early".Translate(), "PES_Warning_Flare_Early_Text".Translate(), LetterDefOf.NegativeEvent);
+            
+
             //return true;
             InterceptedIncident_SolarFlare incident = new InterceptedIncident_SolarFlare();
             incident.incidentDef = DefDatabase<IncidentDef>.GetNamed("SolarFlare");
