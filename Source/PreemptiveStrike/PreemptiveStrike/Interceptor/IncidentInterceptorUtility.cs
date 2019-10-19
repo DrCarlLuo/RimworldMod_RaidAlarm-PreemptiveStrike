@@ -27,7 +27,7 @@ namespace PreemptiveStrike.Interceptor
     [StaticConstructorOnStartup]
     class IncidentInterceptorUtility
     {
-        public static IncidentDef CurrentIncidentDef;
+        public static IncidentDef CurrentIncidentDef;//This is used for all the raid incidents, because incidentDef can not be obtained from PawnsArrivalModeWorker
 
         #region Intercepting Switches
         //Used in harmony Patches
@@ -135,10 +135,10 @@ namespace PreemptiveStrike.Interceptor
             return true;
         }
 
-        public static bool CreateIncidentCaraven_HumanNeutral<T>(IncidentParms parms) where T : InterceptedIncident, new()
+        public static bool CreateIncidentCaraven_HumanNeutral<T>(IncidentDef incidentDef,  IncidentParms parms) where T : InterceptedIncident, new()
         {
             InterceptedIncident incident = new T();
-            incident.incidentDef = CurrentIncidentDef;
+            incident.incidentDef = incidentDef;
             incident.parms = parms;
             IsIntercepting_PawnGeneration = GeneratorPatchFlag.ReturnZero;
             if (!IncidentCaravanUtility.AddNewIncidentCaravan(incident))
@@ -152,10 +152,10 @@ namespace PreemptiveStrike.Interceptor
             return true;
         }
 
-        public static bool CreateIncidentCaravan_Animal<T>(IncidentParms parms) where T : InterceptedIncident, new()
+        public static bool CreateIncidentCaravan_Animal<T>(IncidentDef incidentDef, IncidentParms parms) where T : InterceptedIncident, new()
         {
             InterceptedIncident incident = new T();
-            incident.incidentDef = CurrentIncidentDef;
+            incident.incidentDef = incidentDef;
             incident.parms = parms;
             if (!incident.ManualDeterminParams())
                 return false;
@@ -229,9 +229,6 @@ namespace PreemptiveStrike.Interceptor
 
         public static bool Intercept_SolarFlare(IncidentParms parms)
         {
-            
-
-            //return true;
             InterceptedIncident_SolarFlare incident = new InterceptedIncident_SolarFlare();
             incident.incidentDef = DefDatabase<IncidentDef>.GetNamed("SolarFlare");
             incident.parms = parms;

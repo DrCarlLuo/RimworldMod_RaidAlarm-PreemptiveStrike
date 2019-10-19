@@ -127,6 +127,7 @@
     <Compile Include="Things\CompProperties_NeedSustain.cs" />
     <Compile Include="Things\CompProperties_Upgrade.cs" />
     <Compile Include="Things\CompUpgrade.cs" />
+    <Compile Include="Things\ModernWatchTower.cs" />
     <Compile Include="Things\UpgradeUtilities.cs" />
     <Compile Include="Jobs\WorkGiver_PES_Refuel.cs" />
     <Compile Include="UI\Bulletin.cs" />

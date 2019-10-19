@@ -17,7 +17,7 @@ namespace PreemptiveStrike.Harmony
         static void PostFix(IncidentParms parms, ref bool __result)
         {
             if (IncidentInterceptorUtility.isIntercepting_EdgeDrop)
-                __result = !IncidentInterceptorUtility.Intercept_SkyFaller<InterceptedIncident_SkyFaller_EdgeDrop>(IncidentDefOf.RaidEnemy, parms, true, true);
+                __result = !IncidentInterceptorUtility.Intercept_SkyFaller<InterceptedIncident_SkyFaller_EdgeDrop>(IncidentInterceptorUtility.CurrentIncidentDef, parms, true, true);
         }
     }
 
@@ -28,7 +28,7 @@ namespace PreemptiveStrike.Harmony
         static void PostFix(IncidentParms parms, ref bool __result)
         {
             if (IncidentInterceptorUtility.isIntercepting_CenterDrop)
-                __result = !IncidentInterceptorUtility.Intercept_SkyFaller<InterceptedIncident_SkyFaller_CenterDrop>(IncidentDefOf.RaidEnemy, parms, true, true);
+                __result = !IncidentInterceptorUtility.Intercept_SkyFaller<InterceptedIncident_SkyFaller_CenterDrop>(IncidentInterceptorUtility.CurrentIncidentDef, parms, true, true);
         }
     }
 
@@ -39,7 +39,7 @@ namespace PreemptiveStrike.Harmony
         static void PostFix(IncidentParms parms, ref bool __result)
         {
             if (IncidentInterceptorUtility.isIntercepting_EdgeDropGroup)
-                __result = !IncidentInterceptorUtility.Intercept_SkyFaller<InterceptedIncident_SkyFaller_EdgeDropGroup>(IncidentDefOf.RaidEnemy, parms, true);
+                __result = !IncidentInterceptorUtility.Intercept_SkyFaller<InterceptedIncident_SkyFaller_EdgeDropGroup>(IncidentInterceptorUtility.CurrentIncidentDef, parms, true);
         }
     }
 
@@ -50,7 +50,7 @@ namespace PreemptiveStrike.Harmony
         static void PostFix(IncidentParms parms, ref bool __result)
         {
             if (IncidentInterceptorUtility.isIntercepting_RandomDrop)
-                __result = !IncidentInterceptorUtility.Intercept_SkyFaller<InterceptedIncident_SkyFaller_RandomDrop>(IncidentDefOf.RaidEnemy, parms, true, true);
+                __result = !IncidentInterceptorUtility.Intercept_SkyFaller<InterceptedIncident_SkyFaller_RandomDrop>(IncidentInterceptorUtility.CurrentIncidentDef, parms, true, true);
         }
     }
 

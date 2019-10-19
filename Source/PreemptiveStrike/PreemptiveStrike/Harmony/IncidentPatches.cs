@@ -17,8 +17,6 @@ namespace PreemptiveStrike.Harmony
         [HarmonyPrefix]
         static bool Prefix(IncidentWorker __instance, ref bool __result, IncidentParms parms)
         {
-            IncidentInterceptorUtility.CurrentIncidentDef = __instance.def;
-
             //TODO: This is for the ship part incident
             //I have no choice but do the patch like this
             //'cause the incidentworker for shippart is an internal class
@@ -47,6 +45,17 @@ namespace PreemptiveStrike.Harmony
         }
     }
 
+    //This patch is made for all the raid incidents to help them get the right incidentDef
+    [HarmonyPatch(typeof(IncidentWorker_RaidEnemy), "TryExecuteWorker")]
+    class Patch_RaidEnemy_TryExecuteWorker
+    {
+        [HarmonyPrefix]
+        static void Prefix(IncidentWorker_RaidEnemy __instance)
+        {
+            IncidentInterceptorUtility.CurrentIncidentDef = __instance.def;
+        }
+    }
+
     //----------------------------------------------------------
 
     #region Raid Patches
@@ -62,7 +71,7 @@ namespace PreemptiveStrike.Harmony
 
             if (IncidentInterceptorUtility.IsIntercepting_IncidentExcecution)
             {
-                if(IncidentInterceptorUtility.Intercept_Raid(parms))
+                if (IncidentInterceptorUtility.Intercept_Raid(parms))
                     __result = false;
             }
         }
@@ -128,7 +137,7 @@ namespace PreemptiveStrike.Harmony
         static bool Prefix(IncidentWorker_TraderCaravanArrival __instance, ref bool __result, IncidentParms parms)
         {
             if (IncidentInterceptorUtility.isIntercepting_TraderCaravan_Worker)
-                IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_TraderCaravan>(parms);
+                IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_TraderCaravan>(__instance.def, parms);
             return true;
         }
     }
@@ -140,7 +149,7 @@ namespace PreemptiveStrike.Harmony
         static bool Prefix(IncidentWorker_TravelerGroup __instance, ref bool __result, IncidentParms parms)
         {
             if (IncidentInterceptorUtility.isIntercepting_TravelerGroup)
-                IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_TravelerGroup>(parms);
+                IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_TravelerGroup>(__instance.def, parms);
             return true;
         }
     }
@@ -152,7 +161,7 @@ namespace PreemptiveStrike.Harmony
         static bool Prefix(IncidentWorker_VisitorGroup __instance, ref bool __result, IncidentParms parms)
         {
             if (IncidentInterceptorUtility.isIntercepting_VisitorGroup)
-                IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_VisitorGroup>(parms);
+                IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_VisitorGroup>(__instance.def, parms);
             return true;
         }
     }
@@ -169,7 +178,7 @@ namespace PreemptiveStrike.Harmony
                 return true;
             if (IncidentInterceptorUtility.isIntercepting_FarmAnimalsWanderIn == WorkerPatchType.Forestall)
             {
-                IncidentInterceptorUtility.CreateIncidentCaravan_Animal<InterceptedIncident_AnimalHerd_FarmAnimalsWanderIn>(parms);
+                IncidentInterceptorUtility.CreateIncidentCaravan_Animal<InterceptedIncident_AnimalHerd_FarmAnimalsWanderIn>(__instance.def, parms);
                 __result = true;
             }
             else
@@ -188,7 +197,7 @@ namespace PreemptiveStrike.Harmony
                 return true;
             if (IncidentInterceptorUtility.isIntercepting_HerdMigration == WorkerPatchType.Forestall)
             {
-                IncidentInterceptorUtility.CreateIncidentCaravan_Animal<InterceptedIncident_AnimalHerd_HerdMigration>(parms);
+                IncidentInterceptorUtility.CreateIncidentCaravan_Animal<InterceptedIncident_AnimalHerd_HerdMigration>(__instance.def, parms);
                 __result = true;
             }
             else
@@ -207,7 +216,7 @@ namespace PreemptiveStrike.Harmony
                 return true;
             if (IncidentInterceptorUtility.isIntercepting_ThrumboPasses == WorkerPatchType.Forestall)
             {
-                IncidentInterceptorUtility.CreateIncidentCaravan_Animal<InterceptedIncident_AnimalHerd_ThrumboPasses>(parms);
+                IncidentInterceptorUtility.CreateIncidentCaravan_Animal<InterceptedIncident_AnimalHerd_ThrumboPasses>(__instance.def, parms);
                 __result = true;
             }
             else
@@ -218,13 +227,13 @@ namespace PreemptiveStrike.Harmony
 
     static class Patch_IncidentWorker_Alphabeavers_TryExecuteWorker
     {
-        public static bool Prefix(Object __instance, ref bool __result, IncidentParms parms)
+        public static bool Prefix(IncidentWorker __instance, ref bool __result, IncidentParms parms)
         {
             if (IncidentInterceptorUtility.isIntercepting_Alphabeavers == WorkerPatchType.ExecuteOrigin)
                 return true;
             if (IncidentInterceptorUtility.isIntercepting_Alphabeavers == WorkerPatchType.Forestall)
             {
-                IncidentInterceptorUtility.CreateIncidentCaravan_Animal<InterceptedIncident_AnimalHerd_Alphabeavers>(parms);
+                IncidentInterceptorUtility.CreateIncidentCaravan_Animal<InterceptedIncident_AnimalHerd_Alphabeavers>(__instance.def, parms);
                 __result = true;
             }
             else
@@ -243,7 +252,7 @@ namespace PreemptiveStrike.Harmony
                 return true;
             if (IncidentInterceptorUtility.isIntercepting_ManhunterPack == WorkerPatchType.Forestall)
             {
-                IncidentInterceptorUtility.CreateIncidentCaravan_Animal<InterceptedIncident_AnimalHerd_ManhunterPack>(parms);
+                IncidentInterceptorUtility.CreateIncidentCaravan_Animal<InterceptedIncident_AnimalHerd_ManhunterPack>(__instance.def, parms);
                 __result = true;
             }
             else
