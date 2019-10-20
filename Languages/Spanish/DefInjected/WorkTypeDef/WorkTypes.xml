@@ -2,11 +2,11 @@
 <LanguageData>
 
   <Recon.label>Recon</Recon.label>
-  <Recon.description>Do sentry job in the colony, make reconnaissance of the surrounding area, and detect incoming enemy</Recon.description>
+  <Recon.description>Realiza tareas de centinela en la colonia, realiza reconocimiento del área circundante y detecta a los enemigos que se acercan.</Recon.description>
   <Recon.labelShort>Recon</Recon.labelShort>
-  <Recon.pawnLabel>Sentry</Recon.pawnLabel>
-  <Recon.gerundLabel>being on sentry duty</Recon.gerundLabel>
-  <Recon.verb>Do sentry duty</Recon.verb>
+  <Recon.pawnLabel>Centinela</Recon.pawnLabel>
+  <Recon.gerundLabel>estar de centinela</Recon.gerundLabel>
+  <Recon.verb>Hacer de centinela</Recon.verb>
 
 
 </LanguageData>
