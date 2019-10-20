@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <PES_PrimitiveTower.label>Primitive tower construction</PES_PrimitiveTower.label>
-  <PES_PrimitiveTower.description>Build primitive watch tower to provide basic reconnaissance ability.</PES_PrimitiveTower.description>
+  <PES_PrimitiveTower.label>Construcción de torre primitiva</PES_PrimitiveTower.label>
+  <PES_PrimitiveTower.description>Permite construir una torre de vigilancia primitiva para proporcionar capacidad básica de reconocimiento.</PES_PrimitiveTower.description>
 
 
   <!-- <ResearchProjectDef>
@@ -36,35 +36,35 @@
     <tab>PreemptiveStrike</tab>
   </ResearchProjectDef> -->
 
-  <PES_ModernTower.label>Modern watchTower</PES_ModernTower.label>
-  <PES_ModernTower.description>Build mordern watch towers which provide better reconnaissance ability to the colony and can be installed with various upgrades.</PES_ModernTower.description>
+  <PES_ModernTower.label>Torre de Vigilancia Moderna</PES_ModernTower.label>
+  <PES_ModernTower.description>Permite construir torres de vigilancia modernas que proporcionan una mejor capacidad de reconocimiento a la colonia y pueden ser instaladas con varias mejoras.</PES_ModernTower.description>
 
-  <PES_FoodSupply.label>Sentinel food supply solution</PES_FoodSupply.label>
-  <PES_FoodSupply.description>Install mini nutrient past dispenser in watch tower to provide food supply for sentinels.</PES_FoodSupply.description>
+  <PES_FoodSupply.label>Solución de suministro de alimentos a centinela</PES_FoodSupply.label>
+  <PES_FoodSupply.description>Instala un dispensador de mini nutrientes en la torre de vigilancia para proporcionar alimento a los centinelas.</PES_FoodSupply.description>
 
-  <PES_JoyRadio.label>Recreational Radio</PES_JoyRadio.label>
-  <PES_JoyRadio.description>Install radio in watch tower to provide recreation for sentinels.</PES_JoyRadio.description>
+  <PES_JoyRadio.label>Radio recreacional</PES_JoyRadio.label>
+  <PES_JoyRadio.description>Instala una radio en la torre de vigilancia para proporcionar alimento a los centinelas.</PES_JoyRadio.description>
 
-  <PES_SearchLight.label>Advanced lighting technology</PES_SearchLight.label>
-  <PES_SearchLight.description>Install search light in a watch tower so that it can be used during night.</PES_SearchLight.description>
+  <PES_SearchLight.label>Tecnología de iluminación avanzada</PES_SearchLight.label>
+  <PES_SearchLight.description>Instale un reflector en una torre de vigilancia para que se pueda utilizar durante la noche.</PES_SearchLight.description>
 
-  <PES_SkyIDL.label>Large sky object identification</PES_SkyIDL.label>
-  <PES_SkyIDL.description>Unlock the ability for the colony to identify large sky object, such as ship chunks and meteorites, and predict their impact position, which can help the colony reduce some loss.</PES_SkyIDL.description>
+  <PES_SkyIDL.label>Identificación de objetos celestes grandes</PES_SkyIDL.label>
+  <PES_SkyIDL.description>Desbloquee la capacidad de la colonia para identificar objetos grandes en el cielo, como trozos de naves y meteoritos, y predecir su posición de impacto, lo que puede ayudar a la colonia a reducir algunas pérdidas.</PES_SkyIDL.description>
 
-  <PES_RADAR.label>Radio detection and ranging</PES_RADAR.label>
-  <PES_RADAR.description>Building radar, an unmanned reconn building provide great detection range.</PES_RADAR.description>
+  <PES_RADAR.label>Detección y alcance de radio</PES_RADAR.label>
+  <PES_RADAR.description>El radar del edificio, un edificio de reconocimiento no tripulado, proporciona un gran alcance de detección.</PES_RADAR.description>
 
-  <PES_SkyIDS.label>Small sky object identification</PES_SkyIDS.label>
-  <PES_SkyIDS.description>Unlock the ability for the colony to identify small sky object, such as drop pods, and predict their impact position, which can help the colony reduce some loss.</PES_SkyIDS.description>
+  <PES_SkyIDS.label>Identificación de objetos celestes pequeños</PES_SkyIDS.label>
+  <PES_SkyIDS.description>Desbloquee la capacidad de la colonia para identificar pequeños objetos celestes, como las cápsulas de lanzamiento, y predecir su posición de impacto, lo que puede ayudar a la colonia a reducir algunas pérdidas.</PES_SkyIDS.description>
 
-  <PES_InfestationDetection.label>Earthquake Early Warning System</PES_InfestationDetection.label>
-  <PES_InfestationDetection.description>Add the ability of detect infestation to the ground-penetrating scanner.</PES_InfestationDetection.description>
+  <PES_InfestationDetection.label>Sistema de Alerta Temprana de Terremotos</PES_InfestationDetection.label>
+  <PES_InfestationDetection.description>Añada al escáner de penetración en el suelo la capacidad de detectar infestaciones.</PES_InfestationDetection.description>
 
-  <PES_SentryArray.label>Reconnaissance drones</PES_SentryArray.label>
-  <PES_SentryArray.description>Build sentry drone array, the ultimate reconn facility that provide a large vision range.</PES_SentryArray.description>
+  <PES_SentryArray.label>Drones de reconocimiento</PES_SentryArray.label>
+  <PES_SentryArray.description>Permite construir una red de drones centinelas, lo último en instalaciones de reconocimiento que proporcionan un amplio rango de visión.</PES_SentryArray.description>
 
-  <PES_Satellite.label>Satellite communication</PES_Satellite.label>
-  <PES_Satellite.description>Build reconnaissance satellite uplink, the ultimate recoon facility that provide a huge detection range</PES_Satellite.description>
+  <PES_Satellite.label>Comunicación satelital</PES_Satellite.label>
+  <PES_Satellite.description>Permite construir un enlace ascendente satelital de reconocimiento, lo último en instalaciones de reconocimiento que proporcionan un amplio rango de detección.</PES_Satellite.description>
 
 
 </LanguageData>
