@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_StandGuard_Primitive.label>Hacer Guardia en Torre de Vigilancia Primitiva</PES_StandGuard_Primitive.label>
+  <PES_StandGuard_Primitive.verb>hacer guardia</PES_StandGuard_Primitive.verb>
+  <PES_StandGuard_Primitive.gerund>haciendo guardia</PES_StandGuard_Primitive.gerund>
+
+  <PES_StandGuard.label>Hacer Guardia en Torre de Vigilancia</PES_StandGuard.label>
+  <PES_StandGuard.verb>hacer guardia</PES_StandGuard.verb>
+  <PES_StandGuard.gerund>haciendo guardia</PES_StandGuard.gerund>
+
+  <PES_OperateSentryArray.label>Monitorear la consola de matriz de drones centinelas</PES_OperateSentryArray.label>
+  <PES_OperateSentryArray.verb>monitorear</PES_OperateSentryArray.verb>
+  <PES_OperateSentryArray.gerund>monitoreando a</PES_OperateSentryArray.gerund>
+
+  <PES_InstallUpgrade.label>Instalar actualizaciones en edificaciones de reconocimiento</PES_InstallUpgrade.label>
+  <PES_InstallUpgrade.verb>actualizar</PES_InstallUpgrade.verb>
+  <PES_InstallUpgrade.gerund>actualizando</PES_InstallUpgrade.gerund>
+
+  <PES_Refuel.label>reabastecer las instalaciones de reconocimiento</PES_Refuel.label>
+  <PES_Refuel.verb>reabastecer</PES_Refuel.verb>
+  <PES_Refuel.gerund>reabasteciendo</PES_Refuel.gerund>
+
+
+</LanguageData>

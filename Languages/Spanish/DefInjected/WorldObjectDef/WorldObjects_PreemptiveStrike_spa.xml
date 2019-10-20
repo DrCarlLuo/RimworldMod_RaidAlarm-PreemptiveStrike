@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_RaidingCaravan.label>Caravana de Asalto Llegando</PES_RaidingCaravan.label>
+  <PES_RaidingCaravan.description>¡Una caravana de asalto enemiga se dirige hacia su asentamiento! ¡Prepárate para ello o realiza un ataque preventivo!</PES_RaidingCaravan.description>
+
+  <PES_RaidingCaravan_Simple.label>Caravana de Asalto Llegando</PES_RaidingCaravan_Simple.label>
+  <PES_RaidingCaravan_Simple.description>¡Una caravana de asalto enemiga se dirige hacia su asentamiento! ¡Prepárate para ello o realiza un ataque preventivo!</PES_RaidingCaravan_Simple.description>
+
+
+</LanguageData>
