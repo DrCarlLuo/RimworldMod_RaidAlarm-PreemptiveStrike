@@ -119,6 +119,13 @@ namespace PreemptiveStrike.Interceptor
                 incident = new InterceptedIncident_HumanCrowd_RaidEnemy_Groups();
             else
                 incident = new InterceptedIncident_HumanCrowd_RaidEnemy();
+
+            if (CurrentIncidentDef == null)
+            {
+                Log.Message("PES: TryResolveRaidSpawnCenter is executed without an incidentworker. So this \"incident\" won't be intercepted by PES");
+                return false; //Fix v1.1.4: In some mods, their raids are implemented without a incidentworker
+            }
+
             incident.incidentDef = CurrentIncidentDef;
             incident.parms = parms;
             if (!incident.ManualDeterminParams())
@@ -175,6 +182,12 @@ namespace PreemptiveStrike.Interceptor
         {
             if (checkHostileFaction && parms.faction.PlayerRelationKind != FactionRelationKind.Hostile)
                 return false;
+
+            if (incidentDef == null)
+            {
+                Log.Message("PES: TryResolveRaidSpawnCenter is executed without an incidentworker. So this \"incident\" won't be intercepted by PES");
+                return false;
+            }
 
             InterceptedIncident_SkyFaller incident = new T();
             incident.incidentDef = incidentDef;

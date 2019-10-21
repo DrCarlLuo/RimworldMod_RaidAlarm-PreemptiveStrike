@@ -13,8 +13,6 @@ namespace PreemptiveStrike.Things
 {
     class ModernWatchTower : Building
     {
-        public static Graphic FenceGraphics = GraphicDatabase.Get<Graphic_Single>("Things/Minor/Watchtower_Fence", ShaderDatabase.Transparent, new Vector2(5, 9.5f), Color.white);
-
         public override void Draw()
         {
             base.Draw();
@@ -24,7 +22,7 @@ namespace PreemptiveStrike.Things
             //drawPos.x += 0.5f;
             Quaternion quaternion = Quaternion.identity;
             Color white = Color.white;
-            Material material = FenceGraphics.MatAt(base.Rotation, null);
+            Material material = Textures.FenceGraphics.MatAt(base.Rotation, null);
             if (white != material.color)
             {
                 material = MaterialPool.MatFrom((Texture2D)material.mainTexture, ShaderDatabase.Transparent, white);
@@ -32,7 +30,7 @@ namespace PreemptiveStrike.Things
             //Graphic coloredVersion = GraphicsCache.BathOver.GetColoredVersion(base.Graphic.Shader, this.DrawColor, this.DrawColorTwo);
             //Graphics.DrawMesh(coloredVersion.MeshAt(base.Rotation), drawPos, quaternion, coloredVersion.MatAt(base.Rotation, null), 0);
             //drawPos.y -= 0.01f;
-            Graphics.DrawMesh(FenceGraphics.MeshAt(base.Rotation), drawPos, quaternion, material, 0);
+            Graphics.DrawMesh(Textures.FenceGraphics.MeshAt(base.Rotation), drawPos, quaternion, material, 0);
         }
     }
 }

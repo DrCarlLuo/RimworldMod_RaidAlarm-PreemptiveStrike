@@ -57,6 +57,8 @@
     <Compile Include="Dialogue\DialogMaker_TryToContact.cs" />
     <Compile Include="Dialogue\DialogUtilities.cs" />
     <Compile Include="EventManger.cs" />
+    <Compile Include="Harmony\Compatibility\OtherModPatchMain.cs" />
+    <Compile Include="Harmony\Compatibility\RimQuest.cs" />
     <Compile Include="Harmony\DialogPatches.cs" />
     <Compile Include="Harmony\HarmonyMain.cs" />
     <Compile Include="Harmony\IncidentPatches.cs" />

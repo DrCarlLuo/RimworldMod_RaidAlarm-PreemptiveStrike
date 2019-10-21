@@ -29,10 +29,18 @@ namespace PreemptiveStrike.UI
                 MainIcon = Textures.IconRaidHuman;
             else if (bulletinIntelLevel == IncidentIntelLevel.Neutral)
             {
-                if (Incident_Human is InterceptedIncident_HumanCrowd_TraderCaravan)
-                    MainIcon = Textures.IconTrader;
-                else
-                    MainIcon = Textures.IconTraveler;
+                if (Incident_Human is InterceptedIncident_HumanCrowd_Neutral neutralIncident)
+                {
+                    if (!neutralIncident.intention_revealed)
+                        MainIcon = Textures.IconFriendly_Unknown;
+                    else
+                    {
+                        if (Incident_Human is InterceptedIncident_HumanCrowd_TraderCaravan)
+                            MainIcon = Textures.IconTrader;
+                        else
+                            MainIcon = Textures.IconTraveler;
+                    }
+                }
             }
             base.DrawIcon(x, y);
         }

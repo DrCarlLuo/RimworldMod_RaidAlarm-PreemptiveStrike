@@ -12,7 +12,7 @@ namespace PreemptiveStrike.Harmony
     [StaticConstructorOnStartup]
     class HarmonyMain
     {
-        static HarmonyInstance instance;
+        public static HarmonyInstance instance;
 
         static HarmonyMain()
         {
@@ -31,6 +31,8 @@ namespace PreemptiveStrike.Harmony
             //So as the F**king ShipPartCrash, f**k internal class, f**k this code, f**k everything
             //prefix = typeof(Patch_ShipPartCrash_TryExecuteWorker).GetMethod("PreFix",BindingFlags.Static);
             //instance.Patch(AccessTools.Method(AccessTools.TypeByName("RimWorld.IncidentWorker_ShipPartCrash"), "TryExecuteWorker"), new HarmonyMethod(prefix));
+
+            Compatibility.OtherModPatchMain.ModCompatibilityPatches();
         }
     }
 }

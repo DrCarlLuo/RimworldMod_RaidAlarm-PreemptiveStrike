@@ -37,7 +37,7 @@
 <PES_Infestation_Letter>Unusual Deep-Ground Motion Detected</PES_Infestation_Letter>
 <PES_Infestation_Text>The ground-penetrating scanner in the colony has detected an anomolous movement deep in the gound. It is clear that this is a sign for upcoming infestation.</PES_Infestation_Text>
 
-<PES_Notify_ResoucePod>The incoming drop pods have been confirmed to be resouce pods.</PES_Notify_ResoucePod>
+<PES_Notify_ResoucePod>The incoming drop pods have been confirmed to be resource pods.</PES_Notify_ResoucePod>
 <PES_Notify_RefugeePod>The incoming drop pods have been confirmed to be containing a refugee.</PES_Notify_RefugeePod>
 <PES_Notify_ShipChunk>The incoming large object in the sky has been confirmed to be ship chunks.</PES_Notify_ShipChunk>
 

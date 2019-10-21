@@ -9,7 +9,7 @@
 
     <!-- Goal explanation-->
     <PES_RaidNeg_GoalExp_Extortion>they tell us they launched this raid in order to force us to pay them tribute of:\n {0}x Silver\n(can be paid with silver or gold or both combined, 1 gold = 10 silver) </PES_RaidNeg_GoalExp_Extortion>
-    <PES_RaidNeg_GoalExp_Rescue>they tell us they launched this raid in order to resue some of their fellows that were taken prisoner by our colony. The prisoners they demand us to release including:\n{0} </PES_RaidNeg_GoalExp_Rescue>
+    <PES_RaidNeg_GoalExp_Rescue>they tell us they launched this raid in order to rescue some of their fellows that were taken prisoner by our colony. The prisoners they demand us to release including:\n{0} </PES_RaidNeg_GoalExp_Rescue>
     <PES_RaidNeg_GoalExp_Revenge>they tell us they launched this raid in order to revenge for the death of {0} who was killed by our colony. They demand us to execute the murderer {1}. </PES_RaidNeg_GoalExp_Revenge>
     <PES_RaidNeg_GoalExp_Despoil>they tell us they launched this raid simply out of the need of despoliation. They demand us to hand over the following things: </PES_RaidNeg_GoalExp_Despoil>
     <PES_RaidNeg_GoalExp_Enslave>they tell us this is a slave raid, and they want to enslave and take away the following colonist:\n{0}</PES_RaidNeg_GoalExp_Enslave>

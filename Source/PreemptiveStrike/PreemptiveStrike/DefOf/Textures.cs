@@ -31,5 +31,9 @@ namespace PreemptiveStrike
         public static readonly Texture2D IconReportNormal = ContentFinder<Texture2D>.Get("UI/PES_Report_Normal");
         public static readonly Texture2D IconReportWarning = ContentFinder<Texture2D>.Get("UI/PES_Report_Warning");
         public static readonly Texture2D IconReportDanger = ContentFinder<Texture2D>.Get("UI/PES_Report_Danger");
+
+        public static readonly Texture2D IconFriendly_Unknown = ContentFinder<Texture2D>.Get("UI/PES_Friendly_Unknown");
+
+        public static readonly Graphic FenceGraphics = GraphicDatabase.Get<Graphic_Single>("Things/Minor/Watchtower_Fence", ShaderDatabase.Transparent, new Vector2(5, 9.5f), Color.white);
     }
 }
