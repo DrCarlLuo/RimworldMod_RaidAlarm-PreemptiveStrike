@@ -7,15 +7,15 @@
     <PES_setting_detectionFormula>Detection probability Formula: P = ( c - y ) / c * k\nThen this value will be clamped to [0.1, 0.8] (detect unknown caravan) or [0.2, 0.95] (detect detail information)</PES_setting_detectionFormula>
     <PES_setting_detectionExplain>A = Detection range\nB = Vision Range\nC = A - B\nx = remaining tiles\ny = x - B\nk = the coefficient below\nP is the final probability</PES_setting_detectionExplain>
 
-    <PES_setting_caravanSpeed>Time for an incident caravan to cover one tile in map (in ticks)</PES_setting_caravanSpeed>
+    <PES_setting_caravanSpeed>Time for an incident caravan to cover one tile on the world map (in ticks)</PES_setting_caravanSpeed>
 
     <PES_setting_skyObject>Sky Objects:</PES_setting_skyObject>
-    <PES_setting_skyObject_Large_a>Alarming time before large sky object impacts (in ticks)</PES_setting_skyObject_Large_a>
+    <PES_setting_skyObject_Large_a>Warning time before large sky object impacts (in ticks)</PES_setting_skyObject_Large_a>
     <PES_setting_skyObject_Large_b>Time before identifying large sky objects (in ticks)</PES_setting_skyObject_Large_b>
-    <PES_setting_skyObject_Small_a>Alarming time before small sky object landing(in ticks)</PES_setting_skyObject_Small_a>
+    <PES_setting_skyObject_Small_a>Warning time before small sky object landing(in ticks)</PES_setting_skyObject_Small_a>
     <PES_setting_skyObject_Small_b>Time before identifying small sky objects (in ticks)</PES_setting_skyObject_Small_b>
 
-    <PES_setting_infestation>Alarming time for infestation(in ticks)</PES_setting_infestation>
+    <PES_setting_infestation>Warning time for infestation(in ticks)</PES_setting_infestation>
 
     <PES_setting_negotiationProb>Negotiation Settings</PES_setting_negotiationProb>
 
@@ -34,22 +34,22 @@
 
     <PES_setting_negintro>The probablilites when negotiating about raid goal:</PES_setting_negintro>
     <PES_setting_neg_delay>About trying to make them stop for a while:</PES_setting_neg_delay>
-    <PES_setting_delay_persuasion>Successful persuation</PES_setting_delay_persuasion>
+    <PES_setting_delay_persuasion>Successful persuasion</PES_setting_delay_persuasion>
     <PES_setting_delay_intimidation_s>Successul intimidation</PES_setting_delay_intimidation_s>
     <PES_setting_delay_intimidation_b>Fail intimidation and back fire</PES_setting_delay_intimidation_b>
     <PES_setting_delay_beguilment>Successful beguilement</PES_setting_delay_beguilment>
     <PES_setting_neg_bargain>About trying to bargain with them</PES_setting_neg_bargain>
-    <PES_setting_bargain_persuasion>Successful persuation</PES_setting_bargain_persuasion>
+    <PES_setting_bargain_persuasion>Successful persuasion</PES_setting_bargain_persuasion>
     <PES_setting_bargain_intimidation_s>Successul intimidation</PES_setting_bargain_intimidation_s>
     <PES_setting_bargain_intimidation_b>Fail intimidation and back fire</PES_setting_bargain_intimidation_b>
     <PES_setting_bargain_beguilment>Successful beguilement</PES_setting_bargain_beguilment>
-    <PES_setting_neg_remedy>About trying to ask them change a raid goal</PES_setting_neg_remedy>
-    <PES_setting_remedy_persuasion>Successful persuation</PES_setting_remedy_persuasion>
+    <PES_setting_neg_remedy>About trying to ask them to change a raid goal</PES_setting_neg_remedy>
+    <PES_setting_remedy_persuasion>Successful persuasion</PES_setting_remedy_persuasion>
     <PES_setting_remedy_intimidation_s>Successul intimidation</PES_setting_remedy_intimidation_s>
     <PES_setting_remedy_intimidation_b>Fail intimidation and back fire</PES_setting_remedy_intimidation_b>
     <PES_setting_remedy_beguilment>Successful beguilement</PES_setting_remedy_beguilment>
 
-    <PES_setting_mesintro>When tryting to make contact with a caravan, before the above probablities are tested, there is a probablity of whether this broadcasted message can be received by them or not, it is calculated by:</PES_setting_mesintro>
+    <PES_setting_mesintro>When trying to make contact with a caravan, before the above probablities are tested, there is a probablity of whether this broadcasted message can be received by them or not, it is calculated by:</PES_setting_mesintro>
     <PES_setting_mesExp>P = 1 - 0.2 * difficulty + offset   (P will be clamped to [0, 1])</PES_setting_mesExp>
     <PES_setting_megTip>difficulty is 0 for Peaceful, 5 for Merciless;\noffset is the following value</PES_setting_megTip>
     <PES_setting_mesOffset>Offset for the probablity of message receiving</PES_setting_mesOffset>
