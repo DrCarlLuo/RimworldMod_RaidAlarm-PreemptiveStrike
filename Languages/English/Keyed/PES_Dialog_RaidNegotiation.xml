@@ -2,16 +2,16 @@
 <LanguageData>
     <PES_RaidNeg_Proglog>A member of the raiding team &quot;{0}&quot; answers the call. This raiding team is from {1}.</PES_RaidNeg_Proglog>
 
-    <PES_RaidNeg_SurrenderSuccess>After their demand is met, the raiding team {0} is not longer heading toward our colony.</PES_RaidNeg_SurrenderSuccess>
+    <PES_RaidNeg_SurrenderSuccess>After their demand was met, the raiding team {0} is no longer heading toward our colony.</PES_RaidNeg_SurrenderSuccess>
 
     <PES_RaidNeg_Attitude_Rude>Muttering an insult, </PES_RaidNeg_Attitude_Rude>
     <PES_RaidNeg_Attitude_Polite>Speaking with unexpected courtesy, </PES_RaidNeg_Attitude_Polite>
 
     <!-- Goal explanation-->
     <PES_RaidNeg_GoalExp_Extortion>they tell us they launched this raid in order to force us to pay them tribute of:\n {0}x Silver\n(can be paid with silver or gold or both combined, 1 gold = 10 silver) </PES_RaidNeg_GoalExp_Extortion>
-    <PES_RaidNeg_GoalExp_Rescue>they tell us they launched this raid in order to rescue some of their fellows that were taken prisoner by our colony. The prisoners they demand us to release including:\n{0} </PES_RaidNeg_GoalExp_Rescue>
-    <PES_RaidNeg_GoalExp_Revenge>they tell us they launched this raid in order to revenge for the death of {0} who was killed by our colony. They demand us to execute the murderer {1}. </PES_RaidNeg_GoalExp_Revenge>
-    <PES_RaidNeg_GoalExp_Despoil>they tell us they launched this raid simply out of the need of despoliation. They demand us to hand over the following things: </PES_RaidNeg_GoalExp_Despoil>
+    <PES_RaidNeg_GoalExp_Rescue>they tell us they launched this raid in order to rescue some of their fellows that were taken prisoner by our colony. The prisoners they demand us to release includes:\n{0} </PES_RaidNeg_GoalExp_Rescue>
+    <PES_RaidNeg_GoalExp_Revenge>they tell us they launched this raid in order to avenge the death of {0} who was killed by our colony. They demand we execute the murderer {1}. </PES_RaidNeg_GoalExp_Revenge>
+    <PES_RaidNeg_GoalExp_Despoil>they tell us they launched this raid simply out of the need of despoliation. They demand we hand over the following things: </PES_RaidNeg_GoalExp_Despoil>
     <PES_RaidNeg_GoalExp_Enslave>they tell us this is a slave raid, and they want to enslave and take away the following colonist:\n{0}</PES_RaidNeg_GoalExp_Enslave>
     <PES_RaidNeg_GoalExp_Conquer>they tell us they launched this raid in order to conquer this land for their faction, making this colony their new territory. </PES_RaidNeg_GoalExp_Conquer>
 
@@ -20,18 +20,18 @@
 
     <!-- Rebuff words-->
     <PES_RaidNeg_Rebuff_Head>[Rebuff and Insult]: </PES_RaidNeg_Rebuff_Head>
-    <PES_RaidNeg_Rebuff_Rescue>EXECUTE these prisoners RIGHT NOW! Tell them to stop their reveries and their destiny will, inevitably, be the same with these pathetic prisoners!</PES_RaidNeg_Rebuff_Rescue>
-    <PES_RaidNeg_Rebuff_Despoil>Tell them to expect nothing from us and we shall fight to the death to defend our properties from the barbarians like them!</PES_RaidNeg_Rebuff_Despoil>
+    <PES_RaidNeg_Rebuff_Rescue>EXECUTE these prisoners RIGHT NOW! Tell them to stop their reveries and their destiny will, inevitably, be the same as these pathetic prisoners!</PES_RaidNeg_Rebuff_Rescue>
+    <PES_RaidNeg_Rebuff_Despoil>Tell them to expect nothing from us and we shall fight to the death to defend our properties from barbarians like them!</PES_RaidNeg_Rebuff_Despoil>
     <PES_RaidNeg_Rebuff_Revenge> </PES_RaidNeg_Rebuff_Revenge>
     <PES_RaidNeg_Rebuff_Enslave> </PES_RaidNeg_Rebuff_Enslave>
     <PES_RaidNeg_Rebuff_Conquer> </PES_RaidNeg_Rebuff_Conquer>
-    <PES_RaidNeg_Rebuff_Extortion>Tell them to expect nothing from us and we shall fight to the death to defend our properties from the barbarians like them!</PES_RaidNeg_Rebuff_Extortion>
+    <PES_RaidNeg_Rebuff_Extortion>Tell them to expect nothing from us and we shall fight to the death to defend our properties from barbarians like them!</PES_RaidNeg_Rebuff_Extortion>
 
     <PES_RaidNeg_Rebuff_Rescue_Fail>Not available. This negotiator is incapable of violence.</PES_RaidNeg_Rebuff_Rescue_Fail>
 
     <PES_RaidNeg_Rebuff_Confirmation>Are you sure you want to do this?</PES_RaidNeg_Rebuff_Confirmation>
     <PES_RaidNeg_Rebuff_Confirmation_Rescue>The following prisoners will be executed immediately: </PES_RaidNeg_Rebuff_Confirmation_Rescue>
-    <PES_RaidNeg_Rebuff_Explanation>Doing this will boost the morale of all the colonists. When the raiders arrive, all colonists will get a mood buff and combat buff based on the social skill of {0}. But beware, if the current negotiator is too poor in social skill, this buff will change to a debuff. \n\nHowever, the enemy will become furious. The raiding goal of this raiding team will change to SMITE and you can no longer communicate with them. Also, this raiding team will be reinforced (randomly from 25% to 100% of the current power).\n</PES_RaidNeg_Rebuff_Explanation>
+    <PES_RaidNeg_Rebuff_Explanation>Doing this will boost the morale of all the colonists. When the raiders arrive, all colonists will get a mood buff and combat buff based on the social skill of {0}. But beware, if the current negotiator's social skill is too poor, this buff will change to a debuff. \n\nHowever, the enemy will become furious. The raiding goal of this raiding team will change to SMITE and you can no longer communicate with them. Also, this raiding team will be reinforced (randomly from 25% to 100% of the current power).\n</PES_RaidNeg_Rebuff_Explanation>
 
     <PES_RaidNeg_NegDeeper>Try to negotiate over their demand</PES_RaidNeg_NegDeeper>
     <PES_RaidNeg_NegDeeper_Prolog>How do you want to negotiate?</PES_RaidNeg_NegDeeper_Prolog>
@@ -41,11 +41,11 @@
 
     <!-- delays-->
     <PES_RaidNeg_Delay>Ask them to slow down their marching so that we can better think about their demand, or earn us some time to prepare for upcoming combat</PES_RaidNeg_Delay>
-    <PES_RaidNeg_Delay_Intro>What should we say to them to ask them to stop approaching our colony?</PES_RaidNeg_Delay_Intro>
+    <PES_RaidNeg_Delay_Intro>What should we say to them to stop them from approaching our colony?</PES_RaidNeg_Delay_Intro>
 
     <PES_RaidNeg_Delay_Staging>They've already stopped marching. Remaining Time: {0}</PES_RaidNeg_Delay_Staging>
-    <PES_RaidNeg_Delay_CoolDown>We can only try to ask them to do this every one hour. Remaining Time: {0}</PES_RaidNeg_Delay_CoolDown>
-    <PES_RaidNeg_Delay_DoneBefore>We can only ask them for doing this once.</PES_RaidNeg_Delay_DoneBefore>
+    <PES_RaidNeg_Delay_CoolDown>We can only try to ask them this once every hour. Remaining Time: {0}</PES_RaidNeg_Delay_CoolDown>
+    <PES_RaidNeg_Delay_DoneBefore>We can only ask them to do this once.</PES_RaidNeg_Delay_DoneBefore>
 
     <PES_RaidNeg_Delay_Success_Name>to delay the raiding</PES_RaidNeg_Delay_Success_Name>
     <PES_RaidNeg_Delay_Smite_Name>to make them angry and punish us</PES_RaidNeg_Delay_Smite_Name>
@@ -58,7 +58,7 @@
     <PES_RaidNeg_Delay_Intimidation_Enslave>"We need time to discuss your suggestion. Do not approach our colony any more, or you will get nothing but our mortar fire!"</PES_RaidNeg_Delay_Intimidation_Enslave>
     <PES_RaidNeg_Delay_Intimidation_Extortion>"We need time to discuss your suggestion. Do not approach our colony any more, or you will get nothing but our mortar fire!"</PES_RaidNeg_Delay_Intimidation_Extortion>
 
-    <PES_RaidNeg_Delay_Beguilement_Rescue>"The prisoners you want is in one of our trading caravan. Stop your marching and give us some time to send them back here."</PES_RaidNeg_Delay_Beguilement_Rescue>
+    <PES_RaidNeg_Delay_Beguilement_Rescue>"The prisoners you want are in one of our trading caravans. Stop your marching and give us some time to send them back here."</PES_RaidNeg_Delay_Beguilement_Rescue>
     <PES_RaidNeg_Delay_Beguilement_Despoil>"We don't have sufficient resources here in our colony. We are transporting some resouces from our trading caravan. Give us some time and stop your marching."</PES_RaidNeg_Delay_Beguilement_Despoil>
     <PES_RaidNeg_Delay_Beguilement_Revenge>"The person you want is not here in this colony but in one of our trading caravan. We are sending that person back, so stop your matching and give us some time."</PES_RaidNeg_Delay_Beguilement_Revenge>
     <PES_RaidNeg_Delay_Beguilement_Enslave>"The person you want is not here in this colony but in one of our trading caravan. We are sending that person back, so stop your matching and give us some time."</PES_RaidNeg_Delay_Beguilement_Enslave>
@@ -66,10 +66,10 @@
 
     <PES_RaidNeg_Delay_Success>{0} agree to stop for a while. However, they say that they will only stop for three hours. After three hours, if their demand is still not met, they will keep heading towards our colony.</PES_RaidNeg_Delay_Success>
     <PES_RaidNeg_Delay_Fail>They spurn our suggestion and keep on marching towards our colony.</PES_RaidNeg_Delay_Fail>
-    <PES_RaidNeg_Delay_Smite>They get really angry about the intimidation and consider it as an insult. They decide to give us a punishment and will not communicate with us any more.</PES_RaidNeg_Delay_Smite>
+    <PES_RaidNeg_Delay_Smite>They get really angry about the intimidation and consider it as an insult. They decide to punish us and will not communicate with us any more.</PES_RaidNeg_Delay_Smite>
     
     <!-- Goals -->
-    <PES_RaidNeg_NegCoolDown>We can only do negotiation every one hour. Remaining Time: {0}</PES_RaidNeg_NegCoolDown>
+    <PES_RaidNeg_NegCoolDown>We can only negotiate once per hour. Remaining Time: {0}</PES_RaidNeg_NegCoolDown>
 
     <PES_RaidNeg_NegDeeper_Surrender_Comfirmation>Are you sure you are going to capitulate to their demand?</PES_RaidNeg_NegDeeper_Surrender_Comfirmation>
 
@@ -78,10 +78,10 @@
     <PES_RaidNeg_NegDeeper_Surrender_Fail_Prisoner>Not available. At least one of the prisoners are not available.</PES_RaidNeg_NegDeeper_Surrender_Fail_Prisoner>
     <PES_RaidNeg_NegDeeper_Surrender_Fail_Enslave>Not available. At least one of the colonists they want are not available.</PES_RaidNeg_NegDeeper_Surrender_Fail_Enslave>
     
-    <PES_RaidNeg_NegDeeper_Bargain_Intro>To what extent do you want to redue their demand to?</PES_RaidNeg_NegDeeper_Bargain_Intro>
+    <PES_RaidNeg_NegDeeper_Bargain_Intro>To what extent do you want to reduce their demand to?</PES_RaidNeg_NegDeeper_Bargain_Intro>
     <PES_RaidNeg_NegDeeper_Bargin_Begin>What should we say to them?</PES_RaidNeg_NegDeeper_Bargin_Begin>
 
-    <PES_RaidNeg_NegDeeper_Bargain_Invalid_Conquer>Not available. They want the fully control of our colony.</PES_RaidNeg_NegDeeper_Bargain_Invalid_Conquer>
+    <PES_RaidNeg_NegDeeper_Bargain_Invalid_Conquer>Not available. They want the full control of our colony.</PES_RaidNeg_NegDeeper_Bargain_Invalid_Conquer>
     <PES_RaidNeg_NegDeeper_Bargain_Invalid_OnePrisoner>Not available. They only want one prisoner. Cannot reduce this demand further.</PES_RaidNeg_NegDeeper_Bargain_Invalid_OnePrisoner>
     <PES_RaidNeg_NegDeeper_Bargain_Invalid_OneSlave>Not available. They only want one colonist. Cannot reduce this demand further</PES_RaidNeg_NegDeeper_Bargain_Invalid_OneSlave>
 
@@ -90,8 +90,8 @@
     <PES_RaidNeg_NegDeeper_Bargain_Option_Enslave>{0} less colonist(s)</PES_RaidNeg_NegDeeper_Bargain_Option_Enslave>
 
     <PES_RaidNeg_NegDeeper_Bargain_Success>They agreed to reduce their demand.</PES_RaidNeg_NegDeeper_Bargain_Success>
-    <PES_RaidNeg_NegDeeper_Bargain_Fail>They refuse to accept our suggestion about reducing their demand. Their deman will remain the same.</PES_RaidNeg_NegDeeper_Bargain_Fail>
-    <PES_raidNeg_NegDeeper_Bargain_Smite>They get really angry about the intimidation and consider it as an insult. They decide to give us a punishment and will not communicate with us any more.</PES_raidNeg_NegDeeper_Bargain_Smite>
+    <PES_RaidNeg_NegDeeper_Bargain_Fail>They refused our suggestion about reducing their demand. Their demand will remain the same.</PES_RaidNeg_NegDeeper_Bargain_Fail>
+    <PES_raidNeg_NegDeeper_Bargain_Smite>They get really angry about the intimidation and consider it as an insult. They decide to punish us and will not communicate with us any more.</PES_raidNeg_NegDeeper_Bargain_Smite>
 
     <PES_raidNeg_NegDeeper_Bargain_Success_Name>to make them accept our suggestion</PES_raidNeg_NegDeeper_Bargain_Success_Name>
     <PES_RaidNeg_Negdeeper_Bargain_Smite_Name>to make them angry and punish us</PES_RaidNeg_Negdeeper_Bargain_Smite_Name>
