@@ -1,48 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <LanguageData>
-  <PES_CaravanDismiss>{0} is no longer heading towards our colony and tracked by our reconnaissance system.</PES_CaravanDismiss>
-  <PES_PrisonerDead>{0} is getting really angry now because one of the prisoner they want is dead. They will now revenge on the colony.</PES_PrisonerDead>
-  <PES_AllSlaveDead>{0} changes their raiding goal to Extortion, because all the colonists they want to enslave are dead.</PES_AllSlaveDead>
-  <PES_CommunicationEstablished>We have established communication with {0}. Use Comms Console to contact them.</PES_CommunicationEstablished>
+  <PES_CaravanDismiss>{0} ya no se dirige hacia nuestra colonia y es monitoreada por nuestro sistema de reconocimiento.</PES_CaravanDismiss>
+  <PES_PrisonerDead>{0} se está enfadando mucho ahora porque uno de los prisioneros que quieren está muerto. Ahora se vengarán con la colonia.</PES_PrisonerDead>
+  <PES_AllSlaveDead>{0} cambiaron su objetivo de incursión a la extorsión, porque todos los colonos a los que quieren esclavizar están muertos.</PES_AllSlaveDead>
+  <PES_CommunicationEstablished>Hemos establecido comunicación con {0}. Utilice la consola de comunicaciones para ponerse en contacto con ellos.</PES_CommunicationEstablished>
 
-  <PES_Detected_Title_Human>Crowd Incoming</PES_Detected_Title_Human>
-  <PES_Detected_Title_Animal>Herd Incoming</PES_Detected_Title_Animal>
-  <PES_Detected_Text_Human>The reconnaissance system in our colony has detected that an unknown human crowd is moving toward our colony. Their faction and intention are unknown. The reconnaissance system is trying to identify more information about it. Detail information is in the security report.</PES_Detected_Text_Human>
-  <PES_Detected_Text_Animal>The reconnaissance system in our colony detected that an unusual animal herd is moving toward our colony. The reconnaissance system is trying to identify more information about it. Detail information is in the security report.</PES_Detected_Text_Animal>
+  <PES_Detected_Title_Human>Multitud llegando</PES_Detected_Title_Human>
+  <PES_Detected_Title_Animal>Rebaño llegando</PES_Detected_Title_Animal>
+  <PES_Detected_Text_Human>El sistema de reconocimiento de nuestra colonia ha detectado que una multitud humana desconocida se dirige hacia nuestra colonia. Su facción e intención son desconocidas. El sistema de reconocimiento está tratando de obtener más información al respecto. La información detallada se encuentra en el informe de seguridad.</PES_Detected_Text_Human>
+  <PES_Detected_Text_Animal>El sistema de reconocimiento en nuestra colonia detectó que un rebaño de animales inusual se está moviendo hacia nuestra colonia. El sistema de reconocimiento está tratando de obtener más información al respecto. La información detallada se encuentra en el informe de seguridad.</PES_Detected_Text_Animal>
 
-  <PES_Hostile_Confirmed>Hostile Entity Confirmed</PES_Hostile_Confirmed>
-  <PES_Hostile_Text_Human>The reconnaissance system in our colony has confirmed the incoming human crowed is a hostile raiding team. More information is in the security report.</PES_Hostile_Text_Human>
-  <PES_Hostile_Text_Animal>The reconnaissance system in our colony has confirmed the incoming animal herd are mad animals. More information is in the security report.</PES_Hostile_Text_Animal>
+  <PES_Hostile_Confirmed>Entidad Hostil Confirmada</PES_Hostile_Confirmed>
+  <PES_Hostile_Text_Human>El sistema de reconocimiento de nuestra colonia ha confirmado que los humanos que llegan son un equipo de asalto hostil. Más información en el informe de seguridad.</PES_Hostile_Text_Human>
+  <PES_Hostile_Text_Animal>El sistema de reconocimiento de nuestra colonia ha confirmado que los animales que llegan son animales locos. Más información en el informe de seguridad.</PES_Hostile_Text_Animal>
 
-  <PES_Neutral_Message>The reconnaissance system in our colony has confirmed the incoming crowd is nonhostile. See more in security report.</PES_Neutral_Message>
-  <PES_Neutral_Message_Animal>The reconnaissance system in our colony has confirmed the incoming herd is nonhostile. See more in security report.</PES_Neutral_Message_Animal>
+  <PES_Neutral_Message>El sistema de reconocimiento de nuestra colonia ha confirmado que la multitud no es hostil. Ver más en reporte de seguridad.</PES_Neutral_Message>
+  <PES_Neutral_Message_Animal>El sistema de reconocimiento de nuestra colonia ha confirmado que el rebaño entrante no es hostil. Ver más en reporte de seguridad.</PES_Neutral_Message_Animal>
 
-  <PES_Caravan_Confirmed>"{0}" has entered the vision range of our colony, all information revealed. </PES_Caravan_Confirmed>
+  <PES_Caravan_Confirmed>"{0}" ha entrado en el campo de visión de nuestra colonia, toda la información ha sido revelada. </PES_Caravan_Confirmed>
 
-  <PES_Update_NeedSkill>A colonist with at least Level {0} in construction is required to construct this upgrading</PES_Update_NeedSkill>
+  <PES_Update_NeedSkill>Un colono con al menos el Nivel {0} en Construcción es requerido para construir esta mejora.</PES_Update_NeedSkill>
 
-  <PES_Spot_SkyFaller_Big>The reconnaissance system in our colony has spotted an anomalous large object in the sky</PES_Spot_SkyFaller_Big>
-  <PES_Spot_SkyFaller_Small>The reconnaissace system in our colony has spotted incoming drop pods</PES_Spot_SkyFaller_Small>
+  <PES_Spot_SkyFaller_Big>El sistema de reconocimiento de nuestra colonia ha detectado un gran objeto anómalo en el cielo.</PES_Spot_SkyFaller_Big>
+  <PES_Spot_SkyFaller_Small>El sistema de reconocimiento de nuestra colonia ha detectado cápsulas de escape entrantes</PES_Spot_SkyFaller_Small>
 
-  <PES_Warning_Meteorite>Warning: Meteorite Impact</PES_Warning_Meteorite>
-  <PES_Warning_Meteorite_Text>The reconnaissance system in our colony has confirmed that the incoming large object is a meteorite. The impact spot has been successfully calculated. See the security report for more information.</PES_Warning_Meteorite_Text>
+  <PES_Warning_Meteorite>Advertencia: Impacto de Meteorito</PES_Warning_Meteorite>
+  <PES_Warning_Meteorite_Text>El sistema de reconocimiento de nuestra colonia ha confirmado que el objeto grande entrante es un meteorito. El punto de impacto ha sido calculado con éxito. Consulte el informe de seguridad para obtener más información.</PES_Warning_Meteorite_Text>
 
-  <PES_Warning_ShipPart>Warning: Ship Part Impact</PES_Warning_ShipPart>
-  <PES_Warning_Shippart_Text>The reconnaissance system in our colony has confirmed that the incoming large object is a large piece of an ancient ship! The impact spot has been successfully calculated. See the security report for more information.</PES_Warning_Shippart_Text>
+  <PES_Warning_ShipPart>Advertencia: Impacto de Parte de Nave</PES_Warning_ShipPart>
+  <PES_Warning_Shippart_Text>¡El sistema de reconocimiento en nuestra colonia ha confirmado que el objeto grande entrante es una pieza de gran tamaño de una nave antigua! El punto de impacto ha sido calculado con éxito. Consulte el informe de seguridad para obtener más información.</PES_Warning_Shippart_Text>
 
-  <PES_Warning_DropPodAssault>Warning: Drop Pod Assault</PES_Warning_DropPodAssault>
-  <PES_Warning_DropPodAssault_Text>The reconnaissance system inour colony has confirmed that the incoming drop pods are actually containing enemies! Their landing spot has been successfully calculated. See the security report of more information.</PES_Warning_DropPodAssault_Text>
+  <PES_Warning_DropPodAssault>Advertencia: Asalto con Cápsulas de Lanzamiento</PES_Warning_DropPodAssault>
+  <PES_Warning_DropPodAssault_Text>¡El sistema de reconocimiento en nuestra colonia ha confirmado que las cápsulas de lanzamiento entrantes contienen enemigos. Su lugar de aterrizaje ha sido calculado con éxito. Vea el informe de seguridad para más información.</PES_Warning_DropPodAssault_Text>
 
-  <PES_Infestation_Letter>Unusual Deep-Ground Motion Detected</PES_Infestation_Letter>
-  <PES_Infestation_Text>The ground-penetrating scanner in the colony has detected an anomolous movement deep in the gound. It is clear that this is a sign for upcoming infestation.</PES_Infestation_Text>
+  <PES_Infestation_Letter>Detección de movimiento inusual en el sub-suelo</PES_Infestation_Letter>
+  <PES_Infestation_Text>El escáner de penetración en el suelo de la colonia ha detectado un movimiento anómalo en lo profundo de la tierra. Está claro que esto es una señal de una próxima infestación.</PES_Infestation_Text>
 
-  <PES_Notify_ResoucePod>The incoming drop pods have been confirmed to be resouce pods.</PES_Notify_ResoucePod>
-  <PES_Notify_RefugeePod>The incoming drop pods have been confirmed to be containing a refugee.</PES_Notify_RefugeePod>
-  <PES_Notify_ShipChunk>The incoming large object in the sky has been confirmed to be ship chunks.</PES_Notify_ShipChunk>
+  <PES_Notify_ResoucePod>Se ha confirmado que las cápsulas de lanzamiento entrantes son cápsulas de recursos.</PES_Notify_ResoucePod>
+  <PES_Notify_RefugeePod>Se ha confirmado que las cápsulas de lanzamiento entrantes contienen a un refugiado.</PES_Notify_RefugeePod>
+  <PES_Notify_ShipChunk>Se ha confirmado que el objeto grande entrante en el cielo son trozos de una nave.</PES_Notify_ShipChunk>
 
-  <PES_Warning_Flare_Early>Solar Flare(Early Stage)</PES_Warning_Flare_Early>
-  <PES_Warning_Flare_Early_Text>A solar flare is about to blast the planet. Radar and statellite uplink has already stop functioning because of the electromagnetic interference. Other electronic devices are predicted to stop working in about 12 hours when the solar flare finally hit this planet.</PES_Warning_Flare_Early_Text>
+  <PES_Warning_Flare_Early>Llamarada Solar (Etapa Temprana)</PES_Warning_Flare_Early>
+  <PES_Warning_Flare_Early_Text>Una erupción solar está a punto de golpear el planeta. El enlace ascendente de radar y satélite ya ha dejado de funcionar debido a la interferencia electromagnética. Se predice que otros dispositivos electrónicos dejarán de funcionar en unas 12 horas cuando la erupción solar finalmente golpee este planeta.  </PES_Warning_Flare_Early_Text>
 
-</LanguageData>
-
+</LanguageData> 

@@ -1,46 +1,46 @@
-The Black Brigade
-The Black Wings
-The Cardinal Command
-The Cardinal Corps
-The Cloud
-The Covert Battalion
-The Death Platoon
-The Death's Angels
-The Doomed Ones
-The Ebon Enders
-The Final Regiment
-The Fire Battalion
-The Fire Troops
-The Flaming Army
-The Flaming Battalion
-The Forsaken Soldiers
-The Hell Squad
-The Hellfire Squad
-The Hopeless
-The Invincibles
-The Ivrarun
-The Iyolim
-The Last Hope
-The Last Legion
-The Legion
-The Marauders
-The Maroon Marauders
-The Maroon Myriad
-The Peace Corps
-The Pure Platoon
-The Robed Riders
-The Rose Riders
-The Ruthless
-The Ruthless Regiment
-The Sentinels
-The Silver Lining
-The Silver Squad
-The Sundry
-The Super Soldiers
-The True Order
-The Trust Troops
-The Undefeated
-The Velvet Victors
-The Vortex
-The Watchdogs
-The Wumanir
+﻿La Brigada Negra
+Las Alas Negras
+El Comando Cardinal
+El Cuerpo Cardinal
+La Nube
+El Batallón Encubierto
+El Pelotón de la Muerte
+Los Angeles de la Muerte
+Los Condenados
+Los Enderezadores de Ébano 
+El Regimiento Final
+El Batallón de Fuego
+Las Tropas de Fuego
+El Ejército en Llamas
+El Batallón en Llamas
+Los Soldados Desamparados
+El Escuadrón del Demonio
+El Escuadrón del Infierno 
+Los Desesperanzados
+Los Invencibles
+El Ivrarun
+El Iyolim
+La Ultima Esperanza
+La Ultima Legión
+La Legión
+Los Saqueadores
+Los Saqueadores Cimarrones
+La Miríada de Cimarrones
+El Cuerpo de Paz
+El Pelotón Puro
+Los Jinetes de las Túnicas
+Los Jinetes de las Rosas
+Los Despiadados
+El Regimiento de los Despiadados
+Los Sentinelas
+El Revestimiento de Plata
+El Escuadrón de Plata
+Los Distintos
+Los Super Soldados
+La Orden de la Verdad
+Las Tropas de la Verdad
+Los Invictos
+Los Vencedores de Terciopelo
+La Espiral
+Los Perro Guardianes
+Los Wumanir
