@@ -4,38 +4,6 @@
   <PES_PrimitiveTower.label>Construcción de torre primitiva</PES_PrimitiveTower.label>
   <PES_PrimitiveTower.description>Permite construir una torre de vigilancia primitiva para proporcionar capacidad básica de reconocimiento.</PES_PrimitiveTower.description>
 
-
-  <!-- <ResearchProjectDef>
-    <defName>PES_Astrology</defName>
-    <label>Astrology</label>
-    <description>111</description>
-    <baseCost>200</baseCost>
-    <techLevel>Medieval</techLevel>
-    <tags>
-      <li>TribalStart</li>
-    </tags>
-    <researchViewX>0</researchViewX>
-    <researchViewY>3.5</researchViewY>
-    <prerequisites>
-      <li>PES_PrimitiveTower</li>
-    </prerequisites>
-    <tab>PreemptiveStrike</tab>
-  </ResearchProjectDef>
-
-  <ResearchProjectDef>
-    <defName>PES_MindOverMatter</defName>
-    <label>Mind over matter</label>
-    <description>111</description>
-    <baseCost>500</baseCost>
-    <techLevel>Medieval</techLevel>
-    <researchViewX>0</researchViewX>
-    <researchViewY>4.5</researchViewY>
-    <prerequisites>
-      <li>PES_Astrology</li>
-    </prerequisites>
-    <tab>PreemptiveStrike</tab>
-  </ResearchProjectDef> -->
-
   <PES_ModernTower.label>Torre de Vigilancia Moderna</PES_ModernTower.label>
   <PES_ModernTower.description>Permite construir torres de vigilancia modernas que proporcionan una mejor capacidad de reconocimiento a la colonia y pueden ser instaladas con varias mejoras.</PES_ModernTower.description>
 

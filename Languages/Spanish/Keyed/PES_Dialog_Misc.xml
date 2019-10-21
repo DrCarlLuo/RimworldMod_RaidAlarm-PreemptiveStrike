@@ -14,15 +14,15 @@
   <PES_Condition_Neutral>para amigos</PES_Condition_Neutral>
   <PES_Condition_Hostile>para enemigos</PES_Condition_Hostile>
 
-  <PES_Odds_VeryHigh>&lt;color=lime&gt;probabilidad MUY ALTA&lt;/color&gt;</PES_Odds_VeryHigh>
-  <PES_Odds_High>&lt;color=green&gt;probabilidad ALTA&lt;/color&gt;</PES_Odds_High>
-  <PES_Odds_Medium>&lt;color=cyan&gt;probabilidad MEDIA&lt;/color&gt;</PES_Odds_Medium>
-  <PES_Odds_Low>&lt;color=#f0a1aa&gt;probabilidad BAJA&lt;/color&gt;</PES_Odds_Low>
-  <PES_Odds_VeryLow>&lt;color=red&gt;probabilidad MUY BAJA&lt;/color&gt;</PES_Odds_VeryLow>
+  <PES_Odds_VeryHigh><color=lime>probabilidad MUY ALTA</color></PES_Odds_VeryHigh>
+  <PES_Odds_High><color=green>probabilidad ALTA</color></PES_Odds_High>
+  <PES_Odds_Medium><color=cyan>probabilidad MEDIA</color></PES_Odds_Medium>
+  <PES_Odds_Low><color=#f0a1aa>probabilidad BAJA</color></PES_Odds_Low>
+  <PES_Odds_VeryLow><color=red>probabilidad MUY BAJA</color></PES_Odds_VeryLow>
 
   <PES_ASHAME>desafortunado</PES_ASHAME>
   <PES_Reassuring>apaciguador</PES_Reassuring>
-  <PES_Nice>bien</PES_Nice>
+  <PES_Nice>bueno</PES_Nice>
   <PES_RaiseAlarm>¡Enemigo llegando! ¡Activa la alarma!</PES_RaiseAlarm>
   <PES_trembling>temblando...</PES_trembling>
   <PES_DAMNIT>¡Maldita sea!</PES_DAMNIT>
