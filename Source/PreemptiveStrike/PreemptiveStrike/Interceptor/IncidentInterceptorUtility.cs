@@ -122,7 +122,7 @@ namespace PreemptiveStrike.Interceptor
 
             if (CurrentIncidentDef == null)
             {
-                Log.Message("PES: TryResolveRaidSpawnCenter is executed without an incidentworker. So this \"incident\" won't be intercepted by PES");
+                Log.Error("PES: A raid incident that is not compatible with Preemptive Strike is trying to execute. So this incident won't be intercepted by PES and will be executed in it vanilla way");
                 return false; //Fix v1.1.4: In some mods, their raids are implemented without a incidentworker
             }
 
@@ -185,7 +185,7 @@ namespace PreemptiveStrike.Interceptor
 
             if (incidentDef == null)
             {
-                Log.Message("PES: TryResolveRaidSpawnCenter is executed without an incidentworker. So this \"incident\" won't be intercepted by PES");
+                Log.Error("PES: A raid incident that is not compatible with Preemptive Strike is trying to execute. So this incident won't be intercepted by PES and will be executed in it vanilla way");
                 return false;
             }
 
