@@ -7,6 +7,7 @@ using Verse;
 using UnityEngine;
 using PreemptiveStrike.IncidentCaravan;
 using PreemptiveStrike.DetectionSystem;
+using PreemptiveStrike.Mod;
 
 namespace PreemptiveStrike.UI
 {
@@ -29,12 +30,22 @@ namespace PreemptiveStrike.UI
             this.doCloseX = false;
             this.doCloseButton = false;
             //windowRect = new Rect(Verse.UI.screenWidth - UIConstants.DefualtWindowPin2RightIntend - UIConstants.DefaultWindowWidth, 100f, UIConstants.DefaultWindowWidth, UIConstants.TitleHeight + UIConstants.TitleIntend + 35f);
-            windowRect = new Rect(Verse.UI.screenWidth - UIConstants.TinyWindowSize - UIConstants.TinyWindowPinIntend, 100f, UIConstants.TinyWindowSize, UIConstants.TinyWindowSize);
+            //windowRect = new Rect(Verse.UI.screenWidth - UIConstants.TinyWindowSize - UIConstants.TinyWindowPinIntend, 100f, UIConstants.TinyWindowSize, UIConstants.TinyWindowSize);
+            SetInitialSizeAndPosition();
         }
 
         protected override void SetInitialSizeAndPosition()
         {
-            windowRect = new Rect(Verse.UI.screenWidth - UIConstants.TinyWindowSize - UIConstants.TinyWindowPinIntend, 100f, UIConstants.TinyWindowSize, UIConstants.TinyWindowSize);
+            if(PES_Settings.TinyUIRectSaved)
+            {
+                windowRect = PES_Settings.TinyUIRect;
+            }
+            else
+            {
+                windowRect = PES_Settings.TinyUIRect = new Rect(Verse.UI.screenWidth - UIConstants.TinyWindowSize - UIConstants.TinyWindowPinIntend, 100f, UIConstants.TinyWindowSize, UIConstants.TinyWindowSize);
+            }
+            windowRect.width = UIConstants.TinyWindowSize;
+            windowRect.height = UIConstants.TinyWindowSize;
         }
 
         protected override float Margin => 0f;
@@ -44,8 +55,10 @@ namespace PreemptiveStrike.UI
             //float Offsetx = (UIConstants.TinyWindowSize - inRect.width) / 2;
             //float Offsety = (UIConstants.TinyWindowSize - inRect.height) / 2;
             //Rect rect = new Rect(inRect.x - Offsetx, inRect.y - Offsety,UIConstants.TinyWindowSize,UIConstants.TinyWindowSize);
-            windowRect = new Rect(Verse.UI.screenWidth - UIConstants.TinyWindowSize - UIConstants.TinyWindowPinIntend, windowRect.y, windowRect.width, windowRect.height);
+            //windowRect = new Rect(Verse.UI.screenWidth - UIConstants.TinyWindowSize - UIConstants.TinyWindowPinIntend, windowRect.y, windowRect.width, windowRect.height);
             MakeItInScreen();
+            PES_Settings.TinyUIRect = windowRect;
+
             float picx = 46 * 82 / 110f;
             float picy = 46;
             Rect rect = new Rect((UIConstants.TinyWindowSize - picx) / 2, (UIConstants.TinyWindowSize - picy) / 2, picx, picy);

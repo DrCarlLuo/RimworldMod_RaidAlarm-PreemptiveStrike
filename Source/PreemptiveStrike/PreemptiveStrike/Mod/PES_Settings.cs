@@ -53,6 +53,35 @@ namespace PreemptiveStrike.Mod
         public static float BaseRemedyIntimidationSmiteChance = 0.4f;
         public static float BaseRemedyBeguilementChance = 0.5f;
 
+        //UI settings
+        public static bool TinyUIRectSaved = false;
+        public static float tinyUIRect_x;
+        public static float tinyUIRect_y;
+        public static float tinyUIRect_width;
+        public static float tinyUIRect_height;
+
+        public static Rect TinyUIRect
+        {
+            get
+            {
+                return new Rect(tinyUIRect_x, tinyUIRect_y, tinyUIRect_width, tinyUIRect_height);
+            }
+            set
+            {
+                TinyUIRectSaved = true;
+                Rect curRect = new Rect(tinyUIRect_x, tinyUIRect_y, tinyUIRect_width, tinyUIRect_height);
+                if (curRect != value)
+                {
+                    tinyUIRect_x = value.x;
+                    tinyUIRect_y = value.y;
+                    tinyUIRect_width = value.width;
+                    tinyUIRect_height = value.height;
+                    if (Scribe.mode == LoadSaveMode.Inactive)
+                        PES.Instance.WriteSettings();
+                }
+            }
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();
@@ -86,6 +115,12 @@ namespace PreemptiveStrike.Mod
             Scribe_Values.Look(ref BaseRemedyIntimidationSuccessChance, "BaseRemedyIntimidationSuccessChance", 0.4f);
             Scribe_Values.Look(ref BaseRemedyIntimidationSmiteChance, "BaseRemedyIntimidationSmiteChance", 0.4f);
             Scribe_Values.Look(ref BaseRemedyBeguilementChance, "BaseRemedyBeguilementChance", 0.5f);
+
+            Scribe_Values.Look(ref TinyUIRectSaved, "TinyUIRectSaved",false);
+            Scribe_Values.Look(ref tinyUIRect_x, "tinyUIRect_x");
+            Scribe_Values.Look(ref tinyUIRect_y, "tinyUIRect_y");
+            Scribe_Values.Look(ref tinyUIRect_width, "tinyUIRect_width");
+            Scribe_Values.Look(ref tinyUIRect_height, "tinyUIRect_height");
         }
 
         public static void SetToDefault()

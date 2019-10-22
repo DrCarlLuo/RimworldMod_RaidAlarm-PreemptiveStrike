@@ -11,9 +11,12 @@ namespace PreemptiveStrike.Mod
     [StaticConstructorOnStartup]
     class PES : Verse.Mod
     {
+        public static PES Instance { get; private set; }
+
         public PES(ModContentPack content): base(content)
         {
             GetSettings<PES_Settings>();
+            Instance = this;
         }
 
         public override string SettingsCategory()
