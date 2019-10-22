@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_TryToCallOnRadio>Intentar contactar con {0}</PES_TryToCallOnRadio>
+  <PES_TryContact_CoolDown>Sólo podemos transmitir mensajes a un objeto determinado una vez por hora. Tiempo restante: {0}</PES_TryContact_CoolDown>
+
+  <PES_TryContactPrologue_Unknown>Como no hemos establecido comunicación con "{0}", podemos intentar transmitir un mensaje desde esta consola de comunicaciones, esperando que puedan recibir este mensaje y respondernos.\n\nPero cuidado, no sabemos si son nuestros aliados o enemigos.\n</PES_TryContactPrologue_Unknown>
+
+  <PES_TryContactPrologue_Neutral>Aunque el sistema de reconocimiento en nuestra colonia ha identificado que {0} es amistoso, todavía no podemos establecer comunicación con ellos.\n\nPodemos transmitir un mensaje, instándolos a que nos respondan lo antes posible.\n</PES_TryContactPrologue_Neutral>
+
+  <PES_TryContactPrologue_Hostile>Precaución: {0} ha sido reconocido por nuestro sistema de reconocimiento como una amenaza entrante, pero no hemos encontrado toda su información. \n\nPodemos tratar de transmitir un mensaje exigiéndoles que declaren su intención o tratar de forzarlos a irse.\n</PES_TryContactPrologue_Hostile>
+
+  <PES_BroadCastMessage>Entonces, {0} decide enviar un mensaje diciendo esto:</PES_BroadCastMessage>
+  <PES_BroadCastMessage_Mechanoid>Ya que sabemos que son mecanoides, sólo podemos:</PES_BroadCastMessage_Mechanoid>
+
+  <PES_TryContactPrologue_Mechanoid>Iniciar el protocolo de saludo con esas máquinas sin alma.\n</PES_TryContactPrologue_Mechanoid>
+
+  <PES_TryContact_Persuasion_Unknown>"Este es {0} de {1} al habla. Por favor, declare su intención al venir a nuestra colonia y confirme que no es hostil hacia nosotros".</PES_TryContact_Persuasion_Unknown>
+  <PES_TryContact_Persuasion_Neutral>"Este es {0} de {1} al habla. Hemos confirmado que usted no es hostil con nuestra colonia. ¡Póngase en contacto con nosotros lo antes posible!"</PES_TryContact_Persuasion_Neutral>
+  <PES_TryContact_Persuasion_Hostile>"Este es {0} de {1} al habla. Nuestro sistema de reconocimiento ha identificado su actividad hostil. ¡DÍGANOS SU INTENCIÓN! Repito, ¡DÍGANOS SU INTENCIÓN!"</PES_TryContact_Persuasion_Hostile>
+
+  <PES_TryContact_Intimidation_have_mortar>"¡Su ubicación ha sido confirmada por nosotros! ¡Declaren su intención inmediatamente o prepárense para recibir una lluvia de nuestros morteros!"</PES_TryContact_Intimidation_have_mortar>
+  <PES_TryContact_Intimidation_no_mortar>"¡Su ubicación ha sido confirmada por nosotros! ¡Declaren su intención inmediatamente o nuestros comandos lanzarán un asalto inmediato!"</PES_TryContact_Intimidation_no_mortar>
+
+  <PES_TryContact_Beguilement>"Este es un mensaje de SOS de {0} de {1}: ¡actualmente estamos siendo atacados por mecanoides; incontables ciempiés, lanceros y esciteres están llegando a nuestra base! ¡Necesitamos ayuda militar inmediata! ¡Ahora mismo! Ahhhhhhhhhh"</PES_TryContact_Beguilement>
+  <PES_TryContact_Beguilement_FactionConfirmed>"Este es {0} de {1} al habla. {1} está ocupando actualmente {2}. Cualquier cuerpo entrante con intención no identificable sería reconocido como una amenaza para {1}"</PES_TryContact_Beguilement_FactionConfirmed>
+
+  <PES_Condition_Received>si este mensaje fue recibido</PES_Condition_Received>
+
+  <PES_TryOutcome_Positive>establecer comunicación con nosotros</PES_TryOutcome_Positive>
+  <PES_TryOutcome_Leave>rendirse e irse</PES_TryOutcome_Leave>
+  <PES_TryOutcome_Scared>que se asuste</PES_TryOutcome_Scared>
+
+  <PES_Contact_Fail>{0} no recibió nada de la consola de comunicaciones. No sabemos si no lograron recibir este mensaje, o simplemente decidieron guardar silencio.</PES_Contact_Fail>
+
+  <PES_Persuasion_Success_Hostile>¡Recibimos una respuesta de ellos! ¡Ellos son de {0}! Ahora conocemos su intención y sus intenciones de ataque.\n\nComunicación establecida.</PES_Persuasion_Success_Hostile>
+  <PES_Persuation_Success_Friendly>¡Recibimos una respuesta de ellos! ¡Ellos son de {0}! Ahora tenemos toda la información sobre ellos.\n\nComunicación establecida.</PES_Persuation_Success_Friendly>
+
+  <PES_Intimidation_SuccessFlee_Hostile>¡Nuestra intimidación funcionó! Nuestro sistema de reconocimiento encontró que {0} ahora están huyendo aterrorizados, y los identificamos como personas de {1}. Parece que hemos ganado un combate sin derramamiento de sangre.</PES_Intimidation_SuccessFlee_Hostile>
+  <PES_Intimidation_SuccessFlee_Friendly>¡Nuestra intimidación funcionó! Nuestro sistema de reconocimiento encontró que {0} ahora están huyendo aterrorizados, pero también los identificamos como personas de {1}. Parece que nuestro mensaje anterior era tan aterrador que asustamos a nuestros amigos...</PES_Intimidation_SuccessFlee_Friendly>
+
+  <PES_Beguilement_SuccessFlee_Hostile>¡Nuestro mensaje engañoso funcionó! Logramos hacerles creer que ahora estamos bajo el ataque de los mecanoides. Nuestro sistema de reconocimiento encontró que {0} ahora están huyendo aterrorizados, y los identificamos como gente de {1}. Parece que hemos ganado un combate sin derramamiento de sangre.</PES_Beguilement_SuccessFlee_Hostile>
+  <PES_Beguilement_SuccessFlee_Friendly>¡Nuestro mensaje engañoso funcionó! Logramos hacerles creer que ahora estamos bajo el ataque de los mecanoides. Nuestro sistema de reconocimiento encontró que {0} ahora están huyendo aterrorizados, pero también los identificamos como personas de {1}. Parece que nuestro mensaje anterior era tan aterrador que asustamos a nuestros amigos...</PES_Beguilement_SuccessFlee_Friendly>
+
+  <PES_Beguilement_SuccessLeave_Hostile>¡Nuestro mensaje engañoso funcionó! Logramos hacerles creer que este lugar está ocupado por gente de su propia facción. Nuestro sistema de reconocimiento encontró que {0} ahora se están retirando. Parece que hemos ganado un combate sin derramamiento de sangre.</PES_Beguilement_SuccessLeave_Hostile>
+
+  <PES_Mechanoid_Outcome_1>¡Nos respondieron! Pero.... el mensaje que nos enviaron.... contiene sólo siete palabras....</PES_Mechanoid_Outcome_1>
+
+  <PES_Mechanoid_Outcome_2>¡Nos respondieron! Pero... el mensaje que nos enviaron... sólo repetía una palabra...</PES_Mechanoid_Outcome_2>
+
+  <PES_Mechanoid_Choice>¿Qué dijo esa ingeniosa máquina?</PES_Mechanoid_Choice>
+
+  <PES_MechanoidAnswer_1><color=red>ES DEMASIADO TARDE PARA USTEDES, ORGANICOS</color></PES_MechanoidAnswer_1>
+  <PES_MechanoidAnswer_2>Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte. Muerte.</PES_MechanoidAnswer_2>
+
+</LanguageData>

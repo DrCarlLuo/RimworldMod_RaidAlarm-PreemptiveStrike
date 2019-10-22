@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_CombatFervor_Thought.stages.0.label>Fervor de combate</PES_CombatFervor_Thought.stages.0.label>
+  <PES_CombatFervor_Thought.stages.0.description>Es un honor luchar a muerte por la libertad de la colonia.</PES_CombatFervor_Thought.stages.0.description>
+
+  <PES_CombatTiredness_Thought.stages.0.label>Cansado del combate</PES_CombatTiredness_Thought.stages.0.label>
+  <PES_CombatTiredness_Thought.stages.0.description>Podríamos haber evitado este combate, pero ahora podemos resultar heridos o incluso morir. Esta es una pelea sin sentido.</PES_CombatTiredness_Thought.stages.0.description>
+
+
+</LanguageData>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_UI_Title>Reporte de seguridad</PES_UI_Title>
+  <PES_UI_Ranges>Rango de visión actual: {0} Rango de detección: {1}</PES_UI_Ranges>
+  <PES_UI_Bulletins>Peligoso: {0} Neutral: {1} Indefinido: {2}</PES_UI_Bulletins>
+  <PES_UI_Unknown>Desconocido</PES_UI_Unknown>
+  <PES_UI_UnknownIntention>Intención desconocida</PES_UI_UnknownIntention>
+  <PES_UI_Strategy>Estrategia: {0}</PES_UI_Strategy>
+  <PES_UI_Faction>Facción: </PES_UI_Faction>
+  <PES_UI_Corps>Tamaño del grupo: </PES_UI_Corps>
+  <PES_UI_Herd>Tamaño de la manada: </PES_UI_Herd>
+  <PES_UI_ETA>ETA: </PES_UI_ETA>
+  <PES_UI_Direction_unknown>Dirección de entrada Desconocido</PES_UI_Direction_unknown>
+  <PES_UI_Direction_known>Dirección de entrada (Click para ver)</PES_UI_Direction_known>
+
+  <PES_UI_Letter_ReadMore>Leer mas en el informe de seguridad</PES_UI_Letter_ReadMore>
+
+  <PES_UI_CaravanMoving>Moviéndose hacia {0}</PES_UI_CaravanMoving>
+  <PES_UI_CaravanStaging>Preparandose.</PES_UI_CaravanStaging>
+
+  <PES_UI_SkyFaller_Spot_Big>Predicción del impacto (Haga clic para ver)</PES_UI_SkyFaller_Spot_Big>
+  <PES_UI_SkyFaller_Spot_Small>Predicción del punto de aterrizaje (Haga clic para ver)</PES_UI_SkyFaller_Spot_Small>
+  <PES_UI_SkyFaller_Spot_Unknown>Incapaz de predecir el punto de caída</PES_UI_SkyFaller_Spot_Unknown>
+
+  <PES_UI_Infestation_Spot>Punto de surgimiento (Haga clic para ver)</PES_UI_Infestation_Spot>
+
+</LanguageData>
