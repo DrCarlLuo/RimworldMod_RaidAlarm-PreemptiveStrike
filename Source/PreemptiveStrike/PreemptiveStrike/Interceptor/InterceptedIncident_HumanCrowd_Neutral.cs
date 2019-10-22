@@ -35,6 +35,18 @@ namespace PreemptiveStrike.Interceptor
             SetInterceptFlag(true);
         }
 
+        public override bool ManualDeterminParams()
+        {
+            //Need to first determine factions then do this!
+            pawnList = IncidentInterceptorUtility.GenerateNeutralPawns(GetPawnGroupKind(), parms);
+            if (pawnList == null || pawnList.Count <= 0)
+            {
+                Log.Error("Fail to generate pawns in neutral human crowd");
+                return false;
+            }
+            return true;
+        }
+
         public override void RevealRandomInformation()
         {
             List<Action> availables = new List<Action>();
@@ -68,8 +80,6 @@ namespace PreemptiveStrike.Interceptor
         protected override void RevealCrowdSize()
         {
             crowdSize_revealed = true;
-            if(pawnList == null)
-                pawnList = IncidentInterceptorUtility.GenerateNeutralPawns(GetPawnGroupKind(), parms);
 
             if (PES_Settings.DebugModeOn)
             {

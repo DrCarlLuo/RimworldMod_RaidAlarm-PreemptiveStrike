@@ -137,7 +137,7 @@ namespace PreemptiveStrike.Harmony
         static bool Prefix(IncidentWorker_TraderCaravanArrival __instance, ref bool __result, IncidentParms parms)
         {
             if (IncidentInterceptorUtility.isIntercepting_TraderCaravan_Worker)
-                IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_TraderCaravan>(__instance.def, parms);
+                return !IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_TraderCaravan>(__instance.def, parms);
             return true;
         }
     }
@@ -149,7 +149,7 @@ namespace PreemptiveStrike.Harmony
         static bool Prefix(IncidentWorker_TravelerGroup __instance, ref bool __result, IncidentParms parms)
         {
             if (IncidentInterceptorUtility.isIntercepting_TravelerGroup)
-                IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_TravelerGroup>(__instance.def, parms);
+                return !IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_TravelerGroup>(__instance.def, parms);
             return true;
         }
     }
@@ -161,7 +161,7 @@ namespace PreemptiveStrike.Harmony
         static bool Prefix(IncidentWorker_VisitorGroup __instance, ref bool __result, IncidentParms parms)
         {
             if (IncidentInterceptorUtility.isIntercepting_VisitorGroup)
-                IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_VisitorGroup>(__instance.def, parms);
+                return !IncidentInterceptorUtility.CreateIncidentCaraven_HumanNeutral<InterceptedIncident_HumanCrowd_VisitorGroup>(__instance.def, parms);
             return true;
         }
     }

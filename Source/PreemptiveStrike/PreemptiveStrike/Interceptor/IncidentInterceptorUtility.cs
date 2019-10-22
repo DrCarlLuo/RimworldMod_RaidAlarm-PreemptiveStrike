@@ -147,7 +147,8 @@ namespace PreemptiveStrike.Interceptor
             InterceptedIncident incident = new T();
             incident.incidentDef = incidentDef;
             incident.parms = parms;
-            IsIntercepting_PawnGeneration = GeneratorPatchFlag.ReturnZero;
+            if (!incident.ManualDeterminParams())
+                return false;
             if (!IncidentCaravanUtility.AddNewIncidentCaravan(incident))
             {
                 Log.Error("Fail to create Incident Caravan");
@@ -156,6 +157,7 @@ namespace PreemptiveStrike.Interceptor
             IsHoaxingStoryTeller = true;
             if (PES_Settings.DebugModeOn)
                 Messages.Message("PES_Debug: Successfully intercepted a neutral Incident", MessageTypeDefOf.NeutralEvent);
+            //IsIntercepting_PawnGeneration = GeneratorPatchFlag.ReturnZero;
             return true;
         }
 

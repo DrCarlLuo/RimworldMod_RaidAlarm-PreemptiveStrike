@@ -5,6 +5,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 using PreemptiveStrike.Mod;
+using System.Reflection;
 
 namespace PreemptiveStrike.Interceptor
 {
@@ -22,6 +23,17 @@ namespace PreemptiveStrike.Interceptor
                 }
                 return incidentTitle_Confirmed;
             }
+        }
+
+        public override bool ManualDeterminParams()
+        {
+            MethodInfo vanillaParmsResolver = typeof(IncidentWorker_NeutralGroup).GetMethod("TryResolveParms", BindingFlags.NonPublic | BindingFlags.Instance);
+            bool result = (bool)vanillaParmsResolver.Invoke(new IncidentWorker_VisitorGroup(), new object[] { parms });
+            if (!result)
+            {
+                return false;
+            }
+            return base.ManualDeterminParams();
         }
 
         protected override void SetInterceptFlag(bool value)
