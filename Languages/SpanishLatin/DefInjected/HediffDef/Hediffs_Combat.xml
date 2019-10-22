@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_CombatFervor.label>Fervor de combate</PES_CombatFervor.label>
+  <PES_CombatFervor.stages.0.label>Fervor de combate</PES_CombatFervor.stages.0.label>
+
+  <PES_CombatTiredness.label>Cansado del Combate</PES_CombatTiredness.label>
+  <PES_CombatTiredness.stages.0.label>Cansado del Combate</PES_CombatTiredness.stages.0.label>
+
+
+</LanguageData>

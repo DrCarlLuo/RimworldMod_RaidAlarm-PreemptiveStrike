@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_Intention_Raid>Asalto</PES_Intention_Raid>
+  <PES_Intention_TradeCaravan>Caravana de comerciantes</PES_Intention_TradeCaravan>
+  <PES_Intention_Traveler>Transeúnte</PES_Intention_Traveler>
+  <PES_Intention_Visitor>Visitantes</PES_Intention_Visitor>
+  <PES_Intention_AlphaBeavers>Castores dendrívoros</PES_Intention_AlphaBeavers>
+  <PES_Intention_FarmAnimalsWanderIn>Colono Entrante</PES_Intention_FarmAnimalsWanderIn>
+  <PES_Intention_HerdMigration>Migración de rebaño</PES_Intention_HerdMigration>
+  <PES_Intention_ManHunterPack>Lote de Cazahombres</PES_Intention_ManHunterPack>
+  <PES_Intention_ThrumboPass>Thrumbos de Paso</PES_Intention_ThrumboPass>
+
+  <PES_Intention_RaidInGroups>(En grupos)</PES_Intention_RaidInGroups>
+
+  <PES_RaidGoalName_Rescue>Rescate de prisioneros</PES_RaidGoalName_Rescue>
+  <PES_RaidGoalName_Despoil>Despojos</PES_RaidGoalName_Despoil>
+  <PES_RaidGoalName_Revenge>Venganza</PES_RaidGoalName_Revenge>
+  <PES_RaidGoalName_Enslave>Asalto para Esclavizar</PES_RaidGoalName_Enslave>
+  <PES_RaidGoalName_Conquer>Conquista</PES_RaidGoalName_Conquer>
+  <PES_RaidGoalName_Extortion>Extorción</PES_RaidGoalName_Extortion>
+  <PES_RaidGoalName_Smite>CASTIGO</PES_RaidGoalName_Smite>
+  <PES_RaidGoalName_Extermination>EXTERMINACION</PES_RaidGoalName_Extermination>
+
+  <PES_Strategy_Normal>Asalto Frontal</PES_Strategy_Normal>
+  <PES_Strategy_Sapper>Zapadores</PES_Strategy_Sapper>
+  <PES_Strategy_Smart>Ataque Inteligente</PES_Strategy_Smart>
+  <PES_Strategy_Siege>Asedio</PES_Strategy_Siege>
+  <PES_Strategy_Stage>Estadía y luego ataque</PES_Strategy_Stage>
+
+  <PES_AnimalType_Unknown>Tipo de animal no identificado</PES_AnimalType_Unknown>
+
+  <PES_Unknown_SkyObject_Large>Gran Objeto Celeste No Identificado</PES_Unknown_SkyObject_Large>
+  <PES_Unknown_SkyObject_Small>Pequeño Objeto Celeste No Identificado</PES_Unknown_SkyObject_Small>
+  <PES_Skyfaller_raid>Asalto de Cápsulas Enemigas Llegando</PES_Skyfaller_raid>
+  <PES_Skyfaller_Meteorite>Caida de Meteorito</PES_Skyfaller_Meteorite>
+  <PES_Skyfaller_ResourcePod>Cápsulas de Recursos Llegando</PES_Skyfaller_ResourcePod>
+  <PES_Skyfaller_RefugeePod>Cápsulas de Refugiado Llegando</PES_Skyfaller_RefugeePod>
+  <PES_Skyfaller_ShipChunk>Caida de Trozos de Nave</PES_Skyfaller_ShipChunk>
+  <PES_Skyfaller_ShipPart>Caida de Parte de Nave Antigua</PES_Skyfaller_ShipPart>
+
+  <PES_Infestation_Title>Alerta de Infestación</PES_Infestation_Title>
+
+  <PES_Unknown_HumanCrowd>Multitud humana no identificada</PES_Unknown_HumanCrowd>
+  <PES_Unknown_AnimalHerd>Rebaño de animales no identificados</PES_Unknown_AnimalHerd>
+
+</LanguageData>

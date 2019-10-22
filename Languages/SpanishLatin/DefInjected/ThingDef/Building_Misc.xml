@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_PremitiveWatchtower.label>Torre de Vigilancia Primitiva</PES_PremitiveWatchtower.label>
+  <PES_PremitiveWatchtower.description>Una torre alta donde un colono puede hacer de centinela, vigilando los alrededores, y cuando el peligro se aproxima, alertar a la colonia a tiempo haciendo una señal de humo.</PES_PremitiveWatchtower.description>
+  <PES_PremitiveWatchtower_Blueprint.label>Torre de Vigilancia Primitiva (anteproyecto)</PES_PremitiveWatchtower_Blueprint.label>
+  <PES_PremitiveWatchtower_Frame.label>Torre de Vigilancia Primitiva (en construcción)</PES_PremitiveWatchtower_Frame.label>
+  <PES_PremitiveWatchtower_Frame.description>Una torre alta donde un colono puede hacer de centinela, vigilando los alrededores, y cuando el peligro se aproxima, alertar a la colonia a tiempo haciendo una señal de humo.</PES_PremitiveWatchtower_Frame.description>
+
+  <PES_watchtower.label>Torre de Vigilancia</PES_watchtower.label>
+  <PES_watchtower.description>La tecnología de construcción moderna hizo posible la construcción de una torre de vigilancia mucho más alta que una primitiva. Además de la altura, algunos dispositivos electrónicos modernos pueden hacer que el colono en servicio de centinela vea más allá. Puede funcionar sin electricidad, pero sólo proporciona la mitad del rango de visión y de detección.</PES_watchtower.description>
+	  <PES_watchtower.comps.4.name>Mini Dispensador de Pasta Nutritiva</PES_watchtower.comps.4.name>
+	  <PES_watchtower.comps.4.description>Instale un dispensador de pasta nutritiva dentro de la torre, para que el colono centinela no tenga que salir de vez en cuando de la torre para comer. Acepta alimentos crudos.</PES_watchtower.comps.4.description>
+	  <PES_watchtower.comps.5.name>Radio</PES_watchtower.comps.5.name>
+	  <PES_watchtower.comps.5.description>Instala una radio dentro de la torre de vigilancia, para que el colono centinela pueda escucharla mientras está de centinela. Mantiene la necesidad recreativa del centinela a un nivel moderado.</PES_watchtower.comps.5.description>
+	  <PES_watchtower.comps.6.name>Foco de busqueda</PES_watchtower.comps.6.name>
+	  <PES_watchtower.comps.6.description>Con una luz de búsqueda, la torre de vigilancia se puede utilizar con un 60% de eficiencia cuando está oscuro a costa de un consumo de energía adicional de 500W.</PES_watchtower.comps.6.description>
+	  <PES_watchtower.comps.7.name>Telescopio Tactico</PES_watchtower.comps.7.name>
+	  <PES_watchtower.comps.7.description>Con un telescopio instalado, el centinela puede ver aún más lejos en la torre.\n+50% Rango de Visión\n+50% Rango de Detección</PES_watchtower.comps.7.description>
+  <PES_watchtower_Blueprint.label>Torre de Vigilancia (anteproyecto)</PES_watchtower_Blueprint.label>
+  <PES_watchtower_Frame.label>Torre de Vigilancia (en construcción)</PES_watchtower_Frame.label>
+  <PES_watchtower_Frame.description>La tecnología de construcción moderna hizo posible la construcción de una torre de vigilancia mucho más alta que una primitiva. Además de la altura, algunos dispositivos electrónicos modernos pueden hacer que el colono en servicio de centinela vea más allá. Puede funcionar sin electricidad, pero sólo proporciona la mitad del rango de visión y de detección.</PES_watchtower_Frame.description>
+
+  <PES_Radar.label>Radar</PES_Radar.label>
+  <PES_Radar.description>Un sistema de detección que utiliza ondas de radio para determinar el rango, ángulo o velocidad de los objetos. Puede utilizarse para ampliar el rango de detección de la colonia.</PES_Radar.description>
+  <PES_Radar_Blueprint.label>Radar (anteproyecto)</PES_Radar_Blueprint.label>
+  <PES_Radar_Frame.label>Radar (en construcción)</PES_Radar_Frame.label>
+  <PES_Radar_Frame.description>Un sistema de detección que utiliza ondas de radio para determinar el rango, ángulo o velocidad de los objetos. Puede utilizarse para ampliar el rango de detección de la colonia.</PES_Radar_Frame.description>
+
+  <PES_SentryDroneArray.label>Conjunto de Drones Centinela</PES_SentryDroneArray.label>
+  <PES_SentryDroneArray.description>Una consola de operación y monitoreo para varios drones centinelas que se utilizan para tareas de reconocimiento y que amplían enormemente el rango de visión de la colonia.</PES_SentryDroneArray.description>
+  <PES_SentryDroneArray.comps.4.name>Radio</PES_SentryDroneArray.comps.4.name>
+  <PES_SentryDroneArray.comps.4.description>Instala una radio dentro de la torre de vigilancia, para que el colono centinela pueda escucharla mientras está de centinela. Mantiene la necesidad recreativa del operador a un nivel moderado.</PES_SentryDroneArray.comps.4.description>
+  <PES_SentryDroneArray_Blueprint.label>Conjunto de Drones Centinela (anteproyecto)</PES_SentryDroneArray_Blueprint.label>
+  <PES_SentryDroneArray_Frame.label>Conjunto de Drones Centinela (en construcción)</PES_SentryDroneArray_Frame.label>
+  <PES_SentryDroneArray_Frame.description>Una consola de operación y monitoreo para varios drones centinelas que se utilizan para tareas de reconocimiento y que amplían enormemente el rango de visión de la colonia.</PES_SentryDroneArray_Frame.description>
+
+  <PES_SpySatellite.label>Reconocimiento Satelital de Enlaces Ascendentes</PES_SpySatellite.label>
+  <PES_SpySatellite.description>Una estación de enlace ascendente que recibe y transmite datos entre un satélite espía y la colonia, extendiendo el rango de detección de la colonia para cubrir un área enorme en este planeta.</PES_SpySatellite.description>
+  <PES_SpySatellite_Blueprint.label>Reconocimiento Satelital de Enlaces Ascendentes (anteproyecto)</PES_SpySatellite_Blueprint.label>
+  <PES_SpySatellite_Frame.label>Reconocimiento Satelital de Enlaces Ascendentes (en contrucción)</PES_SpySatellite_Frame.label>
+  <PES_SpySatellite_Frame.description>Una estación de enlace ascendente que recibe y transmite datos entre un satélite espía y la colonia, extendiendo el rango de detección de la colonia para cubrir un área enorme en este planeta.</PES_SpySatellite_Frame.description>
+
+
+</LanguageData>

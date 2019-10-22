@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_UnknownFaction>Facción desconocida</PES_UnknownFaction>
+
+  <PES_Persuade_noun>persuacióm</PES_Persuade_noun>
+  <PES_intimidate_noun>intimidación</PES_intimidate_noun>
+  <PES_beguile_noun>seducción</PES_beguile_noun>
+
+  <PES_SimpleConfirm>confirmar</PES_SimpleConfirm>
+  <PES_Disconnect>Desconectar</PES_Disconnect>
+  <PES_Cancel>No importa</PES_Cancel>
+  <PES_ConfirmChoice>Vale la pena intentarlo</PES_ConfirmChoice>
+
+  <PES_Condition_Neutral>para amigos</PES_Condition_Neutral>
+  <PES_Condition_Hostile>para enemigos</PES_Condition_Hostile>
+
+  <PES_Odds_VeryHigh><color=lime>probabilidad MUY ALTA</color></PES_Odds_VeryHigh>
+  <PES_Odds_High><color=green>probabilidad ALTA</color></PES_Odds_High>
+  <PES_Odds_Medium><color=cyan>probabilidad MEDIA</color></PES_Odds_Medium>
+  <PES_Odds_Low><color=#f0a1aa>probabilidad BAJA</color></PES_Odds_Low>
+  <PES_Odds_VeryLow><color=red>probabilidad MUY BAJA</color></PES_Odds_VeryLow>
+
+  <PES_ASHAME>desafortunado</PES_ASHAME>
+  <PES_Reassuring>apaciguador</PES_Reassuring>
+  <PES_Nice>bueno</PES_Nice>
+  <PES_RaiseAlarm>¡Enemigo llegando! ¡Activa la alarma!</PES_RaiseAlarm>
+  <PES_trembling>temblando...</PES_trembling>
+  <PES_DAMNIT>¡Maldita sea!</PES_DAMNIT>
+
+  <PES_Friendly_Greeting>La gente de {0} saluda cordialmente a {1} y dice que llegarán muy pronto.</PES_Friendly_Greeting>
+  <PES_Friendly_Dismiss>Decirles que no es un buen momento para venir aquí y despedirlos.</PES_Friendly_Dismiss>
+  <PES_Friendly_Dismissed>Dicen que el mensaje ha sido recibido y que no se dirigirán a nuestra colonia.</PES_Friendly_Dismissed>
+
+</LanguageData>
