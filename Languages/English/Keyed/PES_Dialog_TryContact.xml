@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <PES_TryToCallOnRadio>Try to contact {0}</PES_TryToCallOnRadio>
-  <PES_TryContact_CoolDown>We can only broadcast message to a certain object once per hour. Remaining Time: {0}</PES_TryContact_CoolDown>
+  <PES_TryContact_CoolDown>We can only broadcast messages to a certain object once per hour. Remaining Time: {0}</PES_TryContact_CoolDown>
 
-  <PES_TryContactPrologue_Unknown>Since we have not established communication with "{0}", we can try to broadcast a message from this comms console, hoping they could receive this message and reply to us. \n\nBut beware, we don't know they are our allies or enemies.\n</PES_TryContactPrologue_Unknown>
+  <PES_TryContactPrologue_Unknown>Since we have not established communication with "{0}", we can try to broadcast a message from this comms console, hoping they receive this message and reply to us. \n\nBut beware, we don't know if they are our allies or enemies.\n</PES_TryContactPrologue_Unknown>
 
   <PES_TryContactPrologue_Neutral>Although the reconnaissance system in our colony has identified {0} is friendly, we still cannot establish communication with them. \n\nWe can broadcast a message, urging them to reply to us ASAP.\n</PES_TryContactPrologue_Neutral>
 
@@ -15,14 +15,14 @@
   <PES_TryContactPrologue_Mechanoid>Initiate greeting protocol with those soulless machines\n</PES_TryContactPrologue_Mechanoid>
 
   <PES_TryContact_Persuasion_Unknown>"This is {0} from {1} speaking. Please state your intention of coming to our colony and confirm that you have no hostility towards us."</PES_TryContact_Persuasion_Unknown>
-  <PES_TryContact_Persuasion_Neutral>"This is {0} from {1} speaking. We have confirmed that you are not hostile to our conoly. Please contact with us ASAP!"</PES_TryContact_Persuasion_Neutral>
+  <PES_TryContact_Persuasion_Neutral>"This is {0} from {1} speaking. We have confirmed that you are not hostile to our colony. Please contact us ASAP!"</PES_TryContact_Persuasion_Neutral>
   <PES_TryContact_Persuasion_Hostile>"This is {0} from {1} speaking. Our reconnaissance system has identified your hostile activity. NAME YOUR INTENTION! Repeat, NAME YOUR INTENTION!"</PES_TryContact_Persuasion_Hostile>
 
-  <PES_TryContact_Intimidation_have_mortar>"Your location has been confirmed by us! State your intention immediately or be prepared to take a rain of our mortar fire!"</PES_TryContact_Intimidation_have_mortar>
+  <PES_TryContact_Intimidation_have_mortar>"Your location has been confirmed by us! State your intention immediately or be prepared for a rain of mortar fire!"</PES_TryContact_Intimidation_have_mortar>
   <PES_TryContact_Intimidation_no_mortar>"Your location has been confirmed by us! State your intention immediately or our commandos will launch an immediate assault!"</PES_TryContact_Intimidation_no_mortar>
 
   <PES_TryContact_Beguilement>"This is an SOS message from {0} of {1}: we are currently under heveay attack by mechanoids; countless centipedes, lancers and scythers are flocking into our base! We need immediate military assistance! Right Now! Ahhhhhhhhhh"</PES_TryContact_Beguilement>
-  <PES_TryContact_Beguilement_FactionConfirmed>"This is {0} from {1} speaking. {1} is currently occupying {2}. Any incoming corps with unidentifiable intention would be recognized as a threat to {1}"</PES_TryContact_Beguilement_FactionConfirmed>
+  <PES_TryContact_Beguilement_FactionConfirmed>"This is {0} from {1} speaking. {1} is currently occupying {2}. Any incoming corps with unidentifiable intention will be recognized as a threat to {1}"</PES_TryContact_Beguilement_FactionConfirmed>
 
   <PES_Condition_Received>were this message received</PES_Condition_Received>
 
@@ -30,24 +30,24 @@
   <PES_TryOutcome_Leave>to give up and leave</PES_TryOutcome_Leave>
   <PES_TryOutcome_Scared>to be frightened off</PES_TryOutcome_Scared>
 
-  <PES_Contact_Fail>{0} received nothing from the comms console. We do not know if they didn't manage to receice this message at all, or they just chose to keep silent.</PES_Contact_Fail>
+  <PES_Contact_Fail>{0} received nothing from the comms console. We don't know if they failed to receive this message at all, or they just chose to keep silent.</PES_Contact_Fail>
 
   <PES_Persuasion_Success_Hostile>We received a reply from them! They are from {0}! We now know their intention and raiding goals. \n\nCommunication Established.</PES_Persuasion_Success_Hostile>
   <PES_Persuation_Success_Friendly>We received a reply from them! They are from {0}! We now know all information about them.\n\nCommunication Established.</PES_Persuation_Success_Friendly>
 
-  <PES_Intimidation_SuccessFlee_Hostile>Our intimidation worked! Our reconnaissance system found that {0} are now fleeing in panick, and we identified them as people from {1}. It seems that we have won a combat without bleeding at all.</PES_Intimidation_SuccessFlee_Hostile>
-  <PES_Intimidation_SuccessFlee_Friendly>Our intimidation worked! Our reconnaissance system found that {0} are now fleeing in panick, but we also identified them as actually people from {1}. It seems that our previous message were so scary that we frightened off our friends...</PES_Intimidation_SuccessFlee_Friendly>
+  <PES_Intimidation_SuccessFlee_Hostile>Our intimidation worked! Our reconnaissance system found that {0} are now fleeing in panic, and we identified them as people from {1}. It seems that we have won a battle without bloodshed.</PES_Intimidation_SuccessFlee_Hostile>
+  <PES_Intimidation_SuccessFlee_Friendly>Our intimidation worked! Our reconnaissance system found that {0} are now fleeing in panic, but we also identified them as actually people from {1}. It seems that our previous message was so scary that we frightened off our friends...</PES_Intimidation_SuccessFlee_Friendly>
 
-  <PES_Beguilement_SuccessFlee_Hostile>Our deceptive message worked! We managed to make them believe we are now under attack from mechanoids. Our reconnaissance system found that {0} are now fleeing in panick, and we identified them as people from {1}. It seems that we have won a combat without bleeding at all.</PES_Beguilement_SuccessFlee_Hostile>
-  <PES_Beguilement_SuccessFlee_Friendly>Our deceptive message worked! We managed to make them believe we are now under attack from mechanoids. Our reconnaissance system found that {0} are now fleeing in panick, but we also identified them as actually people from {1}. It seems that our previous message were so scary that we frightened off our friends...</PES_Beguilement_SuccessFlee_Friendly>
+  <PES_Beguilement_SuccessFlee_Hostile>Our deceptive message worked! We managed to make them believe we are now under attack from mechanoids. Our reconnaissance system found that {0} are now fleeing in panic, and we identified them as people from {1}. It seems that we have won a battle without bloodshed.</PES_Beguilement_SuccessFlee_Hostile>
+  <PES_Beguilement_SuccessFlee_Friendly>Our deceptive message worked! We managed to make them believe we are now under attack from mechanoids. Our reconnaissance system found that {0} are now fleeing in panic, but we also identified them as actually people from {1}. It seems that our previous message was so scary that we frightened off our friends...</PES_Beguilement_SuccessFlee_Friendly>
 
-  <PES_Beguilement_SuccessLeave_Hostile>Our deceptive message worked! We managed to make them believe this place is taken by people from their own faction. Our reconnaissance system found that {0} are now retreating. It seems that we have won a combat without bleeding at all.</PES_Beguilement_SuccessLeave_Hostile>
+  <PES_Beguilement_SuccessLeave_Hostile>Our deceptive message worked! We managed to make them believe this place is taken by people from their own faction. Our reconnaissance system found that {0} are now retreating. It seems that we have won a battle without bloodshed.</PES_Beguilement_SuccessLeave_Hostile>
 
   <PES_Mechanoid_Outcome_1>They replied us! But... the message they sent to us... contains only seven words...</PES_Mechanoid_Outcome_1>
 
-  <PES_Mechanoid_Outcome_2>They replied us! But... the message they sent to us... were only repeating one word...</PES_Mechanoid_Outcome_2>
+  <PES_Mechanoid_Outcome_2>They replied us! But... the message they sent to us... was only repeating one word...</PES_Mechanoid_Outcome_2>
 
-  <PES_Mechanoid_Choice>What did these nifarious machine said?</PES_Mechanoid_Choice>
+  <PES_Mechanoid_Choice>What did these nefarious machines say?</PES_Mechanoid_Choice>
 
   <PES_MechanoidAnswer_1>&lt;color=red&gt;IT IS TOO LATE FOR YOU, ORGANICS&lt;/color&gt;</PES_MechanoidAnswer_1>
   <PES_MechanoidAnswer_2>Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die. Die.</PES_MechanoidAnswer_2>
