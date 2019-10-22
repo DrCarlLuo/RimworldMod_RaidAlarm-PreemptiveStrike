@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_setting_default>Reset Preestablecido</PES_setting_default>
+  <PES_setting_notes>Notas:\n1 Encontrará una explicación detallada sobre las fórmulas del ajuste a continuación. Pase el ratón por encima y aparecerá\n2. 1 hora = 2500 ticks</PES_setting_notes>
+  <PES_setting_detectioncoefficient>Coeficiente de detección</PES_setting_detectioncoefficient>
+  <PE_setting_detectionMechanism>Ajustes del mecanismo de detección</PE_setting_detectionMechanism>
+  <PES_setting_detectionFormula>Fórmula de probabilidad de detección: P = ( c - y ) / c * k\nA continuación, este valor se fijará a [0.1, 0.8] (detección de caravana desconocida) o [0.2, 0.95] (detección de información detallada)</PES_setting_detectionFormula>
+  <PES_setting_detectionExplain>A = Rango de detección\nB = Rango de visión\nC = A - B\nx = casillas restantes\ny = x - B\nk = el coeficiente siguiente\nP es la probabilidad final</PES_setting_detectionExplain>
+
+  <PES_setting_caravanSpeed>Tiempo para que un incidente de caravana cubra un casilla en el mapa (en ticks)</PES_setting_caravanSpeed>
+
+  <PES_setting_skyObject>Objetos aéreos:</PES_setting_skyObject>
+  <PES_setting_skyObject_Large_a>Tiempo de alarma antes de impactos de objetos aéreos grandes (en ticks)</PES_setting_skyObject_Large_a>
+  <PES_setting_skyObject_Large_b>Tiempo antes de identificar objetos aéreos grandes (en ticks)</PES_setting_skyObject_Large_b>
+  <PES_setting_skyObject_Small_a>Tiempo de alarma antes del aterrizaje de un objeto aéreo pequeño (en ticks)</PES_setting_skyObject_Small_a>
+  <PES_setting_skyObject_Small_b>Tiempo antes de identificar pequeños objetos aéreos (en ticks)</PES_setting_skyObject_Small_b>
+
+  <PES_setting_infestation>Tiempo de alarma para la infestación (en ticks)</PES_setting_infestation>
+
+  <PES_setting_negotiationProb>Opciones de «Negociación»</PES_setting_negotiationProb>
+
+  <PES_setting_negotiationIntro>Todas las probabilidades siguientes son sólo valores base Las probabilidades finales de que cada uno de ellos ocurra se basan en esta fórmula: \nPara un resultado positivo: P = Base * NA\nPara resultados negativos: P = Base * (1 / NA); P = Base / 2 (if NA es cero)\nY P será fijado a [0, 1]</PES_setting_negotiationIntro>
+  <PES_setting_negotiationTip>Base = Los siguientes Valores de referencia\nNA es la capacidad de negociación del colono. Está relacionado con el nivel social del colono, y puedes comprobarlo en el panel de información del colono en juego. Para un colono sano normal, es del 40% cuando está en el nivel 1 y del 190% cuando está en el nivel 20. </PES_setting_negotiationTip>
+  <PES_setting_commintro>Las probabilidades de entrar en contacto con un incidente de caravana:</PES_setting_commintro>
+  <PES_setting_commpersuation_friend>Persuasión exitosa (neutral)</PES_setting_commpersuation_friend>
+  <PES_setting_commpersuation_hostile>Persuasión exitosa (hostil)</PES_setting_commpersuation_hostile>
+  <PES_setting_commintimidation_contact_friend>Intimidación exitosa y establecer contacto (neutral)</PES_setting_commintimidation_contact_friend>
+  <PES_setting_commintimidation_frighten_friend>Intimidación exitosa y ahuyentar (neutral)</PES_setting_commintimidation_frighten_friend>
+  <PES_setting_commintimidation_contact_Hostile>Intimidación exitosa y hacer contacto (Hostil)</PES_setting_commintimidation_contact_Hostile>
+  <PES_setting_commintimidation_frighten_Hostile>Intimidación exitosa y establecer contacto (Hostil)</PES_setting_commintimidation_frighten_Hostile>
+  <PES_setting_commbeguilment_friend>Engaño exitoso (neutral)</PES_setting_commbeguilment_friend>
+  <PES_setting_commbeguilment_Contact_hostile>Engaño exitoso y establecer contacto (hostil)</PES_setting_commbeguilment_Contact_hostile>
+  <PES_setting_commbeguildment_frighten_hostile>Engaño exitoso y ahuyentar (hostil)</PES_setting_commbeguildment_frighten_hostile>
+
+  <PES_setting_negintro>Las probabilidades a la hora de negociar sobre la idea del asalto:</PES_setting_negintro>
+  <PES_setting_neg_delay>Sobre tratar de hacer que paren por un tiempo:</PES_setting_neg_delay>
+  <PES_setting_delay_persuasion>Persuación exitosa</PES_setting_delay_persuasion>
+  <PES_setting_delay_intimidation_s>Intimidación exitosa</PES_setting_delay_intimidation_s>
+  <PES_setting_delay_intimidation_b>Fallo de la intimidación y contraataque</PES_setting_delay_intimidation_b>
+  <PES_setting_delay_beguilment>Engaño exitoso</PES_setting_delay_beguilment>
+  <PES_setting_neg_bargain>Sobre tratar de negociar con ellos</PES_setting_neg_bargain>
+  <PES_setting_bargain_persuasion>Persuación exitosa</PES_setting_bargain_persuasion>
+  <PES_setting_bargain_intimidation_s>Intimidación exitosa</PES_setting_bargain_intimidation_s>
+  <PES_setting_bargain_intimidation_b>Fallo de la intimidación y contraataque</PES_setting_bargain_intimidation_b>
+  <PES_setting_bargain_beguilment>Engaño exitoso</PES_setting_bargain_beguilment>
+  <PES_setting_neg_remedy>Sobre tratar de pedirles que cambien la idea de un asalto.</PES_setting_neg_remedy>
+  <PES_setting_remedy_persuasion>Persuación exitosa</PES_setting_remedy_persuasion>
+  <PES_setting_remedy_intimidation_s>Intimidación exitosa</PES_setting_remedy_intimidation_s>
+  <PES_setting_remedy_intimidation_b>Fallo de la intimidación y contraataque</PES_setting_remedy_intimidation_b>
+  <PES_setting_remedy_beguilment>Engaño exitoso</PES_setting_remedy_beguilment>
+
+  <PES_setting_mesintro>Cuando se trata de hacer contacto con una caravana, antes de que se prueben las probablidades anteriores, hay una probabilidad de si este mensaje transmitido puede ser recibido por ellos o no, se calcula por:</PES_setting_mesintro>
+  <PES_setting_mesExp>P = 1 - 0.2 * dificultad + neutralizar (P será fijado a [0, 1])</PES_setting_mesExp>
+  <PES_setting_megTip>la dificultad es 0 para Pacíficos, 5 para despiadados;\nDesfasamiento es el siguiente valor</PES_setting_megTip>
+  <PES_setting_mesOffset>Desfasamiento para la probabilidad de recepción de mensajes</PES_setting_mesOffset>
+
+</LanguageData>

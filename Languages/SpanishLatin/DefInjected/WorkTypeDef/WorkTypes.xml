@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Recon.label>Recon</Recon.label>
+  <Recon.description>Realiza tareas de centinela en la colonia, realiza reconocimiento del área circundante y detecta a los enemigos que se acercan.</Recon.description>
+  <Recon.labelShort>Recon</Recon.labelShort>
+  <Recon.pawnLabel>Centinela</Recon.pawnLabel>
+  <Recon.gerundLabel>Estar de centinela</Recon.gerundLabel>
+  <Recon.verb>Hacer de centinela</Recon.verb>
+
+
+</LanguageData>
