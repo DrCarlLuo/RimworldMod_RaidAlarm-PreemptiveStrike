@@ -17,10 +17,11 @@ namespace PreemptiveStrike
         }
 
         public static ThingDef PES_PremitiveWatchtower;
-
         public static ThingDef PES_watchtower;
-
         public static ThingDef PES_SentryDroneArray;
+        public static ThingDef PES_Radar;
+        public static ThingDef PES_SpySatellite;
+
 
         public static JobDef PES_StandGuard_Primitive;
         public static JobDef PES_StandGuard;

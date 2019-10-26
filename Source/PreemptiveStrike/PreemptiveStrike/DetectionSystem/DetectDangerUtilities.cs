@@ -29,6 +29,7 @@ namespace PreemptiveStrike.DetectionSystem
     static class DetectDangerUtilities
     {
         public static Dictionary<int, DetectionEffect> DetectionAbilityInMapTile;
+        public static int LastSolarFlareDetectorTick = -1;
 
         public static bool DitectionOddsOfCaravan(TravelingIncidentCaravan caravan, out float odds)
         {

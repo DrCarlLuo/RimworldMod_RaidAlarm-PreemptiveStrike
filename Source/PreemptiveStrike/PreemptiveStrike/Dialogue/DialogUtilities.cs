@@ -119,9 +119,9 @@ namespace PreemptiveStrike.Dialogue
         public static void NegotiatorLearnSocial(bool success)
         {
             if (success)
-                tempPawn.skills.Learn(SkillDefOf.Social, 1000f, true);
+                tempPawn.skills.Learn(SkillDefOf.Social, 2000f, true);
             else
-                tempPawn.skills.Learn(SkillDefOf.Social, 6000f, true);
+                tempPawn.skills.Learn(SkillDefOf.Social, 500f, true);
         }
     }
 }

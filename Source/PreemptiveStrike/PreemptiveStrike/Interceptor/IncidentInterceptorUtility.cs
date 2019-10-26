@@ -7,6 +7,7 @@ using Verse;
 using PreemptiveStrike.IncidentCaravan;
 using PreemptiveStrike.RaidGoal;
 using PreemptiveStrike.Mod;
+using PreemptiveStrike.DetectionSystem;
 
 namespace PreemptiveStrike.Interceptor
 {
@@ -244,6 +245,9 @@ namespace PreemptiveStrike.Interceptor
 
         public static bool Intercept_SolarFlare(IncidentParms parms)
         {
+            if (DetectDangerUtilities.LastSolarFlareDetectorTick != Find.TickManager.TicksGame)
+                return false;
+
             InterceptedIncident_SolarFlare incident = new InterceptedIncident_SolarFlare();
             incident.incidentDef = DefDatabase<IncidentDef>.GetNamed("SolarFlare");
             incident.parms = parms;

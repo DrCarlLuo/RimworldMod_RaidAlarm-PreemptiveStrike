@@ -20,7 +20,7 @@ namespace PreemptiveStrike.IncidentCaravan
         {
             foreach(var x in IncidentCaravans)
             {
-                if (x.Communicable)
+                if (x.Communicable && x.detected)
                     yield return x;
             }
             yield break;

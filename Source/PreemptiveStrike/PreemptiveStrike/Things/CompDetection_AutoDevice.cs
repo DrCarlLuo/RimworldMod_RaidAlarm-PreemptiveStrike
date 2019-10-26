@@ -5,6 +5,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 using UnityEngine;
+using PreemptiveStrike.DetectionSystem;
 
 namespace PreemptiveStrike.Things
 {
@@ -17,8 +18,11 @@ namespace PreemptiveStrike.Things
         public override void CompTick()
         {
             base.CompTick();
-            if(PowerOnOrDontNeedPower)
+            if (PowerOnOrDontNeedPower)
+            {
                 UpdateDetectionAbility(Props.visionRangeProvide, Props.detectionRangeProvide);
+                DetectDangerUtilities.LastSolarFlareDetectorTick = Find.TickManager.TicksGame;
+            }
         }
     }
 }
