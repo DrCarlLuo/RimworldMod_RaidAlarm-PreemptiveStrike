@@ -24,7 +24,7 @@ UI/PES_Traveler
 Suitcase by Thengakola from the Noun Project
 https://thenounproject.com/term/Suitcase/854911/
 
-UpgradeDesignation
+UI/UpgradeDesignation
 setting by throwaway icons from the Noun Project
 https://thenounproject.com/term/setting/365295/
 
@@ -37,6 +37,10 @@ https://www.flaticon.com/free-icon/radio_2067782
 UI/Update_searchlight
 Icon made by Freepik
 https://www.flaticon.com/free-icon/spotlight_1082696
+
+UI/Update_delievery
+Icon made by Freepik
+https://www.flaticon.com/free-icon/box_1720551
 
 Other sources:
 
