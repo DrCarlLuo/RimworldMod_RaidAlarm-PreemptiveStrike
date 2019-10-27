@@ -4,7 +4,7 @@
   <ResearchProjectDef>
     <defName>PES_PrimitiveTower</defName>
     <label>Primitive tower construction</label>
-    <description>Build primitive watchtowers to provide basic reconnaissance ability. </description>
+    <description>Build primitive watchtowers to provide basic reconnaissance ability.</description>
     <baseCost>400</baseCost>
     <techLevel>Medieval</techLevel>
     <tags>
@@ -112,7 +112,7 @@
   <ResearchProjectDef>
     <defName>PES_SkyIDL</defName>
     <label>Large sky object identification</label>
-    <description>Unlock the ability for the colony to identify large sky objects, such as ship chunks and meteorites, and predict their impact position, which can help the colony reduce some loss. </description>
+    <description>Unlock the ability for the colony to identify large sky objects, such as ship chunks and meteorites, and predict their impact position, which can help the colony reduce some loss.</description>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>2</researchViewX>
