@@ -16,17 +16,16 @@ namespace PreemptiveStrike
             DefOfHelper.EnsureInitializedInCtor(typeof(PESDefOf));
         }
 
-        public static ThingDef PES_PremitiveWatchtower;
-        public static ThingDef PES_watchtower;
+        public static ThingDef PES_PremitiveWatchtower_new;
+        public static ThingDef PES_watchtower_new;
         public static ThingDef PES_SentryDroneArray;
         public static ThingDef PES_Radar;
         public static ThingDef PES_SpySatellite;
 
-
-        public static JobDef PES_StandGuard_Primitive;
         public static JobDef PES_StandGuard;
         public static JobDef PES_OperateSentryArray;
         public static JobDef PES_Job_InstallUpgrade;
+        public static JobDef PES_Job_RefuelByNutrition;
 
         public static DesignationDef PES_InstallUpgrade;
 

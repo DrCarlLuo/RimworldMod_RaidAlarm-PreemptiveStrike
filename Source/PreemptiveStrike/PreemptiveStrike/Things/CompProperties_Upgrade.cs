@@ -14,7 +14,8 @@ namespace PreemptiveStrike.Things
         FoodSustain,
         RecreationSustain,
         Telescope,
-        NightVision
+        NightVision,
+        RawFoodAllow
     }
 
 

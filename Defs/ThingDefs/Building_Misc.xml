@@ -2,14 +2,14 @@
 
 <Defs>
 	<ThingDef ParentName="BuildingBase">
-    <defName>PES_PremitiveWatchtower</defName>
-    <label>Primitive WatchTower</label>
-	  <thingClass>Building</thingClass>
-    <description>A premitive tall tower where one colonist can go on sentry duty, keeping a vigilant eye on the surrounding, and when danger approaches, alert the colony in time by making smoke signal.</description>
+    <defName>PES_PremitiveWatchtower_new</defName>
+    <label>Primitive Watchtower</label>
+	  <thingClass>PreemptiveStrike.Things.PrimitiveWatchTower</thingClass>
+    <description>A primitive tall tower where one colonist can go on sentry duty, keeping a vigilant eye on the surrounding, and when danger approaches, alert the colony in time by making a smoke signal.</description>
     <graphicData>
-      <texPath>Things/Buildings/PrimitiveWatchTower</texPath>
+      <texPath>Things/Buildings/PrimitiveWatchTower_1</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3, 5)</drawSize>
+      <drawSize>(4, 4)</drawSize>
       <shadowData>
         <volume>(3.0, 3.0, 3.0)</volume>
       </shadowData>
@@ -17,23 +17,10 @@
     <costList>
       <WoodLog>300</WoodLog>
     </costList>
-    <comps>
-      <li Class="PreemptiveStrike.Things.CompProperties_Detection">
-        <compClass>PreemptiveStrike.Things.CompDetection_ManualDevice</compClass>
-        <visionRangeProvide>1</visionRangeProvide>
-        <detectionRangeProvide>3</detectionRangeProvide>
-        <NotUsableUnderDarkness>true</NotUsableUnderDarkness>
-        <AffectedByOperatorSightAbility>true</AffectedByOperatorSightAbility>
-        <AffectedByWeather>true</AffectedByWeather>
-      </li>
-      <li Class = "PreemptiveStrike.Things.CompProperties_BuildingAlarm_Primitive">
-        <DrawOffset>(-0.1,1.1,2)</DrawOffset>
-      </li>
-    </comps>
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
       <WorkToBuild>2000</WorkToBuild>
@@ -45,7 +32,7 @@
 	  </building>
     <blockWind>true</blockWind>
 	  <fillPercent>0.5</fillPercent>
-    <interactionCellOffset>(1,0,2)</interactionCellOffset>
+    <interactionCellOffset>(1,0,1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 	  <passability>PassThroughOnly</passability>
@@ -53,22 +40,230 @@
     <designationCategory>PES_Reconnaissance</designationCategory>
     <rotatable>false</rotatable>
     <canOverlapZones>false</canOverlapZones>
-    <size>(3, 5)</size>
+    <size>(4, 4)</size>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li>PES_PrimitiveTower</li>
+    </researchPrerequisites>
+    <inspectorTabs>
+        <li>PreemptiveStrike.Things.ITab_TowerFood</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="PreemptiveStrike.Things.CompProperties_Detection">
+          <compClass>PreemptiveStrike.Things.CompDetection_ManualDevice</compClass>
+          <visionRangeProvide>1</visionRangeProvide>
+          <detectionRangeProvide>3</detectionRangeProvide>
+          <NotUsableUnderDarkness>true</NotUsableUnderDarkness>
+          <AffectedByOperatorSightAbility>true</AffectedByOperatorSightAbility>
+          <AffectedByWeather>true</AffectedByWeather>
+      </li>
+      <!-- <li Class = "PreemptiveStrike.Things.CompProperties_BuildingAlarm_Primitive">
+        <DrawOffset>(-0.1,1.1,2)</DrawOffset>
+      </li> -->
+      <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
+        <name>Food Delivery Storage</name>
+        <description>Install a small box for storing food, so that the haulers in your colony can deliver food(cooked meals) for the sentinel colonist.</description>
+        <upgradeTypeName>FoodSustain</upgradeTypeName>
+        <workAmount>1000</workAmount>
+        <costList>
+          <WoodLog>50</WoodLog>
+				</costList>
+        <needConstructionSkill>3</needConstructionSkill>
+        <GizmoTexPath>UI/Update_delievery</GizmoTexPath>
+        <upgradeCompProp>
+          <li Class="PreemptiveStrike.Things.CompProperties_TowerFoodRefuelable">
+            <fuelCapacity>3.0</fuelCapacity>
+            <fuelFilter>
+              <categories>
+                <li>FoodRaw</li>
+              </categories>
+            </fuelFilter>
+            <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+            <autoRefuelPercent>0.5</autoRefuelPercent>
+            <showFuelGizmo>true</showFuelGizmo>
+            <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+            <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+            <fuelGizmoLabel>Food Stored(Nutrition)</fuelGizmoLabel>
+            <DefaultStorageSettings>
+              <priority>Critical</priority>
+              <filter>
+                <categories>
+                  <li>Foods</li>
+                </categories>
+                <disallowedThingDefs>
+                  <li>Chocolate</li>
+                  <li>Pemmican</li>
+                </disallowedThingDefs>
+                <disallowedCategories>
+                  <li>FoodRaw</li>
+                </disallowedCategories>
+              </filter>
+            </DefaultStorageSettings>
+            <FixedStorageSettings>
+              <priority>Critical</priority>
+              <filter>
+                <categories>
+                  <li>Foods</li>
+                </categories>
+                <disallowedCategories>
+                    <li>FoodRaw</li>
+                </disallowedCategories>
+                <disallowedThingDefs>
+                  <li>Kibble</li>
+                  <li>Hay</li>
+                </disallowedThingDefs>
+              </filter>
+            </FixedStorageSettings>
+          </li>
+          <li Class = "PreemptiveStrike.Things.CompProperties_NeedSustain">
+            <needType>Food</needType>
+            <maxLevel>1</maxLevel>
+            <instant>true</instant>
+            <consumeFuel>true</consumeFuel>
+            <converseRatio>1</converseRatio>
+          </li>
+        </upgradeCompProp>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PES_MedievalWatchtower</defName>
+    <label>Medieval Watchtower</label>
+	  <thingClass>PreemptiveStrike.Things.MedievalWatchTower</thingClass>
+    <description>A Medieval tall tower where one colonist can go on sentry duty, keeping a vigilant eye on the surrounding, and when danger approaches, alert the colony in time by making a smoke signal.</description>
+    <graphicData>
+      <texPath>Things/Buildings/MedievalWatchTower</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5.8, 10.9)</drawSize>
+      <!-- <shaderType>CutoutComplex</shaderType> -->
+      <shadowData>
+        <volume>(3.0, 3.0, 3.0)</volume>
+      </shadowData>
+    </graphicData>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>300</costStuffCount>
+    <costList>
+      <WoodLog>100</WoodLog>
+    </costList>
+    <inspectorTabs>
+      <li>PreemptiveStrike.Things.ITab_TowerFood</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="PreemptiveStrike.Things.CompProperties_Detection">
+        <compClass>PreemptiveStrike.Things.CompDetection_ManualDevice</compClass>
+        <visionRangeProvide>1</visionRangeProvide>
+        <detectionRangeProvide>3</detectionRangeProvide>
+        <NotUsableUnderDarkness>true</NotUsableUnderDarkness>
+        <AffectedByOperatorSightAbility>true</AffectedByOperatorSightAbility>
+        <AffectedByWeather>true</AffectedByWeather>
+      </li>
+      <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
+        <name>Food Delivery Storage</name>
+        <description>Install a small box for storing food, so that the haulers in your colony can deliver food(cooked meals) for the sentinel colonist.</description>
+        <upgradeTypeName>FoodSustain</upgradeTypeName>
+        <workAmount>1000</workAmount>
+        <costList>
+          <WoodLog>50</WoodLog>
+				</costList>
+        <needConstructionSkill>3</needConstructionSkill>
+        <GizmoTexPath>UI/Update_delievery</GizmoTexPath>
+        <upgradeCompProp>
+          <li Class="PreemptiveStrike.Things.CompProperties_TowerFoodRefuelable">
+            <fuelCapacity>3.0</fuelCapacity>
+            <fuelFilter>
+              <categories>
+                <li>FoodRaw</li>
+              </categories>
+            </fuelFilter>
+            <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+            <autoRefuelPercent>0.5</autoRefuelPercent>
+            <showFuelGizmo>true</showFuelGizmo>
+            <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+            <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+            <fuelGizmoLabel>Food Stored(Nutrition)</fuelGizmoLabel>
+            <DefaultStorageSettings>
+              <priority>Critical</priority>
+              <filter>
+                <categories>
+                  <li>Foods</li>
+                </categories>
+                <disallowedThingDefs>
+                  <li>Chocolate</li>
+                  <li>Pemmican</li>
+                </disallowedThingDefs>
+                <disallowedCategories>
+                  <li>FoodRaw</li>
+                </disallowedCategories>
+              </filter>
+            </DefaultStorageSettings>
+            <FixedStorageSettings>
+              <priority>Critical</priority>
+              <filter>
+                <categories>
+                  <li>Foods</li>
+                </categories>
+                <disallowedCategories>
+                    <li>FoodRaw</li>
+                </disallowedCategories>
+                <disallowedThingDefs>
+                  <li>Kibble</li>
+                  <li>Hay</li>
+                </disallowedThingDefs>
+              </filter>
+            </FixedStorageSettings>
+          </li>
+          <li Class = "PreemptiveStrike.Things.CompProperties_NeedSustain">
+            <needType>Food</needType>
+            <maxLevel>1</maxLevel>
+            <instant>true</instant>
+            <consumeFuel>true</consumeFuel>
+            <converseRatio>1</converseRatio>
+          </li>
+        </upgradeCompProp>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Flammability>0</Flammability>
+	    <Beauty>0</Beauty>
+    </statBases>
+	  <building>
+      <allowAutoroof>false</allowAutoroof>
+	  </building>
+    <blockWind>true</blockWind>
+	  <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,2)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+	  <passability>PassThroughOnly</passability>
+    <pathCost>10</pathCost>
+    <designationCategory>PES_Reconnaissance</designationCategory>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(5, 5)</size>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <researchPrerequisites>
       <li>PES_PrimitiveTower</li>
     </researchPrerequisites>
   </ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
-    <defName>PES_watchtower</defName>
-    <label>WatchTower</label>
-	  <thingClass>Building</thingClass>
-    <description>Modern construction technology made it possible to build a watch tower much taller than a primitive one. Besides the height, some modern electronic devices can make the colonist on sentry duty see further. Can work without electricity, but only provide half the vision range and detection range.</description>
+    <defName>PES_watchtower_new</defName>
+    <label>Watchtower</label>
+	  <thingClass>PreemptiveStrike.Things.ModernWatchTower</thingClass>
+    <description>Modern construction technology made it possible to build a watchtower much taller than a primitive one. Besides the height, some modern electronic devices can make the colonist on sentry duty see further. Can work without electricity, but only provide half the vision range and detection range.</description>
     <graphicData>
-      <texPath>Things/Buildings/Watchtower</texPath>
+      <texPath>Things/Buildings/Watchtower_1</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(6, 12)</drawSize>
+      <drawSize>(5, 9.5)</drawSize>
       <shadowData>
         <volume>(3.0, 3.0, 3.0)</volume>
       </shadowData>
@@ -76,10 +271,14 @@
     <uiIconOffset>(0, 0.15)</uiIconOffset>
     <uiIconScale>1.25</uiIconScale>
     <tickerType>Normal</tickerType>
+    <size>(5, 5)</size>
     <costList>
       <Steel>300</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
+    <inspectorTabs>
+			<li>PreemptiveStrike.Things.ITab_TowerFood</li>
+		</inspectorTabs>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
@@ -96,11 +295,74 @@
         <UsableWithoutPower>true</UsableWithoutPower>
         <AffectedByWeather>true</AffectedByWeather>
       </li>
+      <li Class="PreemptiveStrike.Things.CompProperties_TowerFoodRefuelable">
+        <fuelCapacity>3.0</fuelCapacity>
+        <fuelFilter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+        <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+        <fuelGizmoLabel>Food Stored(Nutrition)</fuelGizmoLabel>
+        <DefaultStorageSettings>
+          <priority>Critical</priority>
+          <filter>
+            <categories>
+              <li>Foods</li>
+            </categories>
+            <disallowedThingDefs>
+              <li>Chocolate</li>
+              <li>Pemmican</li>
+            </disallowedThingDefs>
+            <disallowedCategories>
+              <li>FoodRaw</li>
+            </disallowedCategories>
+          </filter>
+        </DefaultStorageSettings>
+        <FixedStorageSettings>
+          <priority>Critical</priority>
+          <filter>
+            <categories>
+              <li>Foods</li>
+            </categories>
+            <disallowedCategories>
+                <li>FoodRaw</li>
+            </disallowedCategories>
+            <disallowedThingDefs>
+              <li>Kibble</li>
+              <li>Hay</li>
+            </disallowedThingDefs>
+          </filter>
+        </FixedStorageSettings>
+        <UpdatedStorageSettings>
+          <priority>Critical</priority>
+          <filter>
+            <categories>
+              <li>Foods</li>
+            </categories>
+            <disallowedThingDefs>
+              <li>Kibble</li>
+              <li>Hay</li>
+            </disallowedThingDefs>
+          </filter>
+        </UpdatedStorageSettings>
+      </li>
+      <li Class = "PreemptiveStrike.Things.CompProperties_NeedSustain">
+        <needType>Food</needType>
+        <maxLevel>1</maxLevel>
+        <instant>true</instant>
+        <consumeFuel>true</consumeFuel>
+        <converseRatio>1</converseRatio>
+      </li>
       <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
         <name>Mini Nutrient Paste Dispenser</name>
-        <description>Install a nutrient paste dispenser inside the tower, so that the sentinel colonist does not need to leave the watchtower occasionally for food. Accept Raw food inside.</description>
-        <upgradeTypeName>FoodSustain</upgradeTypeName>
-        <needResearch>PES_FoodSupply</needResearch>
+        <description>Install a nutrient paste dispenser inside the tower, so that the haulers in your colony can directly deliver raw food for the sentinel colonist.</description>
+        <upgradeTypeName>RawFoodAllow</upgradeTypeName>
+        <needResearch>NutrientPaste</needResearch>
         <workAmount>1000</workAmount>
         <costList>
           <Steel>90</Steel>
@@ -108,28 +370,6 @@
 				</costList>
         <needConstructionSkill>5</needConstructionSkill>
         <GizmoTexPath>UI/Update_food</GizmoTexPath>
-        <upgradeCompProp>
-          <li Class="CompProperties_Refuelable">
-            <fuelCapacity>60.0</fuelCapacity>
-            <fuelFilter>
-              <categories>
-                <li>FoodRaw</li>
-              </categories>
-            </fuelFilter>
-            <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-            <autoRefuelPercent>10</autoRefuelPercent>
-            <showFuelGizmo>true</showFuelGizmo>
-            <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
-            <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
-          </li>
-          <li Class = "PreemptiveStrike.Things.CompProperties_NeedSustain">
-            <needType>Food</needType>
-            <maxLevel>100</maxLevel>
-            <instant>true</instant>
-            <consumeFuel>true</consumeFuel>
-            <converseRatio>0.05</converseRatio>
-          </li>
-        </upgradeCompProp>
       </li>
       <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
         <name>Radio</name>
@@ -154,7 +394,7 @@
       <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
         <name>Searchlight</name>
         <needResearch>PES_SearchLight</needResearch>
-        <description>With a search light, the watchtower can be used with 60% efficiency when it's dark at the cost of extra 500W power consumption.</description>
+        <description>With a searchlight, the watchtower can be used with 60% efficiency when it's dark at the cost of an extra 500W power consumption.</description>
         <upgradeTypeName>NightVision</upgradeTypeName>
         <workAmount>2000</workAmount>
         <costList>
@@ -178,7 +418,7 @@
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <statBases>
       <MaxHitPoints>1000</MaxHitPoints>
       <WorkToBuild>2000</WorkToBuild>
@@ -190,7 +430,7 @@
 	  </building>
     <blockWind>true</blockWind>
 	  <fillPercent>0.5</fillPercent>
-    <interactionCellOffset>(2,0,3)</interactionCellOffset>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 	  <passability>PassThroughOnly</passability>
@@ -198,7 +438,6 @@
     <designationCategory>PES_Reconnaissance</designationCategory>
     <rotatable>false</rotatable>
     <canOverlapZones>false</canOverlapZones>
-    <size>(6, 6)</size>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <researchPrerequisites>
@@ -299,7 +538,7 @@
       </li>
       <li Class="PreemptiveStrike.Things.CompProperties_Upgrade">
         <name>Radio</name>
-        <description>Install a radio near this console, so that the operator can listen to it while monitor the drones. Keep the operator's recreational need at a moderate level</description>
+        <description>Install a radio near this console, so that the operator can listen to it while monitor the drones. Keep the operator's recreational need at a moderate level.</description>
         <upgradeTypeName>RecreationSustain</upgradeTypeName>
         <workAmount>1000</workAmount>
         <costList>

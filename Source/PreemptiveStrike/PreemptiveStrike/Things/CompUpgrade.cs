@@ -41,7 +41,7 @@ namespace PreemptiveStrike.Things
             if (Scribe.mode == LoadSaveMode.LoadingVars)
             {
                 //Use this to apply update in save-loading
-                //so that compdetection does not need to save any data
+                //so that other comps does not need to save any data
                 if (complete)
                     PostUpgrade(true);
             }
@@ -102,6 +102,7 @@ namespace PreemptiveStrike.Things
                 foreach (var prop in Props.upgradeCompProp)
                 {
                     var comp = Activator.CreateInstance(prop.compClass) as ThingComp;
+                    prop.ResolveReferences(parent.def);
                     parent.ForceAddComp(comp, prop);
                     if (exposeData)
                         comp.PostExposeData();

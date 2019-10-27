@@ -11,12 +11,8 @@ namespace PreemptiveStrike.Jobs
 {
     class WorkGiver_PES_StandGuard : WorkGiver_Scanner
     {
-        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForDef(PESDefOf.PES_watchtower);
+        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial);
 
-        public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
-        {
-            return pawn.Map.listerBuildings.AllBuildingsColonistOfDef(PESDefOf.PES_watchtower).Cast<Thing>();
-        }
 
         public override PathEndMode PathEndMode => PathEndMode.InteractionCell;
 
@@ -25,7 +21,7 @@ namespace PreemptiveStrike.Jobs
             List<Building> allBuildingsColonist = pawn.Map.listerBuildings.allBuildingsColonist;
             for (int i = 0; i < allBuildingsColonist.Count; i++)
             {
-                if (allBuildingsColonist[i].def == PESDefOf.PES_watchtower)
+                if (allBuildingsColonist[i] is TowerBuildingBase)
                 {
                     CompDetection_ManualDevice comp = allBuildingsColonist[i].GetComp<CompDetection_ManualDevice>();
                     if (comp != null && comp.CanUseNow)
@@ -37,6 +33,8 @@ namespace PreemptiveStrike.Jobs
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
+            if (!(t is TowerBuildingBase))
+                return false;
             if (t.Faction != pawn.Faction)
                 return false;
             Building building = t as Building;

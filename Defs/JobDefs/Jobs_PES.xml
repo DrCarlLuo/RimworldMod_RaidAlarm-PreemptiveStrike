@@ -2,14 +2,6 @@
 
 <Defs>
   <JobDef>
-    <defName>PES_StandGuard_Primitive</defName>
-    <driverClass>PreemptiveStrike.Jobs.JobDriver_PES_StandGuard_Primitive</driverClass>
-    <reportString>Standing guard at TargetA.</reportString>
-    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
-    <alwaysShowWeapon>true</alwaysShowWeapon>
-  </JobDef>
-
-  <JobDef>
     <defName>PES_StandGuard</defName>
     <driverClass>PreemptiveStrike.Jobs.JobDriver_PES_StandGuard</driverClass>
     <reportString>Standing guard at TargetA.</reportString>
@@ -28,5 +20,13 @@
 		<defName>PES_Job_InstallUpgrade</defName>
 		<driverClass>PreemptiveStrike.Jobs.JobDriver_PES_InstallUpgrade</driverClass>
 		<reportString>Installing upgrade at TargetA.</reportString>
-	</JobDef>
+  </JobDef>
+  
+  <JobDef>
+    <defName>PES_Job_RefuelByNutrition</defName>
+    <driverClass>PreemptiveStrike.Jobs.JobDriver_PES_RefuelByNutrition</driverClass>
+    <reportString>refueling TargetA.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
 </Defs>

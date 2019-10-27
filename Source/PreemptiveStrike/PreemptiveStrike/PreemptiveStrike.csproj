@@ -79,6 +79,7 @@
     <Compile Include="Interceptor\InterceptedIncident_SkyFaller_ShipPartCrash.cs" />
     <Compile Include="Interceptor\InterceptedIncident_SkyFaller_TransportPod.cs" />
     <Compile Include="Interceptor\InterceptedIncident_SolarFlare.cs" />
+    <Compile Include="Jobs\JobDriver_PES_RefuelByNutrition.cs" />
     <Compile Include="Mod\Main.cs" />
     <Compile Include="Mod\NameGenerator.cs" />
     <Compile Include="RaidGoal\RaidingGoal.cs" />
@@ -102,11 +103,9 @@
     <Compile Include="Jobs\JobDriver_PES_InstallUpgrade.cs" />
     <Compile Include="Jobs\JobDriver_PES_OperateSentryArray.cs" />
     <Compile Include="Jobs\JobDriver_PES_StandGuard.cs" />
-    <Compile Include="Jobs\JobDriver_PES_StandGuard_Primitive.cs" />
     <Compile Include="Jobs\WorkGiver_PES_InstallUpgrade.cs" />
     <Compile Include="Jobs\WorkGiver_PES_OperateSentryArray.cs" />
     <Compile Include="Jobs\WorkGiver_PES_StandGuard.cs" />
-    <Compile Include="Jobs\WorkGiver_PES_StandGuard_Primitive.cs" />
     <Compile Include="Mod\PES_Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DefOf\Textures.cs" />
@@ -127,9 +126,15 @@
     <Compile Include="Things\CompProperties_BuildingAlarm_Primitive.cs" />
     <Compile Include="Things\CompProperties_Detection.cs" />
     <Compile Include="Things\CompProperties_NeedSustain.cs" />
+    <Compile Include="Things\CompProperties_TowerFoodRefuelable.cs" />
     <Compile Include="Things\CompProperties_Upgrade.cs" />
+    <Compile Include="Things\CompTowerFoodRefuelable.cs" />
     <Compile Include="Things\CompUpgrade.cs" />
+    <Compile Include="Things\ITab_TowerFood.cs" />
+    <Compile Include="Things\MedievalWatchTower.cs" />
     <Compile Include="Things\ModernWatchTower.cs" />
+    <Compile Include="Things\PrimitiveWatchTower.cs" />
+    <Compile Include="Things\TowerBuildingBase.cs" />
     <Compile Include="Things\UpgradeUtilities.cs" />
     <Compile Include="Jobs\WorkGiver_PES_Refuel.cs" />
     <Compile Include="UI\Bulletin.cs" />
