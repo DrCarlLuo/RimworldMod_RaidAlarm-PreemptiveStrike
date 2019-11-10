@@ -20,7 +20,7 @@
 
     <PES_UI_SkyFaller_Spot_Big>Predicted Impact Spot (Click to see)</PES_UI_SkyFaller_Spot_Big>
     <PES_UI_SkyFaller_Spot_Small>Predicted Landfall Spot (Click to see)</PES_UI_SkyFaller_Spot_Small>
-    <PES_UI_SkyFaller_Spot_Unknown>Unable to predict dropping spot</PES_UI_SkyFaller_Spot_Unknown>
+    <PES_UI_SkyFaller_Spot_Unknown>Unable to predict landing zone</PES_UI_SkyFaller_Spot_Unknown>
 
     <PES_UI_Infestation_Spot>Emerging Spot (Click to see)</PES_UI_Infestation_Spot>
 </LanguageData>

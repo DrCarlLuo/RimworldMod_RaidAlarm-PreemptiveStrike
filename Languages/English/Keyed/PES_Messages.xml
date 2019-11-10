@@ -2,46 +2,48 @@
 
 <LanguageData>
 <PES_CaravanDismiss>{0} is no longer heading towards our colony and tracked by our reconnaissance system.</PES_CaravanDismiss>
-<PES_PrisonerDead>{0} is really angry now because one of the prisoner they want is dead. They will now take revenge on the colony.</PES_PrisonerDead>
-<PES_AllSlaveDead>{0} changes their raiding goal to Extortion, because all the colonists they want to enslave are dead.</PES_AllSlaveDead>
+<PES_PrisonerDead>{0} is furious because one of the prisoners they wanted is dead. They are now moving to take revenge on the colony.</PES_PrisonerDead>
+<PES_AllSlaveDead>{0} changed their raiding goal to Extortion, because all the colonists they want to enslave are dead.</PES_AllSlaveDead>
 <PES_CommunicationEstablished>We have established communication with {0}. Use Comms Console to contact them.</PES_CommunicationEstablished>
 
 <PES_Detected_Title_Human>Crowd Incoming</PES_Detected_Title_Human>
 <PES_Detected_Title_Animal>Herd Incoming</PES_Detected_Title_Animal>
-<PES_Detected_Text_Human>The reconnaissance system in our colony has detected that an unknown human crowd is moving toward our colony. Their faction and intention are unknown. The reconnaissance system is trying to identify more information about it. Detailed information is in the security report.</PES_Detected_Text_Human>
-<PES_Detected_Text_Animal>The reconnaissance system in our colony detected that an unusual animal herd is moving toward our colony. The reconnaissance system is trying to identify more information about it. Detailed information is in the security report.</PES_Detected_Text_Animal>
+<PES_Detected_Text_Human>The colony's reconnaissance system has detected an unknown human crowd moving toward the colony. Their affiliation and intentions are unknown. The reconnaissance system is trying to identify more information about it. View the security report for more details.</PES_Detected_Text_Human>
+<PES_Detected_Text_Animal>The colony's reconnaissance system has detected an unusual animal herd moving toward the colony. The reconnaissance system is trying to identify more information about it. View the security report for more details.</PES_Detected_Text_Animal>
 
 <PES_Hostile_Confirmed>Hostile Entity Confirmed</PES_Hostile_Confirmed>
-<PES_Hostile_Text_Human>The reconnaissance system in our colony has confirmed the incoming human crowd is a hostile raiding team. More information is in the security report.</PES_Hostile_Text_Human>
-<PES_Hostile_Text_Animal>The reconnaissance system in our colony has confirmed the incoming animal herd are mad animals. More information is in the security report.</PES_Hostile_Text_Animal>
+<PES_Hostile_Text_Human>The colony's reconnaissance system has confirmed the incoming human crowd to be a hostile raiding party. View the security report for more details.</PES_Hostile_Text_Human>
+<PES_Hostile_Text_Animal>The colony's reconnaissance system has confirmed the incoming animal herd to be a stampede of maddened animals. View the security report for more details.</PES_Hostile_Text_Animal>
 
-<PES_Neutral_Message>The reconnaissance system in our colony has confirmed the incoming crowd is nonhostile. See more in security report.</PES_Neutral_Message>
-<PES_Neutral_Message_Animal>The reconnaissance system in our colony has confirmed the incoming herd is nonhostile. See more in security report.</PES_Neutral_Message_Animal>
+<PES_Neutral_Message>The colony's reconnaissance system has confirmed the incoming crowd to be nonhostile. View the security report for more details.</PES_Neutral_Message>
+<PES_Neutral_Message_Animal>The colony's reconnaissance system has confirmed the incoming herd to be nonhostile. View the security report for more details.</PES_Neutral_Message_Animal>
 
-<PES_Caravan_Confirmed>"{0}" has entered the vision range of our colony, all information revealed. </PES_Caravan_Confirmed>
+<PES_Caravan_Confirmed>"{0}" has entered the vision range of our colony. All information is now available. </PES_Caravan_Confirmed>
 
-<PES_Update_NeedSkill>A colonist with at least Level {0} in construction is required to construct this upgrade</PES_Update_NeedSkill>
+<PES_Update_NeedSkill>A colonist with at least {0} construction skill is required to construct this upgrade.</PES_Update_NeedSkill>
 
-<PES_Spot_SkyFaller_Big>The reconnaissance system in our colony has spotted an anomalous large object in the sky</PES_Spot_SkyFaller_Big>
-<PES_Spot_SkyFaller_Small>The reconnaissace system in our colony has spotted incoming drop pods</PES_Spot_SkyFaller_Small>
+<PES_Spot_SkyFaller_Big>The colony's reconnaissance system has spotted an anomalous large object in the sky.</PES_Spot_SkyFaller_Big>
+<PES_Spot_SkyFaller_Small>The colony's reconnaissace system detected incoming drop pods.</PES_Spot_SkyFaller_Small>
 
 <PES_Warning_Meteorite>Warning: Meteorite Impact</PES_Warning_Meteorite>
-<PES_Warning_Meteorite_Text>The reconnaissance system in our colony has confirmed that the incoming large object is a meteorite. The impact spot has been successfully calculated. See the security report for more information.</PES_Warning_Meteorite_Text>
+<PES_Warning_Meteorite_Text>The colony's reconnaissance system has confirmed that the incoming large object is a meteorite. The impact spot has been successfully calculated. View the security report for more information.</PES_Warning_Meteorite_Text>
 
 <PES_Warning_ShipPart>Warning: Ship Part Impact</PES_Warning_ShipPart>
-<PES_Warning_Shippart_Text>The reconnaissance system in our colony has confirmed that the incoming large object is a large piece of an ancient ship! The impact spot has been successfully calculated. See the security report for more information.</PES_Warning_Shippart_Text>
+<PES_Warning_Shippart_Text>The colony's reconnaissance system has confirmed that the incoming large object is a large piece of an ancient ship! The impact spot has been successfully calculated. View the security report for more information.</PES_Warning_Shippart_Text>
 
 <PES_Warning_DropPodAssault>Warning: Drop Pod Assault</PES_Warning_DropPodAssault>
-<PES_Warning_DropPodAssault_Text>The reconnaissance system in our colony has confirmed that the incoming drop pods actually contain enemies! Their landing spot has been successfully calculated. See the security report of more information.</PES_Warning_DropPodAssault_Text>
+<PES_Warning_DropPodAssault_Text>The colony's reconnaissance system has confirmed that the incoming drop pods actually contain enemies! Their landing spot has been successfully calculated. View the security report for more information.</PES_Warning_DropPodAssault_Text>
 
 <PES_Infestation_Letter>Unusual Deep-Ground Motion Detected</PES_Infestation_Letter>
 <PES_Infestation_Text>The ground-penetrating scanner in the colony has detected an anomolous movement deep in the gound. This is a clear sign of an upcoming infestation.</PES_Infestation_Text>
 
 <PES_Notify_ResoucePod>The incoming drop pods have been confirmed to be resource pods.</PES_Notify_ResoucePod>
 <PES_Notify_RefugeePod>The incoming drop pods have been confirmed to contain a refugee.</PES_Notify_RefugeePod>
-<PES_Notify_ShipChunk>The incoming large object in the sky has been confirmed to be ship chunks.</PES_Notify_ShipChunk>
+<PES_Notify_ShipChunk>The incoming large object in the sky has been confirmed to be chunks of a ship.</PES_Notify_ShipChunk>
 
-<PES_Warning_Flare_Early>Solar Flare(Early Stage)</PES_Warning_Flare_Early>
-<PES_Warning_Flare_Early_Text>A solar flare is about to blast the planet. Radar and statellite uplinks have already stopped functioning because of the electromagnetic interference. Other electronic devices are predicted to stop working in about 12 hours when the solar flare finally hits this planet.</PES_Warning_Flare_Early_Text>
+<PES_Warning_Flare_Early>Imminent Solar Flare</PES_Warning_Flare_Early>
+<PES_Warning_Flare_Early_Text>The local star's energy output is fluctuating. A solar flare will soon begin.
+
+The current electromagnetic interference has disabled all radar and satellite uplinks. All other electrical devices will shut down temporarily in about 12 hours, as the flare hits the planet.</PES_Warning_Flare_Early_Text>
 </LanguageData>
 

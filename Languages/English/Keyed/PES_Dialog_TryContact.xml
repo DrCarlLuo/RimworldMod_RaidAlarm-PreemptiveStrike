@@ -5,21 +5,21 @@
 
   <PES_TryContactPrologue_Unknown>Since we have not established communication with "{0}", we can try to broadcast a message from this comms console, hoping they receive this message and reply to us. \n\nBut beware, we don't know if they are our allies or enemies.\n</PES_TryContactPrologue_Unknown>
 
-  <PES_TryContactPrologue_Neutral>Although the reconnaissance system in our colony has identified {0} is friendly, we still cannot establish communication with them. \n\nWe can broadcast a message, urging them to reply to us ASAP.\n</PES_TryContactPrologue_Neutral>
+  <PES_TryContactPrologue_Neutral>Although the colony's reconnaissance system has identified {0} is friendly, we still cannot establish communication with them. \n\nWe can broadcast a message, urging them to reply to us ASAP.\n</PES_TryContactPrologue_Neutral>
 
-  <PES_TryContactPrologue_Hostile>Caution: {0} has been recognized by our reconnaissance system as an incoming menace, but we haven't uncovered all of their information. \n\nWe can try to broadcast a message demanding them to state their intention or try to force them leave.\n</PES_TryContactPrologue_Hostile>
+  <PES_TryContactPrologue_Hostile>Caution: {0} has been recognized by the colony's reconnaissance system as an incoming menace, but we haven't uncovered all of their information. \n\nWe can try to broadcast a message demanding them to state their intention or try to force them leave.\n</PES_TryContactPrologue_Hostile>
 
   <PES_BroadCastMessage>So, {0} decide to send a message saying that:</PES_BroadCastMessage>
-  <PES_BroadCastMessage_Mechanoid>Since we've already known they are mechanoids, we can only:</PES_BroadCastMessage_Mechanoid>
+  <PES_BroadCastMessage_Mechanoid>Since we've already know they are mechanoids, we can only:</PES_BroadCastMessage_Mechanoid>
 
   <PES_TryContactPrologue_Mechanoid>Initiate greeting protocol with those soulless machines\n</PES_TryContactPrologue_Mechanoid>
 
-  <PES_TryContact_Persuasion_Unknown>"This is {0} from {1} speaking. Please state your intention of coming to our colony and confirm that you have no hostility towards us."</PES_TryContact_Persuasion_Unknown>
+  <PES_TryContact_Persuasion_Unknown>"This is {0} from {1} speaking. Please state your intentions and confirm that you have no hostility towards us."</PES_TryContact_Persuasion_Unknown>
   <PES_TryContact_Persuasion_Neutral>"This is {0} from {1} speaking. We have confirmed that you are not hostile to our colony. Please contact us ASAP!"</PES_TryContact_Persuasion_Neutral>
-  <PES_TryContact_Persuasion_Hostile>"This is {0} from {1} speaking. Our reconnaissance system has identified your hostile activity. NAME YOUR INTENTION! Repeat, NAME YOUR INTENTION!"</PES_TryContact_Persuasion_Hostile>
+  <PES_TryContact_Persuasion_Hostile>"This is {0} from {1} speaking. Our reconnaissance system has identified your hostile activity. Name your intentions!"</PES_TryContact_Persuasion_Hostile>
 
-  <PES_TryContact_Intimidation_have_mortar>"Your location has been confirmed by us! State your intention immediately or be prepared for a rain of mortar fire!"</PES_TryContact_Intimidation_have_mortar>
-  <PES_TryContact_Intimidation_no_mortar>"Your location has been confirmed by us! State your intention immediately or our commandos will launch an immediate assault!"</PES_TryContact_Intimidation_no_mortar>
+  <PES_TryContact_Intimidation_have_mortar>"We've confirmed your location. State your intention immediately or be prepared for a rain of mortar fire!"</PES_TryContact_Intimidation_have_mortar>
+  <PES_TryContact_Intimidation_no_mortar>"We've confirmed your location. State your intention immediately or our commandos will launch an immediate assault!"</PES_TryContact_Intimidation_no_mortar>
 
   <PES_TryContact_Beguilement>"This is an SOS message from {0} of {1}: we are currently under heveay attack by mechanoids; countless centipedes, lancers and scythers are flocking into our base! We need immediate military assistance! Right Now! Ahhhhhhhhhh"</PES_TryContact_Beguilement>
   <PES_TryContact_Beguilement_FactionConfirmed>"This is {0} from {1} speaking. {1} is currently occupying {2}. Any incoming corps with unidentifiable intention will be recognized as a threat to {1}"</PES_TryContact_Beguilement_FactionConfirmed>

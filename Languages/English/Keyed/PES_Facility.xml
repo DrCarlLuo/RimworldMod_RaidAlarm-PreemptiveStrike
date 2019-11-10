@@ -5,5 +5,5 @@
     <PES_Building_UpdateInstalling>Installing Upgrade: {0}\nProgress: {1}%</PES_Building_UpdateInstalling>
     <PES_Building_Delivered>Delivered: {0}</PES_Building_Delivered>
     <PES_Building_UnUsableDark>Unusable when it's dark.</PES_Building_UnUsableDark>
-    <PES_Building_UnUsableSolarFlare>Signal jammed by early-stage solar flare.</PES_Building_UnUsableSolarFlare>
+    <PES_Building_UnUsableSolarFlare>Signal jammed by solar flare.</PES_Building_UnUsableSolarFlare>
 </LanguageData>
