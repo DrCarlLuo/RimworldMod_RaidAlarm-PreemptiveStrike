@@ -6,10 +6,10 @@
   <PES_intimidate_noun>intimidation</PES_intimidate_noun>
   <PES_beguile_noun>beguilement</PES_beguile_noun>
 
-  <PES_SimpleConfirm>confirm</PES_SimpleConfirm>
+  <PES_SimpleConfirm>Confirm</PES_SimpleConfirm>
   <PES_Disconnect>Disconnect</PES_Disconnect>
-  <PES_Cancel>Never mind</PES_Cancel>
-  <PES_ConfirmChoice>This is worth a try</PES_ConfirmChoice>
+  <PES_Cancel>Nevermind.</PES_Cancel>
+  <PES_ConfirmChoice>This is worth a try.</PES_ConfirmChoice>
 
   <PES_Condition_Neutral>for friends</PES_Condition_Neutral>
   <PES_Condition_Hostile>for enemies</PES_Condition_Hostile>
@@ -28,7 +28,7 @@
   <PES_DAMNIT>Damn it!</PES_DAMNIT>
 
   <PES_Friendly_Greeting>People from {0} greets {1} warmly and say that they are arriving very soon.</PES_Friendly_Greeting>
-  <PES_Friendly_Dismiss>Tell them it is not a good time to come here and dismiss them</PES_Friendly_Dismiss>
-  <PES_Friendly_Dismissed>They say that the message is acknowledged and they will not head toward our colony.</PES_Friendly_Dismissed>
+  <PES_Friendly_Dismiss>Tell them it is not a good time to visit and send them away.</PES_Friendly_Dismiss>
+  <PES_Friendly_Dismissed>They acknowledge our message, and will not head toward our colony.</PES_Friendly_Dismissed>
 
 </LanguageData>

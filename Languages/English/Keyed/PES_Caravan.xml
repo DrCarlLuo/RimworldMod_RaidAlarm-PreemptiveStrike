@@ -15,13 +15,13 @@
     <PES_RaidGoalName_Rescue>Rescue Prisoner</PES_RaidGoalName_Rescue>
     <PES_RaidGoalName_Despoil>Despoil</PES_RaidGoalName_Despoil>
     <PES_RaidGoalName_Revenge>Revenge</PES_RaidGoalName_Revenge>
-    <PES_RaidGoalName_Enslave>Slave Raiding</PES_RaidGoalName_Enslave>
+    <PES_RaidGoalName_Enslave>Kidnap Colonists</PES_RaidGoalName_Enslave>
     <PES_RaidGoalName_Conquer>Conquer</PES_RaidGoalName_Conquer>
     <PES_RaidGoalName_Extortion>Extortion</PES_RaidGoalName_Extortion>
     <PES_RaidGoalName_Smite>SMITE</PES_RaidGoalName_Smite>
     <PES_RaidGoalName_Extermination>EXTERMINATION</PES_RaidGoalName_Extermination>
 
-    <PES_Strategy_Normal>Frontal assault</PES_Strategy_Normal>
+    <PES_Strategy_Normal>Frontal Assault</PES_Strategy_Normal>
     <PES_Strategy_Sapper>Sappers</PES_Strategy_Sapper>
     <PES_Strategy_Smart>Smart Attack</PES_Strategy_Smart>
     <PES_Strategy_Siege>Siege</PES_Strategy_Siege>
