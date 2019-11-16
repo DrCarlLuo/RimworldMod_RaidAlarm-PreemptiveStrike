@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_setting_default>リセットして初期化する</PES_setting_default>
+  <PES_setting_notes>注意：\n1．以下の設定の計算式に関してそれぞれ詳細な説明があります。各項目の上にマウスポインターを重ねると表示されます\n2．ゲーム内1時間＝2500ティック(ticks)</PES_setting_notes>
+  <PES_setting_detectioncoefficient>探知係数：</PES_setting_detectioncoefficient>
+  <PE_setting_detectionMechanism>探知方式の設定</PE_setting_detectionMechanism>
+  <PES_setting_detectionFormula>探知率の計算式：P＝（c－y)／c＊k\nこの数値は[0.1、0.8]（未知のキャラバンを探知）か[0.2、0.95]（詳細な情報を探知）に固定されます</PES_setting_detectionFormula>
+  <PES_setting_detectionExplain>A＝索敵範囲\nB＝視界範囲\nC＝A－B\nx＝残りタイル数\ny＝x－B\nk＝以下の係数\nPは最終探知率です</PES_setting_detectionExplain>
+
+  <PES_setting_caravanSpeed>キャラバン隊が1タイルを移動する時間(ティック単位)</PES_setting_caravanSpeed>
+
+  <PES_setting_skyObject>飛翔物や襲来の時間設定：（ティック単位：ゲーム内1時間＝2500ティック）</PES_setting_skyObject>
+  <PES_setting_skyObject_Large_a>大型飛翔物が衝突するまでの警告時間：</PES_setting_skyObject_Large_a>
+  <PES_setting_skyObject_Large_b>大型飛翔物を探知識別するまでの時間：</PES_setting_skyObject_Large_b>
+  <PES_setting_skyObject_Small_a>小型飛翔物が衝突するまでの警告時間：</PES_setting_skyObject_Small_a>
+  <PES_setting_skyObject_Small_b>小型飛翔物を探知識別するまでの時間：</PES_setting_skyObject_Small_b>
+
+  <PES_setting_infestation>虫の襲来か起きるまでの警告時間：</PES_setting_infestation>
+
+  <PES_setting_negotiationProb>交渉の設定</PES_setting_negotiationProb>
+
+  <PES_setting_negotiationIntro>以下の確率は、すべて基本値だけです。それぞれの最終的な発生率は、以下の計算式に基づいています：\n良い結果の場合：P＝基準*NA(欠損値)\n悪い結果の場合：P＝基準*(1／NA)；P＝基準値／2（もしNAが0の場合)\nそしてPは[0、1]に固定されます</PES_setting_negotiationIntro>
+  <PES_setting_negotiationTip>基準=以下の基準値\nNAはポーンの交渉能力(%)です。これはポーンの社交スキルレベルに関係しており、ゲーム内の情報タブで確認できます。健康な普通のポーンの場合は外交レベル1の場合は40％でレベル20の場合は190％です。</PES_setting_negotiationTip>
+  <PES_setting_commintro>インシデントのキャラバン隊と接触した際の確率：(1.0＝100%)</PES_setting_commintro>
+  <PES_setting_commpersuation_friend>説得成功率（中立)：</PES_setting_commpersuation_friend>
+  <PES_setting_commpersuation_hostile>説得成功率（敵対)：</PES_setting_commpersuation_hostile>
+  <PES_setting_commintimidation_contact_friend>連絡した際の脅迫成功率（中立)：</PES_setting_commintimidation_contact_friend>
+  <PES_setting_commintimidation_frighten_friend>威嚇した際の脅迫成功率（中立)：</PES_setting_commintimidation_frighten_friend>
+  <PES_setting_commintimidation_contact_Hostile>連絡した際の脅迫成功率（敵対)：</PES_setting_commintimidation_contact_Hostile>
+  <PES_setting_commintimidation_frighten_Hostile>威嚇した際の脅迫成功率（敵対)：</PES_setting_commintimidation_frighten_Hostile>
+  <PES_setting_commbeguilment_friend>策略成功率（中立)：</PES_setting_commbeguilment_friend>
+  <PES_setting_commbeguilment_Contact_hostile>連絡した際の策略成功率（敵対)：</PES_setting_commbeguilment_Contact_hostile>
+  <PES_setting_commbeguildment_frighten_hostile>脅した際の策略成功率（敵対)：</PES_setting_commbeguildment_frighten_hostile>
+
+  <PES_setting_negintro>襲撃目標について交渉する際の成功率：(1.0＝100%)</PES_setting_negintro>
+  <PES_setting_neg_delay>しばらく襲撃を停止するように説得して交渉した場合：</PES_setting_neg_delay>
+  <PES_setting_delay_persuasion>説得に成功：</PES_setting_delay_persuasion>
+  <PES_setting_delay_intimidation_s>威嚇に成功：</PES_setting_delay_intimidation_s>
+  <PES_setting_delay_intimidation_b>威嚇に失敗して逆効果：</PES_setting_delay_intimidation_b>
+  <PES_setting_delay_beguilment>策略に成功：</PES_setting_delay_beguilment>
+  <PES_setting_neg_bargain>彼らと交渉して説得する場合：(1.0＝100%)</PES_setting_neg_bargain>
+  <PES_setting_bargain_persuasion>説得に成功：</PES_setting_bargain_persuasion>
+  <PES_setting_bargain_intimidation_s>威嚇に成功：</PES_setting_bargain_intimidation_s>
+  <PES_setting_bargain_intimidation_b>威嚇に失敗して逆効果：</PES_setting_bargain_intimidation_b>
+  <PES_setting_bargain_beguilment>策略に成功：</PES_setting_bargain_beguilment>
+  <PES_setting_neg_remedy>襲撃目標を変更するように依頼した場合：(1.0＝100%)</PES_setting_neg_remedy>
+  <PES_setting_remedy_persuasion>説得に成功：</PES_setting_remedy_persuasion>
+  <PES_setting_remedy_intimidation_s>威嚇に成功：</PES_setting_remedy_intimidation_s>
+  <PES_setting_remedy_intimidation_b>威嚇に失敗して逆効果：</PES_setting_remedy_intimidation_b>
+  <PES_setting_remedy_beguilment>策略に成功：</PES_setting_remedy_beguilment>
+
+  <PES_setting_mesintro>キャラバンと接触しようとする場合、上記の確率が試される前に、送信されたメッセージを彼らが受信できるかどうかの判定確率があり、それは以下の式で計算されます。</PES_setting_mesintro>
+  <PES_setting_mesExp>計算式：P＝1－0.2＊難易度＋オフセット　（Pは[0、1]に固定される)</PES_setting_mesExp>
+  <PES_setting_megTip>難易度は、穏やか(Peaceful)の場合は0、過激(Extreme)の場合は5です。\nオフセットは以下の値</PES_setting_megTip>
+  <PES_setting_mesOffset>メッセージ受信確率のオフセット</PES_setting_mesOffset>
+
+</LanguageData>

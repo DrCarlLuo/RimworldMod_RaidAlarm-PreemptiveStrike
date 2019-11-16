@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+  <PES_CaravanDismiss>{0}はもうコロニーに向かっておらず、監視システムによって追跡されています。</PES_CaravanDismiss>
+  <PES_PrisonerDead>{0}は、彼らが要求した囚人の1人が死亡しているので、激怒しています。彼らは今すぐコロニーに復讐するでしょう。</PES_PrisonerDead>
+  <PES_AllSlaveDead>{0}は、襲撃目標を恐喝に変更しました。誘拐したかった入植者が全員死亡しているからです。</PES_AllSlaveDead>
+  <PES_CommunicationEstablished>{0}との通信が繋がりました。通信器を使って連絡してください。</PES_CommunicationEstablished>
+
+  <PES_Detected_Title_Human>人間の集団を発見</PES_Detected_Title_Human>
+  <PES_Detected_Title_Animal>動物の群れを発見</PES_Detected_Title_Animal>
+  <PES_Detected_Text_Human>コロニーの監視システムは、コロニーに向かって移動している未確認な人間の集団を発見した。彼らの所属する派閥や意図は不明です。監視システムはさらに詳細な情報を識別しようと努力しています。\n詳細情報はセキュリティ報告を参照</PES_Detected_Text_Human>
+  <PES_Detected_Text_Animal>コロニーの監視システムは、コロニーに向かって移動している未確認な動物の群れを発見した。監視システムはさらに詳細な情報を識別しようと努力しています。\n詳細情報はセキュリティ報告を参照</PES_Detected_Text_Animal>
+
+  <PES_Hostile_Confirmed>敵対的な集団を確認</PES_Hostile_Confirmed>
+  <PES_Hostile_Text_Human>コロニーの監視システムは、侵入してきた人間の集団が敵対的な襲撃部隊と確認した。\n詳細情報はセキュリティ報告を参照</PES_Hostile_Text_Human>
+  <PES_Hostile_Text_Animal>コロニーの監視システムは、侵入してきた動物の群れが殺人鬼な動物と確認した。\n詳細情報はセキュリティ報告を参照</PES_Hostile_Text_Animal>
+
+  <PES_Neutral_Message>コロニーの監視システムは、侵入してきた人間の集団が敵対的でないことを確認した。\n詳細情報はセキュリティ報告を参照</PES_Neutral_Message>
+  <PES_Neutral_Message_Animal>コロニーの監視システムは、侵入してきた動物の群れが敵対的でないことを確認した。\n詳細情報はセキュリティ報告を参照</PES_Neutral_Message_Animal>
+
+  <PES_Caravan_Confirmed>「{0}」はコロニーの視界範囲に入り、すべての情報が明らかになりました。</PES_Caravan_Confirmed>
+
+  <PES_Update_NeedSkill>この改良は、建設スキルがレベル{0}以上の入植者が必要です。</PES_Update_NeedSkill>
+
+  <PES_Spot_SkyFaller_Big>コロニーの監視システムは、空から接近する未確認の大型飛翔物体を発見した</PES_Spot_SkyFaller_Big>
+  <PES_Spot_SkyFaller_Small>コロニーの監視システムは、空から接近する降下ポッドを発見した</PES_Spot_SkyFaller_Small>
+
+  <PES_Warning_Meteorite>警告：隕石の衝突</PES_Warning_Meteorite>
+  <PES_Warning_Meteorite_Text>コロニーの監視システムは、空から接近する落下物が隕石だと確認して、その衝突地点を正確に計算した。\n詳細情報はセキュリティ報告を参照</PES_Warning_Meteorite_Text>
+
+  <PES_Warning_ShipPart>警告：汚染された船の落下</PES_Warning_ShipPart>
+  <PES_Warning_Shippart_Text>コロニーの監視システムは、空から接近する大型飛翔物体が古代の汚染された船だと確認した！その衝突地点の計算に成功しました。\n詳細情報はセキュリティ報告を参照</PES_Warning_Shippart_Text>
+
+  <PES_Warning_DropPodAssault>警告：降下ポッドによる襲撃</PES_Warning_DropPodAssault>
+  <PES_Warning_DropPodAssault_Text>コロニーの監視システムは、空から接近する降下ポッドに敵が入っている確認しました。\nその着陸地点の計算に成功しました。詳細情報はセキュリティ報告を参照</PES_Warning_DropPodAssault_Text>
+
+  <PES_Infestation_Letter>異常な地下からの振動を検知</PES_Infestation_Letter>
+  <PES_Infestation_Text>コロニーの地殻深部スキャナーは、地中深くから異常な振動を検知しました。これは虫の襲来が発生する確実な兆候です。</PES_Infestation_Text>
+
+  <PES_Notify_ResoucePod>接近する降下ポッドは資源が入った輸送ポッドだと確認した。</PES_Notify_ResoucePod>
+  <PES_Notify_RefugeePod>接近する降下ポッドは避難者が乗った脱出ポッドだと確認した。</PES_Notify_RefugeePod>
+  <PES_Notify_ShipChunk>空から接近する大型飛翔物体は宇宙船のガラクタだと確認されました。</PES_Notify_ShipChunk>
+
+  <PES_Warning_Flare_Early>ソーラーフレア(初期段階)</PES_Warning_Flare_Early>
+  <PES_Warning_Flare_Early_Text>太陽フレアの爆発の最初の影響が惑星に到達しています。監視レーダーと偵察衛星装置は、電磁場干渉のためすでに機能を停止しています。他の電気機器は太陽フレアの本流がこの惑星に衝突した場合、約12時間は機能が停止するでしょう。</PES_Warning_Flare_Early_Text>
+
+</LanguageData>

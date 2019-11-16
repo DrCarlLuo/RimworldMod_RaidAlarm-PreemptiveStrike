@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_Building_Installed>改良済：</PES_Building_Installed>
+  <PES_Building_ToInstall>改良する：\n{0}</PES_Building_ToInstall>
+  <PES_Building_UpdateInstalling>改良中：{0}\n進行度：{1}%</PES_Building_UpdateInstalling>
+  <PES_Building_Delivered>補給完了：{0}</PES_Building_Delivered>
+  <PES_Building_UnUsableDark>夜間は使用不可能</PES_Building_UnUsableDark>
+  <PES_Building_UnUsableSolarFlare>初期段階の太陽フレアにより信号が妨害された。</PES_Building_UnUsableSolarFlare>
+
+</LanguageData>

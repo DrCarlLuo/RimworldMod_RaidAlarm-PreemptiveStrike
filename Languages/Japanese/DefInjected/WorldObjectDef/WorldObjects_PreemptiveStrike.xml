@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_RaidingCaravan.label>侵入者</PES_RaidingCaravan.label>
+  <PES_RaidingCaravan.description>この集団または動物の群れは、コロニーの偵察施設によって発見されました。詳細はセキュリティ報告を確認してください。</PES_RaidingCaravan.description>
+
+  <PES_RaidingCaravan_Simple.label>侵入者</PES_RaidingCaravan_Simple.label>
+  <PES_RaidingCaravan_Simple.description>この集団または動物の群れは、コロニーの偵察施設によって発見されました。詳細はセキュリティ報告を確認してください。</PES_RaidingCaravan_Simple.description>
+
+</LanguageData>

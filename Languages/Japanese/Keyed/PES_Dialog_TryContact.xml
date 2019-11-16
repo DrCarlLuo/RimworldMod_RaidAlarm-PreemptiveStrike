@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_TryToCallOnRadio>{0}と連絡を試みる</PES_TryToCallOnRadio>
+  <PES_TryContact_CoolDown>特定の対象には通信を1時間に1回しか送信できません。残り時間：{0}</PES_TryContact_CoolDown>
+
+  <PES_TryContactPrologue_Unknown>私たちは「{0}」との通信回線をまだ確立していないため、この通信を送信して返信してくれることを期待して通信器からメッセージを送れます。\n\nしかし注意してください。彼らが味方か敵かまだ不明です。\n</PES_TryContactPrologue_Unknown>
+
+  <PES_TryContactPrologue_Neutral>コロニーの監視システムは{0}が友好的であると識別しましたが、まだ彼らとの通信を確立することができません。\n\nメッセージを送って、できるだけ早く返信するように促すことが可能です。\n</PES_TryContactPrologue_Neutral>
+
+  <PES_TryContactPrologue_Hostile>警告：{0}は、私たちの監視システムから新たな脅威として認識されており、詳細な情報は不明のままです。\n\n私たちは、彼らに対して意図を明確にさせるか、強制的に退去するように要求するメッセージを送ってみることが可能です。\n</PES_TryContactPrologue_Hostile>
+
+  <PES_BroadCastMessage>彼らに{0}が送るメッセージを選択：</PES_BroadCastMessage>
+  <PES_BroadCastMessage_Mechanoid>既にメカノイドだと判明しているので次の対応だけ可能です。</PES_BroadCastMessage_Mechanoid>
+
+  <PES_TryContactPrologue_Mechanoid>魂を持たない機械と挨拶プロトコルを開始する\n</PES_TryContactPrologue_Mechanoid>
+
+  <PES_TryContact_Persuasion_Unknown>「こちらは{1}の{0}です。あなた方が私たちのコロニーに接近する理由を答え、私たちに対して敵意がないこと明確にしてください。」</PES_TryContact_Persuasion_Unknown>
+  <PES_TryContact_Persuasion_Neutral>「こちらは{1}の{0}です。あなた方が私たちのコロニーに対して敵意が無い事を確認した。可能な限り早く返答をお願いします。」</PES_TryContact_Persuasion_Neutral>
+  <PES_TryContact_Persuasion_Hostile>「こちらは{1}の{0}です。我々の監視システムはあなた方の敵対的な行動を識別しました。接近する意図を明確にせよ！」</PES_TryContact_Persuasion_Hostile>
+
+  <PES_TryContact_Intimidation_have_mortar>「あなた方の居場所は把握されています！今すぐ接近する意図を言わないのなら、迫撃砲の歓迎を受ける覚悟をせよ！」</PES_TryContact_Intimidation_have_mortar>
+  <PES_TryContact_Intimidation_no_mortar>「あなた方の居場所は把握されています！今すぐ接近する意図を言わないのなら、私たちの迎撃部隊は攻撃を開始します！」</PES_TryContact_Intimidation_no_mortar>
+
+  <PES_TryContact_Beguilement>「これは{1}の{0}が送信しているSOSメッセージです：現在私たちはメカノイドから激しい襲撃を受けており無数のメカノイドたちがこのコロニーに押し寄せています！今すぐ応援部隊が必要です！今すぐに！ああぁぁ神様！」</PES_TryContact_Beguilement>
+  <PES_TryContact_Beguilement_FactionConfirmed>「こちらは{1}の{0}です。現在{2}は{1}が領有する場所です。意図を明確にせず接近する場合{1}に対する脅威とみなします。」</PES_TryContact_Beguilement_FactionConfirmed>
+
+  <PES_Condition_Received>メッセージを受信</PES_Condition_Received>
+
+  <PES_TryOutcome_Positive>通信を確立</PES_TryOutcome_Positive>
+  <PES_TryOutcome_Leave>あきらめて立ち去る</PES_TryOutcome_Leave>
+  <PES_TryOutcome_Scared>戦う気が失せた</PES_TryOutcome_Scared>
+
+  <PES_Contact_Fail>{0}は、通信器から何も受信しませんでした。彼らがこのメッセージを受信できなかったのか、それとも沈黙しているだけなのかは不明です。</PES_Contact_Fail>
+
+  <PES_Persuasion_Success_Hostile>彼らからの返信を受け取りました！彼らは{0}から来たようです！私たちは現在、彼らの意図と襲撃の目標を知っています。\n\n通話が可能になりました。</PES_Persuasion_Success_Hostile>
+  <PES_Persuation_Success_Friendly>彼らからの返信を受け取りました！彼らは{0}から来たようです！現在私たちは彼らについての情報を全て把握しています。\n\n通話が可能になりました。</PES_Persuation_Success_Friendly>
+
+  <PES_Intimidation_SuccessFlee_Hostile>威嚇がうまくいきました！ 私たちの監視システムは、{0}がパニックになって逃亡していることを確認し、{1}から来たと判明しました。戦わずして勝利できたようです。</PES_Intimidation_SuccessFlee_Hostile>
+  <PES_Intimidation_SuccessFlee_Friendly>威嚇がうまくいきました！ 私たちの監視システムは、現在{0}がパニックを起こして逃亡していることを確認しましたが、実は彼らは{1}から来ていたと判明しました。私たちのメッセージはとても恐ろしいものだったので、友人たちを怖がらせてしまったようです...</PES_Intimidation_SuccessFlee_Friendly>
+
+  <PES_Beguilement_SuccessFlee_Hostile>私たちの策略メッセージはうまくいきました！メカノイドから本拠地が攻撃を受けていると信じさせることができました。私たちの監視システムは、{0}がパニックになって逃亡していることを確認し、{1}から来たと判明しました。戦わずして勝利できたようです。</PES_Beguilement_SuccessFlee_Hostile>
+  <PES_Beguilement_SuccessFlee_Friendly>私たちの策略メッセージはうまくいきました！メカノイドから本拠地が攻撃を受けていると信じさせることができました。私たちの監視システムは、現在{0}がパニックを起こして逃亡していることを確認しましたが、実は彼らは{1}から来ていたと判明しました。私たちのメッセージはとても恐ろしいものだったので、友人たちを怖がらせてしまったようです...</PES_Beguilement_SuccessFlee_Friendly>
+
+  <PES_Beguilement_SuccessLeave_Hostile>私たちの策略メッセージはうまくいきました！私たちは、この場所が彼ら自身の派閥によって占領されていると信じ込ませる事に成功しました。私たちの監視システムは、現在{0}が退却していることを確認しました。戦わずして勝利できたようです。</PES_Beguilement_SuccessLeave_Hostile>
+
+  <PES_Mechanoid_Outcome_1>彼らは私たちに回答しました！しかし...彼らが私たちに送ったメッセージには...7つの単語(Fuck y○u)しか含まれていません...</PES_Mechanoid_Outcome_1>
+
+  <PES_Mechanoid_Outcome_2>彼らは私たちに回答しました！しかし...彼らが私たちに送ったメッセージには...1つの言葉(D○e)しか含まれていません...</PES_Mechanoid_Outcome_2>
+
+  <PES_Mechanoid_Choice>これらの悪名高いメカノイドは何と答えたのですか？</PES_Mechanoid_Choice>
+
+  <PES_MechanoidAnswer_1>&lt;color=red&gt;手遅れだ有機体共&lt;/color&gt;</PES_MechanoidAnswer_1>
+  <PES_MechanoidAnswer_2>死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅。殺す。浄化。絶滅。死ね。殲滅</PES_MechanoidAnswer_2>
+
+</LanguageData>

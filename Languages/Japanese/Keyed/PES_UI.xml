@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_UI_Title>セキュリティ報告</PES_UI_Title>
+  <PES_UI_Ranges>現在の視界範囲：{0}　索敵範囲：{1}</PES_UI_Ranges>
+  <PES_UI_Bulletins>脅威：{0}　中立：{1}　未確認：{2}</PES_UI_Bulletins>
+  <PES_UI_Unknown>不明</PES_UI_Unknown>
+  <PES_UI_UnknownIntention>意図不明</PES_UI_UnknownIntention>
+  <PES_UI_Strategy>戦略：{0}</PES_UI_Strategy>
+  <PES_UI_Faction>派閥：</PES_UI_Faction>
+  <PES_UI_Corps>人数：</PES_UI_Corps>
+  <PES_UI_Herd>群れの規模：</PES_UI_Herd>
+  <PES_UI_ETA>到着予定 残り：</PES_UI_ETA>
+  <PES_UI_Direction_unknown>侵入方向：不明</PES_UI_Direction_unknown>
+  <PES_UI_Direction_known>侵入方向：（クリックで表示）</PES_UI_Direction_known>
+
+  <PES_UI_Letter_ReadMore>セキュリティ報告で詳細を見る</PES_UI_Letter_ReadMore>
+
+  <PES_UI_CaravanMoving>{0}に向かって移動中</PES_UI_CaravanMoving>
+  <PES_UI_CaravanStaging>進行中</PES_UI_CaravanStaging>
+
+  <PES_UI_SkyFaller_Spot_Big>予測衝突地点（クリックで表示）</PES_UI_SkyFaller_Spot_Big>
+  <PES_UI_SkyFaller_Spot_Small>予測落下地点（クリックで表示）</PES_UI_SkyFaller_Spot_Small>
+  <PES_UI_SkyFaller_Spot_Unknown>落下地点を予測不可能</PES_UI_SkyFaller_Spot_Unknown>
+
+  <PES_UI_Infestation_Spot>虫の沸き出し地点（クリックで表示）</PES_UI_Infestation_Spot>
+
+</LanguageData>

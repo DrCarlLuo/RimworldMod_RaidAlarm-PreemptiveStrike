@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_RaidNeg_Proglog>襲撃者「{0}」のメンバーが呼び出しに応答しました。この襲撃者は{1}から来たようです。</PES_RaidNeg_Proglog>
+
+  <PES_RaidNeg_SurrenderSuccess>彼らの要求を認められたので、襲撃者{0}たちはもうコロニーに向かっていません。</PES_RaidNeg_SurrenderSuccess>
+
+  <PES_RaidNeg_Attitude_Rude>侮辱の言葉を吐きながら</PES_RaidNeg_Attitude_Rude>
+  <PES_RaidNeg_Attitude_Polite>予想外に丁寧な言葉で</PES_RaidNeg_Attitude_Polite>
+
+  <!-- Goal explanation-->
+  <PES_RaidNeg_GoalExp_Extortion>彼らは、私たちに敬意を払うわせるためにこの襲撃を始めたと言ってきました：\n\n彼らは私たちに{0}シルバーの貢ぎ物を要求している\n（シルバーまたはゴールド、またはその両方を組み合わせて支払うことが可能で、1ゴールド＝10シルバー換算）</PES_RaidNeg_GoalExp_Extortion>
+  <PES_RaidNeg_GoalExp_Rescue>彼らは、私たちのコロニーによって囚人にされた仲間の何人かを救出するために、この襲撃を始めたと言ってきました。\n\n彼らは次の囚人を解放しろと要求している：\n{0}</PES_RaidNeg_GoalExp_Rescue>
+  <PES_RaidNeg_GoalExp_Revenge>彼らは、私たちのコロニーによって殺害された{0}の死に対する復讐として、この襲撃を始めたと言ってきました。\n彼らは私たちに殺人者である{1}を処刑しろと要求しています。</PES_RaidNeg_GoalExp_Revenge>
+  <PES_RaidNeg_GoalExp_Despoil>彼らは、単に略奪しなければ生き延びれないのでこの襲撃を始めたと言ってきました。\n\n彼らは以下のものを引き渡せと要求しています：\n{0}</PES_RaidNeg_GoalExp_Despoil>
+  <PES_RaidNeg_GoalExp_Enslave>彼らは、この襲撃は誘拐目的であり、以下の入植者を寄こせと要求しました。\n{0}</PES_RaidNeg_GoalExp_Enslave>
+  <PES_RaidNeg_GoalExp_Conquer>彼らは自分の派閥の領土を広げて征服するためにこの襲撃を始めたと言ってきました。\n\n彼らはこのコロニーを新しい領土にすると言っています。</PES_RaidNeg_GoalExp_Conquer>
+
+  <PES_RaidNeg_DemandSurrender_rude>彼らは、私たちの即時降伏を要求しています。\n\nもし彼らの要求を飲まなければ、私たちのコロニーを破壊すると言ってきました。</PES_RaidNeg_DemandSurrender_rude>
+  <PES_RaidNeg_DemandSurrender_Polite>彼らは、自分達の要求を受け入れて、不必要な死傷者を出さずに済む事を願っているそうです。</PES_RaidNeg_DemandSurrender_Polite>
+
+  <!-- Rebuff words-->
+  <PES_RaidNeg_Rebuff_Head>[拒否と侮辱]：</PES_RaidNeg_Rebuff_Head>
+  <PES_RaidNeg_Rebuff_Rescue>この囚人を今すぐ処刑しろ！夢を見るのは寝ている時にしろと伝えろ、奴らの運命は決まっている、当然、その囚人を救い出しに来るよう奴らも同じ目に合わせてやる！</PES_RaidNeg_Rebuff_Rescue>
+  <PES_RaidNeg_Rebuff_Despoil>私たちはお前たちの要求に答えることはないと言ってやれ、そして我々は連中のような野蛮人たちから私たちの財産を守るために死ぬまで戦うだろう！</PES_RaidNeg_Rebuff_Despoil>
+  <PES_RaidNeg_Rebuff_Revenge>遠くから吠えてないでかかってこい！復讐できる相手かどうか確かめてみろ！</PES_RaidNeg_Rebuff_Revenge>
+  <PES_RaidNeg_Rebuff_Enslave>ふざけたことを！奴隷にしてやるからかかってこい！</PES_RaidNeg_Rebuff_Enslave>
+  <PES_RaidNeg_Rebuff_Conquer>我々のコロニーは誰の支配下にも入らない！欲望の代償を支払わせてやる！</PES_RaidNeg_Rebuff_Conquer>
+  <PES_RaidNeg_Rebuff_Extortion>私たちはお前たちの要求に答えることはないと言ってやれ、そして我々は連中のような野蛮人から私たちの財産を守るために死ぬまで戦うだろう！</PES_RaidNeg_Rebuff_Extortion>
+
+  <PES_RaidNeg_Rebuff_Rescue_Fail>利用できません。この交渉者は暴力行為ができません。</PES_RaidNeg_Rebuff_Rescue_Fail>
+
+  <PES_RaidNeg_Rebuff_Confirmation>本当にこれを実行しますか？</PES_RaidNeg_Rebuff_Confirmation>
+  <PES_RaidNeg_Rebuff_Confirmation_Rescue>以下の囚人は即時処刑されます：</PES_RaidNeg_Rebuff_Confirmation_Rescue>
+  <PES_RaidNeg_Rebuff_Explanation>これを実行すると、すべての入植者の士気が高まります。襲撃者が到着すると、すべての入植者は{0}の社交スキルに基づいて心情ボーナスと戦闘ボーナスを獲得します。ただし、現在の交渉担当者の社交スキルが低すぎる場合、このボーナスはペナルティに変わります。\n\nただし、敵は激怒します。この襲撃部隊の目標は殲滅に切り替わり、彼らと通信不可能になります。また、この襲撃部隊は強化されます。\n（現在の電力から計算してランダムに25％から100％のボーナス）。\n</PES_RaidNeg_Rebuff_Explanation>
+
+  <PES_RaidNeg_NegDeeper>彼らの要求について交渉てみる</PES_RaidNeg_NegDeeper>
+  <PES_RaidNeg_NegDeeper_Prolog>どのように交渉しますか？</PES_RaidNeg_NegDeeper_Prolog>
+
+  <PES_RaidNeg_NegDeeper_Surrender>彼らの要求を受け入れる以外に選択がない...</PES_RaidNeg_NegDeeper_Surrender>
+  <PES_RaidNeg_NegDeeper_Bargain>彼らの要求について条件を交渉してみる</PES_RaidNeg_NegDeeper_Bargain>
+
+  <!-- delays-->
+  <PES_RaidNeg_Delay>彼らの要求に対して熟考できるように侵攻を待つように頼み、防備を整える時間を稼ぐ</PES_RaidNeg_Delay>
+  <PES_RaidNeg_Delay_Intro>彼らがコロニーに接近するのをやめるように頼むには、何と伝えるべきでしょう？</PES_RaidNeg_Delay_Intro>
+
+  <PES_RaidNeg_Delay_Staging>彼らはすでに接近を停止しています。残り時間：{0}</PES_RaidNeg_Delay_Staging>
+  <PES_RaidNeg_Delay_CoolDown>これは1時間に1回しか依頼できません。残り時間：{0}</PES_RaidNeg_Delay_CoolDown>
+  <PES_RaidNeg_Delay_DoneBefore>これを実行するように頼めるのは1回だけです。</PES_RaidNeg_Delay_DoneBefore>
+
+  <PES_RaidNeg_Delay_Success_Name>襲撃を遅らせる</PES_RaidNeg_Delay_Success_Name>
+  <PES_RaidNeg_Delay_Smite_Name>彼らを激怒させたので我々に罰を与えるでしょう</PES_RaidNeg_Delay_Smite_Name>
+
+  <PES_RaidNeg_Delay_Persuasion>「それについて考える時間をください。これはあなた方と私たちの両方にとって良いことです。」</PES_RaidNeg_Delay_Persuasion>
+
+  <PES_RaidNeg_Delay_Intimidation_Rescue>「私たちはあなた方の提案について話し合う時間が必要です。これ以上私たちのコロニーに接近しないでください。さもないとあなたが要求する囚人を処刑します！」</PES_RaidNeg_Delay_Intimidation_Rescue>
+  <PES_RaidNeg_Delay_Intimidation_Despoil>「私たちはあなた方の提案について話し合う時間が必要です。これ以上私たちのコロニーに接近しないでください。さもないと、迫撃砲の砲弾しか与えません！」</PES_RaidNeg_Delay_Intimidation_Despoil>
+  <PES_RaidNeg_Delay_Intimidation_Revenge>「私たちはあなた方の提案について話し合う時間が必要です。これ以上私たちのコロニーに接近しないでください。さもないと、迫撃砲の砲弾しか与えません！」</PES_RaidNeg_Delay_Intimidation_Revenge>
+  <PES_RaidNeg_Delay_Intimidation_Enslave>「私たちはあなた方の提案について話し合う時間が必要です。これ以上私たちのコロニーに接近しないでください。さもないと、迫撃砲の砲弾しか与えません！」</PES_RaidNeg_Delay_Intimidation_Enslave>
+  <PES_RaidNeg_Delay_Intimidation_Extortion>「私たちはあなた方の提案について話し合う時間が必要です。これ以上私たちのコロニーに接近しないでください。さもないと、迫撃砲の砲弾しか与えません！」</PES_RaidNeg_Delay_Intimidation_Extortion>
+
+  <PES_RaidNeg_Delay_Beguilement_Rescue>「あなた方が要求する囚人は、今外に出ている私たちのキャラバン隊の1人です。あなた方の行進を止めて、私たちに彼らをここへ送り返す時間を与えてください。」</PES_RaidNeg_Delay_Beguilement_Rescue>
+  <PES_RaidNeg_Delay_Beguilement_Despoil>「私たちのコロニーには十分な資源がありません。キャラバン隊からいくつかの資源を輸送してもらいます。あなた方の行進を止めて、私たちに少し時間を与えてください。」</PES_RaidNeg_Delay_Beguilement_Despoil>
+  <PES_RaidNeg_Delay_Beguilement_Revenge>「あなた方が要求する人物はこのコロニーではなく私たちのキャラバン隊の1つに居ます。あなた方の行進を止めて、私たちに彼らをここへ送る時間を与えてください。」</PES_RaidNeg_Delay_Beguilement_Revenge>
+  <PES_RaidNeg_Delay_Beguilement_Enslave>「あなた方が要求する人物はこのコロニーではなく私たちのキャラバン隊の1つに居ます。あなた方の行進を止めて、私たちに彼らをここへ送る時間を与えてください。」</PES_RaidNeg_Delay_Beguilement_Enslave>
+  <PES_RaidNeg_Delay_Beguilement_Extortion>「私たちのコロニーには十分なシルバーがありません。キャラバン隊から要求に見合うシルバーを輸送してもらいます。あなた方の行進を止めて、私たちに少し時間を与えてください。」</PES_RaidNeg_Delay_Beguilement_Extortion>
+
+  <PES_RaidNeg_Delay_Success>{0}は、しばらく停止することに同意しました。\nしかし、彼らは停止するのは3時間だけだと言ってきました。3時間経過しても要求がまだ\n満たされない場合、彼らは私たちのコロニーに向かって進み続けるでしょう。</PES_RaidNeg_Delay_Success>
+  <PES_RaidNeg_Delay_Fail>彼らは、私たちの提案をはねつけてコロニーに向かって行進し続けています。</PES_RaidNeg_Delay_Fail>
+  <PES_RaidNeg_Delay_Smite>彼らは、私たちの威嚇に対して激怒して屈辱と見なしました。彼らは私たちに罰を与えると決め、もう通信に応答しません。</PES_RaidNeg_Delay_Smite>
+
+  <!-- Goals -->
+  <PES_RaidNeg_NegCoolDown>1時間に1回しか交渉不可能。残り時間：{0}</PES_RaidNeg_NegCoolDown>
+
+  <PES_RaidNeg_NegDeeper_Surrender_Comfirmation>本当に彼らの要求に応じるつもりですか？</PES_RaidNeg_NegDeeper_Surrender_Comfirmation>
+
+  <PES_RaidNeg_NegDeeper_Surrender_Fail_Conquer>実行不可能。同意すると、このゲームをプレイ不可能になります。</PES_RaidNeg_NegDeeper_Surrender_Fail_Conquer>
+  <PES_RaidNeg_NegDeeper_Surrender_Fail_NoMoney>実行不可能。シルバーやゴールドが足りません。</PES_RaidNeg_NegDeeper_Surrender_Fail_NoMoney>
+  <PES_RaidNeg_NegDeeper_Surrender_Fail_Prisoner>実行不可能。少なくとも1人の囚人が用意できません。</PES_RaidNeg_NegDeeper_Surrender_Fail_Prisoner>
+  <PES_RaidNeg_NegDeeper_Surrender_Fail_Enslave>実行不可能。要求された入植者の少なくとも1人を用意できません。</PES_RaidNeg_NegDeeper_Surrender_Fail_Enslave>
+
+  <PES_RaidNeg_NegDeeper_Bargain_Intro>どの程度まで要求を減らさせますか？</PES_RaidNeg_NegDeeper_Bargain_Intro>
+  <PES_RaidNeg_NegDeeper_Bargin_Begin>彼らに何と言いますか?</PES_RaidNeg_NegDeeper_Bargin_Begin>
+
+  <PES_RaidNeg_NegDeeper_Bargain_Invalid_Conquer>実行不可能。彼らは私たちのコロニーを完全に占領するつもりです。</PES_RaidNeg_NegDeeper_Bargain_Invalid_Conquer>
+  <PES_RaidNeg_NegDeeper_Bargain_Invalid_OnePrisoner>実行不可能。彼らは一人の囚人だけを要求しています。この要求をさらに削ることは不可能です。</PES_RaidNeg_NegDeeper_Bargain_Invalid_OnePrisoner>
+  <PES_RaidNeg_NegDeeper_Bargain_Invalid_OneSlave>実行不可能。彼らは一人の入植者だけを要求しています。この要求をさらに削ることは不可能です。</PES_RaidNeg_NegDeeper_Bargain_Invalid_OneSlave>
+
+  <PES_RaidNeg_NegDeeper_Bargain_Option_Prisoner>囚人を{0}人未満</PES_RaidNeg_NegDeeper_Bargain_Option_Prisoner>
+
+  <PES_RaidNeg_NegDeeper_Bargain_Option_Enslave>入植者を{0}人未満</PES_RaidNeg_NegDeeper_Bargain_Option_Enslave>
+
+  <PES_RaidNeg_NegDeeper_Bargain_Success>彼らは要求を減らすことに同意しました。</PES_RaidNeg_NegDeeper_Bargain_Success>
+  <PES_RaidNeg_NegDeeper_Bargain_Fail>彼らは要求の削減についてのあなたの提案を拒否しました。彼らの要求は変わりません。</PES_RaidNeg_NegDeeper_Bargain_Fail>
+  <PES_raidNeg_NegDeeper_Bargain_Smite>彼らは威嚇に対して激怒して屈辱と見なしました。彼らは私たちに罰を与えると決め、もう通信に応答しません。</PES_raidNeg_NegDeeper_Bargain_Smite>
+
+  <PES_raidNeg_NegDeeper_Bargain_Success_Name>彼らが私たちの提案を受け入れるように説得</PES_raidNeg_NegDeeper_Bargain_Success_Name>
+  <PES_RaidNeg_Negdeeper_Bargain_Smite_Name>彼らを激怒させて我々に罰を与える</PES_RaidNeg_Negdeeper_Bargain_Smite_Name>
+
+  <!--Remedy-->
+  <PES_RaidNeg_NegDeeper_Remedy>彼らの要求に答えることは不可能です。代替案として彼らに何か別のものを提供しましょう。\n</PES_RaidNeg_NegDeeper_Remedy>
+  <PES_RaidNeg_Sub_Intro>私たちが提供できるもの：</PES_RaidNeg_Sub_Intro>
+  <PES_RaidNeg_Sub_Rescue>代わりに囚人を解放する</PES_RaidNeg_Sub_Rescue>
+  <PES_RaidNeg_Sub_Extortion>代わりにシルバーを支払う</PES_RaidNeg_Sub_Extortion>
+  <PES_RaidNeg_Sub_Rescue_NoPrisoner>彼らの派閥に所属する囚人は私たちのコロニーにいません</PES_RaidNeg_Sub_Rescue_NoPrisoner>
+
+  <PES_RaidNeg_Sub_success>彼らは、私たちの提案を受け入れました！彼らの襲撃目標が変わりました。</PES_RaidNeg_Sub_success>
+  <PES_RaidNeg_Sub_Fail>彼らは、私たちの提案を拒否しました！彼らの襲撃目標は同じままです...</PES_RaidNeg_Sub_Fail>
+
+</LanguageData>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_PremitiveWatchtower_new.label>監視やぐら</PES_PremitiveWatchtower_new.label>
+  <PES_PremitiveWatchtower_new.description>1人の入植者が見張り番を行い周囲を警戒して、危険が近づいた時にはのろしを上げてコロニーに警告する事ができる原始的なやぐらです。</PES_PremitiveWatchtower_new.description>
+  <PES_PremitiveWatchtower_new.comps.CompUpgrade.name>食品貯蔵庫</PES_PremitiveWatchtower_new.comps.CompUpgrade.name>
+  <PES_PremitiveWatchtower_new.comps.CompUpgrade.description>食料品を保管するための小さな箱を設置して、コロニー内の運搬労働者が見張り役の入植者に食料（調理済みの食事）を届けられるようにします。</PES_PremitiveWatchtower_new.comps.CompUpgrade.description>
+  <PES_PremitiveWatchtower_new.comps.CompUpgrade.upgradeCompProp.CompTowerFoodRefuelable.fuelGizmoLabel>貯蔵食料(食事)</PES_PremitiveWatchtower_new.comps.CompUpgrade.upgradeCompProp.CompTowerFoodRefuelable.fuelGizmoLabel>
+  <Blueprint_PES_PremitiveWatchtower_new.label>監視やぐら(設計)</Blueprint_PES_PremitiveWatchtower_new.label>
+  <Frame_PES_PremitiveWatchtower_new.label>監視やぐら(施工)</Frame_PES_PremitiveWatchtower_new.label>
+  <Frame_PES_PremitiveWatchtower_new.description>1人の入植者が見張り番を行い周囲を警戒して、危険が近づいた時にはのろしを上げてコロニーに警告する事ができる原始的なやぐらです。</Frame_PES_PremitiveWatchtower_new.description>
+
+  <PES_MedievalWatchtower.label>監視塔(中世)</PES_MedievalWatchtower.label>
+  <PES_MedievalWatchtower.description>1人の入植者が見張り番を行い周囲を警戒して、危険が近づいた時にはのろしを上げてコロニーに警告する事ができる中世時代の監視塔です。</PES_MedievalWatchtower.description>
+  <PES_MedievalWatchtower.comps.CompUpgrade.name>食品貯蔵庫</PES_MedievalWatchtower.comps.CompUpgrade.name>
+  <PES_MedievalWatchtower.comps.CompUpgrade.description>食料品を保管するための小さな箱を設置して、コロニー内の運搬労働者が見張り役の入植者に食料（調理済みの食事）を届けられるようにします。</PES_MedievalWatchtower.comps.CompUpgrade.description>
+  <PES_MedievalWatchtower.comps.CompUpgrade.upgradeCompProp.CompTowerFoodRefuelable.fuelGizmoLabel>貯蔵食料(食事)</PES_MedievalWatchtower.comps.CompUpgrade.upgradeCompProp.CompTowerFoodRefuelable.fuelGizmoLabel>
+  <Blueprint_PES_MedievalWatchtower.label>監視塔(中世)(設計)</Blueprint_PES_MedievalWatchtower.label>
+  <Frame_PES_MedievalWatchtower.label>監視塔(中世)(施工)</Frame_PES_MedievalWatchtower.label>
+  <Frame_PES_MedievalWatchtower.description>1人の入植者が見張り番を行い周囲を警戒して、危険が近づいた時にはのろしを上げてコロニーに警告する事ができる中世時代の監視塔です。</Frame_PES_MedievalWatchtower.description>
+
+  <PES_watchtower_new.label>監視塔</PES_watchtower_new.label>
+  <PES_watchtower_new.description>現代的な建設技術により原始的なやぐらよりもはるかに高い監視塔を建設可能になりました。高さ以外にも現代的な電子機器の中には、見張り役の入植者をさらに遠くまで監視できるようになるものがあります。電気が無くても動作しますが視界範囲と索敵範囲は通常の半分になります。</PES_watchtower_new.description>
+  <PES_watchtower_new.comps.CompUpgrade-0.name>小型ペースト ディスペンサ</PES_watchtower_new.comps.CompUpgrade-0.name>
+  <PES_watchtower_new.comps.CompUpgrade-0.description>監視塔の中にペーストディスペンサーを設置します。見張り役の入植者が食事を求めて監視塔を離れる必要がないようにします。この中に生の食材を入れてください。</PES_watchtower_new.comps.CompUpgrade-0.description>
+  <PES_watchtower_new.comps.CompTowerFoodRefuelable.fuelGizmoLabel>貯蔵食料(食材)</PES_watchtower_new.comps.CompTowerFoodRefuelable.fuelGizmoLabel>
+  <PES_watchtower_new.comps.CompUpgrade-1.name>ラジオ</PES_watchtower_new.comps.CompUpgrade-1.name>
+  <PES_watchtower_new.comps.CompUpgrade-1.description>監視塔の中にラジオを設置して、見張り役の入植者が監視している間ラジオを聞くことができるようにします。見張りの娯楽の欲求を適度な状態に保ちます。</PES_watchtower_new.comps.CompUpgrade-1.description>
+  <PES_watchtower_new.comps.CompUpgrade-2.name>サーチライト</PES_watchtower_new.comps.CompUpgrade-2.name>
+  <PES_watchtower_new.comps.CompUpgrade-2.description>サーチライトがあれば500Wの消費電力と引き換えにして、闇夜でも60%の効率で監視塔を利用できます。</PES_watchtower_new.comps.CompUpgrade-2.description>
+  <PES_watchtower_new.comps.CompUpgrade-3.name>監視双眼鏡</PES_watchtower_new.comps.CompUpgrade-3.name>
+  <PES_watchtower_new.comps.CompUpgrade-3.description>監視双眼鏡が設置されていると見張りは塔の上からさらに遠くまで見ることができます。\n+50%視界範囲\n+50%索敵範囲</PES_watchtower_new.comps.CompUpgrade-3.description>
+  <Blueprint_PES_watchtower_new.label>監視塔(設計)</Blueprint_PES_watchtower_new.label>
+  <Frame_PES_watchtower_new.label>監視塔(施工)</Frame_PES_watchtower_new.label>
+  <Frame_PES_watchtower_new.description>現代的な建設技術により原始的なやぐらよりもはるかに高い監視塔を建設可能になりました。高さ以外にも現代的な電子機器の中には、見張り役の入植者をさらに遠くまで監視できるようになるものがあります。電気が無くても動作しますが視界範囲と索敵範囲は通常の半分になります。</Frame_PES_watchtower_new.description>
+
+  <PES_Radar.label>監視レーダー</PES_Radar.label>
+  <PES_Radar.description>電波を利用して接近する物体の距離と角度や速度を測定する監視システムです。索敵範囲を拡張するために使用可能です。</PES_Radar.description>
+  <Blueprint_PES_Radar.label>監視レーダー(設計)</Blueprint_PES_Radar.label>
+  <Frame_PES_Radar.label>監視レーダー(施工)</Frame_PES_Radar.label>
+  <Frame_PES_Radar.description>電波を利用して接近する物体の距離と角度や速度を測定する監視システムです。索敵範囲を拡張するために使用可能です。</Frame_PES_Radar.description>
+
+  <PES_SentryDroneArray.label>偵察ドローン アレイ</PES_SentryDroneArray.label>
+  <PES_SentryDroneArray.description>偵察任務に使用して、コロニーの視界範囲を大幅に拡張する数機の偵察ドローンの操作と監視用のコンソールです。</PES_SentryDroneArray.description>
+  <PES_SentryDroneArray.comps.CompUpgrade.name>ラジオ</PES_SentryDroneArray.comps.CompUpgrade.name>
+  <PES_SentryDroneArray.comps.CompUpgrade.description>監視塔の中にラジオを設置して、見張り役の入植者が監視している間、ラジオを聞くことができるようにします。見張りの娯楽の欲求を適度な状態に保ちます。</PES_SentryDroneArray.comps.CompUpgrade.description>
+  <Blueprint_PES_SentryDroneArray.label>偵察ドローン アレイ(設計)</Blueprint_PES_SentryDroneArray.label>
+  <Frame_PES_SentryDroneArray.label>偵察ドローン アレイ(施工)</Frame_PES_SentryDroneArray.label>
+  <Frame_PES_SentryDroneArray.description>偵察任務に使用して、コロニーの視界範囲を大幅に拡張する数機の偵察ドローンの操作と監視用のコンソールです。</Frame_PES_SentryDroneArray.description>
+
+  <PES_SpySatellite.label>偵察衛星装置</PES_SpySatellite.label>
+  <PES_SpySatellite.description>偵察衛星とコロニーの間でデータを送受信するアップリンク装置です。コロニーの索敵範囲を拡張して、この惑星上の広範囲を監視下に置きます。</PES_SpySatellite.description>
+  <Blueprint_PES_SpySatellite.label>偵察衛星装置(設計)</Blueprint_PES_SpySatellite.label>
+  <Frame_PES_SpySatellite.label>偵察衛星装置(施工)</Frame_PES_SpySatellite.label>
+  <Frame_PES_SpySatellite.description>偵察衛星とコロニーの間でデータを送受信するアップリンク装置です。コロニーの索敵範囲を拡張して、この惑星上の広範囲を監視下に置きます。</Frame_PES_SpySatellite.description>
+
+</LanguageData>

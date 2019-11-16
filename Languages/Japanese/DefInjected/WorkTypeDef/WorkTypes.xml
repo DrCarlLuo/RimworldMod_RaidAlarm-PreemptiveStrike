@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Recon.label>偵察</Recon.label>
+  <Recon.description>コロニーでの見張りを行ったり、周辺を偵察や敵の侵入を監視します。</Recon.description>
+  <Recon.labelShort>偵察</Recon.labelShort>
+  <Recon.pawnLabel>偵察兵</Recon.pawnLabel>
+  <Recon.gerundLabel>偵察</Recon.gerundLabel>
+  <Recon.verb>偵察</Recon.verb>
+
+</LanguageData>
