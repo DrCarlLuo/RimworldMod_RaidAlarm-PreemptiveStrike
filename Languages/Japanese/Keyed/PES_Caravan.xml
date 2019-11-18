@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_Intention_Raid>襲撃者</PES_Intention_Raid>
+  <PES_Intention_TradeCaravan>トレーダー</PES_Intention_TradeCaravan>
+  <PES_Intention_Traveler>旅行者</PES_Intention_Traveler>
+  <PES_Intention_Visitor>訪問者</PES_Intention_Visitor>
+  <PES_Intention_AlphaBeavers>アルファビーバー</PES_Intention_AlphaBeavers>
+  <PES_Intention_FarmAnimalsWanderIn>新たな家畜</PES_Intention_FarmAnimalsWanderIn>
+  <PES_Intention_HerdMigration>大群の移動</PES_Intention_HerdMigration>
+  <PES_Intention_ManHunterPack>大群の移動(殺人鬼)</PES_Intention_ManHunterPack>
+  <PES_Intention_ThrumboPass>スランボの群れ</PES_Intention_ThrumboPass>
+
+  <PES_Intention_RaidInGroups>(集団)</PES_Intention_RaidInGroups>
+
+  <PES_RaidGoalName_Rescue>囚人救助</PES_RaidGoalName_Rescue>
+  <PES_RaidGoalName_Despoil>略奪</PES_RaidGoalName_Despoil>
+  <PES_RaidGoalName_Revenge>復讐</PES_RaidGoalName_Revenge>
+  <PES_RaidGoalName_Enslave>誘拐</PES_RaidGoalName_Enslave>
+  <PES_RaidGoalName_Conquer>征服</PES_RaidGoalName_Conquer>
+  <PES_RaidGoalName_Extortion>強盗</PES_RaidGoalName_Extortion>
+  <PES_RaidGoalName_Smite>鎮圧</PES_RaidGoalName_Smite>
+  <PES_RaidGoalName_Extermination>撲滅</PES_RaidGoalName_Extermination>
+
+  <PES_Strategy_Normal>通常攻撃</PES_Strategy_Normal>
+  <PES_Strategy_Sapper>トンネル</PES_Strategy_Sapper>
+  <PES_Strategy_Smart>戦術攻撃</PES_Strategy_Smart>
+  <PES_Strategy_Siege>包囲</PES_Strategy_Siege>
+  <PES_Strategy_Stage>襲撃に移行</PES_Strategy_Stage>
+
+  <PES_AnimalType_Unknown>未確認の動物種類</PES_AnimalType_Unknown>
+
+  <PES_Unknown_SkyObject_Large>未確認の飛翔物体(大)</PES_Unknown_SkyObject_Large>
+  <PES_Unknown_SkyObject_Small>未確認の飛翔物体(小)</PES_Unknown_SkyObject_Small>
+  <PES_Skyfaller_raid>敵の降下ポッドによる襲撃</PES_Skyfaller_raid>
+  <PES_Skyfaller_Meteorite>落下物：隕石</PES_Skyfaller_Meteorite>
+  <PES_Skyfaller_ResourcePod>落下物：輸送ポッド</PES_Skyfaller_ResourcePod>
+  <PES_Skyfaller_RefugeePod>落下物：脱出ポッド</PES_Skyfaller_RefugeePod>
+  <PES_Skyfaller_ShipChunk>落下物：宇宙船のガラクタ</PES_Skyfaller_ShipChunk>
+  <PES_Skyfaller_ShipPart>落下物：汚染された船</PES_Skyfaller_ShipPart>
+
+  <PES_Infestation_Title>虫の襲来</PES_Infestation_Title>
+
+  <PES_Unknown_HumanCrowd>未確認な人間の集団</PES_Unknown_HumanCrowd>
+  <PES_Unknown_AnimalHerd>未確認な動物の群れ</PES_Unknown_AnimalHerd>
+
+</LanguageData>

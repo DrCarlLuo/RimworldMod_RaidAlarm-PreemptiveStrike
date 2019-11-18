@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PES_UnknownFaction>派閥不明</PES_UnknownFaction>
+
+  <PES_Persuade_noun>説得する</PES_Persuade_noun>
+  <PES_intimidate_noun>脅迫する</PES_intimidate_noun>
+  <PES_beguile_noun>策略を仕掛ける</PES_beguile_noun>
+
+  <PES_SimpleConfirm>確認</PES_SimpleConfirm>
+  <PES_Disconnect>切断</PES_Disconnect>
+  <PES_Cancel>気にしない</PES_Cancel>
+  <PES_ConfirmChoice>選択を確認</PES_ConfirmChoice>
+
+  <PES_Condition_Neutral>友好的</PES_Condition_Neutral>
+  <PES_Condition_Hostile>敵対的</PES_Condition_Hostile>
+
+  <PES_Odds_VeryHigh>&lt;color=lime&gt;非常に高確率：&lt;/color&gt;</PES_Odds_VeryHigh>
+  <PES_Odds_High>&lt;color=green&gt;高確率：&lt;/color&gt;</PES_Odds_High>
+  <PES_Odds_Medium>&lt;color=cyan&gt;通常確率：&lt;/color&gt;</PES_Odds_Medium>
+  <PES_Odds_Low>&lt;color=#f0a1aa&gt;低確率：&lt;/color&gt;</PES_Odds_Low>
+  <PES_Odds_VeryLow>&lt;color=red&gt;非常に低確率：&lt;/color&gt;</PES_Odds_VeryLow>
+
+  <PES_ASHAME>残念だ。</PES_ASHAME>
+  <PES_Reassuring>安心した。</PES_Reassuring>
+  <PES_Nice>素晴らしい。</PES_Nice>
+  <PES_RaiseAlarm>敵の襲来だ！警報を出してください！</PES_RaiseAlarm>
+  <PES_trembling>恐ろしい...</PES_trembling>
+  <PES_DAMNIT>ちくしょうめ！</PES_DAMNIT>
+
+  <PES_Friendly_Greeting>{0}の人々は{1}に優しく挨拶を交わして、すぐに到着すると言っています。</PES_Friendly_Greeting>
+  <PES_Friendly_Dismiss>彼らに「今ここに来るべきではないので引き返して欲しい」と伝えます。</PES_Friendly_Dismiss>
+  <PES_Friendly_Dismissed>彼らはその話を聞いて我々のコロニーに向かうのを中止しました。</PES_Friendly_Dismissed>
+
+</LanguageData>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- <PES_StandGuard_Primitive.label>監視やぐらで見張る</PES_StandGuard_Primitive.label> -->
+  <!-- <PES_StandGuard_Primitive.verb>歩哨</PES_StandGuard_Primitive.verb> -->
+  <!-- <PES_StandGuard_Primitive.gerund>で見張る</PES_StandGuard_Primitive.gerund> -->
+
+  <PES_StandGuard.label>監視塔で見張る</PES_StandGuard.label>
+  <PES_StandGuard.verb>歩哨</PES_StandGuard.verb>
+  <PES_StandGuard.gerund>で見張る</PES_StandGuard.gerund>
+
+  <PES_OperateSentryArray.label>偵察ドローンアレイで監視</PES_OperateSentryArray.label>
+  <PES_OperateSentryArray.verb>監視</PES_OperateSentryArray.verb>
+  <PES_OperateSentryArray.gerund>で監視する</PES_OperateSentryArray.gerund>
+
+  <PES_InstallUpgrade.label>監視施設を改良する</PES_InstallUpgrade.label>
+  <PES_InstallUpgrade.verb>改装</PES_InstallUpgrade.verb>
+  <PES_InstallUpgrade.gerund>を改装する</PES_InstallUpgrade.gerund>
+
+  <PES_Refuel.label>偵察施設に補給する</PES_Refuel.label>
+  <PES_Refuel.verb>補給</PES_Refuel.verb>
+  <PES_Refuel.gerund>に補給する</PES_Refuel.gerund>
+
+</LanguageData>

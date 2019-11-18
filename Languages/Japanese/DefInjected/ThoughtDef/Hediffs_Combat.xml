@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_CombatFervor_Thought.stages.Combat_Fervor.label>戦闘興奮状態</PES_CombatFervor_Thought.stages.Combat_Fervor.label>
+  <PES_CombatFervor_Thought.stages.Combat_Fervor.description>命をかけてコロニーの自由を守り戦うことは私にとって名誉です。</PES_CombatFervor_Thought.stages.Combat_Fervor.description>
+
+  <PES_CombatTiredness_Thought.stages.Tired_of_combat.label>戦闘疲労</PES_CombatTiredness_Thought.stages.Tired_of_combat.label>
+  <PES_CombatTiredness_Thought.stages.Tired_of_combat.description>この戦いは避けることができたかもしれないのに、今は私は負傷したり死ぬかもしれない。この戦いに意味は無い。</PES_CombatTiredness_Thought.stages.Tired_of_combat.description>
+
+</LanguageData>

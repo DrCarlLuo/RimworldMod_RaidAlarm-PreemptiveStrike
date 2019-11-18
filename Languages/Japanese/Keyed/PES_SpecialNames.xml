@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Animal herd -->
+  <PES_ManHunterName_1>貪欲な{0}の群れ</PES_ManHunterName_1>
+  <PES_ManHunterName_2>パニック状態な{0}の群れ </PES_ManHunterName_2>
+  <PES_ManHunterName_3>恐慌状態な{0}の群れ </PES_ManHunterName_3>
+  <PES_ManHunterName_4>食い殺す気な{0}の群れ </PES_ManHunterName_4>
+
+  <!-- Mechanoids -->
+  <PES_MechName_1>抹殺部隊:{0}</PES_MechName_1>
+  <PES_MechName_2>浄化部隊:{0}</PES_MechName_2>
+  <PES_MechName_3>根絶部隊:{0}</PES_MechName_3>
+  <PES_MechName_4>駆除部隊:{0}</PES_MechName_4>
+  <PES_MechName_5>絶滅部隊:{0}</PES_MechName_5>
+
+  <!-- Farm Animal -->
+  <PES_FarmAnimal_1>従順な{0}の群れ </PES_FarmAnimal_1>
+
+  <!-- Migrating -->
+  <PES_MigrationName_1>移動中な{0}の群れ</PES_MigrationName_1>
+
+  <!-- Thurmbo -->
+  <PES_Thrumboname_1>珍しいスランボの群れ</PES_Thrumboname_1>
+
+  <!-- Traveler-->
+  <PES_TravelerName_1>{0}の旅行者</PES_TravelerName_1>
+
+  <!-- Visitor -->
+  <PES_VisitorName_1>{0}の訪問者</PES_VisitorName_1>
+
+  <!-- Trader -->
+  <PES_TraderName_1>{0}のトレーダー</PES_TraderName_1>
+
+</LanguageData>

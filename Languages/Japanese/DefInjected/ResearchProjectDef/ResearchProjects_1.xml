@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PES_PrimitiveTower.label>やぐら</PES_PrimitiveTower.label>
+  <PES_PrimitiveTower.description>基礎的な偵察能力を提供する原始的な見張り台を建設できます。</PES_PrimitiveTower.description>
+
+  <!-- <PES_Astrology.label>占星術</PES_Astrology.label> -->
+  <!-- <PES_MindOverMatter.label>注意事項</PES_MindOverMatter.label> -->
+
+  <PES_ModernTower.label>監視塔</PES_ModernTower.label>
+  <PES_ModernTower.description>より高い偵察能力をコロニーに提供して、さまざまなアップグレードで強化できる現代的な監視塔を建設できます。</PES_ModernTower.description>
+
+  <!-- <PES_FoodSupply.label>監視用食事供給</PES_FoodSupply.label> -->
+  <!-- <PES_FoodSupply.description>監視塔に小型のペーストディスペンサーを設置して、見張り役に食料を供給します。</PES_FoodSupply.description> -->
+
+  <PES_JoyRadio.label>娯楽用ラジオ</PES_JoyRadio.label>
+  <PES_JoyRadio.description>監視塔の中にラジオを設置して、見張り役の入植者が監視している間ラジオを聞くことができるようにします。見張りの娯楽の欲求を適度な状態に保ちます。</PES_JoyRadio.description>
+
+  <PES_SearchLight.label>照明技術の発展</PES_SearchLight.label>
+  <PES_SearchLight.description>夜間でも監視塔を利用できるようにサーチライトを設置できます。</PES_SearchLight.description>
+
+  <PES_SkyIDL.label>飛翔物の識別 大型</PES_SkyIDL.label>
+  <PES_SkyIDL.description>コロニーが宇宙船のガラクタや隕石などの空から落下する大型の飛翔物体を識別して、それらが衝突する位置を予測する機能を解除します。これは、コロニーが受ける損害を減らすのに役立ちます。</PES_SkyIDL.description>
+
+  <PES_RADAR.label>レーダー波の索敵</PES_RADAR.label>
+  <PES_RADAR.description>電波を利用して接近する物体の距離と角度や速度を測定する監視レーダー施設を建設します。この無人の監視施設は優れた索敵範囲をコロニーに提供します。</PES_RADAR.description>
+
+  <PES_SkyIDS.label>飛翔物の識別 小型</PES_SkyIDS.label>
+  <PES_SkyIDS.description>コロニーが輸送ポッドなどの空から落下する小型の飛翔物体を識別して、それらが衝突する位置を予測する機能を解除します。これは、コロニーが受ける損害を減らすのに役立ちます。</PES_SkyIDS.description>
+
+  <PES_InfestationDetection.label>緊急地震速報 システム</PES_InfestationDetection.label>
+  <PES_InfestationDetection.description>地殻深部スキャナーに「虫の襲来」を感知する機能を追加します。</PES_InfestationDetection.description>
+
+  <PES_SentryArray.label>偵察ドローン</PES_SentryArray.label>
+  <PES_SentryArray.description>広範囲の視界範囲をコロニーに提供する究極の偵察施設で、偵察ドローンアレイを建設可能になります。</PES_SentryArray.description>
+
+  <PES_Satellite.label>偵察衛星通信</PES_Satellite.label>
+  <PES_Satellite.description>惑星を周回する偵察衛星と接続して惑星規模の巨大な索敵範囲をコロニーに提供する究極の偵察施設で、偵察衛星装置を建築可能になります。</PES_Satellite.description>
+
+
+</LanguageData>
